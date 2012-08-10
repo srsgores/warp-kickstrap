@@ -1,0 +1,13 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@font-face {
+	font-family: 'YanoneKaffeesatzLight';
+	src: url('YanoneKaffeesatz-Light-webfont.eot');
+	src: url('YanoneKaffeesatz-Light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('YanoneKaffeesatz-Light-webfont.woff') format('woff'),
+		url('YanoneKaffeesatz-Light-webfont.ttf') format('truetype'),
+		url('YanoneKaffeesatz-Light-webfont.svg#YanoneKaffeesatzLight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

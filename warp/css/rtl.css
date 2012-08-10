@@ -1,0 +1,327 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * RTL Style Sheet - Used for right-to-left language localizations
+ */
+
+
+/* Base
+----------------------------------------------------------------------------------------------------*/
+
+ul, ol, dl {
+	padding-left: 0;
+	padding-right: 30px;
+}
+
+dd {
+	margin-left: 0;
+	margin-right: 40px;
+}
+
+
+/* Layout
+----------------------------------------------------------------------------------------------------*/
+
+.grid-box,
+.bfc-f,
+.float-left { float: right; }
+.float-right { float: left; }
+
+#toolbar .float-left .module,
+#toolbar .float-left > time {
+	margin: 0 0 0 15px;
+	float: right;
+}
+
+#toolbar .float-right .module {
+	margin: 0 15px 0 0;
+	float: left;
+}
+
+#headerbar .module {
+	margin-left: 0;
+	margin-right: 15px;
+	float: left;
+}
+
+#logo, #logo > img,
+#menu { float: right; }
+#search { float: left; }
+
+
+/* Menus
+----------------------------------------------------------------------------------------------------*/
+
+/* Mega Drop-Down Menu */
+.menu-dropdown,
+.menu-dropdown .level1,
+.menu-dropdown .level1 > span { float: right; }
+
+.menu-dropdown .dropdown {
+	left: auto;
+ 	right: 0;
+}
+
+.menu-dropdown li:hover .dropdown.flip,
+.menu-dropdown li.remain .dropdown.flip {
+	right: auto;
+	left: 0;
+}
+
+.menu-dropdown .column { float: right; }
+
+.menu-dropdown span.icon { float: right; }
+
+.menu-dropdown .level1 .level1 span.icon {
+	margin-left: 0;
+	margin-right: -5px;
+}
+.menu-dropdown .level1 .level1 span.icon + span,
+.menu-dropdown .level1 .level1 span.icon + span + span {
+	margin-left: 0;
+	margin-right: 25px;
+}
+
+.menu-dropdown li.level2 .level2 span.icon {
+	margin-right: 0;
+	margin-left: 5px;
+}
+
+.menu-dropdown li.level2 .level2 span.icon + span,
+.menu-dropdown li.level2 .level2 span.icon + span + span {
+	margin-left: 0;
+	margin-right: 40px;
+}
+
+/* Sidebar/Accordion Menu */
+.menu-sidebar span.icon {
+	margin-right: 0;
+	margin-left: 5px;
+}
+
+
+/* Modules
+----------------------------------------------------------------------------------------------------*/
+
+/* Badges */
+.module .badge {
+	right: auto;
+	left: 0;
+}
+
+/* Icons */
+.module .module-title .icon {
+	margin-right: 0;
+	margin-left: 5px;
+	float: right;
+}
+
+
+/* Tools
+----------------------------------------------------------------------------------------------------*/
+
+/* Alignment (Needed for System Markup, without hyphen needed for WP) */
+.align-left,
+.alignleft {
+	margin-right: 0;
+	margin-left: 15px;
+	float: right;
+}
+
+.align-right,
+.alignright {
+	margin-left: 0;
+	margin-right: 15px;
+	float: left;
+}
+
+/* Buttons */
+.button-more + [class*=button-],
+.button-default + [class*=button-],
+.button-primary + [class*=button-] {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+/* Tables (Needed for System Markup) */
+table.zebra th,
+table.zebra caption { text-align: right; }
+
+/* Definition Lists */
+dl.separator dt {	
+	padding-right: 0;
+	padding-left: 10px;
+	float: right;
+}
+
+dl.separator dd {
+	margin-left: 0;
+	margin-right: 170px;
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+/* Text Alignment */
+.text-left { text-align: right; }
+.text-right { text-align: left; }
+
+/* Drop Caps */
+p.dropcap:first-letter {
+	margin-right: 0;
+	margin-left: 4px ;
+	float: none; /* Fix for IE */
+}
+
+/* Boxes */
+div.box-info,
+div.box-warning,
+div.box-hint,
+div.box-download {
+	padding-left: 0;
+	padding-right: 40px;
+	background-position: 100% 0;
+}
+
+
+/* System
+----------------------------------------------------------------------------------------------------*/
+
+/* Item */
+#system .item > .links a {
+	margin-right: 0;
+	margin-left: 15px;
+}
+
+#system .item .socialbuttons > div {
+	margin-right: 0;
+	margin-left: 10px;
+	float: right;
+}
+
+/* Pagination */
+#system .pagination a,
+#system .pagination strong {
+	margin-left: 0;
+	margin-right: 5px;
+}
+#system .pagination > *:first-child { margin-right: 0; }
+
+/* Search Box */
+.searchbox input { float: right; }
+
+.searchbox.filled button {
+	right: auto;
+	left: 0;
+}
+
+.searchbox .results {
+	right: auto;
+	left: 0;
+}
+
+/* Breadcrumbs */
+.breadcrumbs a,
+.breadcrumbs > span {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+/* Author Box */
+#system .author-box .avatar {
+	margin-right: 0;
+	margin-left: 15px;
+	float: right;
+}
+
+/* Comments */
+#system #comments .comment-head .avatar {
+	margin-right: 0;
+	margin-left: 10px;
+	float: right;
+}
+
+#system #comments ul.level1 ul {
+	padding-left: 0;
+	padding-right: 55px;
+}
+
+#system #respond input[type='text'] {
+	padding-left: 0;
+	padding-right: 5px;
+}
+
+#system ul #respond {
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+ul.line.comments .avatar {
+	margin-right: 0;
+	margin-left: 10px;
+	float: right;
+}
+
+/* Page Navigation */
+.page-nav .prev { float: right; }
+.page-nav .next { float: left; }
+
+/* Joomla 1.5/2.5 Specific */
+#system .item > header .icon { 
+	margin-left: 0;
+	margin-right: 5px;
+	float: left;
+}
+
+#system .filter > div {
+	margin-right: 0;
+	margin-left: 10px;
+	float: right;
+}
+
+#system form.submission fieldset > div > label:first-child { float: right; }
+#system form.submission div > .calendar {
+	margin-left: 0;
+	margin-right: 5px;
+}
+
+#system a img.calendar {
+	margin-left: 0;
+	margin-right: 3px;
+}
+
+#system #editor-xtd-buttons .button2-left,
+#system #editor-xtd-buttons .button2-left * { float: right; }
+
+#system #editor-xtd-buttons .button2-left {
+	margin-right: 0;
+	margin-left: 5px;
+}
+
+#system-message dd { margin-right: 0; }
+
+/* WordPress Specific */
+table.calendar tfoot td { text-align: left; }
+table.calendar tfoot td:first-child { text-align: right; }
+
+
+/* Responsive
+----------------------------------------------------------------------------------------------------*/
+
+/* Only Tablets (Portrait) and Phones (Landscape) */
+@media (min-width: 480px) and (max-width: 959px) {
+
+	#page.sidebars-2.sidebar-a-right #sidebar-a,
+	#page.sidebars-2.sidebar-b-right #sidebar-b { float: left; }
+
+}
+
+/* Only Phones */
+@media (max-width: 767px) {
+
+	#page #header-responsive .logo {
+		margin-right: 0;
+		margin-left: 10%;
+	}
+
+}
+

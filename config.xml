@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fields name="General">
+		<field name="profile_default" type="profile" default="" label="Default Profile" description="Select the profile which should be loaded by default." />
+		<field name="profile_dynamic" type="radio" default="1" label="Dynamic Profiles" description="Allow profiles to be loaded by URL.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="compression" type="list" default="0" label="Compression" description="Minify and combine CSS and JavaScript into a single file. Use gzip compression and Data URIs to reduce image file requests.">
+			<option value="0">None</option>
+			<option value="1">Combination + Minify</option>
+			<option value="2">Combination + Minify + Data URIs</option>
+			<option value="3">Combination + Minify + Data URIs + Gzip</option>
+		</field>
+		<field name="outdated_browser" type="radio" default="1" label="Upgrade Page" description="Redirect outdated browsers to the upgrade page.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="twitter" type="radio" default="0" label="Twitter Button" description="Display a Tweet button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="plusone" type="radio" default="0" label="Google+ Button" description="Display a Google+ button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="facebook" type="radio" default="0" label="Facebook Button" description="Display a facebook like button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+	  	<field name="tracking_code" type="textarea" rows="8" cols="30" label="Tracking Code" description="Insert your Google Analytics tracking code." />
+		<field name="verify" type="verify" label="Verify Files" description="Detect and show all file modifications." />
+		<field name="check" type="check" label="System Check" description="Detects system issues." />
+	</fields>
+	<fields name="Profiles">
+		<field name="Style" type="separator" />
+		<field name="style" type="styles" default="" label="Style" description="Select the style variation." />
+		<field name="color1" type="list" default="default" label="Primary Color" description="Select the primary color.">
+			<option value="">Blue</option>
+			<option value="orange">Orange</option>
+			<option value="green">Green</option>
+			<option value="navy">Navy</option>
+			<option value="red">Red</option>
+			<option value="pink">Pink</option>
+			<option value="salmon">Salmon</option>
+			<option value="turquoise">Turquoise</option>
+			<option value="rose">Rose</option>
+		</field>
+		<field name="color2" type="list" default="default" label="Secondary Color" description="Select the secondary color.">
+			<option value="">Orange</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+			<option value="navy">Navy</option>
+			<option value="red">Red</option>
+			<option value="pink">Pink</option>
+			<option value="salmon">Salmon</option>
+			<option value="turquoise">Turquoise</option>
+			<option value="rose">Rose</option>
+		</field>
+		<field name="font1" type="list" default="default" label="Body Font" description="Select the main body typeface.">
+			<option value="arial">Arial</option>
+			<option value="lucida">Lucida</option>
+			<option value="georgia">Georgia</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="yanonekaffeesatz">Yanone Kaffeesatz</option>
+			<option value="mavenpro">Maven Pro</option>
+			<option value="kreon">Kreon</option>
+		</field>
+		<field name="font2" type="list" default="default" label="Header Font" description="Select the headings typeface.">
+			<option value="arial">Arial</option>
+			<option value="lucida">Lucida</option>
+			<option value="georgia">Georgia</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="yanonekaffeesatz">Yanone Kaffeesatz</option>
+			<option value="mavenpro">Maven Pro</option>
+			<option value="kreon">Kreon</option>
+		</field>
+		<field name="font3" type="list" default="default" label="Menu Font" description="Select the menu typeface.">
+			<option value="arial">Arial</option>
+			<option value="lucida">Lucida</option>
+			<option value="georgia">Georgia</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="yanonekaffeesatz">Yanone Kaffeesatz</option>
+			<option value="mavenpro">Maven Pro</option>
+			<option value="kreon">Kreon</option>
+		</field>
+		<field name="Content" type="separator" />
+		<field name="date" type="radio" default="1" label="Date" description="Show the date.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="totop_scroller" type="radio" default="1" label="To-Top Scroller" description="Show the to-top scroller.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="warp_branding" type="radio" default="1" label="Warp Branding" description="Show the Warp branding.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="system_output" type="radio" default="1" label="System Output" description="Show the system output.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="Layout" type="separator" />
+		<field name="responsive" type="radio" default="1" label="Responsive Layout" description="Enable responsive layout.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="template_width" type="text" size="10" default="980" label="Template Width" description="Set the template width in pixel." class="short" />
+		<field name="sidebar-a_width" type="text" size="10" default="25" label="Sidebar A Width" description="Set the Sidebar A width in percent." class="short" />
+		<field name="sidebar-b_width" type="text" size="10" default="25" label="Sidebar B Width" description="Set the Sidebar B width in percent." class="short" />
+		<field name="sidebar-a" type="list" default="right" label="Sidebar A Position" description="Align the sidebar to the left or right.">
+			<option value="right">Right</option>
+			<option value="left">Left</option>
+		</field>
+		<field name="sidebar-b" type="list" default="right" label="Sidebar B Position" description="Align the sidebar to the left or right.">
+			<option value="right">Right</option>
+			<option value="left">Left</option>
+		</field>
+		<field name="top-a" type="layout" default="equal" label="Top A Layout" description="Select a grid layout for this module position." />
+		<field name="top-b" type="layout" default="equal" label="Top B Layout" description="Select a grid layout for this module position." />
+		<field name="innertop" type="layout" default="equal" label="Inner Top Layout" description="Select a grid layout for this module position." />
+		<field name="innerbottom" type="layout" default="equal" label="Inner Bottom Layout" description="Select a grid layout for this module position." />
+		<field name="bottom-a" type="layout" default="equal" label="Bottom A Layout" description="Select a grid layout for this module position." />
+		<field name="bottom-b" type="layout" default="equal" label="Bottom B Layout" description="Select a grid layout for this module position." />
+		<field name="menu_width" type="text" size="10" default="250" label="Drop Down Column Width" description="Set the column width of the drop down menu in pixel." class="short" />
+	</fields>
+</config>

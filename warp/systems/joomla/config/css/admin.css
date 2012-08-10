@@ -1,0 +1,21 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * Joomla 1.7 specific
+ */
+
+html { overflow-y: scroll; }
+
+.saving .icon-32-save,
+.saving .icon-32-apply,
+.saving .icon-32-save-copy { background-image: url(../../../../config/images/loader.gif); }
+
+#style-form .width-40 { width: 60%; }
+#style-form .width-60 { width: 40%; }
+
+fieldset.adminform { border-radius: 9px; }
+
+.tabs-box {
+	margin: 18px 5px 0px 5px;
+	background: #FFF;
+}

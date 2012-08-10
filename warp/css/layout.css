@@ -1,0 +1,129 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * Layout Style Sheet - Provides a fluid grid and helper classes to create any layout and some layout defaults
+ */
+
+
+/* Grid and Clearing Tools
+----------------------------------------------------------------------------------------------------*/
+
+.clearfix:before,
+.clearfix:after,
+.grid-block:before,
+.grid-block:after,
+.deepest:before,
+.deepest:after {
+	content: "";
+    display: table;
+}
+.clearfix:after,
+.grid-block:after,
+.deepest:after { clear: both; }
+
+.grid-box { float: left; }
+
+/* Grid Units */
+.width16 { width: 16.666%; }
+.width20 { width: 20%; }
+.width25 { width: 25%; }
+.width33 { width: 33.333%; }
+.width40 { width: 40%; }
+.width50 { width: 50%; }
+.width60 { width: 60%; }
+.width66 { width: 66.666%; }
+.width75 { width: 75%; }
+.width80 { width: 80%; }
+.width100 { width: 100%; }
+
+.width16,
+.width20,
+.width25,
+.width33,
+.width40,
+.width50,
+.width60,
+.width66,
+.width75,
+.width80,
+.width100 {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Create new Block Formatting Contexts */
+.bfc-o { overflow: hidden; }
+.bfc-f {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	float: left;
+}
+
+/* Align Boxes */
+.float-left { float: left; }
+.float-right { float: right; }
+
+/* Grid Gutter */
+.grid-gutter.grid-block { margin: 0 -15px; }
+.grid-gutter > .grid-box > * { margin: 0 15px; }
+
+.grid-gutter > .grid-box > * > :first-child { margin-top: 0; }
+.grid-gutter > .grid-box > * > :last-child { margin-bottom: 0; }
+
+
+/* Layout Defaults
+----------------------------------------------------------------------------------------------------*/
+
+/* Center Page */
+.wrapper {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+/* Header */
+#header { position: relative; }
+
+#toolbar .float-left .module,
+#toolbar .float-left > time {
+	margin: 0 15px 0 0;
+	float: left;
+}
+
+#toolbar .float-right .module {
+	margin: 0 0 0 15px;
+	float: right;
+}
+
+#headerbar .module {
+	max-width: 300px;
+	margin-right: 0;
+	float: right;
+}
+
+#logo, #logo > img,
+#menu { float: left; }
+#search { float: right; }
+
+#banner {
+	position: absolute;
+	top: 0;
+	right: -200px;
+}
+
+/* Footer */
+#footer {
+	position: relative;
+	text-align: center;
+}
+
+/* Absolute */
+#absolute {
+	position: absolute;
+	z-index: 15;
+	width: 100%;
+}

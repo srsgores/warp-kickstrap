@@ -1,0 +1,164 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * Responsive Style Sheet - Defines base styles for mobile devices
+ */
+
+
+/* Responsive Utility Classes
+----------------------------------------------------------------------------------------------------*/
+
+.hidden-desktop { display: none; }
+
+/* Only Phones */
+@media (max-width: 767px) {
+	.hidden-desktop { display: block; }
+	.hidden-phone { display: none; }
+}
+
+/* Only Tablets (Portrait) */
+@media (min-width: 768px) and (max-width: 959px) {
+	.hidden-desktop { display: block; }
+	.hidden-tablet { display: none; }
+}
+
+
+/* Responsive Content
+----------------------------------------------------------------------------------------------------*/
+
+#header-responsive { display: none; }
+
+
+/* Layout Breakpoints
+----------------------------------------------------------------------------------------------------*/
+
+/* All except large Screens */
+@media (max-width: 1220px) {
+
+	#banner { display: none; }
+
+}
+
+/* Only Phones and Tablets (Portrait) */
+@media (max-width: 959px) {
+
+	/* Layout */
+	#maininner,
+	#sidebar-a,
+	#sidebar-b {
+		width: 100%;
+		left: auto;
+		right: auto;
+	}
+
+}
+
+/* Only Tablets (Portrait) and Phones (Landscape) */
+@media (min-width: 480px) and (max-width: 959px) {
+
+	/* Layout */
+	.width16,
+	.width20,
+	.width25,
+	.width40,
+	.width60,
+	.width75,
+	.width80 { width: 50%; }
+
+	.width50 .width50 { width: 100%; }
+
+	.sidebars-1 #sidebar-a .width100,
+	.sidebars-1 #sidebar-b .width100 { width: 50%; }
+
+	#sidebar-a .width100:nth-child(odd):last-child,
+	#sidebar-b .width100:nth-child(odd):last-child,
+	.width20:nth-child(odd):last-child { width: 100%; }
+
+	.sidebars-2 #sidebar-a,
+	.sidebars-2 #sidebar-b { width: 50%; }
+
+	.sidebars-2.sidebar-a-right #sidebar-a,
+	.sidebars-2.sidebar-b-right #sidebar-b { float: right; }
+
+	.grid-gutter > .grid-box:nth-child(n+3) > * { margin-top: 30px; }
+
+	/* Tools */
+	.width50 .align-left,
+	.width50 .alignleft,
+	.width50 .align-right,
+	.width50 .alignright {
+		margin: 0 auto 15px auto;
+		float: none;
+	}
+
+}
+
+/* Only Phones */
+@media (max-width: 767px) {
+
+	/* Header */
+	#header-responsive { display: block; }
+
+	#header-responsive .logo,
+	#header-responsive .searchbox {
+		display: inline-block;
+		width: 45%;
+		vertical-align: middle;
+	}
+
+	#header-responsive .logo { margin-right: 10%; }
+
+	#header-responsive .searchbox {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	/* Menu */
+	.menu-responsive {
+		width: 100%;
+		font-size: 14px;
+	}
+
+
+}
+
+/* Only Phones (Landscape) */
+@media (min-width: 480px) and (max-width: 767px) {
+
+	/* Layout */
+	.width33 { width: 50%; }
+	.width33:nth-child(odd):last-child { width: 100%; }
+
+}
+
+/* Only Phones (Portrait) */
+@media (max-width: 479px) {
+
+	/* Base */
+	body { word-wrap: break-word; }
+
+	/* Layout */
+	.width16,
+	.width20,
+	.width25,
+	.width33,
+	.width40,
+	.width50,
+	.width60,
+	.width66,
+	.width75,
+	.width80 { width: 100%; }
+
+	.grid-gutter > .grid-box:nth-child(n+2) > * { margin-top: 30px; }
+
+	/* Tools */
+	.align-left,
+	.alignleft,
+	.align-right,
+	.alignright {
+		margin: 0 auto 15px auto;
+		float: none;
+	}
+
+}

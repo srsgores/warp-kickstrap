@@ -1,0 +1,12 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@font-face {
+	font-family: 'KreonRegular';
+	src: url('kreon-regular-webfont.eot');
+	src: url('kreon-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('kreon-regular-webfont.woff') format('woff'),
+		 url('kreon-regular-webfont.ttf') format('truetype'),
+		 url('kreon-regular-webfont.svg#KreonRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

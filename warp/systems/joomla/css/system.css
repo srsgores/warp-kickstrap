@@ -1,0 +1,209 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * Additional System Stylesheet for Joomla 1.7
+ */
+
+
+/* Item (Addition)
+----------------------------------------------------------------------------------------------------*/
+ 
+#system .item > header .icon { 
+	margin: 2px 0 0 5px;
+	float: right;
+}
+
+#system .item > .edit a { vertical-align: text-top; }
+
+
+/* Item List
+----------------------------------------------------------------------------------------------------*/
+
+#system .item-list {
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+
+/* Filter
+----------------------------------------------------------------------------------------------------*/
+
+#system .filter {
+	margin: 0 0 10px 0;
+	overflow: hidden;
+}
+
+#system .filter > div {
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+
+/* Form Submission
+----------------------------------------------------------------------------------------------------*/
+
+#system form.submission fieldset > div { overflow: hidden; }
+#system form.submission fieldset > div > * { vertical-align: middle; }
+#system form.submission fieldset > div > label:first-child {
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+#system form.submission fieldset > div > input[type='text'],
+#system form.submission fieldset > div > input[type='password'] {
+	padding: 5px;
+	width: 250px;
+}
+#system form.submission fieldset > div > select {
+	padding: 5px;
+	width: 262px;
+}
+
+#system form.submission fieldset > div > textarea { width: 255px; }
+
+#system form.submission small {
+	display: block;
+	margin: -25px 0 25px 0;
+}
+
+#system form.submission div.submit {
+	margin-top: -20px;
+	text-align: center;
+}
+
+#system form.submission div > .calendar { margin-left: 5px; }
+#system form.submission #metadesc { height: 100px; }
+#system form.submission #metakey { height: 60px; }
+
+/* Validation */
+#system .invalid { border-color: #ff0000; }
+#system label.invalid { color: #ff0000; }
+
+/* Calendar */
+#system a img.calendar {
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+	background: url(../../../../../system/images/calendar.png) no-repeat;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+/* Editor Buttons */
+#system #editor-xtd-buttons {
+	margin: 10px 0 10px 0;
+	padding: 0;
+}
+
+#system #editor-xtd-buttons .button2-left,
+#system #editor-xtd-buttons .button2-left * { float: left; }
+
+#system #editor-xtd-buttons .button2-left {
+	margin-right: 5px;
+	background: url(../../../../../system/images/j_button2_left.png) no-repeat;
+}
+
+#system #editor-xtd-buttons .button2-left .image { background: url(../../../../../system/images/j_button2_image.png) 100% 0 no-repeat; }
+#system #editor-xtd-buttons .button2-left .article,
+#system #editor-xtd-buttons .button2-left .readmore { background: url(../../../../../system/images/j_button2_readmore.png) 100% 0 no-repeat; }
+#system #editor-xtd-buttons .button2-left .pagebreak { background: url(../../../../../system/images/j_button2_pagebreak.png) 100% 0 no-repeat; }
+
+#system #editor-xtd-buttons .button2-left a,
+#system #editor-xtd-buttons .button2-left span {
+	display: block;
+	height: 22px;
+	padding: 0 24px 0 6px;
+	line-height: 22px;
+	font-size: 11px;
+	color: #666;
+}
+
+#system #editor-xtd-buttons .button2-left span { color: #999; }
+
+#system #editor-xtd-buttons .button2-left a:hover {
+	text-decoration: none;
+	color: #0B55C4;
+}
+
+/* Small (Login) */
+#system form.submission.small fieldset > div { margin: 15px 0; }
+
+
+/* Tooltip
+----------------------------------------------------------------------------------------------------*/
+
+.tip-wrap {
+	display: none;
+	float: left;
+	background: #ffc;
+	border: 1px solid #D4D5AA;
+	padding: 5px;
+	max-width: 200px;
+	color: #323232;
+	font-size: 12px;
+}
+
+.tip-title {
+	margin-top: -15px;
+	padding: 15px 0 5px 0;
+	background: url(../../../../../system/images/selector-arrow.png) no-repeat;
+	font-weight: bold;
+	font-size: 13px;
+	
+}
+
+
+/* Pagebreak Navigation
+----------------------------------------------------------------------------------------------------*/
+
+#article-index {
+	margin: 0 0 15px 15px;
+	float: right;
+}
+
+#article-index ul,
+.pagination > ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.pagination > ul > li { display: inline-block; }
+
+
+/* System Messages
+----------------------------------------------------------------------------------------------------*/
+
+#system-message {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+#system-message dt { display: none; }
+#system-message dd {
+	margin-left: 0;
+	padding: 10px;
+	border-top: 3px solid #84A7DB;
+	border-bottom: 3px solid #84A7DB;
+	color: #0055BB;
+}
+#system-message dd ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#system-message dd.error { color: #c00; background-color: #E6C0C0; border-top: 3px solid #DE7A7B; border-bottom: 3px solid #DE7A7B;}
+#system-message dd.notice { color: #c00; background: #EFE7B8; border-top: 3px solid #F0DC7E; border-bottom: 3px solid #F0DC7E;}
+
+
+/* System Debug
+----------------------------------------------------------------------------------------------------*/
+ 
+#system-debug {
+	padding: 30px;
+	background: #fff;
+	color: #333;
+}
+#system-debug div { font-size: 11px;}
+
