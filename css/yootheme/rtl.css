@@ -1,0 +1,102 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@import url(../warp/css/rtl.css);
+
+
+/* Layout
+----------------------------------------------------------------------------------------------------*/
+
+#totop-scroller {
+	right: auto;
+	left: 0;
+}
+
+
+/* Menus
+----------------------------------------------------------------------------------------------------*/
+
+/* Mega Drop-Down Menu */
+.menu-dropdown li.level1 {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+/* Sidebar/Accordion Menu */
+.menu-sidebar li.parent .level1 > span { 
+	background-image: url(../images/rtl/menu_sidebar_parent.png);
+	background-position: 0 0;
+}
+.menu-sidebar li.parent.active .level1 > span { background-position: 0 -30px; }
+
+.menu-sidebar ul.level2 ul {
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+/* Line Menu */
+.menu-line li {
+	margin-left: 0;
+	padding-left: 0;
+	margin-right: 7px;
+	padding-right: 8px;
+	background-position: 100% 50%;
+}
+
+.menu-line li:first-child {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+
+/* Modules
+----------------------------------------------------------------------------------------------------*/
+
+.mod-box .badge {
+	right: auto;
+	left: 10px;
+}
+
+
+/* Tools
+----------------------------------------------------------------------------------------------------*/
+
+/* Check List */
+ul.check > li {
+	padding-left: 0;
+	padding-right: 30px;
+	background-position: 100% 0;
+}
+
+/* Definition Lists */
+dl.separator dd { border-width: 0 1px 0 0; }
+
+dl.separator dt:before {
+	right: auto;
+	left: -15px;
+}
+
+dl.separator dt:after {
+	right: auto;
+	left: -3px;
+}
+
+
+/* System
+----------------------------------------------------------------------------------------------------*/
+
+/* Search Box */
+.searchbox { background-position: 100% 50%; }
+
+.searchbox .results {
+	right: auto;
+	left: -1px;
+}
+
+/* Breadcrumgs */
+.breadcrumbs a,
+.breadcrumbs > span {
+	padding-right: 0;
+	padding-left: 10px;
+	background-position: 0 50%;
+}
+	

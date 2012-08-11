@@ -1,0 +1,41 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@import url(../warp/css/error.css);
+
+
+/* Page Defaults
+----------------------------------------------------------------------------------------------------*/
+
+.center {
+	width: 800px;
+	margin-left: -400px;
+}
+
+
+.error { text-shadow: 0 -1px 0 rgba(0,0,0,0.9), 0 1px 0 rgba(255,255,255,0.7); }
+
+.error > span {
+	display: inline-block;
+	position: relative;
+}
+
+.error > span:before {
+	content: "";
+	position: absolute;
+	top: 70%;
+	left: -30px;
+	right: -30px;
+	height: 80px;
+	background: url(../images/error.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.message { width: 400px; }
+
+/* Offline */
+.error-offline .error > span:before { top: 65%; }
+.error-offline .message { width: 350px; }
+
+/* Browser */
+.error-browser .message { width: 500px; }
+

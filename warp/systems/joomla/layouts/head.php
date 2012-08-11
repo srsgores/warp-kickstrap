@@ -31,6 +31,7 @@
 
 // get html head data
 $head = $this['system']->document->getHeadData();
+$http  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
 
 // remove deprecated meta-data (html5)
 unset($head['metaTags']['http-equiv']);
@@ -40,10 +41,27 @@ unset($head['metaTags']['standard']['language']);
 
 $this['system']->document->setHeadData($head);
 
-// load jQuery, if not loaded before
-if (!$this['system']->application->get('jquery')) { //if jQuery is found using warp's helpers...
-	$this['system']->application->set('jquery', true); //set jquery to true
-	$this['system']->document->addScript($this['path']->url('lib:jquery/jquery.js')); //TODO: this should really be loaded via CDN to take advantage of caching
+/**
+ * Load scripts from CDN if the user has specified so; otherwise, load scripts from local drive.
+ * Host must be in HTTP mode, or else we will have problems with Cross-site permissions
+ */
+if ($this['system']->document->params->get('cdn') == "1" && $http != "https") {  //if the user has specified that CDN is to be used
+	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js");
+	$this['system']->document->addScript("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
+	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.4/bootstrap.min.js");
+	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js");
+	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js");
+}
+else {
+	//load modernizr
+	$this['system']->document->addScript($this['path']->url('lib:modernizr/modernizr.custom.js'));
+	// load jQuery, if not loaded before
+	if (!$this['system']->application->get('jquery')) { //if jQuery is found using warp's helpers...
+		$this['system']->application->set('jquery', true); //set jquery to true
+		$this['system']->document->addScript($this['path']->url('lib:jquery/jquery.js'));
+	}
+	//load bootstrap
+	$this['system']->document->addScript($this['path']->url('lib:bootstrap/bootstrap.min.js'));
 }
 
 // get styles and scripts

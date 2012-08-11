@@ -1,0 +1,58 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * Modules Style Sheet - Defines general module defaults, headings, badges and icons
+ */
+
+
+/* Module Badges
+----------------------------------------------------------------------------------------------------*/
+
+.module { position: relative; }
+
+.module .badge {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 1;
+}
+
+
+/* Module Icons
+----------------------------------------------------------------------------------------------------*/
+
+.module .module-title .icon {
+	display: block; 
+	position: relative;
+	top: -6px;
+	width: 30px;
+	height: 30px;
+	margin-right: 5px;
+	overflow: hidden;
+	float: left;
+}
+
+
+/* Module Defaults
+----------------------------------------------------------------------------------------------------*/
+
+.deepest > *:first-child { margin-top: 0; }
+.deepest > *:last-child { margin-bottom: 0; }
+
+
+/* Module Headings
+----------------------------------------------------------------------------------------------------*/
+
+.module .module-title { margin: 0 0 15px 0; }
+
+/* Subtitles */
+.module .module-title span.title { display: block; }
+
+.module .module-title span.subtitle {
+	display: block;
+	margin-top: 2px;
+	line-height: 14px;
+	font-size: 12px;
+	text-indent: 1px;
+}
+

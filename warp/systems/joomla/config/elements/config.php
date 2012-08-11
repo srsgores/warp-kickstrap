@@ -26,11 +26,10 @@ class JFormFieldConfig extends JFormField {
 
 		// get warp
 		$warp = Warp::getInstance();
-		$warp['system']->document->addScript($warp['path']->url('lib:jquery/jquery.js'));
+		loadScripts();
 		$warp['system']->document->addScript($warp['path']->url('config:js/config.js'));
 		$warp['system']->document->addScript($warp['path']->url('config:js/admin.js'));
 		$warp['system']->document->addStyleSheet($warp['path']->url('config:css/config.css'));
-		$warp['system']->document->addStyleSheet($warp['path']->url('config:css/admin.css'));
 
 		// render config
 		return $warp['template']->render('config:layouts/config');
@@ -44,7 +43,6 @@ class JFormFieldConfig extends JFormField {
 		if (!file_exists($target) || md5_file($source) != md5_file($target)) {
 			JFile::copy($source, $target);
 		}
-
 	}
 
 }

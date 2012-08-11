@@ -88,24 +88,36 @@ foreach (array(1 => '.dropdown', 2 => '.columns2', 3 => '.columns3', 4 => '.colu
 }
 
 // load css
+$this['asset']->addFile('css', 'css:reset.css');
 $this['asset']->addFile('css', 'css:base.css');
-$this['asset']->addFile('css', 'css:layout.css');
-$this['asset']->addFile('css', 'css:menus.css');
-$this['asset']->addString('css', implode("\n", $css));
-$this['asset']->addFile('css', 'css:modules.css');
-$this['asset']->addFile('css', 'css:tools.css');
-$this['asset']->addFile('css', 'css:system.css');
-$this['asset']->addFile('css', 'css:extensions.css');
-$this['asset']->addFile('css', 'css:custom.css');
-if (($color = $this['config']->get('color1')) && $this['path']->path("css:/color1/$color.css")) { $this['asset']->addFile('css', "css:/color1/$color.css"); }
-if (($color = $this['config']->get('color2')) && $this['path']->path("css:/color2/$color.css")) { $this['asset']->addFile('css', "css:/color2/$color.css"); }
-if (($font = $this['config']->get('font1')) && $this['path']->path("css:/font1/$font.css")) { $this['asset']->addFile('css', "css:/font1/$font.css"); }
-if (($font = $this['config']->get('font2')) && $this['path']->path("css:/font2/$font.css")) { $this['asset']->addFile('css', "css:/font2/$font.css"); }
-if (($font = $this['config']->get('font3')) && $this['path']->path("css:/font3/$font.css")) { $this['asset']->addFile('css', "css:/font3/$font.css"); }
+$this['asset']->addFile('css', 'css:1140/1140.css');
 $this['asset']->addFile('css', 'css:style.css');
-if ($this['config']->get('direction') == 'rtl') $this['asset']->addFile('css', 'css:rtl.css');
-$this['asset']->addFile('css', 'css:responsive.css');
-$this['asset']->addFile('css', 'css:print.css');
+
+if ($this['system']->document->params->get('yootheme-css') == "1") {
+	$this['asset']->addFile('css', 'css:yootheme/layout.css');
+	$this['asset']->addFile('css', 'css:yootheme/menus.css');
+	$this['asset']->addString('css', implode("\n", $css));
+	$this['asset']->addFile('css', 'css:yootheme/modules.css');
+	$this['asset']->addFile('css', 'css:yootheme/tools.css');
+	$this['asset']->addFile('css', 'css:yootheme/system.css');
+	$this['asset']->addFile('css', 'css:extensions.css');
+	$this['asset']->addFile('css', 'css:custom.css');
+
+	if (($color = $this['config']->get('color1')) && $this['path']->path("css:/yootheme/color1/$color.css")) { $this['asset']->addFile('css', "css:/yootheme/color1/$color.css"); }
+	if (($color = $this['config']->get('color2')) && $this['path']->path("css:/yootheme/color2/$color.css")) { $this['asset']->addFile('css', "css:/yootheme/color2/$color.css"); }
+	if (($font = $this['config']->get('font1')) && $this['path']->path("css:/yootheme/font1/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font1/$font.css"); }
+	if (($font = $this['config']->get('font2')) && $this['path']->path("css:/yootheme/font2/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font2/$font.css"); }
+	if (($font = $this['config']->get('font3')) && $this['path']->path("css:/yootheme/font3/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font3/$font.css"); }
+	if ($this['config']->get('direction') == 'rtl') $this['asset']->addFile('css', 'css:/yoothemertl.css');
+	$this['asset']->addFile('css', 'css:yootheme/responsive.css');
+	$this['asset']->addFile('css', 'css:yootheme/print.css');
+}
+elseif ($this['system']->document->params->get("bootstrap-css") == "1") {
+
+}
+elseif ($this['system']->document->params->get("1140-css") == "1") {
+
+}
 
 // load fonts
 $http  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
