@@ -1,10 +1,25 @@
 <?php
-/**
-* @package   Warp Theme Framework
-* @author    YOOtheme http://www.yootheme.com
-* @copyright Copyright (C) YOOtheme GmbH
-* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
-*/
+/*------------------------------------------------------------------------------------------------------------------------
+    Author: Sean Goresht
+    www: http://seangoresht.com/
+    github: https://github.com/srsgores
+
+    twitter: http://twitter.com/S.Goresht
+
+     warp-kickstrap Joomla Template
+     Licensed under the GNU Public License
+
+	=============================================================================
+	Filename:  warp.php
+	=============================================================================
+	 This file is the main warp class, which sets attributes for the class (variables accessible in all of warp).
+	 This file does the following:
+	 	--Set branding string
+	 	--Register all file paths (ex. CSS/JS/helper file paths, etc.)
+	 	--Declare functions to add/remove helpers
+
+--------------------------------------------------------------------------------------------------------------------- */
+
 
 // init vars
 $path = dirname(__FILE__);
@@ -16,7 +31,7 @@ require_once($path.'/helpers/path.php');
 class Warp implements ArrayAccess {
 
 	/* branding */
-	protected $_branding = 'Powered by <a href="http://www.yootheme.com">Warp Theme Framework</a>';
+	protected $_branding = 'Powered by <a href="https://github.com/srsgores/warp-kickstrap">Warp KickStrap Framework</a>'; //insert the string you want to be displayed at the bottom.  NOTE: you can turn this feature off in the template options!
 
     /* helpers */
 	protected $_helpers = array();

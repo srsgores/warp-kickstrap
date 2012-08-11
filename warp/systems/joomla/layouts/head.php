@@ -25,6 +25,8 @@
 <?php endif; ?>
 <jdoc:include type="head" />
 <link rel="apple-touch-icon-precomposed" href="<?php echo $this['path']->url('template:apple_touch_icon.png'); ?>" />
+<!-- Note: we don't even have to make a link rel for touch icons, as the apple webkit will look for the file in the root directory. -->
+
 <?php
 
 // get html head data
