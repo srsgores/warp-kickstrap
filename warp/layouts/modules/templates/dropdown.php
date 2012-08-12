@@ -6,7 +6,7 @@
 		<div class="dropdown columns1" <?php echo $dropdownwidth; ?>>
 			<div class="dropdown-bg">
 				<div>
-					<div class="module"><?php echo $content; ?></div>
+					<aside class="module"><?php echo $content; ?></aside>
 				</div>
 			</div>
 		</div>

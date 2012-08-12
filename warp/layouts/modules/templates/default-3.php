@@ -1,4 +1,4 @@
-<div class="module <?php echo $style; ?>">
+<aside class="module <?php echo $style; ?>">
 	<div>
 		<div class="deepest">
 		
@@ -8,4 +8,4 @@
 			
 		</div>
 	</div>
-</div>
+</aside>

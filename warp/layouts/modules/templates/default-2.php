@@ -1,4 +1,4 @@
-<div class="module <?php echo $style; ?>">
+<aside class="module <?php echo $style; ?>">
 	<div class="deepest">
 
 		<?php echo $badge; ?>		
@@ -6,4 +6,4 @@
 		<?php echo $content; ?>
 
 	</div>
-</div>
+</aside>

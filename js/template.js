@@ -1,4 +1,21 @@
-/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+/*------------------------------------------------------------------------------------------------------------------------
+    Author: Sean Goresht
+    www: http://seangoresht.com/
+    github: https://github.com/srsgores
+
+    twitter: http://twitter.com/S.Goresht
+
+     warp-kickstrap Joomla Template
+     Licensed under the GNU Public License
+
+	=============================================================================
+	Filename:  template.js
+	=============================================================================
+	 This file is to contain any template-specific javascript code.
+	 In this file, we do the following:
+	 	--move elements around in the DOM when there's a media query
+	 	--Add checkbox menu when the max-width is below a certain amount of pixels
+--------------------------------------------------------------------------------------------------------------------- */
 
 (function($){
 

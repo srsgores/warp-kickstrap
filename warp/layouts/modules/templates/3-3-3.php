@@ -1,4 +1,4 @@
-<div class="module <?php echo $style; ?>">
+<aside class="module <?php echo $style; ?>">
 
 	<?php echo $badge; ?>
 	
@@ -25,4 +25,4 @@
 		</div>
 	</div>
 		
-</div>
+</aside>

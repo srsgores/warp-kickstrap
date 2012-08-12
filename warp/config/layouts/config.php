@@ -1,10 +1,22 @@
 <?php
-/**
-* @package   Warp Theme Framework
-* @author    YOOtheme http://www.yootheme.com
-* @copyright Copyright (C) YOOtheme GmbH
-* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
-*/
+/*------------------------------------------------------------------------------------------------------------------------
+    Author: Sean Goresht
+    www: http://seangoresht.com/
+    github: https://github.com/srsgores
+
+    twitter: http://twitter.com/S.Goresht
+
+     warp-kickstrap Joomla Template
+     Licensed under the GNU Public License
+
+	=============================================================================
+	Filename:  config.php
+	=============================================================================
+	 This file displays the template's admin settings when you click on the template name.  From here, you can configure profiles, styles, layouts, and all template settings.
+	 All template settings are stored in config.xml, and all the fields in that file are outputted here.
+
+--------------------------------------------------------------------------------------------------------------------- */
+
 
 // get config
 $config = $this['system']->config;
