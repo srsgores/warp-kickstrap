@@ -93,7 +93,7 @@ $this['asset']->addFile('css', 'css:base.css');
 $this['asset']->addFile('css', 'css:1140/1140.css');
 $this['asset']->addFile('css', 'css:style.css');
 
-if ($this['system']->document->params->get('yootheme-css') == "1") {
+if ($this['config']->get('yootheme-css') == "1") {
 	$this['asset']->addFile('css', 'css:yootheme/layout.css');
 	$this['asset']->addFile('css', 'css:yootheme/menus.css');
 	$this['asset']->addString('css', implode("\n", $css));
@@ -112,10 +112,10 @@ if ($this['system']->document->params->get('yootheme-css') == "1") {
 	$this['asset']->addFile('css', 'css:yootheme/responsive.css');
 	$this['asset']->addFile('css', 'css:yootheme/print.css');
 }
-elseif ($this['system']->document->params->get("bootstrap-css") == "1") {
+elseif ($this['config']->get("bootstrap-css") == "1") {
 
 }
-elseif ($this['system']->document->params->get("1140-css") == "1") {
+elseif ($this['config']->get("1140-css") == "1") {
 
 }
 
@@ -154,6 +154,11 @@ $this['asset']->addFile('js', 'js:responsive.js');
 $this['asset']->addFile('js', 'js:accordionmenu.js');
 $this['asset']->addFile('js', 'js:dropdownmenu.js');
 $this['asset']->addFile('js', 'js:template.js');
+
+if ($this['config']->get('loader') == "1")
+{
+	$this['asset']->addFile('js', 'js:loader.js');
+}
 
 // internet explorer
 if ($this['useragent']->browser() == 'msie') {

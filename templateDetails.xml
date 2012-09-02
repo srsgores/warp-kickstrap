@@ -20,6 +20,10 @@
 	<files>
 		<filename>checksums</filename>
 		<filename>apple_touch_icon.png</filename>
+		<filename>apple-touch-icon-57x57-precomposed.png</filename>
+		<filename>apple-touch-icon-72x72-precomposed.png</filename>
+		<filename>apple-touch-icon-114x114-precomposed.png</filename>
+		<filename>apple-touch-icon-precomposed.png</filename>
 		<filename>changelog.php</filename>
 		<filename>component.php</filename>
 		<filename>config.php</filename>
@@ -36,6 +40,7 @@
 		<folder>css</folder>
 		<folder>js</folder>
 		<folder>fonts</folder>
+		<folder>less</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>layouts</folder>

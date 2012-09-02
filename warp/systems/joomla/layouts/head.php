@@ -45,26 +45,62 @@ $this['system']->document->setHeadData($head);
  * Load scripts from CDN if the user has specified so; otherwise, load scripts from local drive.
  * Host must be in HTTP mode, or else we will have problems with Cross-site permissions
  */
-if ($this['system']->document->params->get('cdn') == "1" && $http != "https")
-{ //if the user has specified that CDN is to be used
-	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js");
-	$this['system']->document->addScript("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
-	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.4/bootstrap.min.js");
-	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js");
-	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js");
+if ($this['config']->get('jquery_cdn') == "1")
+{
+	$this['system']->document->addScript("https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js");
 }
 else
 {
-	//load modernizr
-	$this['system']->document->addScript($this['path']->url('lib:modernizr/modernizr.custom.js'));
 	// load jQuery, if not loaded before
 	if (!$this['system']->application->get('jquery'))
 	{ //if jQuery is found using warp's helpers...
 		$this['system']->application->set('jquery', true); //set jquery to true
 		$this['system']->document->addScript($this['path']->url('lib:jquery/jquery.js'));
 	}
+}
+
+//now load remaining scripts, depending on parameters
+if ($this['config']->get('cdn') == "1" && $http != "https")
+{ //if the user has specified that CDN is to be used
+	if ($this['config']->get('modernizr') == "1")
+	{
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js");
+	}
+	if ($this['config']->get('bootstrap') == "1")
+	{
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js");
+	}
+	if ($this['config']->get('scrollto') == "1")
+	{
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js");
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js");
+	}
+	if ($this['config']->get('masonry') == "1")
+	{
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js");
+	}
+}
+else
+{
+	//load modernizr
+	if ($this['config']->get('modernizr') == "1")
+	{
+		$this['system']->document->addScript($this['path']->url('lib:modernizr/modernizr.custom.js'));
+	}
 	//load bootstrap
-	$this['system']->document->addScript($this['path']->url('lib:bootstrap/bootstrap.min.js'));
+	if ($this['config']->get('bootstrap') == "1")
+	{
+		$this['system']->document->addScript($this['path']->url('lib:bootstrap/bootstrap.min.js'));
+	}
+	if ($this['config']->get('scrollto') == "1")
+	{
+		$this['system']->document->addScript($this['path']->url('lib:jquery-easing/jquery.easing.min.js'));
+		$this['system']->document->addScript($this['path']->url('lib:jquery-scrollto/jquery.scrollTo.min.js'));
+	}
+	if ($this['config']->get('masonry') == "1")
+	{
+		$this['system']->document->addScript($this['path']->url('lib:masonry/jquery.masonry.min.js'));
+	}
 }
 
 // get styles and scripts

@@ -59,8 +59,14 @@ include($this['path']->path('layouts:template.config.php'));
 		<?php echo $this['modules']->render('absolute'); ?>
 	</div>
 	<?php endif; ?>
-
-	<div class="container">
+	<?php
+	if($this['config']->get('loader') == "1")
+	{
+		$loader_class = "loading visuallyhidden";
+		echo "<div id = \"ajaxloader1\"></div>";
+	}
+	?>
+	<div class="container <?php if (isset($loader_class)){echo $loader_class;}?>">
 
 		<header id="header" class = "row">
 
