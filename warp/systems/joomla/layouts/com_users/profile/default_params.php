@@ -22,7 +22,7 @@ JHtml::register('users.editor', array('JHtmlUsers', 'editor'));
 <?php if (count($fields)): ?>
 
 	<h3><?php echo JText::_('COM_USERS_SETTINGS_FIELDSET_LABEL'); ?></h3>
-	
+
 	<ul>
 	<?php foreach ($fields as $field): ?>
 		<?php if (!$field->hidden): ?>

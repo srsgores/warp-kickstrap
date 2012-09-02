@@ -20,13 +20,13 @@ class FieldWarpHelper extends WarpHelper {
 			String
 	*/
 	public function render($type, $name, $value, $node, $args = array()) {
-		
+
 		// set vars
 		$args['control'] = $this;
 		$args['name']    = $name;
 		$args['value']   = $value;
 		$args['node']    = $node;
-		
+
 		return $this['template']->render('config:layouts/fields/'.$type, $args);
 	}
 
@@ -41,13 +41,13 @@ class FieldWarpHelper extends WarpHelper {
 
 		$attribs = array();
 		$ignore  = (array) $ignore;
-		
+
 		foreach ($attributes as $name => $value) {
 			if (in_array($name, $ignore)) continue;
 
 			$attribs[] = sprintf('%s="%s"', $name, htmlspecialchars($value));
 		}
-		
+
 		return implode(' ', $attribs);
 	}
 

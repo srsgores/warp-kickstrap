@@ -26,11 +26,10 @@ class JFormFieldConfig extends JFormField {
 
 		// get warp
 		$warp = Warp::getInstance();
-		loadScripts();
+		$warp['system']->document->addScript($warp['path']->url('lib:jquery/jquery.js'));
 		$warp['system']->document->addScript($warp['path']->url('config:js/config.js'));
 		$warp['system']->document->addScript($warp['path']->url('config:js/admin.js'));
 		$warp['system']->document->addStyleSheet($warp['path']->url('config:css/config.css'));
-
 		// render config
 		return $warp['template']->render('config:layouts/config');
 	}

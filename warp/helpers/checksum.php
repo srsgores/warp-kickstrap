@@ -9,7 +9,7 @@
 /*
 	Class: ChecksumWarpHelper
 		Checksum helper class
-*/    
+*/
 class ChecksumWarpHelper extends WarpHelper {
 
 	/*
@@ -22,7 +22,7 @@ class ChecksumWarpHelper extends WarpHelper {
 
 		Returns:
 			Boolean
-	*/	
+	*/
 	public function create($path, $filename = 'checksums') {
 
 		$path  = rtrim(str_replace(DIRECTORY_SEPARATOR, '/', $path), '/').'/';
@@ -43,7 +43,7 @@ class ChecksumWarpHelper extends WarpHelper {
 
 			return file_put_contents($path.$filename, $checksums);
 		}
-		
+
 		return false;
 	}
 
@@ -58,14 +58,14 @@ class ChecksumWarpHelper extends WarpHelper {
 
 		Returns:
 			Boolean
-	*/	
+	*/
 	public function verify($path, &$log, $filename = 'checksums') {
 		$path = rtrim(str_replace(DIRECTORY_SEPARATOR, '/', $path), '/').'/';
-		
+
 		if ($rows = file($path.$filename)) {
 			foreach ($rows as $row) {
 				$parts = explode(' ', trim($row), 2);
-				
+
 				if (count($parts) == 2) {
 					list($md5, $file) = $parts;
 
@@ -79,7 +79,7 @@ class ChecksumWarpHelper extends WarpHelper {
 		}
 
 		return empty($log);
-	}	
+	}
 
 	/*
 		Function: _readDirectory
@@ -99,7 +99,7 @@ class ChecksumWarpHelper extends WarpHelper {
 	    $ignore = array('.', '..', '.DS_Store', '.svn', '.git', '.gitignore', '.gitmodules', 'cgi-bin');
 
 		foreach (scandir($path) as $file) {
-			
+
 			// ignore file ?
 	        if (in_array($file, $ignore)) {
 				continue;

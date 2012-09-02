@@ -22,7 +22,7 @@
 	$(document).ready(function() {
 
 		var config = $('body').data('config') || {};
-		
+
 		// Accordion menu
 		$('.menu-sidebar').accordionMenu({ mode:'slide' });
 

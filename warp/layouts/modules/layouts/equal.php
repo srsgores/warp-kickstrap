@@ -46,7 +46,7 @@ switch (count($modules)) {
 		printf('<div class="grid-box twocol">%s</div>', $modules[4]);
 		printf('<div class="grid-box twocol last">%s</div>', $modules[5]);
 		break;
-		
+
 	default:
 		echo '<div class="grid-box twelvecol last">Error: Only up to 6 modules are supported in this layout. If you need more add your own layout.</div>';
 

@@ -17,7 +17,7 @@ foreach ($fields->find('field') as $field) {
     $label = $field->attr('label');
     $desc  = $field->attr('description');
 	$value = $values->get($name, $field->attr('default'));
-	$class = $profile && $matches[1] != 'default' && $values->get($name) === null ? ' class="ignore"' : null; 
+	$class = $profile && $matches[1] != 'default' && $values->get($name) === null ? ' class="ignore"' : null;
 
 	if ($type == 'separator') {
 		printf('<li class="separator">%s</li>', $name);

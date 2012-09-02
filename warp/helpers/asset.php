@@ -139,7 +139,7 @@ class AssetWarpHelper extends WarpHelper {
 		}
 
 		$this->assets[$name]->add($asset);
-		
+
 		return $asset;
 	}
 
@@ -203,7 +203,7 @@ interface WarpAssetInterface {
 	public function load($filter = null);
 
 	public function hash($salt = '');
-	
+
 }
 
 /*
@@ -296,7 +296,7 @@ abstract class WarpAssetBase extends WarpAssetOptions implements WarpAssetInterf
 			String
 	*/
     public function getContent($filter = null) {
-		
+
 		if (!$this->loaded) {
             $this->load($filter);
         }
@@ -306,7 +306,7 @@ abstract class WarpAssetBase extends WarpAssetOptions implements WarpAssetInterf
 			$filter->filterContent($asset);
 	        return $asset->getContent();
 		}
-		
+
 		return $this->content;
 	}
 
@@ -337,11 +337,11 @@ abstract class WarpAssetBase extends WarpAssetOptions implements WarpAssetInterf
 	*/
     protected function doLoad($content, $filter = null) {
 		$this->content = $content;
-		
+
 		if ($filter) {
 			$filter->filterLoad($this);
 		}
-		
+
 		$this->loaded = true;
 	}
 
@@ -357,7 +357,7 @@ class WarpStringAsset extends WarpAssetBase {
 	*/
     public function __construct($string, $options = array()) {
 		parent::__construct($options);
-		
+
 		$this->string = $string;
     }
 
@@ -599,7 +599,7 @@ class WarpAssetCollection extends WarpAssetOptions implements WarpAssetInterface
 	}
 
 	/* Iterator interface implementation */
-	
+
 	public function current() {
 		return $this->assets->current();
 	}

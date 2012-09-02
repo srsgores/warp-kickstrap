@@ -3,5 +3,5 @@
 	<?php echo $badge; ?>
 	<?php if ($showtitle) echo $title; ?>
 	<?php echo $content; ?>
-		
+
 </aside>

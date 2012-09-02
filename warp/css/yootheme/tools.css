@@ -145,7 +145,7 @@ dl.separator {
 	overflow: hidden;
 }
 
-dl.separator dt {	
+dl.separator dt {
 	width: 160px;
 	padding-right: 10px;
 	float: left;
@@ -162,7 +162,7 @@ dl.separator dd {
 ----------------------------------------------------------------------------------------------------*/
 
 /* Inline Text Box */
-em.box { 
+em.box {
 	padding: 0 3px;
 	white-space: nowrap;
 }

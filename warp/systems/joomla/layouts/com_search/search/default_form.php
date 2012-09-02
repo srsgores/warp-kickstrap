@@ -7,7 +7,7 @@
 */
 
 // no direct access
-defined('_JEXEC') or die; 
+defined('_JEXEC') or die;
 
 $lang = JFactory::getLanguage();
 $upper_limit = $lang->getUpperLimitSearchWord();
@@ -18,22 +18,22 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 
 	<fieldset>
 		<legend><?php echo JText::_('COM_SEARCH_SEARCH'); ?></legend>
-	
+
 		<div>
 			<label for="search_searchword"><?php echo JText::_('COM_SEARCH_SEARCH_KEYWORD'); ?></label>
 			<input type="text" name="searchword" id="search_searchword" size="30" maxlength="<?php echo $upper_limit; ?>" value="<?php echo $this->escape($this->origkeyword); ?>" class="inputbox" />
 			<button name="Search" onclick="this.form.submit()" class="button"><?php echo JText::_('COM_SEARCH_SEARCH'); ?></button>
 		</div>
-		
+
 		<div>
 			<?php echo $this->lists['searchphrase']; ?>
 		</div>
-		
+
 		<div>
 			<label for="ordering"><?php echo JText::_('COM_SEARCH_ORDERING'); ?></label>
 			<?php echo $this->lists['ordering'];?>
 		</div>
-		
+
 		<?php if ($this->params->get('search_areas', 1)) : ?>
 		<div>
 			<?php echo JText::_('COM_SEARCH_SEARCH_ONLY'); ?>
@@ -52,7 +52,7 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 			<?php echo JText::plural('COM_SEARCH_SEARCH_KEYWORD_N_RESULTS', $this->total);?>
 		</div>
 		<?php endif;?>
-			
+
 	</fieldset>
 
 	<?php if ($this->total > 0) : ?>

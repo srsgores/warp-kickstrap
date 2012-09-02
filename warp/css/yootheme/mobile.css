@@ -50,7 +50,7 @@ body { background: #c8cdd2 url(../images/mobile/noise_bg.png); }
 }
 
 .m-buttons {
-	position: absolute;	
+	position: absolute;
 	top: 6px;
 	right: 6px;
 	padding: 1px;
@@ -144,7 +144,7 @@ body { background: #c8cdd2 url(../images/mobile/noise_bg.png); }
 #m-navigation ul li {
 	list-style-type: none;
 	border-top: 1px solid #464b50;
-	border-bottom: 1px solid #14191e;	
+	border-bottom: 1px solid #14191e;
 }
 #m-navigation ul li:first-child { border-top: none; }
 #m-navigation ul li:last-child { border-bottom: none; }
@@ -191,17 +191,17 @@ body { background: #c8cdd2 url(../images/mobile/noise_bg.png); }
 ----------------------------------------------------------------------------------------------------*/
 
 @media all and (-webkit-min-device-pixel-ratio: 2) {
-	
+
 	.m-buttons .m-button {
 		background-image: url(../images/mobile/icon_menu@2x.png);
 		background-size: 30px 30px;
 	}
-	
+
 	.m-buttons .m-button.m-search { background-image: url(../images/mobile/icon_search@2x.png); }
 	.m-buttons .m-button.m-login { background-image: url(../images/mobile/icon_login@2x.png); }
 	.m-buttons .m-button.m-close { background-image: url(../images/mobile/icon_close@2x.png); }
-	
-	#m-navigation ul li.parent { 
+
+	#m-navigation ul li.parent {
 		background-image: url(../images/mobile/arrow@2x.png);
 		background-size: 45px 40px;
 	}
@@ -476,7 +476,7 @@ body { background: #c8cdd2 url(../images/mobile/noise_bg.png); }
 	-webkit-transform-origin: 100% 50%;
 }
 .cube.in.reverse {
-	-webkit-animation-name: cubeinfromleft;	
+	-webkit-animation-name: cubeinfromleft;
 	-webkit-transform-origin: 100% 50%;
 }
 .cube.out.reverse {

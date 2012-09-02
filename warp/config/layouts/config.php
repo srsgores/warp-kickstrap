@@ -29,7 +29,7 @@ echo '<ul id="config" data-warpversion="'.($warpxml->first('version')->text()).'
 
 // render fields
 foreach ($xml->find('fields') as $fields) {
-	
+
 	// init vars
     $name    = $fields->attr('name');
 	$content = '';

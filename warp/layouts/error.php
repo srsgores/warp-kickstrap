@@ -39,6 +39,6 @@ $filters = $this['assetfilter']->create(array('CSSImportResolver', 'CSSRewriteUR
 		<p class="message"><?php echo $message; ?></p>
 
 	</div>
-	
+
 </body>
 </html>

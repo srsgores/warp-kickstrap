@@ -19,7 +19,7 @@ foreach ($this['path']->files("layouts:modules/layouts") as $filename) {
         $selected = "selected=\"true\"";
     }
 
-    printf("<option value=\"%s\" %s>%s</option>", $option, $selected, $readable); 
+    printf("<option value=\"%s\" %s>%s</option>", $option, $selected, $readable);
 
 }
 

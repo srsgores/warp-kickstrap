@@ -36,13 +36,13 @@ $body_config	 = array();
 
 // set widths
 if ($this['modules']->count('sidebar-a')) {
-	$sidebar_a = $this['config']->get('sidebar-a'); 
+	$sidebar_a = $this['config']->get('sidebar-a');
 	$maininner_width -= $sidebar_a_width;
 	$css[] = sprintf('#sidebar-a { width: %d%%; }', $sidebar_a_width);
 }
 
 if ($this['modules']->count('sidebar-b')) {
-	$sidebar_b = $this['config']->get('sidebar-b'); 
+	$sidebar_b = $this['config']->get('sidebar-b');
 	$maininner_width -= $sidebar_b_width;
 	$css[] = sprintf('#sidebar-b { width: %d%%; }', $sidebar_b_width);
 }

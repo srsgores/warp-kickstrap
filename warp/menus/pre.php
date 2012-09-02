@@ -17,7 +17,7 @@ class WarpMenuPre extends WarpMenu {
 
 		Returns:
 			Object
-	*/	
+	*/
 	public function process($module, $element) {
 		return $element;
 	}

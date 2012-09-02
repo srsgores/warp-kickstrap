@@ -17,7 +17,7 @@ class ModulesWarpHelper extends WarpHelper {
 			Document.
     */
 	public $_document;
-	
+
     /*
 		Variable: _renderer
 			Module renderer.
@@ -35,8 +35,8 @@ class ModulesWarpHelper extends WarpHelper {
 		$this->_document = JFactory::getDocument();
 		$this->_renderer = $this->_document->loadRenderer('module');
 	}
-	
-	
+
+
 	/*
 		Function: count
 			Retrieve the active module count at a position
@@ -45,7 +45,7 @@ class ModulesWarpHelper extends WarpHelper {
 			Int
 	*/
 	public function count($position) {
-	    
+
 		return $this->_document->countModules($position);
 	}
 
@@ -78,7 +78,7 @@ class ModulesWarpHelper extends WarpHelper {
 
 		// set params, force no style
 		$params['style'] = 'none';
-		
+
 		// get modules content
 		foreach ($modules as $module) {
 			$module->parameter = new JRegistry($module->params);

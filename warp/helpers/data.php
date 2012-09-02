@@ -35,11 +35,11 @@ class DataWarpHelper extends WarpHelper {
 			Mixed
 	*/
 	public function create($data = array(), $format = 'json') {
-		
+
 		// load data class
 		$class = $format.'WarpData';
 
 		return new $class($data);
 	}
-	
+
 }

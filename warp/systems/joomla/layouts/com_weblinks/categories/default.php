@@ -32,5 +32,5 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 	<?php endif; ?>
 
 	<?php echo $this->loadTemplate('items'); ?>
-	
+
 </div>

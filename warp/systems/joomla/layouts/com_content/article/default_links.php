@@ -78,6 +78,6 @@ $params		= $this->item->params;
 			?>
 			</li>
 	<?php endforeach; ?>
-	
+
 </ul>
 <?php endif;

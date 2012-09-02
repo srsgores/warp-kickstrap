@@ -25,11 +25,11 @@ foreach ($profiles as $profile => $values) {
 
 ?>
 
-<select class="profile" name="<?php echo $name; ?>"><?php echo implode("\n", $selected); ?></select>			
+<select class="profile" name="<?php echo $name; ?>"><?php echo implode("\n", $selected); ?></select>
 
 <div id="profile">
 
-	<select><?php echo implode("\n", $select); ?></select>			
+	<select><?php echo implode("\n", $select); ?></select>
 
 	<a class="add" href="#">Add</a>
 	<a class="rename" href="#">Rename</a>

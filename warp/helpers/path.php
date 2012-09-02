@@ -11,10 +11,10 @@
 		Path helper class, simplify path handling
 */
 class PathWarpHelper extends WarpHelper {
-    
+
 	/* paths */
     public $_paths = array();
-	
+
     /*
 		Function: register
 			Register a path to a namespace.
@@ -27,7 +27,7 @@ class PathWarpHelper extends WarpHelper {
 			Void
 	*/
 	public function register($path, $namespace = 'default') {
-	    
+
 	    if (!isset($this->_paths[$namespace])) {
 	        $this->_paths[$namespace] = array();
 	    }
@@ -46,13 +46,13 @@ class PathWarpHelper extends WarpHelper {
 			Mixed
 	*/
 	public function path($resource) {
-				
+
 		// parse resource
 		extract($this->_parse($resource));
-		
+
 		return $this->_find($paths, $path);
 	}
-	
+
     /*
 		Function: url
 			Retrieve absolute url to a file
@@ -77,14 +77,14 @@ class PathWarpHelper extends WarpHelper {
 	    }
 
 	    if ($url) {
-	        
+
 	        if (isset($parts[1])) {
-	            $url .= '?'.$parts[1];    
+	            $url .= '?'.$parts[1];
 	        }
 
 	        $url = $root.'/'.ltrim(preg_replace('/'.preg_quote(str_replace(DIRECTORY_SEPARATOR, '/', $this['system']->path), '/').'/i', '', $url, 1), '/');
 	    }
-	
+
 	    return $url;
 	}
 
@@ -127,10 +127,10 @@ class PathWarpHelper extends WarpHelper {
 			Array
 	*/
 	public function ls($resource, $mode = 'file', $recursive = false) {
-		
+
 		$files = array();
 		$res   = $this->_parse($resource);
-		
+
 		foreach ($res['paths'] as $path) {
 			foreach ($this->_list(realpath($path.'/'.$res['path']), '', $mode, $recursive) as $file) {
 				if (!in_array($file, $files)) {
@@ -138,10 +138,10 @@ class PathWarpHelper extends WarpHelper {
 				}
 			}
 		}
-		
+
 		return $files;
 	}
-	
+
 	/*
 		Function: _parse
 			Parse resource string.
@@ -153,7 +153,7 @@ class PathWarpHelper extends WarpHelper {
 			String
 	*/
 	protected function _parse($resource) {
-	    
+
 	    // init vars
 		$parts     = explode(':', $resource, 2);
 		$count     = count($parts);
@@ -166,7 +166,7 @@ class PathWarpHelper extends WarpHelper {
 		} elseif ($count == 2) {
 			list($namespace, $path) = $parts;
 		}
-		
+
 		// remove heading slash or backslash
 		$path = ltrim($path, "\\/");
 
@@ -186,14 +186,14 @@ class PathWarpHelper extends WarpHelper {
 
 		Returns:
 			Mixed
-	*/	
+	*/
 	protected function _find($paths, $file) {
 
 		$paths = (array) $paths;
 		$file  = ltrim($file, "\\/");
 
 		foreach ($paths as $path) {
-			
+
 			$fullpath = realpath("$path/$file");
 			$path     = realpath($path);
 
@@ -217,7 +217,7 @@ class PathWarpHelper extends WarpHelper {
 
 		Returns:
 			Array
-	*/	
+	*/
 	protected function _list($path, $prefix = '', $mode = 'file', $recursive = false) {
 
 		$files  = array();
@@ -225,7 +225,7 @@ class PathWarpHelper extends WarpHelper {
 
 		if (is_readable($path) && is_dir($path) && ($scan = scandir($path))) {
 			foreach ($scan as $file) {
-				
+
 				// continue if ignore match
 				if (in_array($file, $ignore)) {
 					continue;
@@ -242,19 +242,19 @@ class PathWarpHelper extends WarpHelper {
 					if (!$recursive) {
 						continue;
 					}
-					
+
 					// read subdirectory
 	            	$files = array_merge($files, $this->_list($path.'/'.$file, $prefix.$file.'/', $mode, $recursive));
 
 				} else {
-					
+
 					// add file
 					if ($mode == 'file') {
 						$files[] = $prefix.$file;
 					}
 
 	            }
-				
+
 			}
 		}
 

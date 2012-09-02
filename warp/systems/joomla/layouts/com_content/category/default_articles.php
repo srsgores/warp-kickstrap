@@ -33,21 +33,21 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 
 	<?php if (($this->params->get('filter_field') != 'hide') || $this->params->get('show_pagination_limit')) :?>
 	<div class="filter">
-	
+
 		<?php if ($this->params->get('filter_field') != 'hide') :?>
 		<div>
 			<label for="filter-search"><?php echo JText::_('COM_CONTENT_'.$this->params->get('filter_field').'_FILTER_LABEL'); ?></label>
 			<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('list.filter')); ?>" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_CONTENT_FILTER_SEARCH_DESC'); ?>" />
 		</div>
 		<?php endif; ?>
-		
+
 		<?php if ($this->params->get('show_pagination_limit')) : ?>
 		<div>
 			<?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?>
 			<?php echo $this->pagination->getLimitBox(); ?>
 		</div>
 		<?php endif; ?>
-		
+
 	</div>
 	<?php endif; ?>
 
@@ -57,7 +57,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		<thead>
 			<tr>
 				<th align="left"><?php  echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder) ; ?></th>
-				
+
 				<?php if ($date = $this->params->get('list_show_date')) : ?>
 				<th align="left" width="25%">
 					<?php if ($date == "created") : ?>
@@ -69,43 +69,43 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<?php endif; ?>
 				</th>
 				<?php endif; ?>
-				
+
 				<?php if ($this->params->get('list_show_author', 1)) : ?>
 				<th align="left" width="20%"><?php echo JHtml::_('grid.sort', 'JAUTHOR', 'author', $listDirn, $listOrder); ?></th>
 				<?php endif; ?>
-				
+
 				<?php if ($this->params->get('list_show_hits', 1)) : ?>
 				<th align="center" width="5%"><?php echo JHtml::_('grid.sort', 'JGLOBAL_HITS', 'a.hits', $listDirn, $listOrder); ?></th>
 				<?php endif; ?>
-				
+
 			</tr>
 		</thead>
 		<?php endif; ?>
 
 		<tbody>
-		
+
 			<?php foreach ($this->items as $i => $article) : ?>
 			<tr class="<?php if ($i % 2 == '0') { echo 'odd'; } else { echo 'even'; } ?>">
-			
+
 				<?php if (in_array($article->access, $this->user->getAuthorisedViewLevels())) : ?>
-					
+
 					<td>
 						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid)); ?>"><?php echo $this->escape($article->title); ?></a>
 						<?php if ($article->params->get('access-edit')) echo JHtml::_('icon.edit', $article, $params); ?>
 					</td>
-					
+
 					<?php if ($this->params->get('list_show_date')) : ?>
 					<td><?php echo JHtml::_('date', $article->displayDate, $this->escape($this->params->get('date_format', JText::_('DATE_FORMAT_LC3')))); ?></td>
 					<?php endif; ?>
-					
+
 					<?php if ($this->params->get('list_show_author', 1)) : ?>
 					<td>
-					
+
 						<?php
 							if (!empty($article->author) || !empty($article->created_by_alias)) {
 								$author =  $article->author;
 								$author = ($article->created_by_alias ? $article->created_by_alias : $author);
-		
+
 								if (!empty($article->contactid ) &&  $this->params->get('link_author') == true) {
 									echo JHtml::_('link', JRoute::_('index.php?option=com_contact&view=contact&id='.$article->contactid), $author);
 								} else {
@@ -120,9 +120,9 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 					<?php if ($this->params->get('list_show_hits', 1)) : ?>
 					<td align="center"><?php echo $article->hits; ?></td>
 					<?php endif; ?>
-				
+
 				<?php else : // Show unauth links ?>
-				
+
 					<td colspan="4">
 						<?php
 							echo $this->escape($article->title).' : ';
@@ -136,14 +136,14 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 						?>
 						<a href="<?php echo $fullURL; ?>"><?php echo JText::_( 'COM_CONTENT_REGISTER_TO_READ_MORE' ); ?></a>
 					</td>
-					
+
 				<?php endif; ?>
-				
+
 			</tr>
 			<?php endforeach; ?>
-			
+
 		</tbody>
-		
+
 	</table>
 
 	<?php // Code to add a link to submit an article. ?>

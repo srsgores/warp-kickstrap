@@ -14,11 +14,11 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 ?>
 
 <div id="system">
-	
+
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
-	
+
 	<?php if ($this->params->get('show_base_description') && ($this->params->get('categories_description') || $this->parent->description)) : ?>
 	<div class="description">
 		<?php
@@ -30,7 +30,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 		?>
 	</div>
 	<?php endif; ?>
-		
+
 	<?php echo $this->loadTemplate('items'); ?>
-		
+
 </div>

@@ -16,7 +16,7 @@ JHtml::_('behavior.formvalidation');
 ?>
 
 <div id="system">
-	
+
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
@@ -45,11 +45,11 @@ JHtml::_('behavior.formvalidation');
 		<div>
 			<button class="validate" type="submit"><?php echo JText::_('JREGISTER'); ?></button>
 		</div>
-		
+
 		<input type="hidden" name="option" value="com_users" />
 		<input type="hidden" name="task" value="registration.register" />
 		<?php echo JHtml::_('form.token');?>
-		
+
 	</form>
 
 </div>

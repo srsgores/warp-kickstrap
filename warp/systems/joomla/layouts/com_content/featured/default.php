@@ -20,16 +20,16 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 	<?php endif; ?>
 
 	<?php
-	
+
 	// init vars
 	$articles = '';
-	
+
 	// leading articles
 	foreach ($this->lead_items as $item) {
 		$this->item = $item;
 		$articles  .= '<div class="grid-box width100 leading">'.$this->loadTemplate('item').'</div>';
 	}
-	
+
 	// intro articles
 	$columns = array();
 	$i       = 0;
@@ -44,7 +44,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 		$this->item = $item;
 		$columns[$column] .= $this->loadTemplate('item');
 	}
-	
+
 	// render intro columns
 	if ($count = count($columns)) {
 		for ($i = 0; $i < $count; $i++) {

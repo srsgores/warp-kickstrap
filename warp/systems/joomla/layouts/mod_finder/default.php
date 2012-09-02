@@ -22,10 +22,10 @@ $warp = Warp::getInstance();
 jQuery(function($) {
 
 	$('#searchbox-<?php echo $module->id; ?> input[name=q]').search({
-		'url': '<?php echo JRoute::_("index.php?option=com_finder&task=suggestions.display&format=json&tmpl=component");?>', 
-		'param': 'q', 
-		'msgResultsHeader': false, 
-		'msgMoreResults': false, 
+		'url': '<?php echo JRoute::_("index.php?option=com_finder&task=suggestions.display&format=json&tmpl=component");?>',
+		'param': 'q',
+		'msgResultsHeader': false,
+		'msgMoreResults': false,
 		'msgNoResults': false,
 		'onSelect': function(selected){
 			this.input.val(selected.data('choice').title);

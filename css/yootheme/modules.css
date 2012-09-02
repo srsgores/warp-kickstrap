@@ -11,7 +11,7 @@
 	height: 22px;
 	background: url(../images/module_badges.png) 0 0 no-repeat;
 }
- 
+
 .module .badge-hot { background-position: 0 0; }
 .module .badge-top { background-position: 0 -25px; }
 .module .badge-free { background-position: 0 -50px; }

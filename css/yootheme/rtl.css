@@ -22,7 +22,7 @@
 }
 
 /* Sidebar/Accordion Menu */
-.menu-sidebar li.parent .level1 > span { 
+.menu-sidebar li.parent .level1 > span {
 	background-image: url(../images/rtl/menu_sidebar_parent.png);
 	background-position: 0 0;
 }

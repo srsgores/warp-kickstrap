@@ -41,7 +41,7 @@
 }
 
 /* Level 2 */
-.menu-dropdown li.level2 { 
+.menu-dropdown li.level2 {
 	margin: 0 5px;
 	border-top: 1px solid #ddd;
 }
@@ -54,13 +54,13 @@
 .menu-dropdown a.level2:hover { color: #d50; }
 
 /* Set Current */
-.menu-dropdown a.current.level2 { font-weight: bold; } 
+.menu-dropdown a.current.level2 { font-weight: bold; }
 
 /* Set Hover */
 .menu-dropdown a.level3:hover { color: #d50; }
 
 /* Set Current */
-.menu-dropdown a.current.level3 { font-weight: bold; } 
+.menu-dropdown a.current.level3 { font-weight: bold; }
 
 
 /* Sidebar/Accordion Menu

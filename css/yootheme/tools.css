@@ -61,7 +61,7 @@ table.zebra caption { color: #999; }
 /* Definition Lists
 ----------------------------------------------------------------------------------------------------*/
 
-dl.separator dt {	
+dl.separator dt {
 	position: relative;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -106,7 +106,7 @@ dl.separator dt:first-child:after { display: none; }
 ----------------------------------------------------------------------------------------------------*/
 
 /* Inline Text Box */
-em.box { 
+em.box {
 	border: 1px dotted #bbb;
 	background: #fafafa;
 	color: #444;

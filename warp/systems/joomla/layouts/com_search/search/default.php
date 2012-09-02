@@ -12,8 +12,8 @@ defined('_JEXEC') or die('Restricted access');
 if (JRequest::getWord('type', '') == 'json' && JRequest::getWord('tmpl', '') == 'raw') :
 
 	// set defaults
-	$res_limit  = 6;		
-	$char_limit = 100;		
+	$res_limit  = 6;
+	$char_limit = 100;
 
 	// get request var
 	$search = JRequest::getString('searchword', '');
@@ -23,13 +23,13 @@ if (JRequest::getWord('type', '') == 'json' && JRequest::getWord('tmpl', '') == 
 	$res_items = array();
 	if (!$this->error && count($this->results) > 0) {
 		foreach ($this->results as $result) {
-			
+
 			// strip text
 			$text = str_replace(array("\r\n", "\n", "\r", "\t"), "", $result->text);
 			$text = html_entity_decode($text, ENT_COMPAT, 'UTF-8');
 			$text = preg_replace('/{.+?}/', '', $text);
 			$text = substr(trim(strip_tags($text)), 0, $char_limit);
-			
+
 			// create item
 			$item          = array();
 			$item['title'] = $result->title;
@@ -58,7 +58,7 @@ else :
 	<?php endif; ?>
 
 	<?php echo $this->loadTemplate('form'); ?>
-		
+
 	<?php
 		if (!$this->error && count($this->results) > 0) {
 			echo $this->loadTemplate('results');

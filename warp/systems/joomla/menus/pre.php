@@ -17,7 +17,7 @@ class WarpMenuPre extends WarpMenu {
 
 		Returns:
 			Object
-	*/		
+	*/
 	public function process($module, $element) {
 
 		// has ul ?
@@ -27,7 +27,7 @@ class WarpMenuPre extends WarpMenu {
 
 		// init vars
 		$menu   = JFactory::getApplication()->getMenu();
-		$images = strpos($module->parameter->get('class_sfx'), 'images-off') === false;        
+		$images = strpos($module->parameter->get('class_sfx'), 'images-off') === false;
 
 		foreach ($element->find('li') as $li) {
 
@@ -52,20 +52,20 @@ class WarpMenuPre extends WarpMenu {
 				if (preg_match('/columns-(\d+)/', $item->params->get('pageclass_sfx'), $matches)) {
 					$li->attr('data-menu-columns', $matches[1]);
 				}
-				
+
 				if (preg_match('/columnwidth-(\d+)/', $item->params->get('pageclass_sfx'), $matches)) {
 					$li->attr('data-menu-columnwidth', $matches[1]);
 				}
-				
+
 			}
-			
+
 			// set image
 			if (isset($item) && $images && ($image = $item->params->get('menu_image'))) {
 				if ($image != -1) {
 					$li->attr('data-menu-image', JURI::base().$image);
 				}
 			}
-			
+
 			// set title span and clean empty text nodes
 			foreach ($li->children('a,span') as $child) {
 				$child->html(sprintf('<span>%s</span>', trim($child->text())));
@@ -73,7 +73,7 @@ class WarpMenuPre extends WarpMenu {
 
 			$li->removeAttr('id')->removeAttr('class');
 		}
-				
+
 		return $element;
 	}
 

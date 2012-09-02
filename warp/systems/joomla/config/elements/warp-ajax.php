@@ -20,6 +20,6 @@ if (file_exists($config)) {
 
 	// trigger save config
 	$warp = Warp::getInstance();
-	$warp['system']->saveConfig();	
+	$warp['system']->saveConfig();
 
 }

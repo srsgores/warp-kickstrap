@@ -35,8 +35,8 @@ if ($critical || $notice) {
 
 	echo '<a href="#" class="systemcheck-link '.($critical ? 'critical' : '').'">'.implode(' and ', $label).' issue(s) detected.</a>';
 	echo '<ul class="systemcheck">';
-	echo implode('', array_map(create_function('$message', 'return "<li class=\"critical\">{$message}</li>";'), $critical)); 
-	echo implode('', array_map(create_function('$message', 'return "<li>{$message}</li>";'), $notice)); 
+	echo implode('', array_map(create_function('$message', 'return "<li class=\"critical\">{$message}</li>";'), $critical));
+	echo implode('', array_map(create_function('$message', 'return "<li>{$message}</li>";'), $notice));
 	echo '</ul>';
 
 } else {

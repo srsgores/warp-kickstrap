@@ -1,14 +1,14 @@
-<?php 
+<?php
 /*------------------------------------------------------------------------------------------------------------------------
      Author: Sean Goresht
      www: http://seangoresht.com/
      github: https://github.com/srsgores
- 
+
      twitter: http://twitter.com/S.Goresht
- 
+
       warp-kickstrap Joomla Template
       Licensed under the GNU Public License
- 
+
  	=============================================================================
  	Filename:  head.php
  	=============================================================================
@@ -45,18 +45,21 @@ $this['system']->document->setHeadData($head);
  * Load scripts from CDN if the user has specified so; otherwise, load scripts from local drive.
  * Host must be in HTTP mode, or else we will have problems with Cross-site permissions
  */
-if ($this['system']->document->params->get('cdn') == "1" && $http != "https") {  //if the user has specified that CDN is to be used
+if ($this['system']->document->params->get('cdn') == "1" && $http != "https")
+{ //if the user has specified that CDN is to be used
 	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js");
 	$this['system']->document->addScript("https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js");
 	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.4/bootstrap.min.js");
 	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js");
 	$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js");
 }
-else {
+else
+{
 	//load modernizr
 	$this['system']->document->addScript($this['path']->url('lib:modernizr/modernizr.custom.js'));
 	// load jQuery, if not loaded before
-	if (!$this['system']->application->get('jquery')) { //if jQuery is found using warp's helpers...
+	if (!$this['system']->application->get('jquery'))
+	{ //if jQuery is found using warp's helpers...
 		$this['system']->application->set('jquery', true); //set jquery to true
 		$this['system']->document->addScript($this['path']->url('lib:jquery/jquery.js'));
 	}
@@ -107,7 +110,7 @@ if ($compression = $this['config']->get('compression')) {
 	// compress joomla styles and scripts
 	$head = $this['system']->document->getHeadData();
 	$data = array('styleSheets' => array(), 'scripts' => array());
-	
+
 	foreach ($head['styleSheets'] as $style => $meta) {
 
 		if (preg_match('/\.css$/i', $style)) {
@@ -128,10 +131,10 @@ if ($compression = $this['config']->get('compression')) {
 				$script = $this['asset']->cache(basename($script), $asset, array('JSCompressor'), $options)->getUrl();
 			}
 		}
-	
+
 		$data['scripts'][$script] = $meta;
 	}
-	
+
 	$this['system']->document->setHeadData(array_merge($head, $data));
 }
 

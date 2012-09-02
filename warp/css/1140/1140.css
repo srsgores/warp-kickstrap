@@ -96,7 +96,7 @@ img {
 	font-size: 0.8em;
 	line-height: 1.5em;
 	}
-	
+
 	}
 
 
@@ -108,7 +108,7 @@ img {
 	font-size: 16px;
 	-webkit-text-size-adjust: none;
 	}
-	
+
 	.row, body, .container {
 	width: 100%;
 	min-width: 0;
@@ -117,7 +117,7 @@ img {
 	padding-left: 0px;
 	padding-right: 0px;
 	}
-	
+
 	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
 	width: auto;
 	float: none;

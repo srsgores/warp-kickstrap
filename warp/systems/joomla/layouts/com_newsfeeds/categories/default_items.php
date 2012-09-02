@@ -17,7 +17,7 @@ defined('_JEXEC') or die;
 		<?php if ($this->params->get('show_empty_categories_cat') || $item->numitems || count($item->getChildren())) : ?>
 		<li>
 			<a href="<?php echo JRoute::_(NewsfeedsHelperRoute::getCategoryRoute($item->id));?>"><?php echo $this->escape($item->title); ?></a>
-			
+
 			<?php if ($this->params->get('show_cat_items_cat') == 1) : ?>
 			<small>(<?php echo $item->numitems; ?>)</small>
 			<?php endif; ?>

@@ -35,7 +35,7 @@ function iFrameHeight() {
 		<?php endif; ?>
 	</h1>
 	<?php endif; ?>
-	
+
 	<iframe <?php echo $this->wrapper->load; ?>
 		id="blockrandom"
 		name="iframe"

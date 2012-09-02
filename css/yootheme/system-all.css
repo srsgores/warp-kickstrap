@@ -67,7 +67,7 @@
 
 .searchbox.filled button {
 	width: 25px;
-	background: url(../images/searchbox_reset.png) 50% 50% no-repeat; 
+	background: url(../images/searchbox_reset.png) 50% 50% no-repeat;
 }
 .searchbox.loading button { background: url(../images/searchbox_loader.gif) 50% 50% no-repeat; }
 

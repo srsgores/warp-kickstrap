@@ -17,14 +17,14 @@ defined('_JEXEC') or die;
 	$count = count($list);
 
 	for ($i = 0; $i < $count; $i ++) {
-	
+
 		// clean subtitle from breadcrumb
 		if ($pos = strpos($list[$i]->name, '||')) {
 			$name = trim(substr($list[$i]->name, 0, $pos));
 		} else {
 			$name = $list[$i]->name;
 		}
-		
+
 		// mark-up last item as strong
 		if ($i < $count-1) {
 			if (!empty($list[$i]->link)) {

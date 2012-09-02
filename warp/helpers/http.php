@@ -9,7 +9,7 @@
 /*
 	Class: HttpWarpHelper
 		HTTP helper class
-*/    
+*/
 class HttpWarpHelper extends WarpHelper {
 
 	/* current transport class */
@@ -33,7 +33,7 @@ class HttpWarpHelper extends WarpHelper {
 				break;
 			}
 		}
-	}	
+	}
 
 	/*
 		Function: get
@@ -45,7 +45,7 @@ class HttpWarpHelper extends WarpHelper {
 
 		Returns:
 			Mixed
-	*/	
+	*/
 	public function get($url, $options = array()) {
 		return $this->request($url, $options);
 	}
@@ -61,7 +61,7 @@ class HttpWarpHelper extends WarpHelper {
 
 		Returns:
 			Mixed
-	*/	
+	*/
 	public function post($url, $data = null, $options = array()) {
 		return $this->request($url, array_merge(array('method' => 'POST', 'body' => $data), $options));
 	}
@@ -77,7 +77,7 @@ class HttpWarpHelper extends WarpHelper {
 
 		Returns:
 			Mixed
-	*/	
+	*/
 	public function put($url, $data = null, $options = array()) {
 		return $this->request($url, array_merge(array('method' => 'PUT', 'body' => $data), $options));
 	}
@@ -94,11 +94,11 @@ class HttpWarpHelper extends WarpHelper {
 			Mixed
 	*/
 	public function request($url, $options = array()) {
-		
+
 		if ($this->transport) {
 			return $this->transport->request($url, $options);
 		}
-		
+
 		return false;
 	}
 
@@ -109,7 +109,7 @@ class HttpWarpHelper extends WarpHelper {
 		HTTP transport class using cURL
 */
 class WarpHttpCurl extends WarpHttp {
-	
+
 	/*
 		Function: request
 			Execute a HTTP request
@@ -120,7 +120,7 @@ class WarpHttpCurl extends WarpHttp {
 
 		Returns:
 			Mixed
-	*/	
+	*/
 	public function request($url, $options = array()) {
 
 		// parse request
@@ -135,7 +135,7 @@ class WarpHttpCurl extends WarpHttp {
 		curl_setopt($curl, CURLOPT_MAXREDIRS, $request['redirects']);
 		curl_setopt($curl, CURLOPT_HEADER, true);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-		
+
 		// post request ?
 		if ($request['method'] == 'POST') {
 			curl_setopt($curl, CURLOPT_POST, true);
@@ -147,19 +147,19 @@ class WarpHttpCurl extends WarpHttp {
 			curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $request['method']);
 			curl_setopt($curl, CURLOPT_POSTFIELDS, $request['body']);
 		}
-		
+
 		// connect with curl
 		$res = curl_exec($curl);
 		curl_close($curl);
 
 		// parse response
 		$res = $this->_parseResponse($res);
-	
+
 		// save to file
 		if ($res && $request['file'] && file_put_contents($request['file'], $res['body']) === false) {
 			return false;
 		}
-		
+
 		return $res;
 	}
 
@@ -192,7 +192,7 @@ class WarpHttpStreams extends WarpHttp {
 
 		Returns:
 			Mixed
-	*/	
+	*/
 	public function request($url, $options = array()) {
 
 		// parse request
@@ -262,7 +262,7 @@ class WarpHttpSocket extends WarpHttp {
 
 		Returns:
 			Mixed
-	*/	
+	*/
 	public function request($url, $options = array()) {
 
 		// parse request
@@ -270,7 +270,7 @@ class WarpHttpSocket extends WarpHttp {
 
 		// set host
 		$host = $request['url']['scheme'] == 'https' ? sprintf('ssl://%s', $request['url']['host']) : $request['url']['host'];
-		
+
 		// connect with fsockopen
 		$res = false;
 	    $fp  = @fsockopen($host, $request['url']['port'], $errno, $errstr, $request['url']['timeout']);
@@ -284,7 +284,7 @@ class WarpHttpSocket extends WarpHttp {
 
 		// parse response
 		$res = $this->_parseResponse($res);
-	
+
 		// save to file
 		if ($res && $request['file'] && file_put_contents($request['file'], $res['body']) === false) {
 			return false;
@@ -421,7 +421,7 @@ class WarpHttp {
 
 		$request['timeout']   = (int) ceil($request['timeout']);
 		$request['redirects'] = (int) $request['redirects'];
-		
+
 		if (is_array($request['header'])) {
 			$request['header'] = $this->_parseHeader($request['header']);
 			$request['header'] = array_merge(array('Host' => $request['url']['host']), $request['header']);
@@ -430,7 +430,7 @@ class WarpHttp {
 		if (isset($request['auth']['user']) && isset($request['auth']['pass'])) {
 			$request['header']['Authorization'] = $request['auth']['method'].' '.base64_encode($request['auth']['user'].':'.$request['auth']['pass']);
 		}
-		
+
 		if (isset($request['url']['user']) && isset($request['url']['pass'])) {
 			$request['header']['Authorization'] = $request['auth']['method'].' '.base64_encode($request['url']['user'].':'.$request['url']['pass']);
 		}
@@ -442,7 +442,7 @@ class WarpHttp {
 		if (!empty($request['body']) && !isset($request['header']['Content-Length'])) {
 			$request['header']['Content-Length'] = strlen($request['body']);
 		}
-		
+
 		if (empty($request['line'])) {
 			$request['line'] = strtoupper($request['method']).' '.$request['url']['path'].(isset($request['url']['query']) ? '?'.$request['url']['query'] : ''). ' HTTP/' . $request['version'].$this->line_break;
 		}
@@ -473,7 +473,7 @@ class WarpHttp {
 
 		// parse header
 		if (preg_match("/^(.+\r\n)(.*)(?<=\r\n)\r\n/Us", $res, $match)) {
-			
+
 			list($null, $response['raw']['status-line'], $response['raw']['header']) = $match;
 			$response['raw']['body'] = substr($res, strlen($match[0]));
 
@@ -489,7 +489,7 @@ class WarpHttp {
 			if (!empty($response['header'])) {
 				$response['cookies'] = $this->parseCookies($response['header']);
 			}
-			
+
 		} else {
 			$response['body'] = $res;
 			$response['raw']['body'] = $res;
@@ -507,7 +507,7 @@ class WarpHttp {
 
 		return $response;
 	}
-	
+
 	/*
 		Function: _buildHeader
 			 Builds the header string for a request
@@ -539,7 +539,7 @@ class WarpHttp {
 
 		return $returnHeader;
 	}
-	
+
 	/*
 		Function: _parseHeader
 			 Parses an string based header to an array
@@ -588,7 +588,7 @@ class WarpHttp {
 				$header[$field] = array_merge((array) $header[$field], (array) $value);
 			}
 		}
-		
+
 		return $header;
 	}
 
@@ -636,7 +636,7 @@ class WarpHttp {
 			$chunkLength = hexdec($hexLength);
 			$chunk = substr($body, 0, $chunkLength);
 			$decodedBody .= $chunk;
-			
+
 			if ($chunkLength !== 0) {
 				$body = substr($body, $chunkLength + strlen("\r\n"));
 			}
@@ -656,7 +656,7 @@ class WarpHttp {
 
 		// parse url
 		$url = array_merge(array('user' => null, 'pass' => null, 'path' => '/', 'query' => null, 'fragment' => null), parse_url($url));
-		
+
 		// set scheme
 		if (!isset($url['scheme'])) {
 			$url['scheme'] = 'http';
@@ -676,7 +676,7 @@ class WarpHttp {
 		if (!isset($url['path'])) {
 			$url['path'] = '/';
 		}
-		
+
 		return $url;
 	}
 
@@ -686,35 +686,35 @@ class WarpHttp {
 
 		Returns:
 			String
-	*/	
+	*/
 	protected function _escapeToken($token, $chars = null) {
 		$regex = '/(['.join('', $this->_tokenEscapeChars(true, $chars)).'])/';
 		$token = preg_replace($regex, '"\\1"', $token);
 		return $token;
 	}
-	
+
 	/*
 		Function: _unescapeToken
 			Unescapes a given $token according to RFC 2616 (HTTP 1.1 specs)
 
 		Returns:
 			String
-	*/	
+	*/
 	protected function _unescapeToken($token, $chars = null) {
 		$regex = '/"(['.join('', $this->_tokenEscapeChars(true, $chars)).'])"/';
 		$token = preg_replace($regex, '\\1', $token);
 		return $token;
 	}
-		
+
 	/*
 		Function: _tokenEscapeChars
 			Gets escape chars according to RFC 2616 (HTTP 1.1 specs)
 
 		Returns:
 			Array
-	*/	
+	*/
 	protected function _tokenEscapeChars($hex = true, $chars = null) {
-		
+
 		if (!empty($chars)) {
 			$escape = $chars;
 		} else {
@@ -737,5 +737,5 @@ class WarpHttp {
 
 		return $escape;
 	}
-	
+
 }

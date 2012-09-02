@@ -11,7 +11,7 @@
 		Browser helper class.
 */
 class BrowserWarpHelper extends WarpHelper {
-	
+
 	protected $is_mobile;
 
 	/*
@@ -25,11 +25,11 @@ class BrowserWarpHelper extends WarpHelper {
 
 
 		if (is_null($this->is_mobile)) {
-			
+
 			$this->is_mobile = false;
 
 			if (in_array($this['useragent']->os(), array('iphone', 'ipod', 'android'))) {
-				
+
 				$this['asset']->addFile('js', 'js:mobile.js');
 
 				if ($this->get('mobile') !== null) {
@@ -39,7 +39,7 @@ class BrowserWarpHelper extends WarpHelper {
 				$this->is_mobile = $this->cookie('WarpMobile') != 'no';
 			}
 		}
-		
+
 		return $this->is_mobile;
     }
 
@@ -53,14 +53,14 @@ class BrowserWarpHelper extends WarpHelper {
 	public function outdatedBrowser() {
 
 		if ($this['useragent']->browser() == 'msie' && ((int) $this['useragent']->version()) < 8) {
-			
+
 			if ($this->get('forwardOutdatedBrowser') !== null) {
 				$this->cookie('WarpForwardOutdatedBrowser', (int) $this->get('forwardOutdatedBrowser') == 0 ? 'no' : 'yes');
 			}
 
 			return $this->cookie('WarpForwardOutdatedBrowser') != 'yes';
 		}
-		
+
 		return false;
     }
 
@@ -74,14 +74,14 @@ class BrowserWarpHelper extends WarpHelper {
 	public function isIE6() {
 
 		if ($this['useragent']->browser() == 'msie' && ((int) $this['useragent']->version()) < 7) {
-			
+
 			if ($this->get('forwardOutdatedBrowser') !== null) {
 				$this->cookie('WarpForwardOutdatedBrowser', (int) $this->get('forwardOutdatedBrowser') == 0 ? 'no' : 'yes');
 			}
 
 			return $this->cookie('WarpForwardOutdatedBrowser') != 'yes';
 		}
-		
+
 		return false;
     }
 
@@ -94,7 +94,7 @@ class BrowserWarpHelper extends WarpHelper {
 
 		Returns:
 			Mixed
-	*/	
+	*/
     public function get($name) {
 		return isset($_GET[$name]) ? $_GET[$name] : null;
     }
@@ -109,7 +109,7 @@ class BrowserWarpHelper extends WarpHelper {
 
 		Returns:
 			Mixed
-	*/	
+	*/
     public function cookie($name) {
 		$args = func_get_args();
 

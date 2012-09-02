@@ -15,7 +15,7 @@ class UseragentWarpHelper extends WarpHelper {
 
 	/* user agent info */
 	protected $_info;
-	
+
 	/*
 		Function: browser
 			Retrieve browser name
@@ -24,11 +24,11 @@ class UseragentWarpHelper extends WarpHelper {
 			String
 	*/
 	public function browser() {
-		
+
 		if (empty($this->_info)) {
 			$this->_info = $this->parse();
 		}
-		
+
 		return $this->_info['browser_name'];
 	}
 
@@ -40,11 +40,11 @@ class UseragentWarpHelper extends WarpHelper {
 			String
 	*/
 	public function version() {
-		
+
 		if (empty($this->_info)) {
 			$this->_info = $this->parse();
 		}
-		
+
 		return $this->_info['browser_version'];
 	}
 
@@ -56,11 +56,11 @@ class UseragentWarpHelper extends WarpHelper {
 			String
 	*/
 	public function os() {
-		
+
 		if (empty($this->_info)) {
 			$this->_info = $this->parse();
 		}
-		
+
 		return $this->_info['operating_system'];
 	}
 
@@ -75,23 +75,23 @@ class UseragentWarpHelper extends WarpHelper {
 	 *          )
 	 */
 	public function parse($userAgentString = null) {
-		
+
 		// use current user agent string as default
 		if (!$userAgentString) {
 			$userAgentString = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : null;
 		}
-		
+
 		// parse quickly (with medium accuracy)
 		$informations = $this->doParse($userAgentString);
-		
+
 		// run some filters to increase accuracy
 		foreach ($this->getFilters() as $filter) {
 			$this->$filter($informations);
 		}
-		
+
 		return $informations;
 	}
-	
+
 	/**
 	 * Detect quickly informations from the user agent string
 	 *
@@ -99,7 +99,7 @@ class UseragentWarpHelper extends WarpHelper {
 	 * @return  array                     user agent informations array
 	 */
 	public function doParse($userAgentString) {
-		
+
 		$userAgent = array(
 			'string' => $this->cleanUserAgentString($userAgentString) ,
 			'browser_name' => null,
@@ -152,7 +152,7 @@ class UseragentWarpHelper extends WarpHelper {
 	 * @return  string                  the clean user agent string
 	 */
 	public function cleanUserAgentString($userAgentString) {
-		
+
 		// clean up the string
 		$userAgentString = trim(strtolower($userAgentString));
 
@@ -188,7 +188,7 @@ class UseragentWarpHelper extends WarpHelper {
 	public function addFilter($filter) {
 		$this->filters+= $filter;
 	}
-	
+
 	/**
 	 * Get known browsers
 	 *
@@ -226,7 +226,7 @@ class UseragentWarpHelper extends WarpHelper {
 			'granparadiso' => 'firefox'
 		);
 	}
-	
+
 	/**
 	 * Get known operating system
 	 *
@@ -245,7 +245,7 @@ class UseragentWarpHelper extends WarpHelper {
 			'android',
 		);
 	}
-	
+
 	/**
 	 * Get known operating system aliases
 	 *
@@ -254,7 +254,7 @@ class UseragentWarpHelper extends WarpHelper {
 	public function getKnownOperatingSystemAliases() {
 		return array();
 	}
-	
+
 	/**
 	 * Filters
 	 */
@@ -267,7 +267,7 @@ class UseragentWarpHelper extends WarpHelper {
 			$userAgent['operating_system'] = strpos($userAgent['string'], 'mobile') ? 'android' : 'android.tablet';
 		}
 	}
-	
+
 	/**
 	 * Google chrome has a safari like signature
 	 */
@@ -277,7 +277,7 @@ class UseragentWarpHelper extends WarpHelper {
 			$userAgent['browser_version'] = preg_replace('|.+chrome/([0-9]+(?:\.[0-9]+)?).+|', '$1', $userAgent['string']);
 		}
 	}
-	
+
 	/**
 	 * Safari version is not encoded "normally"
 	 */
@@ -286,7 +286,7 @@ class UseragentWarpHelper extends WarpHelper {
 			$userAgent['browser_version'] = preg_replace('|.+\sversion/([0-9]+(?:\.[0-9]+)?).+|', '$1', $userAgent['string']);
 		}
 	}
-	
+
 	/**
 	 * Opera 10.00 (and higher) version number is located at the end
 	 */
@@ -295,7 +295,7 @@ class UseragentWarpHelper extends WarpHelper {
 			$userAgent['browser_version'] = preg_replace('|.+\sversion/([0-9]+\.[0-9]+)\s*.*|', '$1', $userAgent['string']);
 		}
 	}
-	
+
 	/**
 	 * Yahoo bot has a special user agent string
 	 */

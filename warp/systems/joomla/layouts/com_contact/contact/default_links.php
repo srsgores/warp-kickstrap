@@ -24,10 +24,10 @@ defined('_JEXEC') or die;
 
 		// If no label is present, take the link
 		$label = ($label) ? $label : $link;
-		
+
 	?>
-	
+
 	<li><a href="<?php echo $link; ?>"><?php echo $label; ?></a></li>
-	
+
 <?php endforeach; ?>
 </ul>

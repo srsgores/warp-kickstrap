@@ -40,5 +40,5 @@ defined('_JEXEC') or die;
 		<?php echo $this->loadTemplate('children'); ?>
 	</div>
 	<?php endif; ?>
-	
+
 </div>

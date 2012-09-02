@@ -17,7 +17,7 @@ class WarpMenuDefault extends WarpMenu {
 
 		Returns:
 			Object
-	*/	
+	*/
 	public function process($module, $element) {
 		self::_process($module, $element->first('ul:first'));
 		return $element;
@@ -50,7 +50,7 @@ class WarpMenuDefault extends WarpMenu {
 
 			// set class in li
 			$li->attr('class', sprintf('level%d item%s'.$parent.$active, $level + 1, $li->attr('data-id')));
-			
+
 			// set class in a/span
 			foreach ($li->children('a,span') as $child) {
 
@@ -59,7 +59,7 @@ class WarpMenuDefault extends WarpMenu {
 
 				// set subtile
 				$subtitle = $title ? explode('||', $title->text()) : array();
-				
+
 				if (count($subtitle) == 2) {
 					$li->addClass('hassubtitle');
 					$title->html(sprintf('<span class="title">%s</span><span class="subtitle">%s</span>', trim($subtitle[0]), trim($subtitle[1])));

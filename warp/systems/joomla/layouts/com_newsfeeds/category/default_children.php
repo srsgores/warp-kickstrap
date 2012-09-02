@@ -17,11 +17,11 @@ defined('_JEXEC') or die;
 		<?php if ($this->params->get('show_empty_categories') || $child->numitems || count($child->getChildren())) : ?>
 			<li>
 				<a href="<?php echo JRoute::_(NewsfeedsHelperRoute::getCategoryRoute($child->id));?>"><?php echo $this->escape($child->title); ?></a>
-	
+
 				<?php if ($this->params->get('show_cat_items') == 1) :?>
 				<small>(<?php echo $child->numitems; ?>)</small>
 				<?php endif; ?>
-	
+
 				<?php if (($this->params->get('show_subcat_desc') == 1) && $child->description) : ?>
 				<div><?php echo JHtml::_('content.prepare', $child->description, '', 'com_newsfeeds.category'); ?></div>
 				<?php endif; ?>

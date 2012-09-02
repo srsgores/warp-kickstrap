@@ -19,7 +19,7 @@ $itemid = intval($params->get('set_itemid', 0));
 	<button type="reset" value="Reset"></button>
 	<input type="hidden" name="task"   value="search" />
 	<input type="hidden" name="option" value="com_search" />
-	<input type="hidden" name="Itemid" value="<?php echo $itemid > 0 ? $itemid : JRequest::getInt('Itemid'); ?>" />	
+	<input type="hidden" name="Itemid" value="<?php echo $itemid > 0 ? $itemid : JRequest::getInt('Itemid'); ?>" />
 </form>
 
 <script src="<?php echo $warp['path']->url('js:search.js'); ?>"></script>

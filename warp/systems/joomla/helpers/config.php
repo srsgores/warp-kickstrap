@@ -9,7 +9,7 @@
 /*
 	Class: ConfigWarpHelper
 		Config helper class, configuration container
-*/    
+*/
 class ConfigWarpHelper extends WarpHelper {
 
     /*
@@ -45,11 +45,11 @@ class ConfigWarpHelper extends WarpHelper {
 
 			// add dynamic profile ?
             if ($config->get('profile_dynamic')) {
-                
+
 				if ($var = JRequest::getVar($this->_profile, null, 'default', 'alnum')) {
                     $this['system']->application->setUserState('_current_profile', $var);
                 }
-                
+
 				if ($dynamic = $this['system']->application->getUserState('_current_profile')) {
 					$profiles[] = $dynamic;
 				}
@@ -71,7 +71,7 @@ class ConfigWarpHelper extends WarpHelper {
 		}
 
 		// set data
-		$this->_data = $this['data']->create($data);		
+		$this->_data = $this['data']->create($data);
 	}
 
  	/*
