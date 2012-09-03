@@ -119,59 +119,6 @@ elseif ($this['config']->get("1140-css") == "1") {
 
 }
 
-//check for LESS configuration
-if ($this['config']->get('less') == "1")
-{
-	$less_dir = $this['config']->get('lessdir');
-	$add_path = "template:" . $less_dir;
-	$current_path = $this['path']->path($add_path) . "/*.less";
-
-	$destination_path = $this['path']->path("template:css");
-	$less = new lessc;
-	if ($this['config']->get('less_compress') == "1")
-	{
-		$less->setFormatter("compressed");
-	}
-	$less->addImportDir($this['path']->path($add_path) . "/imports/");
-	//loop through all files in folder, creating a CSS file
-	foreach(glob($current_path) as $file)
-	{
-		if ($this['config']->get('less_cache') == "1")
-		{
-			autoCompileLess($file, $destination_path . "/" . basename($file, ".less") . ".css", $less);
-		}
-		else
-		{
-			$less->compileFile($file, $destination_path . "/" . basename($file, ".less") . ".css");
-		}
-	}
-}
-
-function autoCompileLess($inputFile, $outputFile, $compiler)
-{
-	// load the cache
-	$cacheFile = $inputFile . ".cache";
-
-	if (file_exists($cacheFile))
-	{
-		$cache = unserialize(file_get_contents($cacheFile));
-	}
-	else
-	{
-		$cache = $inputFile;
-	}
-
-	$less = $compiler;
-
-	$newCache = $less->cachedCompile($cache);
-
-	if (!is_array($cache) || $newCache["updated"] > $cache["updated"])
-	{
-		file_put_contents($cacheFile, serialize($newCache));
-		file_put_contents($outputFile, $newCache['compiled']);
-	}
-}
-
 // load fonts
 $http  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
 $fonts = array(

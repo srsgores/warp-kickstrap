@@ -267,18 +267,6 @@
 		       description = "Type in the location, relative to this template path, where your LESS files are stored.  Files will be outputted to a folder titled css in the parent folder"
 		       default = "less">
 		</field>
-		<field name = "less_compress" type = "radio" label = "Compress Results?"
-		       description = "Strip out whitespaces and comments on your resulting CSS files."
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "less_cache" type = "radio" label = "Cache Results?"
-		       description = "Cache the resulting CSS files so that the LESS files aren't re-compiled when they haven't changed at all."
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
 	</fields>
 	<fields name = "Template-Specific Stuff">
 		<field name = "Template Javascript" type = "separator"/>
