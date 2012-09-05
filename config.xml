@@ -163,6 +163,90 @@
 		       description = "Select a grid layout for this module position."/>
 		<field name = "menu_width" type = "text" size = "10" default = "250" label = "Drop Down Column Width"
 		       description = "Set the column width of the drop down menu in pixel." class = "short"/>
+		<field name = "Twitter Bootstrap Variables Customization" type = "separator"/>
+		<field name = "Scaffolding" type = "separator"/>
+		<field name = "bootstrap_bodyBackground" type = "text" size = "10" default = "#FFFFFF" label =
+				"Body background colour" description = "Set the background colour for your body." class =
+				"short colour-picker"/>
+		<field name = "bootstrap_textColor" type = "text" size = "10" default = "#000000" label =
+				"Body text colour" description = "Set the text colour for your body." class =
+				"short colour-picker"/>
+		<field name = "Typography" type = "separator"/>
+		<field name = "bootstrap_sansFontFamily" type = "text" default = "Helvetica Neue, Helvetica, Arial, sans-serif" label =
+				"Sans font family" description = "Set the main fonts to be used by Bootstrap"/>
+		<field name = "bootstrap_serifFontFamily" type = "text" default = "Georgia, Times New Roman, Times, serif" label =
+				"serif font family" description = "Set the main serif fonts to be used by Bootstrap"/>
+		<field name = "bootstrap_monoFontFamily" type = "text" default = "Menlo, Monaco, Courier New, monospace" label =
+				"mono font family" description = "Set the main mono fonts to be used by Bootstrap"/>
+		<field name = "bootstrap_baseFontSize" type = "text" size = "10" default = "14px" label =
+				"Base font size"
+		       description = "Set the amount of pixels for the base body text" class = "short"/>
+		<field name = "bootstrap_baseFontFamily" type = "text" default = "@sansFontFamily" label =
+				"Base Font Family" description = "Set the main font family to be used by Bootstrap"/>
+		<field name = "bootstrap_altFontFamily" type = "text" default = "@serifFontFamily" label =
+				"Alternative Font Family"
+		       description = "Set the alternative, secondary font family to be used by Bootstrap"/>
+		<field name = "bootstrap_headingsFontFamily" type = "text" default = "inherit" label =
+				"Headings Font Family" description = "Set the main font family to be used for headings in Bootstrap"/>
+		<field name = "bootstrap_headingsFontWeight" type = "list" default = "bold" label =
+				"Headings Font Weight" description = "Set the thickness of the headings">
+			<option value = "normal">Normal</option>
+			<option value = "bold">Bold</option>
+			<option value = "italic">Italic</option>
+			<option value = "300">300 (thin)</option>
+		</field>
+		<field name = "bootstrap_headingsColor" type = "text" size = "10" default = "#000000" label =
+				"Headings text colour" description = "Set the text colour for your headings." class =
+				"short colour-picker"/>
+		<field name = "bootstrap_heroUnitBackground" type = "text" size = "10" default = "#CCC" label =
+				"Hero unit background colour" description = "Set the background colour for the hero unit." class =
+				"short colour-picker"/>
+		<field name = "bootstrap_heroUnitHeadingColor" type = "text" size = "10" default = "inherit" label =
+				"Hero unit heading colour" description = "Set the text colour for the headings in any hero unit."
+		       class =
+				       "short colour-picker"/>
+		<field name = "bootstrap_heroUnitLeadColor" type = "text" size = "10" default = "inherit" label =
+				"Hero unit lead heading colour" description
+				= "Set the text colour for the lead headings in any hero unit." class =
+				"short colour-picker"/>
+		<field name = "bootstrap_baseLineHeight" type = "text" default = "20px" label =
+				"Base Line Height" description = "Set the main line height for your text"/>
+		<field name = "Grid System" type = "separator"/>
+		<field name = "bootstrap_gridColumns" type = "text" size = "10" default = "12" label = "Number of columns"
+		       description
+				       = "Set the number of columns.  The resulting classes will be integers from 1 to the specified number."
+		       class = "short"/>
+		<field name = "bootstrap_gridColumnWidth" type = "text" size = "10" default = "60px" label =
+				"Grid Column Width"
+		       description
+				       = "Set the desired width in pixels for Bootstrap's fixed grid"
+		       class = "short"/>
+		<field name = "bootstrap_gridGutterWidth" type = "text" size = "10" default = "20px" label =
+				"Grid gutter width"
+		       description
+				       = "Set the desired grid gutter width"
+		       class = "short"/>
+		<field name = "bootstrap_gridGutterWidth1200" type = "text" size = "10" default = "30px" label =
+				"Grid gutter width at 1200px"
+		       description
+				       = "Set the desired grid gutter width on screens of 1200px resolution"
+		       class = "short"/>
+		<field name = "bootstrap_gridGutterWidth768" type = "text" size = "10" default = "20px" label =
+				"Grid gutter width at 768px"
+		       description
+				       = "Set the desired grid gutter width on screens of 768px resolution"
+		       class = "short"/>
+
+		<field name = "bootstrap_gridColumnWidth1200" type = "text" size = "10" default = "70px" label =
+				"Grid column width on screens of 1200px"
+		       description
+				       = "Set the desired grid column width on screens that are 1200px"
+		       class = "short"/>
+		<field name = "bootstrap_gridColumnWidth768" type = "text" size = "10" default = "42px" label =
+				"Grid column width on screens of 768px"
+		       description
+				       = "Set the desired grid column width on screens that are 768px"
+		       class = "short"/>
 	</fields>
 	<fields name = "Warp Kickstrap Stuff">
 		<field name = "Grid" type = "separator"/>
@@ -172,6 +256,7 @@
 			<option value = "1140">1140 CSS Grid by Andy Taylor</option>
 			<option value = "bootstrap">Twitter Bootstrap Grid System</option>
 			<option value = "ggs">Golden Grid System (tweaked and modified as well)</option>
+			<option value = "foundation">Zurb Foundation</option>
 			<option value = "yoo">YooTheme Warp Grid System</option>
 		</field>
 		<field name = "max_columns" type = "text" label = "Maximum number of columns"
@@ -275,6 +360,23 @@
 		</field>
 		<field name = "less_cache" type = "radio" label = "Cache Results?"
 		       description = "Cache the resulting CSS files so that the LESS files aren't re-compiled when they haven't changed at all."
+		       default = "1">
+			<option value = "0">No</option>
+			<option value = "1">Yes</option>
+		</field>
+		<field name = "SASS Files" type = "separator"/>
+		<field name = "sass" type = "radio" label = "Enable SASS stylesheets"
+		       description = "Let the server compile your sass files in the directory for this template into the CSS directory when any client loads the page.  Note: the resulting CSS files are then cached."
+		       default = "0">
+			<option value = "0">No</option>
+			<option value = "1">Yes</option>
+		</field>
+		<field name = "sassdir" type = "text" label = "sass Directory"
+		       description = "Type in the location, relative to this template path, where your sass files are stored.  Files will be outputted to a folder titled css in the parent folder"
+		       default = "sass">
+		</field>
+		<field name = "sass_compress" type = "radio" label = "Compress Results?"
+		       description = "Strip out whitespaces and comments on your resulting CSS files."
 		       default = "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>

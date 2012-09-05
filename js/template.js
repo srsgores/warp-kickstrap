@@ -16,7 +16,54 @@
 	 	--move elements around in the DOM when there's a media query
 	 	--Add checkbox menu when the max-width is below a certain amount of pixels
 --------------------------------------------------------------------------------------------------------------------- */
+function getRootUrl() {
+	// Create
+	var rootUrl = document.location.protocol+'//'+(document.location.hostname||document.location.host);
+	if ( document.location.port||false ) {
+		rootUrl += ':'+document.location.port;
+	}
+	rootUrl += '/';
 
+	// Return
+	return rootUrl;
+}
+var rootUrl = getRootUrl();
+
+function getRandomInt(min, max)
+{
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// Internal Helper
+$.expr[':'].internal = function(obj, index, meta, stack){
+	// Prepare
+	var
+		$this = $(obj),
+		url = $this.attr('href')||'',
+		isInternalLink;
+
+	// Check link
+	isInternalLink = url.substring(0,rootUrl.length) === rootUrl || url.indexOf(':') === -1;
+
+	// Ignore or Keep
+	return isInternalLink;
+};
+
+function addSlides(slideClass) {
+	var content_area = $("#content");
+	var wrappingStep = "<div class = " + slideClass + "></div>";
+	content_area.wrapInner(wrappingStep);
+
+	//bind all a tags to have be loaded as new slides
+	var anchors = $("a:internal:not(.no-ajaxy)");
+	anchors.attr("data-src", function() {
+		//remove duplicate hrefs
+		if (content_area.find("div[href='" + this.href + "']").length === 0) {
+			console.log("Creating new step in content area with href of " + this.href);
+			var newStep = content_area.append("<section class = " + slideClass + " data-x = \"" + getRandomInt(-4000, 8000) + "\" data-y = \"" + getRandomInt(-4000, 8000) + "\" data-src = \"" + this.href + "\"" + "></section>");
+		}
+		return this.href;
+	});
+}
 (function($){
 
 	$(document).ready(function() {
@@ -34,7 +81,8 @@
 
 		// Social buttons
 		$('article[data-permalink]').socialButtons(config);
-
+		//addSlides("step");
+		//$("#content").jmpress();
 	});
 
 	$.onMediaQuery('(min-width: 960px)', {

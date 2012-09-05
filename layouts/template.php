@@ -79,12 +79,12 @@ include($this['path']->path('layouts:template.config.php'));
 					<?php if ($this['config']->get('date')) : ?>
 					<time datetime="<?php echo $this['config']->get('datetime'); ?>"><?php echo $this['config']->get('actual_date'); ?></time>
 					<?php endif; ?>
-
+					<div class = "sixcol last">
 					<?php echo $this['modules']->render('toolbar-l'); ?>
+					</div>
 
 				</div>
 				<?php endif; ?>
-
 				<?php if ($this['modules']->count('toolbar-r')) : ?>
 				<div class="sixcol last"><?php echo $this['modules']->render('toolbar-r'); ?></div>
 				<?php endif; ?>
@@ -96,7 +96,8 @@ include($this['path']->path('layouts:template.config.php'));
 			<div id="headerbar" class = "row">
 
 				<?php if ($this['modules']->count('logo')) : ?>
-				<a id="logo" href="<?php echo $this['config']->get('site_url'); ?>"><?php echo $this['modules']->render('logo'); ?></a>
+				<a id="logo" class = "eightcol" href="<?php echo $this['config']->get('site_url'); ?>"><?php echo
+				$this['modules']->render('logo'); ?></a>
 				<?php endif; ?>
 
 				<?php if($this['modules']->count('headerbar')) : ?>
@@ -110,11 +111,11 @@ include($this['path']->path('layouts:template.config.php'));
 			<div id="menubar" class = "row">
 
 				<?php if ($this['modules']->count('menu')) : ?>
-				<nav id="menu"><?php echo $this['modules']->render('menu'); ?></nav>
+				<nav id="menu" class = "eightcol"><?php echo $this['modules']->render('menu'); ?></nav>
 				<?php endif; ?>
 
 				<?php if ($this['modules']->count('search')) : ?>
-				<div id="search"><?php echo $this['modules']->render('search'); ?></div>
+				<div id="search" class = "fourcol last"><?php echo $this['modules']->render('search'); ?></div>
 				<?php endif; ?>
 
 			</div>
@@ -125,7 +126,7 @@ include($this['path']->path('layouts:template.config.php'));
 			<?php endif; ?>
 
 		</header>
-
+		<div id = "content">
 		<?php if ($this['modules']->count('top-a')) : ?>
 		<section id="top-a" class="row grid-block"><?php echo $this['modules']->render('top-a', array('layout'=>$this['config']->get('top-a'))); ?></section>
 		<?php endif; ?>
@@ -148,7 +149,7 @@ include($this['path']->path('layouts:template.config.php'));
 				<?php endif; ?>
 
 				<?php if ($this['config']->get('system_output')) : ?>
-				<section id="content" class="row grid-block"><?php echo $this['template']->render('content'); ?></section>
+				<section class="row grid-block"><?php echo $this['template']->render('content'); ?></section>
 				<?php endif; ?>
 
 				<?php if ($this['modules']->count('innerbottom')) : ?>
@@ -179,6 +180,7 @@ include($this['path']->path('layouts:template.config.php'));
 		<?php endif; ?>
 
 		<?php if ($this['modules']->count('footer + debug') || $this['config']->get('warp_branding') || $this['config']->get('totop_scroller')) : ?>
+			</div>
 		<footer id="footer" class = "row">
 
 			<?php if ($this['config']->get('totop_scroller')) : ?>

@@ -87,38 +87,6 @@ foreach (array(1 => '.dropdown', 2 => '.columns2', 3 => '.columns3', 4 => '.colu
 	$css[] = sprintf('#menu %s { width: %dpx; }', $class, $i * intval($this['config']->get('menu_width')));
 }
 
-// load css
-$this['asset']->addFile('css', 'css:reset.css');
-$this['asset']->addFile('css', 'css:base.css');
-$this['asset']->addFile('css', 'css:1140/1140.css');
-$this['asset']->addFile('css', 'css:style.css');
-
-if ($this['config']->get('yootheme-css') == "1") {
-	$this['asset']->addFile('css', 'css:yootheme/layout.css');
-	$this['asset']->addFile('css', 'css:yootheme/menus.css');
-	$this['asset']->addString('css', implode("\n", $css));
-	$this['asset']->addFile('css', 'css:yootheme/modules.css');
-	$this['asset']->addFile('css', 'css:yootheme/tools.css');
-	$this['asset']->addFile('css', 'css:yootheme/system.css');
-	$this['asset']->addFile('css', 'css:extensions.css');
-	$this['asset']->addFile('css', 'css:custom.css');
-
-	if (($color = $this['config']->get('color1')) && $this['path']->path("css:/yootheme/color1/$color.css")) { $this['asset']->addFile('css', "css:/yootheme/color1/$color.css"); }
-	if (($color = $this['config']->get('color2')) && $this['path']->path("css:/yootheme/color2/$color.css")) { $this['asset']->addFile('css', "css:/yootheme/color2/$color.css"); }
-	if (($font = $this['config']->get('font1')) && $this['path']->path("css:/yootheme/font1/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font1/$font.css"); }
-	if (($font = $this['config']->get('font2')) && $this['path']->path("css:/yootheme/font2/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font2/$font.css"); }
-	if (($font = $this['config']->get('font3')) && $this['path']->path("css:/yootheme/font3/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font3/$font.css"); }
-	if ($this['config']->get('direction') == 'rtl') $this['asset']->addFile('css', 'css:/yoothemertl.css');
-	$this['asset']->addFile('css', 'css:yootheme/responsive.css');
-	$this['asset']->addFile('css', 'css:yootheme/print.css');
-}
-elseif ($this['config']->get("bootstrap-css") == "1") {
-
-}
-elseif ($this['config']->get("1140-css") == "1") {
-
-}
-
 //check for LESS configuration
 if ($this['config']->get('less') == "1")
 {
@@ -145,8 +113,69 @@ if ($this['config']->get('less') == "1")
 			$less->compileFile($file, $destination_path . "/" . basename($file, ".less") . ".css");
 		}
 	}
+	//check to see if Bootstrap is enabled.  If so, compile those files too
+	if ($this['config']->get('grid_system') == "bootstrap" || $this['config']->get('bootstrap-css') == "1")
+	{
+		$bootstrap_less_path = $this['path']->path("css:bootstrap/less");
+
+		//set configured LESS variables based off of parameters
+		$less->setVariables(array(
+			"bodyBackground" => $this['config']->get("bootstrap_bodyBackground"),
+			"textColor" => $this['config']->get("bootstrap_textColor"),
+			"sansFontFamily" => $this['config']->get("bootstrap_sansFontFamily"),
+			"serifFontFamily" => $this['config']->get("bootstrap_serifFontFamily"),
+			"baseFontSize" => $this['config']->get("bootstrap_baseFontSize"),
+			"baseFontFamily" => $this['config']->get("bootstrap_baseFontFamily"),
+			"altFontFamily" => $this['config']->get("bootstrap_altFontFamily"),
+			"headingsColor" => $this['config']->get("bootstrap_headingsColor"),
+			"heroUnitBackground" => $this['config']->get("bootstrap_heroUnitBackground"),
+			"heroUnitHeadingColor" => $this['config']->get("bootstrap_heroUnitHeadingColor"),
+			"heroUnitLeadColor" => $this['config']->get("bootstrap_heroUnitLeadColor"),
+			"baseLineHeight" => $this['config']->get("bootstrap_baseLineHeight"),
+			"gridColumns" => $this['config']->get("bootstrap_gridColumns"),
+			"gridColumnWidth" => $this['config']->get("bootstrap_gridColumnWidth"),
+			"gridGutterWidth" => $this['config']->get("bootstrap_gridGutterWidth"),
+			"gridGutterWidth1200" => $this['config']->get("bootstrap_gridGutterWidth1200"),
+			"gridGutterWidth768" => $this['config']->get("bootstrap_gridGutterWidth768"),
+			"gridColumnWidth1200" => $this['config']->get("bootstrap_gridColumnWidth1200"),
+			"gridColumnWidth768" => $this['config']->get("bootstrap_gridColumnWidth768")
+		));
+
+
+		if ($this['config']->get('less_cache') == "1")
+		{
+			autoCompileLess($bootstrap_less_path . "/bootstrap.less", $destination_path . "/bootstrap.css",
+				$less);
+		}
+		else
+		{
+			$less->compileFile($bootstrap_less_path . "/bootstrap.less", $destination_path . "/bootstrap.css");
+		}
+	}
 }
 
+//check for SCSS configuration
+if ($this['config']->get('sass') == "1")
+{
+	$sass_dir = $this['config']->get('sassdir');
+	$warp_path = "template:" . $sass_dir;
+	$add_path = $this['path']->path($warp_path) . "/";
+	//check to see if foundation is enabled
+	if ($this['config']->get("grid_system") == "foundation")
+	{
+		$add_path = $this['path']->path("css:foundation");
+	}
+	$scss = new scssc();
+	if ($this['config']->get('sass_compress') == "1")
+	{
+		$scss->setFormatter("scss_formatter_compressed");
+	}
+	$scss->addImportPath($add_path . "/imports/");
+	//loop through all files in folder, serving css to client
+	var_dump($add_path);
+	$server = new scss_server($add_path, null, $scss);
+	$server->serve();
+}
 function autoCompileLess($inputFile, $outputFile, $compiler)
 {
 	// load the cache
@@ -171,6 +200,51 @@ function autoCompileLess($inputFile, $outputFile, $compiler)
 		file_put_contents($outputFile, $newCache['compiled']);
 	}
 }
+
+// load css
+$this['asset']->addFile('css', 'css:reset.css');
+$this['asset']->addFile('css', 'css:base.css');
+
+if ($this['config']->get('yootheme-css') == "1" || $this['config']->get('grid_system') == "yoo") {
+	$this['asset']->addFile('css', 'css:yootheme/layout.css');
+	$this['asset']->addFile('css', 'css:yootheme/menus.css');
+	$this['asset']->addString('css', implode("\n", $css));
+	$this['asset']->addFile('css', 'css:yootheme/modules.css');
+	$this['asset']->addFile('css', 'css:yootheme/tools.css');
+	$this['asset']->addFile('css', 'css:yootheme/system.css');
+	$this['asset']->addFile('css', 'css:extensions.css');
+	$this['asset']->addFile('css', 'css:custom.css');
+
+	if (($color = $this['config']->get('color1')) && $this['path']->path("css:/yootheme/color1/$color.css")) { $this['asset']->addFile('css', "css:/yootheme/color1/$color.css"); }
+	if (($color = $this['config']->get('color2')) && $this['path']->path("css:/yootheme/color2/$color.css")) { $this['asset']->addFile('css', "css:/yootheme/color2/$color.css"); }
+	if (($font = $this['config']->get('font1')) && $this['path']->path("css:/yootheme/font1/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font1/$font.css"); }
+	if (($font = $this['config']->get('font2')) && $this['path']->path("css:/yootheme/font2/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font2/$font.css"); }
+	if (($font = $this['config']->get('font3')) && $this['path']->path("css:/yootheme/font3/$font.css")) { $this['asset']->addFile('css', "css:/yootheme/font3/$font.css"); }
+	if ($this['config']->get('direction') == 'rtl') $this['asset']->addFile('css', 'css:/yoothemertl.css');
+	$this['asset']->addFile('css', 'css:yootheme/responsive.css');
+	$this['asset']->addFile('css', 'css:yootheme/print.css');
+}
+elseif ($this['config']->get("bootstrap-css") == "1" || $this['config']->get("grid_system") == "bootstrap")
+{
+	$this['asset']->addFile('css', 'css:bootstrap.css'); //NOTE: Bootstrap's grid is merged together
+}
+elseif ($this['config']->get("grid_system") == "1140")
+{
+	$this['asset']->addFile('css', 'css:1140/1140.css');
+}
+elseif ($this['config']->get("grid_system") == "ggs")
+{
+	$this['asset']->addFile('css', 'css:ggs/ggs.css');
+}
+
+if ($this['config']->get("icomoon") == "1")
+{
+	$this['asset']->addFile('css', 'css:icomoon/style.css');
+}
+
+
+//now that grid systems are loaded, time to load main styles
+$this['asset']->addFile('css', 'css:style.css');
 
 // load fonts
 $http  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
@@ -207,6 +281,20 @@ $this['asset']->addFile('js', 'js:responsive.js');
 $this['asset']->addFile('js', 'js:accordionmenu.js');
 $this['asset']->addFile('js', 'js:dropdownmenu.js');
 $this['asset']->addFile('js', 'js:template.js');
+if ($this['config']->get('jmpress') == "1")
+{
+	$this['config']->get('ajaxify') == "0"; //loading ajaxify and jmpress will conflict because they both use ajax
+	$this['asset']->addFile('js', 'lib:jmpress/jmpress.js');
+}
+if ($this['config']->get('ajaxify') == "1")
+{
+	$this['asset']->addFile('js', 'lib:history/jquery.history.js');
+	if ($this['config']->get('scrollto') == "0")
+	{
+		$this['asset']->addFile('js', 'lib:scrollto/jquery.scrollTo.js');
+	}
+	$this['asset']->addFile('js', 'js:ajaxify-html5.js');
+}
 
 if ($this['config']->get('loader') == "1")
 {

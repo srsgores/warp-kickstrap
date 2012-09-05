@@ -28,6 +28,7 @@ $path = dirname(__FILE__);
 require_once($path.'/classes/helper.php');
 require_once($path.'/helpers/path.php');
 require_once($path.'/helpers/lessc.inc.php');
+require_once($path.'/helpers/scss.inc.php');
 
 class Warp implements ArrayAccess {
 
