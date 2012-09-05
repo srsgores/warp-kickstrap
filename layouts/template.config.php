@@ -280,7 +280,7 @@ $this['asset']->addFile('js', 'js:warp.js');
 $this['asset']->addFile('js', 'js:responsive.js');
 $this['asset']->addFile('js', 'js:accordionmenu.js');
 $this['asset']->addFile('js', 'js:dropdownmenu.js');
-$this['asset']->addFile('js', 'js:template.js');
+
 if ($this['config']->get('jmpress') == "1")
 {
 	$this['config']->get('ajaxify') == "0"; //loading ajaxify and jmpress will conflict because they both use ajax
@@ -295,7 +295,7 @@ if ($this['config']->get('ajaxify') == "1")
 	}
 	$this['asset']->addFile('js', 'js:ajaxify-html5.js');
 }
-
+$this['asset']->addFile('js', 'js:template.js');
 if ($this['config']->get('loader') == "1")
 {
 	$this['asset']->addFile('js', 'js:loader.js');

@@ -50,18 +50,18 @@ $.expr[':'].internal = function(obj, index, meta, stack){
 
 function addSlides(slideClass) {
 	var content_area = $("#content");
-	var wrappingStep = "<div class = " + slideClass + "></div>";
+	var wrappingStep = "<div class = " + slideClass + "id = " + $(this).text() + "></div>";
 	content_area.wrapInner(wrappingStep);
 
 	//bind all a tags to have be loaded as new slides
 	var anchors = $("a:internal:not(.no-ajaxy)");
-	anchors.attr("data-src", function() {
+	anchors.attr("href", function() {
 		//remove duplicate hrefs
-		if (content_area.find("div[href='" + this.href + "']").length === 0) {
+		if (!content_area.find("section[data-src='" + this.href + "']").length) {
 			console.log("Creating new step in content area with href of " + this.href);
-			var newStep = content_area.append("<section class = " + slideClass + " data-x = \"" + getRandomInt(-4000, 8000) + "\" data-y = \"" + getRandomInt(-4000, 8000) + "\" data-src = \"" + this.href + "\"" + "></section>");
+			var newStep = content_area.append("<section class = " + slideClass + " data-x = \"" + getRandomInt(-4000, 8000) + "\" data-y = \"" + getRandomInt(-4000, 8000) + "\" data-z = \"" + getRandomInt(-4000, 8000) + "\" data-src = \"" + this.href + "\"" + "id = " + $(this).text() + "></section>");
 		}
-		return this.href;
+		return "#" + $(this).text();
 	});
 }
 (function($){
@@ -81,8 +81,10 @@ function addSlides(slideClass) {
 
 		// Social buttons
 		$('article[data-permalink]').socialButtons(config);
-		//addSlides("step");
-		//$("#content").jmpress();
+		addSlides("step");
+		$("#content").jmpress({
+			afterStepLoaded: addSlides
+		});
 	});
 
 	$.onMediaQuery('(min-width: 960px)', {

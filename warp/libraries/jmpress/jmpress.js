@@ -1362,7 +1362,8 @@
 		if ( href ) {
 			$(step).addClass( settings.ajaxLoadedClass );
 			stepData.srcLoaded = true;
-			$(step).load(href, function(response, status, xhr) {
+			var loadData = href + " #content";
+			$(step).load(loadData, function(response, status, xhr) {
 				$(eventData.jmpress).jmpress('fire', afterStepLoaded, step, $.extend({}, eventData, {
 					response: response
 					,status: status
