@@ -46,159 +46,160 @@ include($this['path']->path('layouts:template.config.php'));
 
 ?>
 <!DOCTYPE HTML>
-<html lang="<?php echo $this['config']->get('language'); ?>" dir="<?php echo $this['config']->get('direction'); ?>">
+<html lang = "<?php echo $this['config']->get('language'); ?>" dir = "<?php echo $this['config']->get('direction'); ?>">
 
 <head>
-<?php echo $this['template']->render('head'); ?>
+	<?php echo $this['template']->render('head'); ?>
 </head>
 
-<body id="page" class="page <?php echo $this['config']->get('body_classes'); ?>" data-config='<?php echo $this['config']->get('body_config','{}'); ?>'>
+<body id = "page" class = "page <?php echo $this['config']->get('body_classes'); ?>" data-config = '<?php echo $this['config']->get('body_config', '{}'); ?>'>
 
-	<?php if ($this['modules']->count('absolute')) : ?>
-	<div id="absolute">
-		<?php echo $this['modules']->render('absolute'); ?>
-	</div>
+<?php if ($this['modules']->count('absolute')) : ?>
+<div id = "absolute">
+	<?php echo $this['modules']->render('absolute'); ?>
+</div>
 	<?php endif; ?>
-	<?php
-	if($this['config']->get('loader') == "1")
-	{
-		$loader_class = "loading visuallyhidden";
-		echo "<div id = \"ajaxloader1\"></div>";
-	}
-	?>
-	<div class="container <?php if (isset($loader_class)){echo $loader_class;}?>">
+<?php
+if ($this['config']->get('loader') == "1")
+{
+	$loader_class = "loading visuallyhidden";
+	echo "<div id = \"ajaxloader1\"></div>";
+}
+?>
+<div class = "container <?php if (isset($loader_class))
+{
+	echo $loader_class;
+}?>">
 
-		<header id="header" class = "row">
+<header id = "header" class = "row">
 
-			<?php if ($this['modules']->count('toolbar-l + toolbar-r') || $this['config']->get('date')) : ?>
-			<div id="toolbar" class = "row">
+<?php if ($this['modules']->count('toolbar-l + toolbar-r') || $this['config']->get('date')) : ?> <!-- if the
+	time is set to display, and any of the toolbar module positions are enabled, then show the date first -->
+			<div id = "toolbar" class = "row">
 
 				<?php if ($this['modules']->count('toolbar-l') || $this['config']->get('date')) : ?>
-				<div class="sixcol">
 
-					<?php if ($this['config']->get('date')) : ?>
-					<time datetime="<?php echo $this['config']->get('datetime'); ?>"><?php echo $this['config']->get('actual_date'); ?></time>
-					<?php endif; ?>
-					<div class = "sixcol last">
-					<?php echo $this['modules']->render('toolbar-l'); ?>
-					</div>
-
-				</div>
+		<div class = "sixcol">
+			<?php if ($this['config']->get('date')) : ?>
+			<time datetime = "<?php echo $this['config']->get('datetime'); ?>"><?php echo $this['config']->get('actual_date'); ?></time>
+			<?php endif; ?>
+			<?php echo $this['modules']->render('toolbar-l'); ?>
+		</div> <!-- end left part of toolbar -->
 				<?php endif; ?>
-				<?php if ($this['modules']->count('toolbar-r')) : ?>
-				<div class="sixcol last"><?php echo $this['modules']->render('toolbar-r'); ?></div>
-				<?php endif; ?>
-
-			</div>
+	<?php if ($this['modules']->count('toolbar-r')) : ?>
+		<div class = "sixcol last">
+			<?php echo $this['modules']->render('toolbar-r'); ?></div>
+	<?php endif; ?>
+		</div> <!-- end toolbar -->
 			<?php endif; ?>
 
-			<?php if ($this['modules']->count('logo + headerbar')) : ?>
-			<div id="headerbar" class = "row">
+<?php if ($this['modules']->count('logo + headerbar')) : ?>
+<div id = "headerbar" class = "row">
 
-				<?php if ($this['modules']->count('logo')) : ?>
-				<a id="logo" class = "eightcol" href="<?php echo $this['config']->get('site_url'); ?>"><?php echo
-				$this['modules']->render('logo'); ?></a>
-				<?php endif; ?>
+	<?php if ($this['modules']->count('logo')) : ?>
+	<a id = "logo" class = "eightcol" href = "<?php echo $this['config']->get('site_url'); ?>"><?php echo
+	$this['modules']->render('logo'); ?></a>
+	<?php endif; ?>
 
-				<?php if($this['modules']->count('headerbar')) : ?>
-				<?php echo $this['modules']->render('headerbar'); ?>
-				<?php endif; ?>
+	<?php if ($this['modules']->count('headerbar')) : ?>
+	<?php echo $this['modules']->render('headerbar'); ?>
+	<?php endif; ?>
 
-			</div>
+</div>
+	<?php endif; ?>
+
+<?php if ($this['modules']->count('menu + search')) : ?>
+<div id = "menubar" class = "row">
+
+	<?php if ($this['modules']->count('menu')) : ?>
+	<nav id = "menu" class = "eightcol"><?php echo $this['modules']->render('menu'); ?></nav>
+	<?php endif; ?>
+
+	<?php if ($this['modules']->count('search')) : ?>
+	<div id = "search" class = "fourcol last"><?php echo $this['modules']->render('search'); ?></div>
+	<?php endif; ?>
+
+</div>
+	<?php endif; ?>
+
+<?php if ($this['modules']->count('banner')) : ?>
+<div id = "banner"><?php echo $this['modules']->render('banner'); ?></div>
+	<?php endif; ?>
+
+</header>
+<div id = "content">
+<?php if ($this['modules']->count('top-a')) : ?>
+	<section id = "top-a" class = "row grid-block"><?php echo $this['modules']->render('top-a', array('layout' => $this['config']->get('top-a'))); ?></section>
+	<?php endif; ?>
+
+<?php if ($this['modules']->count('top-b')) : ?>
+	<section id = "top-b" class = "row grid-block"><?php echo $this['modules']->render('top-b', array('layout' => $this['config']->get('top-b'))); ?></section>
+	<?php endif; ?>
+
+<?php if ($this['modules']->count('innertop + innerbottom + sidebar-a + sidebar-b') || $this['config']->get('system_output')) : ?>
+	<div id = "main" class = "row grid-block">
+
+		<div id = "maininner" class = "grid-box">
+
+			<?php if ($this['modules']->count('innertop')) : ?>
+			<section id = "innertop" class = "row grid-block"><?php echo $this['modules']->render('innertop', array('layout' => $this['config']->get('innertop'))); ?></section>
 			<?php endif; ?>
 
-			<?php if ($this['modules']->count('menu + search')) : ?>
-			<div id="menubar" class = "row">
-
-				<?php if ($this['modules']->count('menu')) : ?>
-				<nav id="menu" class = "eightcol"><?php echo $this['modules']->render('menu'); ?></nav>
-				<?php endif; ?>
-
-				<?php if ($this['modules']->count('search')) : ?>
-				<div id="search" class = "fourcol last"><?php echo $this['modules']->render('search'); ?></div>
-				<?php endif; ?>
-
-			</div>
+			<?php if ($this['modules']->count('breadcrumbs')) : ?>
+			<section id = "breadcrumbs"><?php echo $this['modules']->render('breadcrumbs'); ?></section>
 			<?php endif; ?>
 
-			<?php if ($this['modules']->count('banner')) : ?>
-			<div id="banner"><?php echo $this['modules']->render('banner'); ?></div>
+			<?php if ($this['config']->get('system_output')) : ?>
+			<section class = "row grid-block"><?php echo $this['template']->render('content'); ?></section>
 			<?php endif; ?>
 
-		</header>
-		<div id = "content">
-		<?php if ($this['modules']->count('top-a')) : ?>
-		<section id="top-a" class="row grid-block"><?php echo $this['modules']->render('top-a', array('layout'=>$this['config']->get('top-a'))); ?></section>
-		<?php endif; ?>
-
-		<?php if ($this['modules']->count('top-b')) : ?>
-		<section id="top-b" class="row grid-block"><?php echo $this['modules']->render('top-b', array('layout'=>$this['config']->get('top-b'))); ?></section>
-		<?php endif; ?>
-
-		<?php if ($this['modules']->count('innertop + innerbottom + sidebar-a + sidebar-b') || $this['config']->get('system_output')) : ?>
-		<div id="main" class="row grid-block">
-
-			<div id="maininner" class="grid-box">
-
-				<?php if ($this['modules']->count('innertop')) : ?>
-				<section id="innertop" class="row grid-block"><?php echo $this['modules']->render('innertop', array('layout'=>$this['config']->get('innertop'))); ?></section>
-				<?php endif; ?>
-
-				<?php if ($this['modules']->count('breadcrumbs')) : ?>
-				<section id="breadcrumbs"><?php echo $this['modules']->render('breadcrumbs'); ?></section>
-				<?php endif; ?>
-
-				<?php if ($this['config']->get('system_output')) : ?>
-				<section class="row grid-block"><?php echo $this['template']->render('content'); ?></section>
-				<?php endif; ?>
-
-				<?php if ($this['modules']->count('innerbottom')) : ?>
-				<section id="innerbottom" class="row grid-block"><?php echo $this['modules']->render('innerbottom', array('layout'=>$this['config']->get('innerbottom'))); ?></section>
-				<?php endif; ?>
-
-			</div>
-			<!-- maininner end -->
-
-			<?php if ($this['modules']->count('sidebar-a')) : ?>
-			<aside id="sidebar-a" class="grid-box"><?php echo $this['modules']->render('sidebar-a', array('layout'=>'stack')); ?></aside>
-			<?php endif; ?>
-
-			<?php if ($this['modules']->count('sidebar-b')) : ?>
-			<aside id="sidebar-b" class="grid-box"><?php echo $this['modules']->render('sidebar-b', array('layout'=>'stack')); ?></aside>
+			<?php if ($this['modules']->count('innerbottom')) : ?>
+			<section id = "innerbottom" class = "row grid-block"><?php echo $this['modules']->render('innerbottom', array('layout' => $this['config']->get('innerbottom'))); ?></section>
 			<?php endif; ?>
 
 		</div>
-		<?php endif; ?>
-		<!-- main end -->
+		<!-- maininner end -->
 
-		<?php if ($this['modules']->count('bottom-a')) : ?>
-		<section id="bottom-a" class="row grid-block"><?php echo $this['modules']->render('bottom-a', array('layout'=>$this['config']->get('bottom-a'))); ?></section>
-		<?php endif; ?>
-
-		<?php if ($this['modules']->count('bottom-b')) : ?>
-		<section id="bottom-b" class="row grid-block"><?php echo $this['modules']->render('bottom-b', array('layout'=>$this['config']->get('bottom-b'))); ?></section>
+		<?php if ($this['modules']->count('sidebar-a')) : ?>
+		<aside id = "sidebar-a" class = "grid-box"><?php echo $this['modules']->render('sidebar-a', array('layout' => 'stack')); ?></aside>
 		<?php endif; ?>
 
-		<?php if ($this['modules']->count('footer + debug') || $this['config']->get('warp_branding') || $this['config']->get('totop_scroller')) : ?>
-			</div>
-		<footer id="footer" class = "row">
-
-			<?php if ($this['config']->get('totop_scroller')) : ?>
-			<a id="totop-scroller" href="#page"></a>
-			<?php endif; ?>
-
-			<?php
-				echo $this['modules']->render('footer');
-				$this->output('warp_branding');
-				echo $this['modules']->render('debug');
-			?>
-
-		</footer>
+		<?php if ($this['modules']->count('sidebar-b')) : ?>
+		<aside id = "sidebar-b" class = "grid-box"><?php echo $this['modules']->render('sidebar-b', array('layout' => 'stack')); ?></aside>
 		<?php endif; ?>
 
 	</div>
+	<?php endif; ?>
+	<!-- main end -->
 
-	<?php echo $this->render('footer'); ?>
+<?php if ($this['modules']->count('bottom-a')) : ?>
+	<section id = "bottom-a" class = "row grid-block"><?php echo $this['modules']->render('bottom-a', array('layout' => $this['config']->get('bottom-a'))); ?></section>
+	<?php endif; ?>
+
+<?php if ($this['modules']->count('bottom-b')) : ?>
+	<section id = "bottom-b" class = "row grid-block"><?php echo $this['modules']->render('bottom-b', array('layout' => $this['config']->get('bottom-b'))); ?></section>
+	<?php endif; ?>
+
+<?php if ($this['modules']->count('footer + debug') || $this['config']->get('warp_branding') || $this['config']->get('totop_scroller')) : ?>
+			</div>
+		<footer id = "footer" class = "row">
+
+			<?php if ($this['config']->get('totop_scroller')) : ?>
+			<a id = "totop-scroller" href = "#page"></a>
+			<?php endif; ?>
+
+			<?php
+			echo $this['modules']->render('footer');
+			$this->output('warp_branding');
+			echo $this['modules']->render('debug');
+			?>
+
+		</footer>
+	<?php endif; ?>
+
+</div>
+
+<?php echo $this->render('footer'); ?>
 
 </body>
 </html>
