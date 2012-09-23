@@ -32,25 +32,62 @@ jQuery(function (a)
 	a("#config a.verify-link").bind("click", function (a)
 	{
 		a.preventDefault();
-		d.slideToggle()
+		d.slideToggle();
 	});
 	var h = a("#config ul.systemcheck").hide();
 	a("#config a.systemcheck-link").bind("click", function (a)
 	{
 		a.preventDefault();
-		h.slideToggle()
+		h.slideToggle();
 	});
+	//the following sets the radio buttons to disabled if less is not enabled.
+	function setDisableLessRadios()
+	{
+		var lessEnabled = a("input[name='config[less]']:checked").val();
+		switch (lessEnabled)
+		{
+			default:
+			case "0":
+				//less is disabled
+				a("input[name='config[less]']").parent().parent().nextUntil("li.separator").find("input").attr("disabled", "disabled");
+				break;
+			case "1":
+				a("input[name='config[less]']").parent().parent().nextUntil("li.separator").find("input").removeAttr("disabled");
+		}
+		a("input[name='config[less]'][value='1']").on('click', function (e)
+		{
+			a(this).parent().parent().nextUntil("li.separator").find("input").removeAttr("disabled");
+		});
+		a("input[name='config[less]'][value='0']").on('click', function (e)
+		{
+			a(this).parent().parent().nextUntil("li.separator").find("input").attr("disabled", "disabled");
+		});
+	}
 
-	//this will show the LESS custom file input when the less radio is enabled...
-	a("input[name='config[lessdir]']").parent().parent().hide();
-	a("input[name='config[less]'][value='1']").on('click', function (e)
+	function setDisableSassRadios()
 	{
-		a("input[name='config[lessdir]']").parent().parent().show("fast");
-	});
-	a("input[name='config[less]'][value='0']").on('click', function (e)
-	{
-		a("input[name='config[lessdir]']").parent().parent().hide("fast");
-	});
+		var sassEnabled = a("input[name='config[sass]']:checked").val();
+		switch (sassEnabled)
+		{
+			default:
+			case "0":
+				//less is disabled
+				a("input[name='config[sass]']").parent().parent().nextUntil("li.separator").find("input").attr("disabled", "disabled");
+				break;
+			case "1":
+				a("input[name='config[sass]']").parent().parent().nextUntil("li.separator").find("input").removeAttr("disabled");
+		}
+		a("input[name='config[sass]'][value='1']").on('click', function (e)
+		{
+			a(this).parent().parent().nextUntil("li.separator").find("input").removeAttr("disabled");
+		});
+		a("input[name='config[sass]'][value='0']").on('click', function (e)
+		{
+			a(this).parent().parent().nextUntil("li.separator").find("input").attr("disabled", "disabled");
+		});
+	}
+	setDisableLessRadios();
+	setDisableSassRadios();
 	a('form[name="adminForm"]').bind("save", function (b, c, d)
 	{
 		var e = {}, f = [],

@@ -152,6 +152,34 @@ if ($this['config']->get('less') == "1")
 			$less->compileFile($bootstrap_less_path . "/bootstrap.less", $destination_path . "/bootstrap.css");
 		}
 	}
+	if ($this['config']->get('toastr') == "1")
+	{
+		$toastr_less_path = $this['path']->path("lib:toastr");
+
+		if ($this['config']->get('less_cache') == "1")
+		{
+			autoCompileLess($toastr_less_path . "/toastr.less", $destination_path . "/toastr.css",
+				$less);
+		}
+		else
+		{
+			$less->compileFile($toastr_less_path . "/toastr.less", $destination_path . "/toastr.css");
+		}
+	}
+	if ($this['config']->get('chosen') == "1")
+	{
+		$chosen_less_path = $this['path']->path("lib:chosen");
+
+		if ($this['config']->get('less_cache') == "1")
+		{
+			autoCompileLess($chosen_less_path . "/chosen.less", $destination_path . "/chosen.css",
+				$less);
+		}
+		else
+		{
+			$less->compileFile($chosen_less_path . "/chosen.less", $destination_path . "/chosen.css");
+		}
+	}
 }
 
 //check for SCSS configuration
@@ -286,6 +314,9 @@ if ($this['config']->get('jmpress') == "1")
 	$this['config']->get('ajaxify') == "0"; //loading ajaxify and jmpress will conflict because they both use ajax
 	$this['asset']->addFile('js', 'lib:jmpress/jmpress.js');
 }
+
+$this['asset']->addFile('js', 'js:template.js');
+
 if ($this['config']->get('ajaxify') == "1")
 {
 	$this['asset']->addFile('js', 'lib:history/jquery.history.js');
@@ -295,12 +326,22 @@ if ($this['config']->get('ajaxify') == "1")
 	}
 	$this['asset']->addFile('js', 'js:ajaxify-html5.js');
 }
-$this['asset']->addFile('js', 'js:template.js');
+
 if ($this['config']->get('loader') == "1")
 {
 	$this['asset']->addFile('js', 'js:loader.js');
 }
 
+if ($this['config']->get('toastr') == "1")
+{
+	$this['asset']->addFile('js', 'lib:toastr/toastr.js');
+}
+
+//chosen
+if ($this['config']->get('chosen') == "1")
+{
+	$this['asset']->addFile('js', 'lib:chosen/chosen.js');
+}
 // internet explorer
 if ($this['useragent']->browser() == 'msie') {
 

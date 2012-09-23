@@ -396,8 +396,8 @@
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
-		<field name = "noty" type = "radio" label = "Load noty"
-		       description = "Load noty for real-time notifications"
+		<field name = "toastr" type = "radio" label = "Load toastr"
+		       description = "Load toastr for real-time notifications"
 		       default = "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
