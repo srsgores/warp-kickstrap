@@ -252,12 +252,13 @@
 		<field name = "Grid" type = "separator"/>
 		<field name = "grid_system" type = "list" label = "Grid System"
 		       description = "Grid system to be used when styling the template.  Bootstrap and 1140 both use the .row class, but the Warp one uses poor css classes like width33 (meaining 33 percent of the page)."
-		       default = "1140">
+		       default = "none">
 			<option value = "1140">1140 CSS Grid by Andy Taylor</option>
 			<option value = "bootstrap">Twitter Bootstrap Grid System</option>
 			<option value = "ggs">Golden Grid System (tweaked and modified as well)</option>
 			<option value = "foundation">Zurb Foundation</option>
 			<option value = "yoo">YooTheme Warp Grid System</option>
+			<option value = "none">None</option>
 		</field>
 		<field name = "max_columns" type = "text" label = "Maximum number of columns"
 		       description = "GGS only: set how many columns you want your grid to be.  (Hint: try not to go over 16, and try to use even numbers" default = "16" class = "short">

@@ -5,6 +5,18 @@
 @padding: 1em;
 @margin: 1em;
 
+
+@line: 24;
+@column-count: 12;
+@column: 100% / @column-count;
+@font-size: 16;
+@em: @font-size*1em;
+@column-notation: "col";
+@row-notation: "row";
+
+@transition-time: 1s;
+
+@text-colour: #FFF;
 // Global values
 // --------------------------------------------------
 
@@ -99,11 +111,11 @@
 
 // Forms
 // -------------------------
-@inputBackground: rgba(39, 39, 39, 0.74);
-@inputBorder: #313131;
+@inputBackground: rgba(249, 249, 249, 0.73);
+@inputBorder: #bfbfbf;
 @inputBorderRadius: 0.4em;
 @inputDisabledBackground: @grayLighter;
-@formActionsBackground: rgba(41, 41, 41, 0.87);
+@formActionsBackground: rgba(244, 244, 244, 0.66);
 
 // Dropdowns
 // -------------------------
@@ -211,6 +223,10 @@
 @infoText: #3a87ad;
 @infoBackground: #d9edf7;
 @infoBorder: darken(spin(@infoBackground, -10), 7%);
+
+@hintText: #adab1e;
+@hintBackground: #f7f31a;
+@hintBorder: darken(spin(#ad9400, -10), 7%);
 
 // Tooltips and popovers
 // -------------------------

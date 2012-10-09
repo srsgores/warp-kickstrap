@@ -17,6 +17,8 @@
 
 /*! normalize.css 2012-08-07T21:27 UTC | MIT License | git.io/normalize */
 
+/*put CSS imports here, as they cannot go in LESS*/
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500);
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -187,7 +189,7 @@ strong {
 }
 
 blockquote {
-	margin: 1em 40px;
+	margin: 1em 3em;
 }
 
 /*
@@ -291,25 +293,25 @@ sub {
  * Addresses margins set differently in IE6/7.
  */
 
-dl,
-menu,
-ol,
-ul {
+#content dl,
+#content menu,
+#content ol,
+#content ul {
 	margin: 1em 0;
 }
 
-dd {
-	margin: 0 0 0 40px;
+#content dd {
+	margin: 0 0 0 3em;
 }
 
 /*
  * Addresses paddings set differently in IE6/7.
  */
 
-menu,
-ol,
-ul {
-	padding: 0 0 0 40px;
+#content menu,
+#content ol,
+#content ul {
+	padding: 0 0 0 3em;
 }
 
 /*

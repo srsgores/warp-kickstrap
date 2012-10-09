@@ -6,8 +6,9 @@
 // --------------------------------------------------
 
 // Core
-.btn {
+.btn, {
 	display: inline-block;
+	color: @gray;
 	.ie7-inline-block();
 	padding: 0.84em @padding;
 	margin-bottom: 0; // For input.btn
@@ -37,12 +38,6 @@
 // Focus state for keyboard and accessibility
 	&:focus {
 		.tab-focus();
-	}
-
-	//fix for yootheme
-	.button-more {
-		.btn-inverse;
-		.btn;
 	}
 
 // Active state
@@ -128,9 +123,10 @@
 
 // Set the backgrounds
 // -------------------------
-.btn { // reset here as of 2.0.3 due to Recess property order
+.btn, { // reset here as of 2.0.3 due to Recess property order
 	border-color: #c5c5c5;
 	border-color: rgba(0, 0, 0, .15) rgba(0, 0, 0, .15) rgba(0, 0, 0, .25);
+	.buttonBackground(@btnBackground, @btnBackgroundHighlight);
 }
 
 .btn-primary {
@@ -166,11 +162,12 @@
 // --------------------------------------------------
 
 button.btn,
-input[type="submit"].btn { // Firefox 3.6 only I believe
+input[type="submit"].btn,  { // Firefox 3.6 only I believe
 	&::-moz-focus-inner {
 		padding: 0;
 		border: 0;
 	}
+	.btn;
 
 // IE7 has some default padding on button controls
 	*padding-top: 3px;
@@ -212,4 +209,13 @@ input[type="submit"].btn { // Firefox 3.6 only I believe
 	color: @linkColorHover;
 	text-decoration: underline;
 	background-color: transparent;
+}
+
+//fix for yootheme
+.button-more, .btn-more {
+	.btn;
+	&:after {
+		.right-icon("");
+		margin-left: @border-radius;
+	}
 }
