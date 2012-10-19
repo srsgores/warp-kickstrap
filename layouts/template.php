@@ -1,4 +1,11 @@
 <?php
+/**
+* @package   yoo_master
+* @author    YOOtheme http://www.yootheme.com
+* @copyright Copyright (C) YOOtheme GmbH
+* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+*/
+
 /*------------------------------------------------------------------------------------------------------------------------
     Author: Sean Goresht
     www: http://seangoresht.com/
@@ -139,6 +146,10 @@ if ($this['config']->get('loader') == "1")
 <?php if ($this['modules']->count('innertop + innerbottom + sidebar-a + sidebar-b') || $this['config']->get('system_output')) : ?>
 	<div id = "main" class = "row grid-block">
 
+		<?php if ($this['modules']->count('sidebar-a')) : ?>
+		<aside id = "sidebar-a" class = "grid-box"><?php echo $this['modules']->render('sidebar-a', array('layout' => 'stack')); ?></aside>
+		<?php endif; ?>
+
 		<div id = "maininner" class = "grid-box">
 
 			<?php if ($this['modules']->count('innertop')) : ?>
@@ -159,10 +170,6 @@ if ($this['config']->get('loader') == "1")
 
 		</div>
 		<!-- maininner end -->
-
-		<?php if ($this['modules']->count('sidebar-a')) : ?>
-		<aside id = "sidebar-a" class = "grid-box"><?php echo $this['modules']->render('sidebar-a', array('layout' => 'stack')); ?></aside>
-		<?php endif; ?>
 
 		<?php if ($this['modules']->count('sidebar-b')) : ?>
 		<aside id = "sidebar-b" class = "grid-box"><?php echo $this['modules']->render('sidebar-b', array('layout' => 'stack')); ?></aside>

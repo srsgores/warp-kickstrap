@@ -21,132 +21,12 @@
     <flatten value="false" />
     <groupTables value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="yoo_master_demo_package_j25" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/config/js/config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="817" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="templateDetails.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_master/templateDetails.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="53" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.52">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="templateDetails.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_nano2/templateDetails.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="101" selection-start="2236" selection-end="2307" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/systems/joomla/config/elements/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="37" selection-start="838" selection-end="838" vertical-scroll-proportion="-21.5625">
-              <folding>
-                <element signature="e#6#191#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_master/config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="37" selection-start="6638" selection-end="6652" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#0;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#1;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#2;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#3;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#4;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#5;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#6;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#7;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#8;tag#fields#0;tag#config#0" expanded="false" />
-                <element signature="tag#field#2;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#3;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#4;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#5;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#6;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#8;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#9;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#10;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#11;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#13;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#15;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#16;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#17;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#18;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#19;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#20;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#21;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#22;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#23;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#24;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#field#25;tag#fields#1;tag#config#0" expanded="false" />
-                <element signature="tag#fields#2;tag#config#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.default" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_master/config.default">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="343" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_master/layouts/template.config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="72" selection-start="1205" selection-end="1205" vertical-scroll-proportion="-2.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_nano2/warp/systems/joomla/config/elements/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="89" selection-start="642" selection-end="723" vertical-scroll-proportion="-16.53125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/systems/joomla/config/js/admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="7" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -208,6 +88,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,7 +103,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
+              <option name="myItemId" value="warp-kickstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -232,215 +113,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master" />
+              <option name="myItemId" value="warp-kickstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="warp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="systems" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="joomla" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="systems" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="joomla" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="systems" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="joomla" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master_demo_package_j25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoo_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="editing.templates" />
-    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="Joomla 3" serverId="9cfa253b-0d15-48d6-8614-4f4e672f03da">
     <servers>
@@ -461,25 +152,17 @@
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
-      <method>
-        <option name="PhingTarget" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote">
       <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method>
-        <option name="FtpUpload" enabled="false">
-          <server_id />
-          <server_name />
-        </option>
-        <option name="PhingTarget" enabled="false" />
-      </method>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="9cfa253b-0d15-48d6-8614-4f4e672f03da" server_name="Joomla 3">
+      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -504,6 +187,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="ae210a17-a70d-403a-9dec-527a9ec3826f" name="Default" comment="" />
       <created>1346561041014</created>
       <updated>1346561041014</updated>
     </task>
@@ -511,30 +195,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6703911" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.9984721" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18036287" sideWeight="0.6703911" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="eSnippet Pro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20117396" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18036287" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20117396" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6703911" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.9984721" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="eSnippet Pro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -559,7 +244,6 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
@@ -569,7 +253,6 @@
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
@@ -590,192 +273,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/user/profile/profile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="575" selection-end="575" vertical-scroll-proportion="0.52">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_admin/views/profile/tmpl/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1378" selection-end="1378" vertical-scroll-proportion="-10.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/helpers/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/config/js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="817" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_nano2/warp/systems/joomla/config/elements/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="89" selection-start="642" selection-end="723" vertical-scroll-proportion="-16.53125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_nano2/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="13" selection-start="8815" selection-end="8815" vertical-scroll-proportion="0.12">
-          <folding>
-            <element signature="tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#0;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#1;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#3;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#4;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#5;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#6;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#7;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#8;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#2;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#3;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#4;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#5;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#6;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#8;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#9;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#10;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#11;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#13;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#14;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#15;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#16;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#17;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#18;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#19;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#20;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#21;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#22;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#23;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#24;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#25;tag#fields#1;tag#config#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/systems/joomla/config/elements/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="37" selection-start="838" selection-end="838" vertical-scroll-proportion="-21.5625">
-          <folding>
-            <element signature="e#6#191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/warp/systems/joomla/config/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="7" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="37" selection-start="6638" selection-end="6652" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#0;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#1;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#2;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#3;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#4;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#5;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#6;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#7;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#8;tag#fields#0;tag#config#0" expanded="false" />
-            <element signature="tag#field#2;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#3;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#4;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#5;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#6;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#8;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#9;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#10;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#11;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#13;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#15;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#16;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#17;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#18;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#19;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#20;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#21;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#22;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#23;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#24;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#field#25;tag#fields#1;tag#config#0" expanded="false" />
-            <element signature="tag#fields#2;tag#config#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/config.default">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="343" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/layouts/template.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="72" selection-start="1205" selection-end="1205" vertical-scroll-proportion="-2.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_nano2/templateDetails.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="101" selection-start="2236" selection-end="2307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/yoo_master/templateDetails.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="53" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.52">
-          <folding />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
 

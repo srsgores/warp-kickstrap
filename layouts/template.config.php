@@ -1,4 +1,11 @@
 <?php
+/**
+* @package   yoo_master
+* @author    YOOtheme http://www.yootheme.com
+* @copyright Copyright (C) YOOtheme GmbH
+* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+*/
+
 /*------------------------------------------------------------------------------------------------------------------------
     Author: Sean Goresht
     www: http://seangoresht.com/
@@ -268,6 +275,7 @@ elseif ($this['config']->get("grid_system") == "ggs")
 if ($this['config']->get("icomoon") == "1")
 {
 	$this['asset']->addFile('css', 'css:icomoon/style.css');
+	$this['asset']->addFile('js', 'css:icomoon/lte-ie7.js');
 }
 
 
@@ -347,6 +355,7 @@ if ($this['useragent']->browser() == 'msie') {
 
 	// add conditional comments
 	$head[] = sprintf('<!--[if lte IE 8]><script src="%s"></script><![endif]-->', $this['path']->url('js:html5.js'));
+	$head[] = sprintf('<!--[if lte IE 7]><script src="%s"></script><![endif]-->', $this['path']->url('css:icomoon/lte-ie7.js'));
 	$head[] = sprintf('<!--[if IE 8]><link rel="stylesheet" href="%s" /><![endif]-->', $this['path']->url('css:ie8.css'));
 
 }

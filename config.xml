@@ -272,7 +272,7 @@
 		</field>
 		<field name = "cdn" type = "radio" label = "Load javascript Via CDN"
 		       description = "Use Content Delivery Networks when possible for plugins."
-		       default = "1">
+		       default = "0">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
@@ -285,7 +285,7 @@
 		<field name = "bootstrap" type = "radio" label = "Load Twitter Bootstrap Javascript File"
 		       description =
 				       "Load the Twitter Bootstrap file via CDN to enable the javascript component functionality.  Use this if your site uses some of these methods.  See the Bootstrap Documentation for more info."
-		       default = "1">
+		       default = "0">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
@@ -306,7 +306,7 @@
 		<field name = "ajaxify" type = "radio" label = "Ajaxify site front-end"
 		       description =
 				       "Give your users a more fluid experience by enabling ajax on the whole site.  Note: this can cause a lot of problems for some plugins, so test this out before you commit to it!  Also, this loads a file called history.js to allow for functionality on older browsers (requires ScrollTo."
-		       default = "0">
+		       default = "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
