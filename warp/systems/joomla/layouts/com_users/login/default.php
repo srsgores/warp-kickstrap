@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
 * @package   Warp Theme Framework
 * @author    YOOtheme http://www.yootheme.com

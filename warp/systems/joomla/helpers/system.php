@@ -1,31 +1,14 @@
 <?php
 /**
-* @package   yoo_master
+* @package   Warp Theme Framework
 * @author    YOOtheme http://www.yootheme.com
 * @copyright Copyright (C) YOOtheme GmbH
 * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
 */
 
-/*------------------------------------------------------------------------------------------------------------------------
-    Author: Sean Goresht
-    www: http://seangoresht.com/
-    github: https://github.com/srsgores
-
-    twitter: http://twitter.com/S.Goresht
-
-     warp-kickstrap Joomla Template
-     Licensed under the GNU Public License
-
-	=============================================================================
-	Filename:  system.php
-	=============================================================================
-	 This file is responsible for the setting and getting of parameters of this template.  This way, instead of calling a params -> get each time, we can simply access this class' stuff.
-
---------------------------------------------------------------------------------------------------------------------- */
-
 /*
 	Class: SystemWarpHelper
-		Joomla! system helper class, provides Joomla! 1.7 CMS integration (http://www.joomla.org)
+		Joomla! system helper class, provides Joomla! CMS integration (http://www.joomla.org)
 */
 class SystemWarpHelper extends WarpHelper {
 
@@ -60,6 +43,8 @@ class SystemWarpHelper extends WarpHelper {
 	public function __construct() {
 		parent::__construct();
 
+	    jimport('joomla.filesystem.folder');
+
 		// init vars
 		$this->application = JFactory::getApplication();
         $this->document    = JFactory::getDocument();
@@ -67,7 +52,7 @@ class SystemWarpHelper extends WarpHelper {
         $this->path        = JPATH_ROOT;
         $this->url         = rtrim(JURI::root(false), '/');
         $this->cache_path  = $this->path.'/cache/template';
-        $this->cache_time  = max(JFactory::getConfig()->getValue('config.cachetime') * 60, 86400);
+        $this->cache_time  = max(JFactory::getConfig()->get('cachetime') * 60, 86400);
 
 		// set config or load defaults
 		$file = $this['path']->path('template:config');
@@ -133,8 +118,8 @@ class SystemWarpHelper extends WarpHelper {
 				}
 			}
 
-			//force show system output on search results
-			if (strtolower(JRequest::getVar('option')) == "com_search") {
+			// force show system output on search results
+			if (strtolower($this->application->input->get('option')) == 'com_search') {
 				$this['config']->set('system_output', 1);
 			}
 
@@ -193,15 +178,18 @@ class SystemWarpHelper extends WarpHelper {
 	*/
 	public function saveConfig() {
 
+		// get application
+		$app = $this->application;
+
 		// init vars
-		$config = JRequest::getVar('config', array(), 'post', 'array', JREQUEST_ALLOWRAW);
-		$config = array_merge($config, array('profile_data' => JRequest::getVar('profile_data', array())));
-		$config = array_merge($config, array('profile_map' => JRequest::getVar('profile_map', array())));
+		$config = isset($_REQUEST['config']) ? $_REQUEST['config'] : array();
+		$config = array_merge($config, array('profile_data' => $app->input->get('profile_data', array(), 'array')));
+		$config = array_merge($config, array('profile_map' => $app->input->get('profile_map', array(), 'array')));
 		$file   = $this['path']->path('template:').'/config';
 		$data   = $this['data']->create($config);
 
 		// save config file
-		echo json_encode(array('message' => (file_put_contents($file, (string) $data) ? 'success' : 'failed')));
+		echo json_encode(array('message' => (count($config) > 2 && file_put_contents($file, (string) $data) ? 'success' : 'failed')));
 	}
 
 	/*
@@ -212,13 +200,16 @@ class SystemWarpHelper extends WarpHelper {
 	*/
 	public function isBlog() {
 
-		if (JRequest::getCmd('option') == 'com_content') {
-			if (in_array(JRequest::getCmd('view'), array('frontpage', 'article', 'archive', 'featured')) || (JRequest::getCmd('view') == 'category' && JRequest::getCmd('layout') == 'blog')) {
+		// get application
+		$app = $this->application;
+
+		if ($app->input->get('option') == 'com_content') {
+			if (in_array($app->input->get('view'), array('frontpage', 'article', 'archive', 'featured')) || ($app->input->get('view') == 'category' && $app->input->get('layout') == 'blog')) {
 				return true;
 			}
 		}
 
-		if (JRequest::getCmd('option') == 'com_zoo' && !in_array(JRequest::getCmd('task'), array('submission', 'mysubmissions')) && $app = App::getInstance('zoo')->zoo->getApplication() and $app->getGroup() == 'blog') {
+		if ($app->input->get('option') == 'com_zoo' && !in_array($app->input->get('task'), array('submission', 'mysubmissions')) && $a = App::getInstance('zoo')->zoo->getApplication() and $a->getGroup() == 'blog') {
 			return true;
 		}
 

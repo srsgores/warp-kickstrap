@@ -25,7 +25,7 @@ JHtml::register('users.spacer', array('JHtmlUsers', 'spacer'));
 		<?php if (isset($fieldset->label)): ?>
 		<h3><?php echo JText::_($fieldset->label); ?></h3>
 		<?php endif;?>
-
+		
 		<ul>
 		<?php foreach ($fields as $field): ?>
 			<?php if (!$field->hidden): ?>

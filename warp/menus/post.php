@@ -12,13 +12,13 @@
 		Menu base class
 */
 class WarpMenuPost extends WarpMenu {
-
+	
 	/*
 		Function: process
 
 		Returns:
 			Object
-	*/
+	*/	
 	public function process($module, $element) {
 
 		foreach ($element->find('li') as $li) {

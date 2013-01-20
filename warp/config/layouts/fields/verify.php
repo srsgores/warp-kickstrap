@@ -12,7 +12,7 @@ if (($checksums = $this['path']->path('template:checksums')) && filesize($checks
 	$this['checksum']->verify($this['path']->path('template:'), $log);
 
 	if ($count = count($log)) {
-
+	
 		$html[] = '<a href="#" class="verify-link">Some template files have been modified.</a>';
 		$html[] = '<ul class="verify">';
 		foreach (array('modified', 'missing') as $type) {

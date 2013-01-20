@@ -27,11 +27,11 @@ class EventWarpHelper extends WarpHelper {
 			Void
 	*/
 	public function bind($event, $callback) {
-
+		
 		if (!isset($this->_events[$event])) {
 			$this->_events[$event] = array();
 		}
-
+		
 		$this->_events[$event][] = $callback;
 	}
 
@@ -47,7 +47,7 @@ class EventWarpHelper extends WarpHelper {
 			Void
  	*/
 	public function trigger($event, $args = array()) {
-
+		
 		if (isset($this->_events[$event])) {
 			foreach ($this->_events[$event] as $callback) {
 				$this->_call($callback, $args);
@@ -55,5 +55,5 @@ class EventWarpHelper extends WarpHelper {
 		}
 
 	}
-
+	
 }

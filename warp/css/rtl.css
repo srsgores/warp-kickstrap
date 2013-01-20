@@ -310,8 +310,7 @@ table.calendar tfoot td:first-child { text-align: right; }
 /* Only Tablets (Portrait) and Phones (Landscape) */
 @media (min-width: 480px) and (max-width: 959px) {
 
-	#page.sidebars-2.sidebar-a-right #sidebar-a,
-	#page.sidebars-2.sidebar-b-right #sidebar-b { float: left; }
+	#page.sidebars-2.sidebar-b-left:not(.sidebar-a-left) #sidebar-a { float: left; } 
 
 }
 

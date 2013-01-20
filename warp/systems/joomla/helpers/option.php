@@ -30,7 +30,7 @@ class OptionWarpHelper extends WarpHelper {
 	*/
 	public function __construct() {
 		parent::__construct();
-
+		
 		// load data
 		$this->file = $this['system']->cache_path.sprintf('/%s.php', basename($this['path']->path('template:')));
 		$this->data = $this['data']->create(file_exists($this->file) ? file_get_contents($this->file) : null);

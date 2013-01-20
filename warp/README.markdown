@@ -1,11 +1,46 @@
 # Warp Theme Framework #
 
-- Version: 6.2.4
-- Date: August 2012
+- Version: 6.3.3
+- Date: January 2013
 - Author: YOOtheme GmbH
 - Website: <http://www.yootheme.com/warp>
 
 ## Changelog
+
+	6.3.3
+	^ Updated jQuery to 1.9.0 (J)
+	^ Updated HTML5 Shiv to 3.6.2
+
+	6.3.2
+	# Fixed floatmetrics check for chrome >= version 24
+	# Fixed has_cap deprecated message in debug mode (WP)
+	# Fixed style settings in widget options (WP)
+
+	6.3.1
+	^ Updated jQuery to 1.8.3 (J)
+	^ Updated overrides according to Joomla 2.5.8 (J25)
+	^ Updated overrides according to Joomla 3.0.2 (J3)
+	^ Changed responsive behavior of CSS class `width33`
+	# Fixed search results layout (WP)
+
+	6.3.0
+	+ Added Joomla 3.0 support
+	^ Updated jQuery to 1.8.2 (J)
+	^ Updated JSmin asset filter
+	# Fixed Viewport for IE10 Snap Mode
+	
+	6.2.7
+	# Removed double CSS class attribute in com_contact (J25)
+	^ Updated overrides according to Joomla 2.5.7 (J25)
+
+	6.2.6
+	^ Updated jQuery to 1.8.1 (J)
+	# Removed IE10 input clear icon in searchbox (::-ms-clear)
+
+	6.2.5
+	# Fixed $.matchWidth function for browsers with element float metrics
+	^ Updated jQuery to 1.8.0 (J)
+	^ Featured image is shown above title
 
 	6.2.4
 	# Fixed $.matchWidth function for Chrome 20+

@@ -23,7 +23,7 @@
 	background: #F0F0F0;
 	background: -moz-linear-gradient(top, #f5f5f5, #e6e6e6);
 	background: -webkit-linear-gradient(top, #f5f5f5, #e6e6e6);
-	background: -o-linear-gradient(top, #f5f5f5, #e6e6e6 100%);
+	background: -o-linear-gradient(top, #f5f5f5, #e6e6e6);
 	background: linear-gradient(to bottom, #f5f5f5, #e6e6e6);
 	overflow: hidden;
 }
@@ -161,17 +161,28 @@
 .tabs-box ul.content input[type='text']:focus,
 .tabs-box ul.content input[type='password']:focus,
 .tabs-box ul.content select:focus,
-.tabs-box ul.content textarea:focus { background: #FFFFDD; }
+.tabs-box ul.content textarea:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
+}
 
 /* Properties */
+.tabs-box ul.properties > li:before,
+.tabs-box ul.properties > li:after {
+	content: " ";
+	display: table;
+}
+
+.tabs-box ul.properties > li:after { clear: both; }
+
 .tabs-box ul.properties > li {
 	margin-top: 10px;
 	line-height: 20px;
-	overflow: hidden;
 }
 .tabs-box ul.properties > li:first-child { margin-top: 0; }
 
-.tabs-box ul.properties .label {
+.tabs-box ul.properties .wlabel {
 	width: 200px;
 	padding: 4px 5px 0 0;
 	float: left;
@@ -189,7 +200,7 @@
 	display: block;
 }
 
-.tabs-box ul.properties > li.ignore .label,
+.tabs-box ul.properties > li.ignore .wlabel,
 .tabs-box ul.properties > li.ignore .field {
 	opacity: 0.5;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -213,6 +224,7 @@
 .tabs-box ul.properties > li.separator {
 	height: 33px;
 	margin: 15px -15px;
+	padding-left: 15px; /* text-indent is not working because of the clearfix */
 	border-top: 1px solid #D2D2D2;
 	border-bottom: 1px solid #D2D2D2;
 	background: #F0F0F0;
@@ -221,7 +233,6 @@
 	background: -o-linear-gradient(top, #FFF 4%, #FAFAFA 5%, #F0F0F0 100%);
 	background: linear-gradient(to bottom, #FFF 4%, #FAFAFA 5%, #F0F0F0 100%);
 	line-height: 34px;
-	text-indent: 15px;
 	color: #787878;
 	text-shadow: 0 1px 0 #fff;
 	text-transform: uppercase;

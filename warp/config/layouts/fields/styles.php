@@ -18,7 +18,7 @@ if ($style_folder) {
 
     // fill the list with all styles found in the folder
     foreach (scandir($style_folder) as $style) {
-
+        
         if (in_array($style, $skip_folders) || !is_dir($style_folder.'/'.$style)) {
             continue;
         }

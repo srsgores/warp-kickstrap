@@ -14,7 +14,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 
 <div id="system">
 
-	<?php if ($this->params->get('show_page_heading', 1)) : ?>
+	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
 
@@ -35,11 +35,11 @@ $cparams = JComponentHelper::getParams ('com_media');
 	<?php endif; ?>
 
 	<div class="item">
-
+	
 		<?php if ($this->contact->name && $this->params->get('show_name')) : ?>
 		<h1 class="title"><?php echo $this->contact->name; ?></h1>
 		<?php endif;  ?>
-
+		
 		<?php if ($this->contact->con_position && $this->params->get('show_position')) : ?>
 		<h2 class="subtitle"><?php echo $this->contact->con_position; ?></h2>
 		<?php endif; ?>
@@ -81,7 +81,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 			<h3><?php  echo JText::_('COM_CONTACT_EMAIL_FORM'); ?></h3>
 			<?php  echo $this->loadTemplate('form');  ?>
 		<?php endif; ?>
-
+		
 	</div>
-
+	
 </div>

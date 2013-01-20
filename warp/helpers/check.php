@@ -11,7 +11,7 @@
         System check helper class
 */
 class CheckWarpHelper extends WarpHelper {
-
+    
     protected $issues;
 
     /*
@@ -51,7 +51,7 @@ class CheckWarpHelper extends WarpHelper {
 			Void
     */
     public function checkCommon() {
-
+ 
         // check php version
 		$current  = phpversion();
 		$required = '5.2.7';
@@ -95,7 +95,7 @@ class CheckWarpHelper extends WarpHelper {
 				if (preg_match('/zoo|widgetkit/', $file)) {
 					continue;
 				}
-
+				
 				$matches[] = $file;
 			}
 		}
@@ -139,7 +139,7 @@ class CheckWarpHelper extends WarpHelper {
 	    $ignore = array('.', '..', '.DS_Store', '.svn', '.git', '.gitignore', '.gitmodules', 'cgi-bin');
 
 		foreach (scandir($path) as $file) {
-
+			
 			// ignore file ?
 	        if (in_array($file, $ignore)) {
 				continue;
@@ -154,7 +154,7 @@ class CheckWarpHelper extends WarpHelper {
 				if ($filter && !preg_match($filter, $file)) {
 					continue;
 				}
-
+				
 				$files[] = $prefix.$file;
             }
 		}

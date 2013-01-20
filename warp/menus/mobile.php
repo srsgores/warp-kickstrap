@@ -11,13 +11,13 @@
 		Mobile menu class
 */
 class WarpMenuMobile extends WarpMenu {
-
+	
 	/*
 		Function: process
 
 		Returns:
 			Object
-	*/
+	*/	
 	public function process($module, $element) {
 
 		// add mobile class

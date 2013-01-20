@@ -1,30 +1,3 @@
-<?php
-/**
-* @package   yoo_master
-* @author    YOOtheme http://www.yootheme.com
-* @copyright Copyright (C) YOOtheme GmbH
-* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
-*/
-
-/*------------------------------------------------------------------------------------------------------------------------
-     Author: Sean Goresht
-     www: http://seangoresht.com/
-     github: https://github.com/srsgores
-
-     twitter: http://twitter.com/S.Goresht
-
-      warp-kickstrap Joomla Template
-      Licensed under the GNU Public License
-
- 	=============================================================================
- 	Filename:  head.php
- 	=============================================================================
- 	 This file serves as the building block for all of warp kickstrap.  It will APPEND to the existing head created by Joomla.
- 	 This file is the main location where CSS and Javascript files are loaded; other files are loaded WITHIN the template (under the root directory -- not WARP) directory in template.config.php.  They are imported using WARP's helpers.
- 
- --------------------------------------------------------------------------------------------------------------------- */
-  ?>
-
 <meta charset="<?php echo $this['system']->document->getCharset(); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <?php if($this['config']->get('responsive', false)): ?>
@@ -32,13 +5,10 @@
 <?php endif; ?>
 <jdoc:include type="head" />
 <link rel="apple-touch-icon-precomposed" href="<?php echo $this['path']->url('template:apple_touch_icon.png'); ?>" />
-<!-- Note: we don't even have to make a link rel for touch icons, as the apple webkit will look for the file in the root directory. -->
-
 <?php
 
 // get html head data
 $head = $this['system']->document->getHeadData();
-$http  = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
 
 // remove deprecated meta-data (html5)
 unset($head['metaTags']['http-equiv']);
@@ -48,67 +18,8 @@ unset($head['metaTags']['standard']['language']);
 
 $this['system']->document->setHeadData($head);
 
-/**
- * Load scripts from CDN if the user has specified so; otherwise, load scripts from local drive.
- * Host must be in HTTP mode, or else we will have problems with Cross-site permissions
- */
-if ($this['config']->get('jquery_cdn') == "1")
-{
-	$this['system']->document->addScript("https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js");
-}
-else
-{
-	// load jQuery, if not loaded before
-	if (!$this['system']->application->get('jquery'))
-	{ //if jQuery is found using warp's helpers...
-		$this['system']->application->set('jquery', true); //set jquery to true
-		$this['system']->document->addScript($this['path']->url('lib:jquery/jquery.js'));
-	}
-}
-
-//now load remaining scripts, depending on parameters
-if ($this['config']->get('cdn') == "1" && $http != "https")
-{ //if the user has specified that CDN is to be used
-	if ($this['config']->get('modernizr') == "1")
-	{
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js");
-	}
-	if ($this['config']->get('bootstrap') == "1")
-	{
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js");
-	}
-	if ($this['config']->get('scrollto') == "1")
-	{
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js");
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js");
-	}
-	if ($this['config']->get('masonry') == "1")
-	{
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js");
-	}
-}
-else
-{
-	//load modernizr
-	if ($this['config']->get('modernizr') == "1")
-	{
-		$this['system']->document->addScript($this['path']->url('lib:modernizr/modernizr.custom.js'));
-	}
-	//load bootstrap
-	if ($this['config']->get('bootstrap') == "1")
-	{
-		$this['system']->document->addScript($this['path']->url('lib:bootstrap/bootstrap.min.js'));
-	}
-	if ($this['config']->get('scrollto') == "1")
-	{
-		$this['system']->document->addScript($this['path']->url('lib:jquery-easing/jquery.easing.min.js'));
-		$this['system']->document->addScript($this['path']->url('lib:jquery-scrollto/jquery.scrollTo.min.js'));
-	}
-	if ($this['config']->get('masonry') == "1")
-	{
-		$this['system']->document->addScript($this['path']->url('lib:masonry/jquery.masonry.min.js'));
-	}
-}
+// load jQuery
+JHtml::_('jquery.framework');
 
 // get styles and scripts
 $styles  = $this['asset']->get('css');
@@ -153,7 +64,7 @@ if ($compression = $this['config']->get('compression')) {
 	// compress joomla styles and scripts
 	$head = $this['system']->document->getHeadData();
 	$data = array('styleSheets' => array(), 'scripts' => array());
-
+	
 	foreach ($head['styleSheets'] as $style => $meta) {
 
 		if (preg_match('/\.css$/i', $style)) {
@@ -174,10 +85,10 @@ if ($compression = $this['config']->get('compression')) {
 				$script = $this['asset']->cache(basename($script), $asset, array('JSCompressor'), $options)->getUrl();
 			}
 		}
-
+	
 		$data['scripts'][$script] = $meta;
 	}
-
+	
 	$this['system']->document->setHeadData(array_merge($head, $data));
 }
 

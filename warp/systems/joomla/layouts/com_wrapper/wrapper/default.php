@@ -26,7 +26,7 @@ function iFrameHeight() {
 
 <div id="system">
 
-	<?php if ($this->params->get('show_page_heading', 1)) : ?>
+	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title">
 		<?php if ($this->escape($this->params->get('page_heading'))) :?>
 			<?php echo $this->escape($this->params->get('page_heading')); ?>
@@ -35,7 +35,7 @@ function iFrameHeight() {
 		<?php endif; ?>
 	</h1>
 	<?php endif; ?>
-
+	
 	<iframe <?php echo $this->wrapper->load; ?>
 		id="blockrandom"
 		name="iframe"

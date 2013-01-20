@@ -76,9 +76,7 @@
 
 	.sidebars-2 #sidebar-a,
 	.sidebars-2 #sidebar-b { width: 50%; }
-
-	.sidebars-2.sidebar-a-right #sidebar-a,
-	.sidebars-2.sidebar-b-right #sidebar-b { float: right; }
+	.sidebars-2.sidebar-b-left:not(.sidebar-a-left) #sidebar-a { float: right; } /* Keep Sidebar order */
 
 	.grid-gutter > .grid-box:nth-child(n+3) > * { margin-top: 30px; }
 
@@ -95,6 +93,10 @@
 
 /* Only Phones */
 @media (max-width: 767px) {
+
+	/* Layout */
+	.width33,
+	.width66 { width: 100%; }
 
 	/* Header */
 	#header-responsive { display: block; }
@@ -125,11 +127,6 @@
 
 /* Only Phones (Landscape) */
 @media (min-width: 480px) and (max-width: 767px) {
-
-	/* Layout */
-	.width33 { width: 50%; }
-	.width33:nth-child(odd):last-child { width: 100%; }
-
 }
 
 /* Only Phones (Portrait) */
@@ -142,11 +139,9 @@
 	.width16,
 	.width20,
 	.width25,
-	.width33,
 	.width40,
 	.width50,
 	.width60,
-	.width66,
 	.width75,
 	.width80 { width: 100%; }
 
@@ -161,4 +156,14 @@
 		float: none;
 	}
 
+}
+
+
+/* Fix Viewport for IE10 Snap Mode
+----------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 400px) {
+	@-ms-viewport{
+		width: 320px;
+	}
 }

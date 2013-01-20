@@ -18,9 +18,9 @@ defined('_JEXEC') or die;
 	<li>
 		<?php
 			if ($profile->value) {
-
+				
 				echo $profile->label.' ';
-
+				
 				$profile->text = htmlspecialchars($profile->value, ENT_COMPAT, 'UTF-8');
 				switch ($profile->id) {
 
@@ -32,15 +32,15 @@ defined('_JEXEC') or die;
 							echo '<a href="http://'.$profile->text.'">'.$profile->text.'</a>';
 						}
 						break;
-
+	
 					default:
 						echo $profile->text;
-
+						
 				}
 			}
 		?>
 	</li>
-
+	
 <?php endforeach; ?>
 </ul>
 <?php endif;

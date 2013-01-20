@@ -17,11 +17,11 @@ class WarpMenuDropdown extends WarpMenu {
 
 		Returns:
 			Object
-	*/
+	*/	
 	public function process($module, $element) {
-
+		
 		foreach ($element->find('ul.level2') as $ul) {
-
+			
 			// get parent li
 			$li = $ul->parent();
 
@@ -37,7 +37,7 @@ class WarpMenuDropdown extends WarpMenu {
 
 				foreach ($children as $child) {
 					$col = intval($i / $colrows);
-
+					
 					if ($column != $col) {
 						$column = $col;
 					}
@@ -45,7 +45,7 @@ class WarpMenuDropdown extends WarpMenu {
 					if ($li->children('ul')->length == $column) {
 						$li->append('<ul class="level2"></ul>');
 					}
-
+					
 					if ($column > 0) {
 						$li->children('ul')->item($column)->append($child);
 					}

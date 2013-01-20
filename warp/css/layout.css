@@ -36,17 +36,7 @@
 .width80 { width: 80%; }
 .width100 { width: 100%; }
 
-.width16,
-.width20,
-.width25,
-.width33,
-.width40,
-.width50,
-.width60,
-.width66,
-.width75,
-.width80,
-.width100 {
+[class*='width'] {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;

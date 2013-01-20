@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
 * @package   Warp Theme Framework
 * @author    YOOtheme http://www.yootheme.com
@@ -16,7 +16,7 @@ if (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING']) {
 
 	if (($file = realpath(dirname(__FILE__).DIRECTORY_SEPARATOR.$query)) && is_file($file)) {
 		if ($type = pathinfo($file, PATHINFO_EXTENSION)) {
-
+			
 			// set header
 			if ($type == 'css') header('Content-type: text/css; charset=UTF-8');
 			if ($type == 'js') header('Content-type: application/x-javascript');

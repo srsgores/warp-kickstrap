@@ -1,32 +1,10 @@
 <?php
 /**
-* @package   yoo_master
+* @package   Warp Theme Framework
 * @author    YOOtheme http://www.yootheme.com
 * @copyright Copyright (C) YOOtheme GmbH
 * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
 */
-
-/*------------------------------------------------------------------------------------------------------------------------
-    Author: Sean Goresht
-    www: http://seangoresht.com/
-    github: https://github.com/srsgores
-
-    twitter: http://twitter.com/S.Goresht
-
-     warp-kickstrap Joomla Template
-     Licensed under the GNU Public License
-
-	=============================================================================
-	Filename:  warp.php
-	=============================================================================
-	 This file is the main warp class, which sets attributes for the class (variables accessible in all of warp).
-	 This file does the following:
-	 	--Set branding string
-	 	--Register all file paths (ex. CSS/JS/helper file paths, etc.)
-	 	--Declare functions to add/remove helpers
-
---------------------------------------------------------------------------------------------------------------------- */
-
 
 // init vars
 $path = dirname(__FILE__);
@@ -34,20 +12,18 @@ $path = dirname(__FILE__);
 // load classes
 require_once($path.'/classes/helper.php');
 require_once($path.'/helpers/path.php');
-require_once($path.'/helpers/lessc.inc.php');
-require_once($path.'/helpers/scss.inc.php');
 
 class Warp implements ArrayAccess {
 
 	/* branding */
-	protected $_branding = 'Powered by <a href="https://github.com/srsgores/warp-kickstrap">Warp KickStrap Framework</a>'; //insert the string you want to be displayed at the bottom.  NOTE: you can turn this feature off in the template options!
+	protected $_branding = 'Powered by <a href="http://www.yootheme.com">Warp Theme Framework</a>';
 
     /* helpers */
 	protected $_helpers = array();
 
     /* instance */
 	protected static $_instance;
-
+    
 	/*
 		Function: getInstance
 			Retrieve warp instance
@@ -55,7 +31,7 @@ class Warp implements ArrayAccess {
 		Returns:
 			Template
 	*/
-	public static function getInstance() {
+	public static function getInstance() {      
 
         if (!isset(self::$_instance)) {
 
@@ -91,7 +67,7 @@ class Warp implements ArrayAccess {
 	public function getBranding() {
 		return $this->_branding;
 	}
-
+    
     /*
 		Function: getHelper
 			Retrieve a helper
@@ -110,7 +86,7 @@ class Warp implements ArrayAccess {
 		if (isset($this->_helpers[$name])) {
 			return $this->_helpers[$name];
 		}
-
+		
 		return null;
 	}
 
@@ -144,7 +120,7 @@ class Warp implements ArrayAccess {
 	*/
 	public function loadHelper($helpers, $suffix = 'WarpHelper') {
 		$helpers = (array) $helpers;
-
+		
 		foreach ($helpers as $name) {
 			$class = $name.$suffix;
 
@@ -159,7 +135,7 @@ class Warp implements ArrayAccess {
 			}
 		}
 	}
-
+	
 	/* ArrayAccess interface implementation */
 
 	public function offsetGet($name)	{

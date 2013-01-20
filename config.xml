@@ -1,419 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-	<fields name = "General">
-		<field name = "profile_default" type = "profile" default = "" label = "Default Profile"
-		       description = "Select the profile which should be loaded by default."/>
-		<field name = "profile_dynamic" type = "radio" default = "1" label = "Dynamic Profiles"
-		       description = "Allow profiles to be loaded by URL.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+	<fields name="General">
+		<field name="profile_default" type="profile" default="" label="Default Profile" description="Select the profile which should be loaded by default." />
+		<field name="profile_dynamic" type="radio" default="1" label="Dynamic Profiles" description="Allow profiles to be loaded by URL.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "compression" type = "list" default = "0" label = "Compression"
-		       description = "Minify and combine CSS and JavaScript into a single file. Use gzip compression and Data URIs to reduce image file requests.">
-			<option value = "0">None</option>
-			<option value = "1">Combination + Minify</option>
-			<option value = "2">Combination + Minify + Data URIs</option>
-			<option value = "3">Combination + Minify + Data URIs + Gzip</option>
+		<field name="compression" type="list" default="0" label="Compression" description="Minify and combine CSS and JavaScript into a single file. Use gzip compression and Data URIs to reduce image file requests.">
+			<option value="0">None</option>
+			<option value="1">Combination + Minify</option>
+			<option value="2">Combination + Minify + Data URIs</option>
+			<option value="3">Combination + Minify + Data URIs + Gzip</option>
 		</field>
-		<field name = "outdated_browser" type = "radio" default = "1" label = "Upgrade Page"
-		       description = "Redirect outdated browsers to the upgrade page.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="outdated_browser" type="radio" default="1" label="Upgrade Page" description="Redirect outdated browsers to the upgrade page.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "twitter" type = "radio" default = "0" label = "Twitter Button"
-		       description = "Display a Tweet button in your articles.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="twitter" type="radio" default="0" label="Twitter Button" description="Display a Tweet button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "plusone" type = "radio" default = "0" label = "Google+ Button"
-		       description = "Display a Google+ button in your articles.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="plusone" type="radio" default="0" label="Google+ Button" description="Display a Google+ button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "facebook" type = "radio" default = "0" label = "Facebook Button"
-		       description = "Display a facebook like button in your articles.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="facebook" type="radio" default="0" label="Facebook Button" description="Display a facebook like button in your articles.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "tracking_code" type = "textarea" rows = "8" cols = "30" label = "Tracking Code"
-		       description = "Insert your Google Analytics tracking code."/>
-		<field name = "verify" type = "verify" label = "Verify Files"
-		       description = "Detect and show all file modifications."/>
-		<field name = "check" type = "check" label = "System Check" description = "Detects system issues."/>
+	  	<field name="tracking_code" type="textarea" rows="8" cols="30" label="Tracking Code" description="Insert your Google Analytics tracking code." />
+		<field name="verify" type="verify" label="Verify Files" description="Detect and show all file modifications." />
+		<field name="check" type="check" label="System Check" description="Detects system issues." />
 	</fields>
-	<fields name = "Profiles">
-		<field name = "Style" type = "separator"/>
-		<field name = "style" type = "styles" default = "" label = "Style" description = "Select the style variation."/>
-		<field name = "color1" type = "list" default = "default" label = "Primary Color"
-		       description = "Select the primary color.">
-			<option value = "">Blue</option>
-			<option value = "orange">Orange</option>
-			<option value = "green">Green</option>
-			<option value = "navy">Navy</option>
-			<option value = "red">Red</option>
-			<option value = "pink">Pink</option>
-			<option value = "salmon">Salmon</option>
-			<option value = "turquoise">Turquoise</option>
-			<option value = "rose">Rose</option>
+	<fields name="Profiles">
+		<field name="Style" type="separator" />
+		<field name="style" type="styles" default="" label="Style" description="Select the style variation." />
+		<field name="color1" type="list" default="default" label="Primary Color" description="Select the primary color.">
+			<option value="">Blue</option>
+			<option value="orange">Orange</option>
+			<option value="green">Green</option>
+			<option value="navy">Navy</option>
+			<option value="red">Red</option>
+			<option value="pink">Pink</option>
+			<option value="salmon">Salmon</option>
+			<option value="turquoise">Turquoise</option>
+			<option value="rose">Rose</option>
 		</field>
-		<field name = "color2" type = "list" default = "default" label = "Secondary Color"
-		       description = "Select the secondary color.">
-			<option value = "">Orange</option>
-			<option value = "blue">Blue</option>
-			<option value = "green">Green</option>
-			<option value = "navy">Navy</option>
-			<option value = "red">Red</option>
-			<option value = "pink">Pink</option>
-			<option value = "salmon">Salmon</option>
-			<option value = "turquoise">Turquoise</option>
-			<option value = "rose">Rose</option>
+		<field name="color2" type="list" default="default" label="Secondary Color" description="Select the secondary color.">
+			<option value="">Orange</option>
+			<option value="blue">Blue</option>
+			<option value="green">Green</option>
+			<option value="navy">Navy</option>
+			<option value="red">Red</option>
+			<option value="pink">Pink</option>
+			<option value="salmon">Salmon</option>
+			<option value="turquoise">Turquoise</option>
+			<option value="rose">Rose</option>
 		</field>
-		<field name = "font1" type = "list" default = "default" label = "Body Font"
-		       description = "Select the main body typeface.">
-			<option value = "arial">Arial</option>
-			<option value = "lucida">Lucida</option>
-			<option value = "georgia">Georgia</option>
-			<option value = "timesnewroman">Times New Roman</option>
-			<option value = "trebuchet">Trebuchet</option>
-			<option value = "droidsans">Droid Sans</option>
-			<option value = "opensans">Open Sans</option>
-			<option value = "yanonekaffeesatz">Yanone Kaffeesatz</option>
-			<option value = "mavenpro">Maven Pro</option>
-			<option value = "kreon">Kreon</option>
+		<field name="font1" type="list" default="default" label="Body Font" description="Select the main body typeface.">
+			<option value="arial">Arial</option>
+			<option value="lucida">Lucida</option>
+			<option value="georgia">Georgia</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="yanonekaffeesatz">Yanone Kaffeesatz</option>
+			<option value="mavenpro">Maven Pro</option>
+			<option value="kreon">Kreon</option>
 		</field>
-		<field name = "font2" type = "list" default = "default" label = "Header Font"
-		       description = "Select the headings typeface.">
-			<option value = "arial">Arial</option>
-			<option value = "lucida">Lucida</option>
-			<option value = "georgia">Georgia</option>
-			<option value = "timesnewroman">Times New Roman</option>
-			<option value = "trebuchet">Trebuchet</option>
-			<option value = "droidsans">Droid Sans</option>
-			<option value = "opensans">Open Sans</option>
-			<option value = "yanonekaffeesatz">Yanone Kaffeesatz</option>
-			<option value = "mavenpro">Maven Pro</option>
-			<option value = "kreon">Kreon</option>
+		<field name="font2" type="list" default="default" label="Header Font" description="Select the headings typeface.">
+			<option value="arial">Arial</option>
+			<option value="lucida">Lucida</option>
+			<option value="georgia">Georgia</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="yanonekaffeesatz">Yanone Kaffeesatz</option>
+			<option value="mavenpro">Maven Pro</option>
+			<option value="kreon">Kreon</option>
 		</field>
-		<field name = "font3" type = "list" default = "default" label = "Menu Font"
-		       description = "Select the menu typeface.">
-			<option value = "arial">Arial</option>
-			<option value = "lucida">Lucida</option>
-			<option value = "georgia">Georgia</option>
-			<option value = "timesnewroman">Times New Roman</option>
-			<option value = "trebuchet">Trebuchet</option>
-			<option value = "droidsans">Droid Sans</option>
-			<option value = "opensans">Open Sans</option>
-			<option value = "yanonekaffeesatz">Yanone Kaffeesatz</option>
-			<option value = "mavenpro">Maven Pro</option>
-			<option value = "kreon">Kreon</option>
+		<field name="font3" type="list" default="default" label="Menu Font" description="Select the menu typeface.">
+			<option value="arial">Arial</option>
+			<option value="lucida">Lucida</option>
+			<option value="georgia">Georgia</option>
+			<option value="timesnewroman">Times New Roman</option>
+			<option value="trebuchet">Trebuchet</option>
+			<option value="droidsans">Droid Sans</option>
+			<option value="opensans">Open Sans</option>
+			<option value="yanonekaffeesatz">Yanone Kaffeesatz</option>
+			<option value="mavenpro">Maven Pro</option>
+			<option value="kreon">Kreon</option>
 		</field>
-		<field name = "Content" type = "separator"/>
-		<field name = "date" type = "radio" default = "1" label = "Date" description = "Show the date.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="Content" type="separator" />
+		<field name="date" type="radio" default="1" label="Date" description="Show the date.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "totop_scroller" type = "radio" default = "1" label = "To-Top Scroller"
-		       description = "Show the to-top scroller.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="totop_scroller" type="radio" default="1" label="To-Top Scroller" description="Show the to-top scroller.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "warp_branding" type = "radio" default = "1" label = "Warp KickStrap Branding"
-		       description = "Show the Warp branding.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="warp_branding" type="radio" default="1" label="Warp Branding" description="Show the Warp branding.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "system_output" type = "radio" default = "1" label = "System Output"
-		       description = "Show the system output.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="system_output" type="radio" default="1" label="System Output" description="Show the system output.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "Layout" type = "separator"/>
-		<field name = "responsive" type = "radio" default = "1" label = "Responsive Layout"
-		       description = "Enable responsive layout.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
+		<field name="Layout" type="separator" />
+		<field name="responsive" type="radio" default="1" label="Responsive Layout" description="Enable responsive layout.">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
 		</field>
-		<field name = "template_width" type = "text" size = "10" default = "1140" label = "Template Width"
-		       description = "Set the template max-width in pixels." class = "short"/>
-		<field name = "sidebar-a_width" type = "text" size = "10" default = "25" label = "Sidebar A Width"
-		       description = "Set the Sidebar A width in percent." class = "short"/>
-		<field name = "sidebar-b_width" type = "text" size = "10" default = "25" label = "Sidebar B Width"
-		       description = "Set the Sidebar B width in percent." class = "short"/>
-		<field name = "sidebar-a" type = "list" default = "right" label = "Sidebar A Position"
-		       description = "Align the sidebar to the left or right.">
-			<option value = "right">Right</option>
-			<option value = "left">Left</option>
+		<field name="template_width" type="text" size="10" default="980" label="Template Width" description="Set the template width in pixel." class="short" />
+		<field name="sidebar-a_width" type="text" size="10" default="25" label="Sidebar A Width" description="Set the Sidebar A width in percent." class="short" />
+		<field name="sidebar-b_width" type="text" size="10" default="25" label="Sidebar B Width" description="Set the Sidebar B width in percent." class="short" />
+		<field name="sidebar-a" type="list" default="right" label="Sidebar A Position" description="Align the sidebar to the left or right.">
+			<option value="right">Right</option>
+			<option value="left">Left</option>
 		</field>
-		<field name = "sidebar-b" type = "list" default = "right" label = "Sidebar B Position"
-		       description = "Align the sidebar to the left or right.">
-			<option value = "right">Right</option>
-			<option value = "left">Left</option>
+		<field name="sidebar-b" type="list" default="right" label="Sidebar B Position" description="Align the sidebar to the left or right.">
+			<option value="right">Right</option>
+			<option value="left">Left</option>
 		</field>
-		<field name = "top-a" type = "layout" default = "equal" label = "Top A Layout"
-		       description = "Select a grid layout for this module position."/>
-		<field name = "top-b" type = "layout" default = "equal" label = "Top B Layout"
-		       description = "Select a grid layout for this module position."/>
-		<field name = "innertop" type = "layout" default = "equal" label = "Inner Top Layout"
-		       description = "Select a grid layout for this module position."/>
-		<field name = "innerbottom" type = "layout" default = "equal" label = "Inner Bottom Layout"
-		       description = "Select a grid layout for this module position."/>
-		<field name = "bottom-a" type = "layout" default = "equal" label = "Bottom A Layout"
-		       description = "Select a grid layout for this module position."/>
-		<field name = "bottom-b" type = "layout" default = "equal" label = "Bottom B Layout"
-		       description = "Select a grid layout for this module position."/>
-		<field name = "menu_width" type = "text" size = "10" default = "250" label = "Drop Down Column Width"
-		       description = "Set the column width of the drop down menu in pixel." class = "short"/>
-		<field name = "Twitter Bootstrap Variables Customization" type = "separator"/>
-		<field name = "Scaffolding" type = "separator"/>
-		<field name = "bootstrap_bodyBackground" type = "text" size = "10" default = "#FFFFFF" label =
-				"Body background colour" description = "Set the background colour for your body." class =
-				"short colour-picker"/>
-		<field name = "bootstrap_textColor" type = "text" size = "10" default = "#000000" label =
-				"Body text colour" description = "Set the text colour for your body." class =
-				"short colour-picker"/>
-		<field name = "Typography" type = "separator"/>
-		<field name = "bootstrap_sansFontFamily" type = "text" default = "Helvetica Neue, Helvetica, Arial, sans-serif" label =
-				"Sans font family" description = "Set the main fonts to be used by Bootstrap"/>
-		<field name = "bootstrap_serifFontFamily" type = "text" default = "Georgia, Times New Roman, Times, serif" label =
-				"serif font family" description = "Set the main serif fonts to be used by Bootstrap"/>
-		<field name = "bootstrap_monoFontFamily" type = "text" default = "Menlo, Monaco, Courier New, monospace" label =
-				"mono font family" description = "Set the main mono fonts to be used by Bootstrap"/>
-		<field name = "bootstrap_baseFontSize" type = "text" size = "10" default = "14px" label =
-				"Base font size"
-		       description = "Set the amount of pixels for the base body text" class = "short"/>
-		<field name = "bootstrap_baseFontFamily" type = "text" default = "@sansFontFamily" label =
-				"Base Font Family" description = "Set the main font family to be used by Bootstrap"/>
-		<field name = "bootstrap_altFontFamily" type = "text" default = "@serifFontFamily" label =
-				"Alternative Font Family"
-		       description = "Set the alternative, secondary font family to be used by Bootstrap"/>
-		<field name = "bootstrap_headingsFontFamily" type = "text" default = "inherit" label =
-				"Headings Font Family" description = "Set the main font family to be used for headings in Bootstrap"/>
-		<field name = "bootstrap_headingsFontWeight" type = "list" default = "bold" label =
-				"Headings Font Weight" description = "Set the thickness of the headings">
-			<option value = "normal">Normal</option>
-			<option value = "bold">Bold</option>
-			<option value = "italic">Italic</option>
-			<option value = "300">300 (thin)</option>
-		</field>
-		<field name = "bootstrap_headingsColor" type = "text" size = "10" default = "#000000" label =
-				"Headings text colour" description = "Set the text colour for your headings." class =
-				"short colour-picker"/>
-		<field name = "bootstrap_heroUnitBackground" type = "text" size = "10" default = "#CCC" label =
-				"Hero unit background colour" description = "Set the background colour for the hero unit." class =
-				"short colour-picker"/>
-		<field name = "bootstrap_heroUnitHeadingColor" type = "text" size = "10" default = "inherit" label =
-				"Hero unit heading colour" description = "Set the text colour for the headings in any hero unit."
-		       class =
-				       "short colour-picker"/>
-		<field name = "bootstrap_heroUnitLeadColor" type = "text" size = "10" default = "inherit" label =
-				"Hero unit lead heading colour" description
-				= "Set the text colour for the lead headings in any hero unit." class =
-				"short colour-picker"/>
-		<field name = "bootstrap_baseLineHeight" type = "text" default = "20px" label =
-				"Base Line Height" description = "Set the main line height for your text"/>
-		<field name = "Grid System" type = "separator"/>
-		<field name = "bootstrap_gridColumns" type = "text" size = "10" default = "12" label = "Number of columns"
-		       description
-				       = "Set the number of columns.  The resulting classes will be integers from 1 to the specified number."
-		       class = "short"/>
-		<field name = "bootstrap_gridColumnWidth" type = "text" size = "10" default = "60px" label =
-				"Grid Column Width"
-		       description
-				       = "Set the desired width in pixels for Bootstrap's fixed grid"
-		       class = "short"/>
-		<field name = "bootstrap_gridGutterWidth" type = "text" size = "10" default = "20px" label =
-				"Grid gutter width"
-		       description
-				       = "Set the desired grid gutter width"
-		       class = "short"/>
-		<field name = "bootstrap_gridGutterWidth1200" type = "text" size = "10" default = "30px" label =
-				"Grid gutter width at 1200px"
-		       description
-				       = "Set the desired grid gutter width on screens of 1200px resolution"
-		       class = "short"/>
-		<field name = "bootstrap_gridGutterWidth768" type = "text" size = "10" default = "20px" label =
-				"Grid gutter width at 768px"
-		       description
-				       = "Set the desired grid gutter width on screens of 768px resolution"
-		       class = "short"/>
-
-		<field name = "bootstrap_gridColumnWidth1200" type = "text" size = "10" default = "70px" label =
-				"Grid column width on screens of 1200px"
-		       description
-				       = "Set the desired grid column width on screens that are 1200px"
-		       class = "short"/>
-		<field name = "bootstrap_gridColumnWidth768" type = "text" size = "10" default = "42px" label =
-				"Grid column width on screens of 768px"
-		       description
-				       = "Set the desired grid column width on screens that are 768px"
-		       class = "short"/>
-	</fields>
-	<fields name = "Warp Kickstrap Stuff">
-		<field name = "Grid" type = "separator"/>
-		<field name = "grid_system" type = "list" label = "Grid System"
-		       description = "Grid system to be used when styling the template.  Bootstrap and 1140 both use the .row class, but the Warp one uses poor css classes like width33 (meaining 33 percent of the page)."
-		       default = "none">
-			<option value = "1140">1140 CSS Grid by Andy Taylor</option>
-			<option value = "bootstrap">Twitter Bootstrap Grid System</option>
-			<option value = "ggs">Golden Grid System (tweaked and modified as well)</option>
-			<option value = "foundation">Zurb Foundation</option>
-			<option value = "yoo">YooTheme Warp Grid System</option>
-			<option value = "none">None</option>
-		</field>
-		<field name = "max_columns" type = "text" label = "Maximum number of columns"
-		       description = "GGS only: set how many columns you want your grid to be.  (Hint: try not to go over 16, and try to use even numbers" default = "16" class = "short">
-		       </field>
-		<field name = "Javascript Plugins" type = "separator"/>
-		<field name = "jquery_cdn" type = "radio" label = "Load jQuery via CDN?"
-		       description = "Choose yes if you want jQuery to be loaded via the CDN (content distribution network) AKA Google.  Note: if you have selected to minify javascript files, they will be cached, and this effectively won't matter after the person first visits your site."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "cdn" type = "radio" label = "Load javascript Via CDN"
-		       description = "Use Content Delivery Networks when possible for plugins."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "modernizr" type = "radio" label = "Load Modernizr"
-		       description = "Make your site work with older versions of IE and other browsers.  This is a pretty big script, but it's totally worth it if your viewiers (might) be using older browsers.  It can be loaded via CDN as well."
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "bootstrap" type = "radio" label = "Load Twitter Bootstrap Javascript File"
-		       description =
-				       "Load the Twitter Bootstrap file via CDN to enable the javascript component functionality.  Use this if your site uses some of these methods.  See the Bootstrap Documentation for more info."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "scrollto" type = "radio" label = "Load ScrollTo Plugin"
-		       description =
-				       "Allow smooth transitions between anchors on the same page with ScrollTo (required for ajax functionality)."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "masonry" type = "radio" label = "Load masonry plugin"
-		       description =
-				       "Allow boxes and elements to be shifted depending on screen widths."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "ajaxify" type = "radio" label = "Ajaxify site front-end"
-		       description =
-				       "Give your users a more fluid experience by enabling ajax on the whole site.  Note: this can cause a lot of problems for some plugins, so test this out before you commit to it!  Also, this loads a file called history.js to allow for functionality on older browsers (requires ScrollTo."
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "CSS Files" type = "separator"/>
-		<field name = "animate" type = "radio" label =
-				"Load Animate.css"
-		       description = "Load in animate.css for easy-to-use animations.  Use -webkit-animation-delay, with the correct prefixes, and you can get cool animations on your page when the user loads."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "yootheme-css" type = "radio" label =
-				"Load YooTheme.css"
-		       description =
-				       "Load Yootheme's CSS for their templates.  Not the best CSS, but if you need it, then go ahead and load it."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "bootstrap-css" type = "radio" label =
-				"Load Twitter Bootstrap CSS"
-		       description =
-				       "Load the Twitter Bootstrap CSS framework's files.  You may want this if you're using Joomla 3.  If LESS is enabled, the CSS will be generated server-side by LESS."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "icomoon" type = "radio" label =
-				"Load icomoon css icons" description
-				= "Load in a pre-selected package of icomoon css icons.  To see what icons are available, check this template's css/icomoon directory"
-		       default =
-				       "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "LESS Files" type = "separator"/>
-		<field name = "less" type = "radio" label = "Enable LESS stylesheets"
-		       description = "Let the server compile your less files in the directory for this template into the CSS directory when any client loads the page.  Note: the resulting CSS files are then cached."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "lessdir" type = "text" label = "LESS Directory"
-		       description = "Type in the location, relative to this template path, where your LESS files are stored.  Files will be outputted to a folder titled css in the parent folder"
-		       default = "less">
-		</field>
-		<field name = "less_compress" type = "radio" label = "Compress Results?"
-		       description = "Strip out whitespaces and comments on your resulting CSS files."
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "less_cache" type = "radio" label = "Cache Results?"
-		       description = "Cache the resulting CSS files so that the LESS files aren't re-compiled when they haven't changed at all."
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "SASS Files" type = "separator"/>
-		<field name = "sass" type = "radio" label = "Enable SASS stylesheets"
-		       description = "Let the server compile your sass files in the directory for this template into the CSS directory when any client loads the page.  Note: the resulting CSS files are then cached."
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "sassdir" type = "text" label = "sass Directory"
-		       description = "Type in the location, relative to this template path, where your sass files are stored.  Files will be outputted to a folder titled css in the parent folder"
-		       default = "sass">
-		</field>
-		<field name = "sass_compress" type = "radio" label = "Compress Results?"
-		       description = "Strip out whitespaces and comments on your resulting CSS files."
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-	</fields>
-	<fields name = "Template-Specific Stuff">
-		<field name = "Template Javascript" type = "separator"/>
-		<field name = "jmpress" type = "radio" label = "Load jmpress"
-		       description = "Load jmpress to make your pages slides on their own.  New pages are then loaded via ajax"
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		       </field>
-		<field name = "chosen" type = "radio" label = "Load chosen"
-		       description = "Load chosen to beef up your select boxes"
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "toastr" type = "radio" label = "Load toastr"
-		       description = "Load toastr for real-time notifications"
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "datatables" type = "radio" label = "Load datatables"
-		       description = "Load datatables for dynamic tables on your site front-end"
-		       default = "0">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
-		<field name = "loader" type = "radio" label = "Use loader.js"
-		       description = "Show a loading CSS3 animation while the page is being loaded"
-		       default = "1">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
+		<field name="top-a" type="layout" default="equal" label="Top A Layout" description="Select a grid layout for this module position." />
+		<field name="top-b" type="layout" default="equal" label="Top B Layout" description="Select a grid layout for this module position." />
+		<field name="innertop" type="layout" default="equal" label="Inner Top Layout" description="Select a grid layout for this module position." />
+		<field name="innerbottom" type="layout" default="equal" label="Inner Bottom Layout" description="Select a grid layout for this module position." />
+		<field name="bottom-a" type="layout" default="equal" label="Bottom A Layout" description="Select a grid layout for this module position." />
+		<field name="bottom-b" type="layout" default="equal" label="Bottom B Layout" description="Select a grid layout for this module position." />
+		<field name="menu_width" type="text" size="10" default="250" label="Drop Down Column Width" description="Set the column width of the drop down menu in pixel." class="short" />
 	</fields>
 </config>

@@ -17,7 +17,7 @@ class WarpMenuAccordion extends WarpMenu {
 
 		Returns:
 			Object
-	*/
+	*/	
 	public function process($module, $element) {
 
 		$remove = array();

@@ -9,15 +9,15 @@
 /*
 	Class: MenuWarpHelper
 		Menu helper class
-*/
+*/    
 class MenuWarpHelper extends WarpHelper {
-
+	
     /*
 		Variable: _renderers
 			Menu renderers.
-    */
+    */	
 	protected $_renderers = array();
-
+	
 	/*
 		Function: Constructor
 			Class Constructor.
@@ -27,7 +27,7 @@ class MenuWarpHelper extends WarpHelper {
 
 		// load menu class
 		require_once($this['path']->path('warp:classes/menu.php'));
-	}
+	}	
 
 	/*
 		Function: process
@@ -39,18 +39,18 @@ class MenuWarpHelper extends WarpHelper {
 
 		Returns:
 			String
-	*/
+	*/	
 	public function process($module, $renderers){
 
 		// init vars
 		$menu = $this['dom']->create($module->content);
-
+		
 		foreach ((array) $renderers as $renderer) {
-
+			
 			if (!isset($this->_renderers[$renderer])) {
 				$classname = 'WarpMenu'.$renderer;
-
-				if (!class_exists($classname) && ($path = $this['path']->path('menu:'.$renderer.'.php'))) {
+				
+				if (!class_exists($classname) && ($path = $this['path']->path('menu:'.$renderer.'.php'))) {				
 					require_once($path);
 				}
 
@@ -58,11 +58,11 @@ class MenuWarpHelper extends WarpHelper {
 					$this->_renderers[$renderer] = new $classname();
 				}
 			}
-
+			
 			if (isset($this->_renderers[$renderer])) {
 				$menu = $this->_renderers[$renderer]->process($module, $menu);
 			}
-
+			
 			if (!$menu) {
 				return $module->content;
 			}

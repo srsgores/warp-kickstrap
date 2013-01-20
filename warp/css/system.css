@@ -31,6 +31,8 @@
 ----------------------------------------------------------------------------------------------------*/
 
 #system .item > header { margin-bottom: 15px; }
+#system .item > :first-child + header { margin-top: 10px; }
+
 #system .item > header .title { margin-bottom: 0; }
 
 #system .item > header .meta {
@@ -120,6 +122,8 @@
 	background: none;
 	float: left;
 }
+
+.searchbox input::-ms-clear { display: none; }
 
 .searchbox button { display: none; }
 .searchbox.filled button {

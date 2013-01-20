@@ -17,25 +17,25 @@ JHtml::_('behavior.tooltip');
 	<?php echo $this->error; ?>
 <?php endif; ?>
 
-<form class="submission box style" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate" id="contact-form">
+<form class="submission box style" action="<?php echo JRoute::_('index.php'); ?>" method="post" id="contact-form">
 	<fieldset>
 		<legend><?php echo JText::_('COM_CONTACT_FORM_LABEL'); ?></legend>
-
+		
 		<div>
 			<?php echo $this->form->getLabel('contact_name'); ?>
 			<?php echo $this->form->getInput('contact_name'); ?>
 		</div>
-
+		
 		<div>
 			<?php echo $this->form->getLabel('contact_email'); ?>
 			<?php echo $this->form->getInput('contact_email'); ?>
 		</div>
-
+		
 		<div>
 			<?php echo $this->form->getLabel('contact_subject'); ?>
 			<?php echo $this->form->getInput('contact_subject'); ?>
 		</div>
-
+		
 		<div>
 			<?php echo $this->form->getLabel('contact_message'); ?>
 			<?php echo $this->form->getInput('contact_message'); ?>
@@ -73,7 +73,7 @@ JHtml::_('behavior.tooltip');
 	<div class="submit">
 		<button class="button validate" type="submit"><?php echo JText::_('COM_CONTACT_CONTACT_SEND'); ?></button>
 	</div>
-
+	
 	<input type="hidden" name="option" value="com_contact" />
 	<input type="hidden" name="task" value="contact.submit" />
 	<input type="hidden" name="return" value="<?php echo $this->return_page;?>" />

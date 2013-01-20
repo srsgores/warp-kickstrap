@@ -16,7 +16,7 @@ JHtml::_('behavior.keepalive');
 <?php if ($type == 'logout') : ?>
 
 	<form class="short style" action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post">
-
+	
 		<?php if ($params->get('greeting')) : ?>
 		<div class="greeting">
 			<?php if ($params->get('name') == 0) : {
@@ -26,21 +26,21 @@ JHtml::_('behavior.keepalive');
 			} endif; ?>
 		</div>
 		<?php endif; ?>
-
+	
 		<div class="button">
 			<button value="<?php echo JText::_('JLOGOUT'); ?>" name="Submit" type="submit"><?php echo JText::_('JLOGOUT'); ?></button>
 		</div>
-
+		
 		<input type="hidden" name="option" value="com_users" />
 		<input type="hidden" name="task" value="user.logout" />
 		<input type="hidden" name="return" value="<?php echo $return; ?>" />
-		<?php echo JHtml::_('form.token'); ?>
+		<?php echo JHtml::_('form.token'); ?>	
 	</form>
 
 <?php else : ?>
 
 	<form class="short style" action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post">
-
+	
 		<?php if ($params->get('pretext')) : ?>
 		<div class="pretext">
 			<?php echo $params->get('pretext'); ?>
@@ -62,11 +62,11 @@ JHtml::_('behavior.keepalive');
 			<input id="modlgn-remember-<?php echo $number; ?>" type="checkbox" name="remember" value="yes" checked />
 		</div>
 		<?php endif; ?>
-
+		
 		<div class="button">
 			<button value="<?php echo JText::_('JLOGIN') ?>" name="Submit" type="submit"><?php echo JText::_('JLOGIN') ?></button>
 		</div>
-
+		
 		<ul class="blank">
 			<li>
 				<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>"><?php echo JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD'); ?></a>
@@ -82,23 +82,23 @@ JHtml::_('behavior.keepalive');
 			</li>
 			<?php endif; ?>
 		</ul>
-
+		
 		<?php if($params->get('posttext')) : ?>
 		<div class="posttext">
 			<?php echo $params->get('posttext'); ?>
 		</div>
 		<?php endif; ?>
-
+		
 		<input type="hidden" name="option" value="com_users" />
 		<input type="hidden" name="task" value="user.login" />
 		<input type="hidden" name="return" value="<?php echo $return; ?>" />
 		<?php echo JHtml::_('form.token'); ?>
 	</form>
-
+	
 	<script>
 		jQuery(function($){
 			$('form.login input[placeholder]').placeholder();
 		});
 	</script>
-
+	
 <?php endif;

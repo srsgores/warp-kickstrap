@@ -15,13 +15,13 @@ JHtml::_('behavior.formvalidation');
 ?>
 
 <div id="system">
-
+	
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
 
 	<form class="submission small style" id="user-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=remind.remind'); ?>" method="post">
-
+	
 		<?php foreach ($this->form->getFieldsets() as $fieldset): ?>
 			<p><?php echo JText::_($fieldset->label); ?></p>
 			<fieldset>

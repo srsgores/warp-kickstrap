@@ -15,7 +15,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
 <div id="system">
 
-	<?php if ($this->params->get('show_page_heading', 1)) : ?>
+	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
 
@@ -32,5 +32,5 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 	<?php endif; ?>
 
 	<?php echo $this->loadTemplate('items'); ?>
-
+	
 </div>

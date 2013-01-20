@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 ?>
 
 <div id="system">
-
+	
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
@@ -30,5 +30,5 @@ defined('_JEXEC') or die;
 		<input type="hidden" name="return" value="<?php echo base64_encode($this->params->get('logout_redirect_url', $this->form->getValue('return'))); ?>" />
 		<?php echo JHtml::_('form.token'); ?>
 	</form>
-
+	
 </div>

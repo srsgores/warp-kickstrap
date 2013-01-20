@@ -17,12 +17,12 @@ foreach ($fields->find('field') as $field) {
     $label = $field->attr('label');
     $desc  = $field->attr('description');
 	$value = $values->get($name, $field->attr('default'));
-	$class = $profile && $matches[1] != 'default' && $values->get($name) === null ? ' class="ignore"' : null;
+	$class = $profile && $matches[1] != 'default' && $values->get($name) === null ? ' class="ignore"' : null; 
 
 	if ($type == 'separator') {
 		printf('<li class="separator">%s</li>', $name);
 	} else {
-		printf('<li%s><div class="label">%s</div><div class="field">%s</div><div class="description">%s</div></li>', $class, $label, $this['field']->render($type, $prefix.'['.$name.']', $value, $field, compact('config')), $desc);
+		printf('<li%s><div class="wlabel">%s</div><div class="field">%s</div><div class="description">%s</div></li>', $class, $label, $this['field']->render($type, $prefix.'['.$name.']', $value, $field, compact('config')), $desc);
 	}
 }
 

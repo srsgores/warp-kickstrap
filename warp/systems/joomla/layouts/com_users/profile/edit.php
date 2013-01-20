@@ -12,6 +12,7 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
+JHtml::_('behavior.noframes');
 
 // load user_profile plugin language
 $lang = JFactory::getLanguage();
@@ -19,7 +20,7 @@ $lang->load( 'plg_user_profile', JPATH_ADMINISTRATOR);
 ?>
 
 <div id="system">
-
+	
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
@@ -50,7 +51,7 @@ $lang->load( 'plg_user_profile', JPATH_ADMINISTRATOR);
 		<div class="submit">
 			<button class="validate" type="submit"><?php echo JText::_('JSUBMIT'); ?></button>
 		</div>
-
+		
 		<input type="hidden" name="option" value="com_users" />
 		<input type="hidden" name="task" value="profile.save" />
 		<?php echo JHtml::_('form.token'); ?>

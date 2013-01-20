@@ -14,7 +14,7 @@ class TemplateWarpHelper extends WarpHelper {
 
 	/* slots */
 	protected $_slots = array();
-
+    
 	/*
 		Function: render
 			Render a layout file
@@ -25,7 +25,7 @@ class TemplateWarpHelper extends WarpHelper {
 
 		Returns:
 			String
-	*/
+	*/	
 	public function render($resource, $args = array()) {
 
 		// default namespace
@@ -42,19 +42,19 @@ class TemplateWarpHelper extends WarpHelper {
 
 		// render layout
 		if ($__layout != false) {
-
+			
 			// import vars and get content
 			extract($args);
 			ob_start();
 			include($__layout);
 			return ob_get_clean();
 		}
-
+		
 		trigger_error('<b>'.$__resource.'</b> not found in paths: ['.implode(', ', $this['path']->_paths['layouts']).']');
-
+		
 		return null;
 	}
-
+    
 	/*
 		Function: has
 			Slot exists ?
@@ -64,7 +64,7 @@ class TemplateWarpHelper extends WarpHelper {
 
 		Returns:
 			Boolean
-	*/
+	*/	
 	public function has($name) {
 		return isset($this->_slots[$name]);
 	}
@@ -79,7 +79,7 @@ class TemplateWarpHelper extends WarpHelper {
 
 		Returns:
 			Mixed
-	*/
+	*/	
 	public function get($name, $default = false) {
 		return isset($this->_slots[$name]) ? $this->_slots[$name] : $default;
 	}
@@ -94,7 +94,7 @@ class TemplateWarpHelper extends WarpHelper {
 
 		Returns:
 			Void
-	*/
+	*/	
 	public function set($name, $content) {
 		$this->_slots[$name] = $content;
 	}
@@ -109,11 +109,11 @@ class TemplateWarpHelper extends WarpHelper {
 
 		Returns:
 			Boolean
-	*/
+	*/	
 	public function output($name, $default = false) {
 
 		if (!isset($this->_slots[$name])) {
-
+		
 			if (false !== $default) {
 				echo $default;
 				return true;

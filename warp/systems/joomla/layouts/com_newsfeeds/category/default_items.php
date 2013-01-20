@@ -9,7 +9,7 @@
 // no direct access
 defined('_JEXEC') or die;
 
-JHtml::core();
+JHtml::_('behavior.framework');
 
 $n			= count($this->items);
 $listOrder	= $this->escape($this->state->get('list.ordering'));
@@ -22,7 +22,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 <?php else : ?>
 
 <form action="<?php echo htmlspecialchars(JFactory::getURI()->toString()); ?>" method="post" name="adminForm" id="adminForm">
-
+	
 	<?php if ($this->params->get('show_pagination_limit')) : ?>
 	<div class="filter">
 		<?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?>
@@ -83,7 +83,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 	<?php if ($this->params->get('show_pagination')) : ?>
 	<?php echo $this->pagination->getPagesLinks(); ?>
 	<?php endif; ?>
-
+	
 	<input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>" />
 	<input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>" />
 </form>

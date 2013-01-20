@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 
 <div id="system">
 
-	<?php if ($this->params->get('show_page_heading', 1)) : ?>
+	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="page-title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
 
@@ -31,11 +31,11 @@ defined('_JEXEC') or die;
 	<ul class="space">
 		<?php foreach ($this->newsfeed->items as $item) :  ?>
 		<li>
-
+		
 			<?php if (!is_null($item->get_link())) : ?>
 			<a href="<?php echo $item->get_link(); ?>" target="_blank"><?php echo $item->get_title(); ?></a>
 			<?php endif; ?>
-
+			
 			<?php if ($this->params->get('show_item_description') && $item->get_description()) : ?>
 				<?php
 					$text = $item->get_description();
@@ -46,7 +46,7 @@ defined('_JEXEC') or die;
 				?>
 				<div><?php echo str_replace('&apos;', "'", $text);	?></div>
 			<?php endif; ?>
-
+			
 		</li>
 		<?php endforeach; ?>
 	</ul>

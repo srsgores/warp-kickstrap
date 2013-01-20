@@ -43,7 +43,7 @@ $filters = $this['assetfilter']->create(array('CSSImportResolver', 'CSSRewriteUR
 				<label for="remember"><?php echo JText::_('JGLOBAL_REMEMBER_ME') ?></label>
 				<input type="checkbox" name="remember" class="inputbox" value="yes" alt="<?php echo JText::_('JGLOBAL_REMEMBER_ME') ?>" id="remember" />
 			</div>
-
+			
 			<div class="button">
 				<input type="submit" name="Submit" class="button" value="<?php echo JText::_('JLOGIN') ?>" />
 			</div>
@@ -54,6 +54,6 @@ $filters = $this['assetfilter']->create(array('CSSImportResolver', 'CSSRewriteUR
 		</form>
 
 	</div>
-
+	
 </body>
 </html>

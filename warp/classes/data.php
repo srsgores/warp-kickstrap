@@ -69,7 +69,7 @@ class WarpData extends ArrayObject {
 		$this->offsetSet($name, $value);
 		return $this;
 	}
-
+	
 	/*
 		Function: remove
 			Remove a value
@@ -96,7 +96,7 @@ class WarpData extends ArrayObject {
 			ArrayObject
 	*/
 	public function merge($array) {
-		$this->exchangeArray(array_merge($this->getArrayCopy(), $array));
+		$this->exchangeArray(array_merge($this->getArrayCopy(), $array)); 
 		return $this;
 	}
 
@@ -171,7 +171,7 @@ class WarpData extends ArrayObject {
 	/*
 		Function: _read
 			Read array
-	*/
+	*/	
 	protected function _read($array = array()) {
 		return $array;
 	}
@@ -201,21 +201,21 @@ class JSONWarpData extends WarpData {
 	/*
 		Function: __construct
 			Constructor
-	*/
+	*/	
 	public function __construct($data = array()) {
-
+		
 		// decode JSON string
 		if (is_string($data)) {
 			$data = $this->_read($data);
 		}
-
+		
 		parent::__construct($data);
 	}
 
 	/*
 		Function: _read
 			Decode JSON string
-	*/
+	*/	
 	protected function _read($json = '') {
 		return json_decode($json, $this->_assoc);
 	}
@@ -227,5 +227,5 @@ class JSONWarpData extends WarpData {
 	protected function _write($data) {
 		return json_encode($data);
 	}
-
+	
 }

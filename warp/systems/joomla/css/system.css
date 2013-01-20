@@ -7,8 +7,8 @@
 
 /* Item (Addition)
 ----------------------------------------------------------------------------------------------------*/
-
-#system .item > header .icon {
+ 
+#system .item > header .icon { 
 	margin: 2px 0 0 5px;
 	float: right;
 }
@@ -150,7 +150,7 @@
 	background: url(../../../../../system/images/selector-arrow.png) no-repeat;
 	font-weight: bold;
 	font-size: 13px;
-
+	
 }
 
 
@@ -199,7 +199,7 @@
 
 /* System Debug
 ----------------------------------------------------------------------------------------------------*/
-
+ 
 #system-debug {
 	padding: 30px;
 	background: #fff;

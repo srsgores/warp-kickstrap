@@ -14,9 +14,6 @@ foreach (array($this['path']->path('cache:'), $this['path']->path('template:'),	
 	$this['check']->checkWritable($directory);
 }
 
-// check jquery
-$this['check']->checkjQuery(array($this['path']->path('site:components'), $this['path']->path('site:media'), $this['path']->path('site:modules'), $this['path']->path('site:plugins')));
-
 // output
 $critical = $this['check']->getIssues('critical');
 $notice   = $this['check']->getIssues('notice');
@@ -35,8 +32,8 @@ if ($critical || $notice) {
 
 	echo '<a href="#" class="systemcheck-link '.($critical ? 'critical' : '').'">'.implode(' and ', $label).' issue(s) detected.</a>';
 	echo '<ul class="systemcheck">';
-	echo implode('', array_map(create_function('$message', 'return "<li class=\"critical\">{$message}</li>";'), $critical));
-	echo implode('', array_map(create_function('$message', 'return "<li>{$message}</li>";'), $notice));
+	echo implode('', array_map(create_function('$message', 'return "<li class=\"critical\">{$message}</li>";'), $critical)); 
+	echo implode('', array_map(create_function('$message', 'return "<li>{$message}</li>";'), $notice)); 
 	echo '</ul>';
 
 } else {

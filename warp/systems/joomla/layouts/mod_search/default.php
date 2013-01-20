@@ -6,6 +6,9 @@
 * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
 */
 
+// get application
+$app = JFactory::getApplication();
+
 // get warp
 $warp = Warp::getInstance();
 
@@ -15,11 +18,11 @@ $itemid = intval($params->get('set_itemid', 0));
 ?>
 
 <form id="searchbox-<?php echo $module->id; ?>" class="searchbox" action="<?php echo JRoute::_('index.php'); ?>" method="post" role="search">
-	<input type="search" value="" name="searchword" placeholder="<?php echo JText::_('TPL_WARP_SEARCH'); ?>" />
+	<input type="text" value="" name="searchword" placeholder="<?php echo JText::_('TPL_WARP_SEARCH'); ?>" />
 	<button type="reset" value="Reset"></button>
 	<input type="hidden" name="task"   value="search" />
 	<input type="hidden" name="option" value="com_search" />
-	<input type="hidden" name="Itemid" value="<?php echo $itemid > 0 ? $itemid : JRequest::getInt('Itemid'); ?>" />
+	<input type="hidden" name="Itemid" value="<?php echo $itemid > 0 ? $itemid : $app->input->getInt('Itemid'); ?>" />	
 </form>
 
 <script src="<?php echo $warp['path']->url('js:search.js'); ?>"></script>

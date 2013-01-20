@@ -10,11 +10,12 @@
 defined('_JEXEC') or die;
 
 JHtml::_('behavior.keepalive');
-
+JHtml::_('behavior.noframes');
+	
 ?>
 
 <div id="system">
-
+	
 	<?php if ($this->params->get('show_page_heading')) : ?>
 	<h1 class="title"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif; ?>
@@ -29,7 +30,7 @@ JHtml::_('behavior.keepalive');
 	<?php endif; ?>
 
 	<form class="submission small style" action="<?php echo JRoute::_('index.php?option=com_users&task=user.login'); ?>" method="post">
-
+	
 		<fieldset>
 			<?php foreach ($this->form->getFieldset('credentials') as $field): ?>
 				<?php if (!$field->hidden): ?>

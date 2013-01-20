@@ -41,7 +41,7 @@ defined('_JEXEC') or die;
 				if ($('#advanced-search').length) {
 					// Disable select boxes with no value selected.
 					$('#advanced-search').find('select').each(function(s){
-
+						
 						var s = $(this);
 
 						if (!s.val()) {
@@ -103,7 +103,7 @@ defined('_JEXEC') or die;
 				<div id="finder-filter-window">
 					<?php echo JHtml::_('filter.select', $this->query, $this->params); ?>
 				</div>
-
+				
 			</div>
 		</div>
 		<?php endif; ?>
