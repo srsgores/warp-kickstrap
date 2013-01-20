@@ -1,0 +1,577 @@
+@import "imports/variables.less";
+@import "icomoon/icomoon.less";
+@import "mixins.less";
+@import "imports/reset.less";
+@import "imports/normalize.less";
+@import "imports/utilities.less";
+@import "imports/grids.less";
+@import "imports/buttons.less";
+@import "imports/button-groups.less";
+@import "imports/alerts.less";
+@import "imports/forms.less";
+@import "imports/tables.less";
+@import "imports/labels-badges.less";
+@import "imports/chosen.less";
+@import "imports/toastr.less";
+@import "imports/toastr-responsive.less";
+@import "imports/media-queries.less";
+@import "imports/dropdowns.less";
+@import "imports/code.less";
+@import "imports/type.less";
+@import "imports/codehighlighter";
+@import "imports/loaders.less";
+@import "imports/widgetkit.less";
+
+/* Layout
+----------------------------------------------------------------------------------------------------*/
+
+.row {
+	&.container {
+		border-bottom: 1px solid #2E2E2E;
+		.box-shadow(inset 0px -15px 29px -15px #000);
+	}
+}
+
+/* Menus
+----------------------------------------------------------------------------------------------------*/
+
+#header {
+	padding: 0;
+	#menubar {
+		.rounded-corners(@border-radius);
+		padding-left: 0;
+		border: 1px solid #E2E2E2;
+		border-bottom-color: #E0E0E0; //.box-shadow(inset 0 -0.6em 2em rgba(0, 0, 0, 0.08));
+	//background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/cream_dust.png);
+		margin-bottom: @margin;
+		#menu {
+			li {
+				display: inline-block;
+			}
+			a {
+				padding: 1.1em 1.4em;
+				text-decoration: none;
+				border-right: 1px solid #E2E2E2;
+				font-size: 1.2em;
+				color: #8D8D8D;
+				&:hover {
+					.box-shadow(inset 0 -0.1em 0.2em @gray);
+				}
+				&.active {
+					.box-shadow(inset 0 0 3em ~"rgba(119, 119, 119, 0.2)", 0 0 3.5em -1em ~"rgba(31, 31, 31, 0.64)");
+					text-shadow: 0 1px rgba(0, 0, 0, 0.82);
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.searchbox {
+	button[type='reset'] {
+		.visuallyhidden;
+	}
+	input {
+		width: 50%;
+		float: right;
+		position: relative;
+		margin-top: @border-radius;
+		font-size: 1em;
+		.transition(width @transition-time linear);
+		&:focus {
+			width: 70%;
+		}
+
+	/*		&:before {
+				.left-icon(@icon-search);
+				position: absolute;
+			}*/
+	}
+}
+
+ul.menu {
+	padding: 0.9em 0;
+	margin: 0;
+
+	ul {
+		margin: 0;
+	}
+}
+
+.menu-dropdown .dropdown, .menu-dropdown .dropdown-bg > div {
+	.rounded-corners(@border-radius);
+}
+
+.dropdown {
+	position: absolute;
+	margin-top: 2em;
+	li {
+		display: block;
+		margin-bottom: 2em;
+	}
+	.dropdown-bg {
+		background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/gray_jean.png");
+	}
+	.column {
+		margin-top: 2em;
+		a {
+			border-right: none;
+			border-bottom: 1px solid #CCC;
+			.box-shadow(inset 0 0 1em #787f83);
+		}
+	}
+}
+
+.menu-line {
+	li {
+		display: inline-block;
+	}
+	a {
+		margin-right: 1em;
+	}
+}
+
+/* Modules
+----------------------------------------------------------------------------------------------------*/
+
+#top-a, #top-b, #bottom-a, #bottom-b, #main {
+	.rounded-corners(@border-radius);
+	margin-bottom: 1em;
+	padding: @padding; //background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/debut_light.png);
+//background: @moduleBackground;
+}
+ul.social {
+	float: right;
+	i {
+		padding: 0.2em 0.4em;
+		font-size: 2em;
+		color: rgba(167, 161, 161, 0.53);
+		background: rgba(218, 218, 218, 0.3);
+		border-radius: 50%;
+
+		&:hover {
+			font-size: 2.1em;
+		}
+
+	}
+}
+#toolbar {
+	.centred;
+	padding: @border-radius 0;
+}
+
+footer, #footer {
+	.centred;
+}
+
+#content {
+	.box-shadow(inset 0 0 26px rgba(238, 238, 238, 0.31));
+}
+
+.module {
+	.border-box;
+	padding: @padding; //border: 1px solid #CCC;
+//border-bottom-color: #9E9E9E;
+	.box-shadow(inset 0 0 1.4em ~"rgba(216, 216, 216, 0.38)");
+	.rounded-corners(@border-radius);
+	margin-bottom: @margin;
+	margin-right: @margin;
+	border: 1px solid #DDD;
+	border-bottom-color: #9E9E9E;
+}
+
+/* Tools
+----------------------------------------------------------------------------------------------------*/
+
+.social {
+	li {
+		display: inline-block;
+	}
+}
+
+/* search */
+
+.search {
+	padding: @padding 0.5em;
+}
+
+/* System
+----------------------------------------------------------------------------------------------------*/
+
+body {
+	background: @white;
+	background: url(http://subtlepatterns.com/patterns/egg_shell.png);
+	background: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/gray_jean.png"); //.box-shadow(inset 0 0 371px ~"rgba(0, 0, 0, 0.58)");
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	margin: 0 @margin;
+	overflow-x: hidden;
+	text-shadow: 0 1px @white;
+}
+
+.title {
+	font-size: 3em;
+	margin-bottom: 0.4em;
+	line-height: 1.1em;
+	font-family: Quicksand;
+}
+
+.subtitle {
+	font-size: 2em;
+	font-weight: italic;
+}
+
+p {
+	line-height: 1.4;
+	padding-bottom: 0.7em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: @border-radius;
+	font-weight: 300;
+}
+
+article {
+	margin-bottom: 1em;
+}
+
+/* =============================================================================
+Miscellenious fixes for various things
+========================================================================== */
+
+.fb-comments {
+	position: absolute;
+}
+
+.wk-twitter-single.image {
+	&:before {
+		.left-icon(@icon-twitter);
+		font-size: 4.6em;
+		margin: 0.5% 0.2em 0 0;
+		color: rgba(82, 82, 82, 0.19);
+	}
+	.content {
+		font-style: italic;
+		font-size: 150%;
+		color: rgba(0, 0, 0, 0.41);
+	}
+	.meta {
+		font-size: 110%;
+	}
+	background: none;
+	padding-left: 0;
+	min-height: 0;
+}
+
+/* =============================================================================
+Typography
+========================================================================== */
+
+a {
+	text-decoration: none;
+	.transition-all(@transition-time);
+	color: @black;
+
+	&:hover {
+		text-shadow: 0 0 4px #d2d2d2;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	a {
+		text-decoration: none;
+		color: @grayDark;
+		&:hover {
+			text-shadow: 0 0 14px #e2e2e2;
+		}
+	}
+}
+
+.subtitle, .pos-subtitle {
+	color: @black;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 3em;
+	margin: 0.67em 0;
+}
+
+h2 {
+	font-size: 2.1em;
+	margin: 0.83em 0;
+}
+
+h3 {
+	font-size: 1.8em;
+	margin: 1em 0;
+}
+
+h4 {
+	font-size: 1.5em;
+	margin: 1.33em 0;
+}
+
+h5 {
+	font-size: 1.3em;
+	margin: 1.67em 0;
+}
+
+h6 {
+	font-size: 1.2em;
+	margin: 2.33em 0;
+}
+
+/* UL styles */
+
+//checkboxes ul.check
+ul.check {
+	position: relative;
+	list-style: none;
+	li {
+		&:before {
+			.left-icon(@icon-checkmark-2);
+			position: absolute;
+			left: -1.5em;
+		}
+	}
+}
+
+.social-button {
+	font-size: 7em;
+	color: #4B4B4B;
+	text-shadow: 0 3px #858585, 0 -11px 49px #D5D5D5;
+	.transition(text-shadow @transition-time);
+	&:hover {
+		text-shadow: 0 3px #d9d9d9, 0 -11px 49px #2d2d2d;
+	}
+}
+
+.teaser-circle {
+	background: url(../images/debut_light.png);
+	padding: 3.8em;
+	.border-box;
+	.rounded-corners(50%);
+	.centred;
+	border: 2px dashed #D6D6D6;
+	border-bottom-color: #E7E7E7;
+	display: inline-block;
+	.transition-all(@transition-time / 4);
+	position: relative;
+	margin: 1% 2% 6% 0;
+
+	&:before {
+		content: " ";
+		.rounded-corners(50%);
+		position: absolute;
+		.box-shadow(0 0 2em #9a9a9a);
+		height: 110%;
+		width: 109%;
+		top: -5%;
+		left: -5%;
+		border: 1px solid #DDD;
+	}
+
+	&:hover {
+		.box-shadow(inset 0 5px 3em ~"rgba(163, 163, 163, 0.42)"); //#gradient > .vertical(#F1F1F1, #B9B9B9);
+		margin-right: @margin * 1.2; //font-size: 102%;
+	}
+	h3 {
+		margin: 0;
+		font-weight: 500;
+		color: #4D4D4D;
+		font-size: 1.5em;
+		text-shadow: 0 1px #CCC;
+	}
+
+	i {
+		font-size: 6em;
+		color: rgba(0, 0, 0, 0.14);
+		text-shadow: 0 3px @white, 0 -11px 49px #E2E2E2;
+	}
+}
+
+.frontpage-header-text {
+	text-align: center;
+	h1 {
+		font-size: 5em;
+		margin-bottom: @margin;
+		font-family: "Quicksand";
+		font-weight: 300;
+		margin-top: 16%;
+	}
+	h2 {
+		margin-bottom: 3em;
+	}
+}
+
+.borderless {
+	border: none !important;
+}
+
+.extended-height {
+	overflow: visible !important;
+}
+
+.social-link {
+	margin-right: @margin;
+	&.inactive {
+		margin-right: -9.3%;
+		text-indent: -177em;
+	}
+}
+
+.box {
+	.padding-fix;
+	.rounded-corners(@border-radius);
+	border: 1px solid @borderColour;
+	margin: 0 @margin @margin 0;
+	padding: @padding;
+	border-bottom-color: darken(@borderColour, 20%);
+	.box-shadow(0 0 8.2em -3em darken(@borderColour, 25%))
+}
+
+.logo {
+	color: @grayDarker;
+	font-family: "Quicksand";
+	font-size: 2.4em;
+	fonr-weight: 300;
+}
+
+.facebook-like-button {
+	position: absolute;
+	top: -20%;
+}
+
+.socialbuttons {
+	position: relative;
+
+	div {
+		display: inline-block;
+	}
+}
+
+#header-responsive {
+	display: none;
+}
+
+ul, ol {
+	list-style: inherit;
+}
+
+.welcome-page {
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../images/gray_jean.png);
+	.box-shadow(inset 0 0 371px ~"rgba(0, 0, 0, 0.58)");
+	height: auto;
+	z-index: 9000;
+}
+
+.github-ribbon {
+	background-color: #121621;
+	top: 3.2em;
+	right: -3.7em;
+	.rotate(45deg);
+	.box-shadow(0 0 0 1px #1D212E inset,0 0 2px 1px white inset,0 0 1em #888);
+	color: ~"rgba(255, 255, 255, 0.90)";
+	display: block;
+	padding: .6em 3.5em;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px -1px 8px rgba(0, 0, 0, 0.60);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.meta {
+	margin-left: @margin;
+}
+
+table {
+	background: ~"rgba(255, 255, 255, 0.56)";
+	caption {
+		margin-bottom: @margin;
+	}
+}
+
+.tooltip {
+	position: relative;
+	span {
+		line-height: @baseLineHeight * 1.3;
+		padding: @padding;
+		left: -45.5%;
+		min-width: 4em;
+		bottom: 6em;
+		font-weight: 400;
+		font-style: italic;
+		color: #9B9B9B;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		z-index: 900;
+		border: 4px solid rgba(218, 215, 215, 0.77);
+		background: @white;
+		text-indent: 0;
+		.rounded-corners(@border-radius);
+		position: absolute;
+		pointer-events: none;
+		.opacity(0);
+		.box-shadow(1px 1px 2px ~"rgba(0,0,0,0.1)");
+		.transition-all(@transition-time);
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			bottom: -0.8em;
+			left: 50%;
+			margin-left: -0.4em;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid rgba(0, 0, 0, 0.1);
+		}
+		&:after {
+			bottom: -0.5em;
+			margin-left: -0.4em;
+			border-top: 10px solid #fff;
+		}
+	}
+
+	&:hover span {
+		.opacity(100);
+		bottom: 3.4em;
+	}
+}
+
+.invisible-module {
+	.heightless;
+	.borderless;
+	.no-shadow;
+}
+
+i.feature {
+	text-shadow: 0 0 100px rgba(244, 244, 244, 0.46);
+	font-size: 6em;
+	color: rgba(0, 0, 0, 0.60);
+	cursor: alias;
+	.transition-all(@transition-time);
+
+	&:hover {
+		color: #FFF;
+		text-shadow: 0 0 100px rgba(255, 255, 255, 0.47);
+	}
+}
+
+#totop-scroller {
+	color: rgba(146, 146, 146, 0.37);
+	text-shadow: 0 1px @white, 0 0 15px @white;
+	&:hover {
+		color: rgba(58, 57, 57, 0.4);
+	}
+}

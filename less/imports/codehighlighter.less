@@ -1,0 +1,340 @@
+/*------------------------------------------------------------------------------------------------------------------------
+	Author: Sean Goresht
+	www: http://seangoresht.com/
+	github: https://github.com/srsgores
+	twitter: http://twitter.com/S.Goresht
+	
+	Licensed under the GNU Public License
+	
+	=============================================================================
+	Filename:  codehighlighter
+	=============================================================================
+	
+--------------------------------------------------------------------------------------------------------------------- */
+.syntaxhighlighter {
+	width: 100%;
+	margin: 1em 0 1em 0;
+	position: relative;
+	overflow: auto;
+	font-size: 1em;
+	min-height: 2em;
+	background-color: #ffffff;
+	a, div, code, table td, table tr, table tbody, table thead, textarea {
+		background: none;
+		border: 0;
+		line-height: 1.1em;
+		vertical-align: baseline;
+		.padding-fix;
+		font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+		font-size: 1em;
+	}
+	.line.highlighted.alt1, .line.highlighted.alt2 {
+		background-color: #e0e0e0;
+	}
+	table {
+		.padding-fix;
+		background: none;
+		border: 0;
+		line-height: 1.1em;
+		width: 100%;
+		font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+		font-size: 1em;
+		caption {
+			.rounded-corners(0);
+			.padding-fix;
+			background: none;
+			border: 0;
+			line-height: 1.1em;
+			padding: .5em 0 0.5em 1em;
+			font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+			font-size: 1em;
+			color: #000000;
+		}
+		td.code {
+			width: 100%;
+			.container {
+				position: relative;
+				textarea {
+					.padding-fix;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					border: none;
+					background: white;
+					padding-left: 1em;
+					overflow: hidden;
+					white-space: pre;
+				}
+			}
+			.line {
+				padding: 0 1em;
+			}
+		}
+		td.gutter .line {
+			text-align: right;
+			padding: 0 0.5em 0 1em;
+		}
+	}
+	.bold {
+		font-weight: bold;
+	}
+	.italic {
+		font-style: italic;
+	}
+	.line {
+		white-space: pre;
+	}
+	.toolbar {
+		position: absolute;
+		right: 1px;
+		top: 1px;
+		width: 11px;
+		height: 11px;
+		font-size: 10px;
+		z-index: 10;
+		color: white;
+		background: #6ce26c;
+		border: none;
+		span.title {
+			display: inline;
+		}
+		a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			padding-top: 1px;
+			color: white;
+		}
+		a.expandSource {
+			display: none;
+		}
+		a:hover {
+			color: black;
+		}
+	}
+	.line.alt1 {
+		background-color: #ffffff;
+	}
+	.line.alt2 {
+		background-color: #ffffff;
+	}
+	.line.highlighted.number {
+		color: #000000;
+	}
+	.gutter {
+		color: #afafaf;
+		.line {
+			border-right: 3px solid #6ce26c;
+		}
+		.line.highlighted {
+			background-color: #6ce26c;
+			color: white;
+		}
+	}
+	.plain, .plain a {
+		color: black;
+	}
+
+	.comments, .comments a {
+		color: #008200;
+	}
+
+	.string, .string a {
+		color: blue;
+	}
+
+	.keyword {
+		color: #006699;
+		font-weight: bold;
+	}
+
+	.preprocessor {
+		color: #808080;
+	}
+
+	.variable {
+		color: #aa7700;
+	}
+
+	.value {
+		color: #009900;
+	}
+
+	.functions {
+		color: #ff1493;
+	}
+
+	.constants {
+		color: #0066cc;
+	}
+
+	.script {
+		font-weight: bold;
+		color: #006699;
+		background-color: none;
+	}
+
+	.color1, .color1 a {
+		color: #808080;
+
+	}
+
+	.color2, .color2 a {
+		color: #ff1493;
+	}
+
+	.color3, .color3 a {
+		a {
+			color: #ff0000;
+		}
+
+	}
+
+	.source {
+		overflow: hidden;
+	}
+
+	.nogutter td.code {
+		.container textarea, .line {
+			padding-left: 0em;
+		}
+	}
+
+	.show {
+		display: block;
+	}
+
+	.collapsed {
+		overflow: visible;
+		table {
+			display: none;
+		}
+		.toolbar {
+			padding: 0.1em 0.8em 0em 0.8em;
+			font-size: 1em;
+			position: static;
+			width: auto;
+			height: auto;
+			color: blue;
+			background: white;
+			border: 1px solid #6ce26c;
+			span {
+				display: inline;
+				margin-right: 1em;
+				a {
+					padding: 0;
+					display: none;
+				}
+				a.expandSource {
+					display: inline;
+				}
+			}
+			a {
+				color: #0000ff;
+			}
+			a:hover {
+				color: #ff0000;
+			}
+		}
+	}
+
+	.ie {
+		font-size: .9em;
+		padding: 1px 0 1px 0;
+		.toolbar {
+			line-height: 8px;
+			a {
+				padding-top: 0px;
+			}
+		}
+	}
+
+	.printing {
+		.line.alt1 .content, .line.alt2 .content, .line.highlighted .number, .line.highlighted.alt1 .content, .line.highlighted.alt2 .content {
+			background: none;
+		}
+		.line {
+			.number {
+				color: #bbbbbb;
+			}
+			.content {
+				color: #000000;
+				border: none;
+			}
+		}
+	}
+	.toolbar {
+		display: none;
+	}
+	a {
+		text-decoration: none;
+	}
+	.plain, .plain a {
+		color: black;
+	}
+
+	.comments, .comments a {
+		color: #008200;
+	}
+
+	.color1 {
+		a {
+			color: #808080;
+		}
+	}
+
+	.color2 {
+		a {
+			color: #ff1493;
+		}
+	}
+
+	.color3 {
+		a {
+			color: #ff0000;
+		}
+	}
+
+	.break {
+		a {
+			color: #000000;
+		}
+	}
+	.string, string a {
+		a {
+			color: #0000ff;
+		}
+	}
+
+	.keyword {
+		color: #006699;
+		font-weight: bold;
+	}
+
+	.preprocessor {
+		color: #808080;
+	}
+
+	.variable {
+		color: #aa7700;
+	}
+
+	.value {
+		color: #009900;
+	}
+
+	.functions {
+		color: #ff1493;
+	}
+
+	.constants {
+		color: #0066cc;
+	}
+
+	.script {
+		font-weight: bold;
+	}
+}
+

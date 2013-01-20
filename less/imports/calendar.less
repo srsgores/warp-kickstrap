@@ -1,0 +1,273 @@
+/**
+* @package   yoo_master
+* @author    YOOtheme http://www.yootheme.com
+* @copyright Copyright (C) YOOtheme GmbH
+* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+*/
+
+/*------------------------------------------------------------------------------------------------------------------------
+	Author: Sean Goresht
+	www: http://seangoresht.com/
+	github: https://github.com/srsgores
+	twitter: http://twitter.com/S.Goresht
+	
+	Licensed under the GNU Public License
+	
+	=============================================================================
+	Filename:  calendar.less
+	=============================================================================
+	
+--------------------------------------------------------------------------------------------------------------------- */
+.regpro_calendar {
+	background-color:#29363e;
+	color:#000000;
+	vertical-align:top;
+}
+.regpro_calendarMonthHeader {
+	background-color:#29363e;
+	text-align:center;
+	vertical-align:middle;
+	border-left:1px solid #65879b;
+	border-top:1px solid #65879b;
+}
+.regpro_calendar_table {
+	td {
+	}
+}
+.regpro_calendarWeekDayHeader {
+	font-weight:bolder;
+	background:#3e525e url(../images/tile.gif) repeat-x center bottom;
+	text-align:center;
+	vertical-align:middle;
+	padding:5px;
+	color:#ffffff;
+	border-left:1px solid #4f6a79;
+}
+.regpro_calendarDay {
+	background-color:#efefef;
+	width:60px;
+	height:60px;
+	text-align:left;
+	font-weight:bolder;
+	vertical-align:top;
+	font-size:12px;
+	color:#29363e;
+	font-style:normal;
+	border-left:1px solid #ffffff;
+	border-top:1px solid #ffffff;
+	padding:5px;
+}
+.regpro_calenderday_highlight {
+	background-color:#dad9ce;
+	text-align:left;
+	vertical-align:top;
+	font-weight:bolder;
+	width:60px;
+	height:60px;
+	padding:5px;
+	border-left:1px solid #ffffff;
+	border-top:1px solid #ffffff;
+}
+.regpro_calendarDay .eb_event_link, .regpro_calenderday_highlight .eb_event_link {
+	color:#29363e;
+	background:#dedede;
+	border-left:1px #d0d4d4 solid;
+	border-top:1px #d0d4d4 solid;
+	border-right:1px #ffffff solid;
+	border-bottom:1px #ffffff solid;
+	display:block;
+	font-size:11px;
+	padding:5px;
+}
+.regpro_calendar_years {
+	height:22px;
+	text-align:left;
+	border:0px #c9d8fc;
+	background-color:#efefef;
+	vertical-align:top;
+	margin:0;
+	font-size:14px;
+}
+.regpro_calendar_years:hover {
+	background:#ffffff;
+}
+.regpro_calendar_months {
+	height:22px;
+	text-align:left;
+	border:0px #c9d8fc;
+	background-color:#efefef;
+	vertical-align:top;
+	margin:0;
+	font-size:14px;
+}
+.regpro_calendar_months:hover {
+	background:#ffffff;
+}
+#extcalendar {
+	.currentmonth, .currentday, .currentweek {
+		background-color:#29363e;
+		border-top:1px solid #65879b;
+		color:#ffffff;
+		font-size:14px;
+		font-style:normal;
+		font-weight:normal;
+		padding:3px 11px;
+		text-align:center;
+		text-align:center;
+		text-decoration:none;
+		text-transform:uppercase;
+		height:22px;
+		vertical-align:middle;
+		width:34%;
+	}
+	.previousmonth, .previousday, .previousweek, .nextmonth, .nextday, .nextweek {
+		background-color:#29363e;
+		border-top:1px solid #65879b;
+		color:#ffffff;
+		font-size:11px;
+		font-weight:bold;
+		padding:3px 11px;
+		text-align:center;
+		text-align:center;
+		text-decoration:none;
+		height:22px;
+		vertical-align:middle;
+		width:33%;
+	}
+	.previousday a, .previousmonth a, .previousweek a {
+		background:url(../images/mini_arrowL.gif) no-repeat left center;
+		color:#ffffff;
+		padding-left:8px;
+	}
+	.nextday a, .nextmonth a, .nextweek a {
+		background:url(../images/mini_arrowR.gif) no-repeat right center;
+		color:#ffffff;
+		padding-right:8px;
+	}
+	table.jcl_basetable {
+		border:0 none;
+		border-collapse:collapse;
+		border-spacing:0;
+		padding:0;
+		width:100%;
+	}
+	.today {
+		color:#606f79;
+		font-size:11px;
+		font-weight:bold;
+	}
+	.tableb {
+		background-color:#f4f4f4;
+		border-left:1px solid #ffffff;
+		color:black;
+		line-height:16px;
+		padding:6px 11px;
+	}
+	.tablec {
+		background-color:#f9f9f9;
+		border-top:1px solid #ffffff;
+		color:#333333;
+		padding:3px 11px;
+	}
+	.tableh2 {
+		background:#3e525e url(../images/tile.gif) repeat-x center bottom;
+		border-left:1px solid #4f6a79;
+		border-right:1px solid #4f6a79;
+		color:white;
+		font-size:11px;
+		font-weight:bold;
+		margin:0;
+		padding:6px 12px;
+	}
+	.eventdesc {
+		color:#606f79;
+		font-size:11px;
+	}
+	.eventtitle {
+		color:#606f79;
+		font-size:11px;
+		font-weight:bold;
+		text-decoration:none;
+	}
+}
+.wraptable_calendar {
+	width:100%;
+	clear:both;
+}
+.topmenu_calendar {
+	overflow:hidden;
+	.left_calendar {
+		float:left;
+		padding:7px;
+	}
+	ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+		float:right;
+		li {
+			float:left;
+			margin:0 0 0 @paddingSmall;
+			display:block;
+			a {
+				background:#3e525e url(../images/tile.gif) repeat-x center bottom;
+				display:block;
+				color:#ffffff;
+				padding:7px 10px;
+			}
+			a.active {
+				background:#f4f4f4;
+				color:#29363e;
+				border-top:1px solid #cccccc;
+				border-left:1px solid #cccccc;
+				border-right:1px solid #cccccc;
+			}
+		}
+	}
+}
+div.moduleS2 {
+	background:url(../images/topright_2.png) no-repeat 100% 0;
+	height:1%;
+	margin-bottom:10px;
+	div {
+		background:url(../images/topleft_2.png) no-repeat 0 0;
+		div {
+			background:url(../images/botright_2.png) no-repeat 100% 100%;
+			div {
+				background:url(../images/botleft_2.png) no-repeat 0 100%;
+				padding:12px 15px 15px;
+				div {
+					background:none repeat scroll 0 0 transparent;
+					padding:0;
+				}
+			}
+		}
+	}
+}
+div.moduleS2 h3, div.moduletableS2 h3 {
+	font-style:normal;
+	font-weight:normal;
+	height:auto;
+	line-height:100%;
+	margin:0 0 10px;
+	padding:0 0 3px;
+	text-indent:0;
+	border-bottom:1px solid #2b6da1;
+	color:#ffffff;
+	font-size:16px;
+}
+.extcal_minical table.extcal_minical {
+	background-color:#214865;
+	padding:5px;
+	width:100%;
+}
+.extcal_minical .extcal_month_label a {
+	color:#ffffff;
+	font-size:11px;
+	font-weight:bold;
+}
+.mod_eb_minicalendar_link {
+	color:#ffffff;
+	font-size:11px;
+	font-weight:bold;
+}

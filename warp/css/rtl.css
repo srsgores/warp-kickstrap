@@ -4,7 +4,6 @@
  * RTL Style Sheet - Used for right-to-left language localizations
  */
 
-
 /* Base
 ----------------------------------------------------------------------------------------------------*/
 
@@ -18,14 +17,18 @@ dd {
 	margin-right: 40px;
 }
 
-
 /* Layout
 ----------------------------------------------------------------------------------------------------*/
 
 .grid-box,
 .bfc-f,
-.float-left { float: right; }
-.float-right { float: left; }
+.float-left {
+	float: right;
+}
+
+.float-right {
+	float: left;
+}
 
 #toolbar .float-left .module,
 #toolbar .float-left > time {
@@ -45,9 +48,13 @@ dd {
 }
 
 #logo, #logo > img,
-#menu { float: right; }
-#search { float: left; }
+#menu {
+	float: right;
+}
 
+#search {
+	float: left;
+}
 
 /* Menus
 ----------------------------------------------------------------------------------------------------*/
@@ -55,11 +62,13 @@ dd {
 /* Mega Drop-Down Menu */
 .menu-dropdown,
 .menu-dropdown .level1,
-.menu-dropdown .level1 > span { float: right; }
+.menu-dropdown .level1 > span {
+	float: right;
+}
 
 .menu-dropdown .dropdown {
 	left: auto;
- 	right: 0;
+	right: 0;
 }
 
 .menu-dropdown li:hover .dropdown.flip,
@@ -68,14 +77,19 @@ dd {
 	left: 0;
 }
 
-.menu-dropdown .column { float: right; }
+.menu-dropdown .column {
+	float: right;
+}
 
-.menu-dropdown span.icon { float: right; }
+.menu-dropdown span.icon {
+	float: right;
+}
 
 .menu-dropdown .level1 .level1 span.icon {
 	margin-left: 0;
 	margin-right: -5px;
 }
+
 .menu-dropdown .level1 .level1 span.icon + span,
 .menu-dropdown .level1 .level1 span.icon + span + span {
 	margin-left: 0;
@@ -99,7 +113,6 @@ dd {
 	margin-left: 5px;
 }
 
-
 /* Modules
 ----------------------------------------------------------------------------------------------------*/
 
@@ -115,7 +128,6 @@ dd {
 	margin-left: 5px;
 	float: right;
 }
-
 
 /* Tools
 ----------------------------------------------------------------------------------------------------*/
@@ -145,10 +157,12 @@ dd {
 
 /* Tables (Needed for System Markup) */
 table.zebra th,
-table.zebra caption { text-align: right; }
+table.zebra caption {
+	text-align: right;
+}
 
 /* Definition Lists */
-dl.separator dt {	
+dl.separator dt {
 	padding-right: 0;
 	padding-left: 10px;
 	float: right;
@@ -162,13 +176,18 @@ dl.separator dd {
 }
 
 /* Text Alignment */
-.text-left { text-align: right; }
-.text-right { text-align: left; }
+.text-left {
+	text-align: right;
+}
+
+.text-right {
+	text-align: left;
+}
 
 /* Drop Caps */
 p.dropcap:first-letter {
 	margin-right: 0;
-	margin-left: 4px ;
+	margin-left: 4px;
 	float: none; /* Fix for IE */
 }
 
@@ -181,7 +200,6 @@ div.box-download {
 	padding-right: 40px;
 	background-position: 100% 0;
 }
-
 
 /* System
 ----------------------------------------------------------------------------------------------------*/
@@ -204,10 +222,15 @@ div.box-download {
 	margin-left: 0;
 	margin-right: 5px;
 }
-#system .pagination > *:first-child { margin-right: 0; }
+
+#system .pagination > *:first-child {
+	margin-right: 0;
+}
 
 /* Search Box */
-.searchbox input { float: right; }
+.searchbox input {
+	float: right;
+}
 
 .searchbox.filled button {
 	right: auto;
@@ -262,11 +285,16 @@ ul.line.comments .avatar {
 }
 
 /* Page Navigation */
-.page-nav .prev { float: right; }
-.page-nav .next { float: left; }
+.page-nav .prev {
+	float: right;
+}
+
+.page-nav .next {
+	float: left;
+}
 
 /* Joomla 1.5/2.5 Specific */
-#system .item > header .icon { 
+#system .item > header .icon {
 	margin-left: 0;
 	margin-right: 5px;
 	float: left;
@@ -278,7 +306,10 @@ ul.line.comments .avatar {
 	float: right;
 }
 
-#system form.submission fieldset > div > label:first-child { float: right; }
+#system form.submission fieldset > div > label:first-child {
+	float: right;
+}
+
 #system form.submission div > .calendar {
 	margin-left: 0;
 	margin-right: 5px;
@@ -290,19 +321,27 @@ ul.line.comments .avatar {
 }
 
 #system #editor-xtd-buttons .button2-left,
-#system #editor-xtd-buttons .button2-left * { float: right; }
+#system #editor-xtd-buttons .button2-left * {
+	float: right;
+}
 
 #system #editor-xtd-buttons .button2-left {
 	margin-right: 0;
 	margin-left: 5px;
 }
 
-#system-message dd { margin-right: 0; }
+#system-message dd {
+	margin-right: 0;
+}
 
 /* WordPress Specific */
-table.calendar tfoot td { text-align: left; }
-table.calendar tfoot td:first-child { text-align: right; }
+table.calendar tfoot td {
+	text-align: left;
+}
 
+table.calendar tfoot td:first-child {
+	text-align: right;
+}
 
 /* Responsive
 ----------------------------------------------------------------------------------------------------*/
@@ -310,7 +349,10 @@ table.calendar tfoot td:first-child { text-align: right; }
 /* Only Tablets (Portrait) and Phones (Landscape) */
 @media (min-width: 480px) and (max-width: 959px) {
 
-	#page.sidebars-2.sidebar-b-left:not(.sidebar-a-left) #sidebar-a { float: left; } 
+	#page.sidebars-2.sidebar-a-right #sidebar-a,
+	#page.sidebars-2.sidebar-b-right #sidebar-b {
+		float: left;
+	}
 
 }
 
