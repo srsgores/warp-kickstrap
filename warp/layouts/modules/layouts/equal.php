@@ -1,13 +1,12 @@
 <?php
 /**
- * @package   Warp Theme Framework
- * @author    YOOtheme http://www.yootheme.com
- * @copyright Copyright (C) YOOtheme GmbH
- * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
- */
+* @package   Warp Theme Framework
+* @author    YOOtheme http://www.yootheme.com
+* @copyright Copyright (C) YOOtheme GmbH
+* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+*/
 
-switch (count($modules))
-{
+switch (count($modules)) {
 
 	case 1:
 		printf('<div class="grid-box twelvecol last">%s</div>', $modules[0]);

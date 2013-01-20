@@ -1,2 +1,2 @@
-<jdoc:include type = "message"/>
-<jdoc:include type = "component"/>
+<jdoc:include type="message" />
+<jdoc:include type="component" />

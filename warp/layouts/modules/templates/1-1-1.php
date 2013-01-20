@@ -1,19 +1,16 @@
-<aside class = "module <?php echo $style; ?>">
+<aside class="module <?php echo $style; ?>">
 
 	<?php echo $badge; ?>
 
-	<div class = "box-t"></div>
+	<div class="box-t"></div>
 
-	<div class = "box-m deepest">
+	<div class="box-m deepest">
 
-		<?php if ($showtitle)
-	{
-		echo $title;
-	} ?>
+		<?php if ($showtitle) echo $title; ?>
 		<?php echo $content; ?>
 
 	</div>
 
-	<div class = "box-b"></div>
+	<div class="box-b"></div>
 
 </aside>

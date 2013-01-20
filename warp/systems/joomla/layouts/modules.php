@@ -1,40 +1,36 @@
 <?php
 /**
- * @package   Warp Theme Framework
- * @author    YOOtheme http://www.yootheme.com
- * @copyright Copyright (C) YOOtheme GmbH
- * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
- */
+* @package   Warp Theme Framework
+* @author    YOOtheme http://www.yootheme.com
+* @copyright Copyright (C) YOOtheme GmbH
+* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+*/
 
 // load modules
 $modules = $this['modules']->load($position);
-$count = count($modules);
-$output = array();
+$count   = count($modules);
+$output  = array();
 
-foreach ($modules as $index => $module)
-{
+foreach ($modules as $index => $module) {
 
 	// set module params
-	$params = array();
-	$params['count'] = $count;
-	$params['order'] = $index + 1;
-	$params['first'] = $params['order'] == 1;
-	$params['last'] = $params['order'] == $count;
+	$params           = array();
+	$params['count']  = $count;
+	$params['order']  = $index + 1;
+	$params['first']  = $params['order'] == 1;
+	$params['last']   = $params['order'] == $count;
 	$params['suffix'] = $module->parameter->get('moduleclass_sfx', '');
 
 	// pass through menu params
-	if (isset($menu))
-	{
+	if (isset($menu)) {
 		$params['menu'] = $menu;
 	}
 
 	// get class suffix params
 	$parts = preg_split('/[\s]+/', $params['suffix']);
 
-	foreach ($parts as $part)
-	{
-		if (strpos($part, '-') !== false)
-		{
+	foreach ($parts as $part) {
+		if (strpos($part, '-') !== false) {
 			list($name, $value) = explode('-', $part, 2);
 			$params[$name] = $value;
 		}
