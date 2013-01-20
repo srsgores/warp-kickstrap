@@ -323,6 +323,64 @@ $body_config['facebook'] = (int)$this['config']->get('facebook', 0);
 $this['config']->set('body_config', json_encode($body_config));
 
 // add javascripts
+
+/**
+ * Load scripts from CDN if the user has specified so; otherwise, load scripts from local drive.
+ * Host must be in HTTP mode, or else we will have problems with Cross-site permissions
+ */
+if ($this['config']->get('jquery_cdn') == "1")
+{
+	$this['system']->document->addScript("https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js");
+}
+else
+{
+	// load jQuery
+	$this['asset']->addFile('js', 'lib:jquery/jquery.js');
+}
+
+//now load remaining scripts, depending on parameters
+if ($this['config']->get('cdn') == "1" && $http != "https")
+{ //if the user has specified that CDN is to be used
+	if ($this['config']->get('modernizr') == "1")
+	{
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js");
+	}
+	if ($this['config']->get('bootstrap') == "1")
+	{
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js");
+	}
+	if ($this['config']->get('scrollto') == "1")
+	{
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js");
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js");
+	}
+	if ($this['config']->get('masonry') == "1")
+	{
+		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js");
+	}
+}
+else
+{
+	//load modernizr
+	if ($this['config']->get('modernizr') == "1")
+	{
+		$this['asset']->addFile('js', 'lib:modernizr/modernizr.custom.min.js');
+	}
+	//load bootstrap
+	if ($this['config']->get('bootstrap') == "1")
+	{
+		$this['asset']->addFile('js', 'lib:bootstrap/bootstrap.min.js');
+	}
+	if ($this['config']->get('scrollto') == "1")
+	{
+		$this['asset']->addFile('js', 'lib:jquery-easing/jquery.easing.min.js');
+		$this['asset']->addFile('js', 'lib:jquery-scrollto/jquery.scrollTo.min.js');
+	}
+	if ($this['config']->get('masonry') == "1")
+	{
+		$this['asset']->addFile('js', 'lib:masonry/jquery.masonry.min.js');
+	}
+}
 $this['asset']->addFile('js', 'js:warp.js');
 $this['asset']->addFile('js', 'js:responsive.js');
 $this['asset']->addFile('js', 'js:accordionmenu.js');
