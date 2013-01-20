@@ -1,22 +1,24 @@
 <?php
 /**
-* @package   Warp Theme Framework
-* @author    YOOtheme http://www.yootheme.com
-* @copyright Copyright (C) YOOtheme GmbH
-* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
-*/
+ * @package   Warp Theme Framework
+ * @author    YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
 
 /*
 	Class: WarpData
 		Read/Write data in various formats.
 */
-class WarpData extends ArrayObject {
+class WarpData extends ArrayObject
+{
 
 	/*
 		Function: __construct
 			Constructor
 	*/
-	public function __construct($data = array()) {
+	public function __construct($data = array())
+	{
 		parent::__construct((empty($data) ? array() : $data));
 	}
 
@@ -30,7 +32,8 @@ class WarpData extends ArrayObject {
 		Returns:
 			Boolean
 	*/
-	public function has($name) {
+	public function has($name)
+	{
 		return $this->offsetExists($name);
 	}
 
@@ -45,16 +48,18 @@ class WarpData extends ArrayObject {
 		Returns:
 			Mixed
 	*/
-	public function get($key, $default = null) {
+	public function get($key, $default = null)
+	{
 
-		if ($this->offsetExists($key)) {
+		if ($this->offsetExists($key))
+		{
 			return $this->offsetGet($key);
 		}
 
 		return $default;
 	}
 
- 	/*
+	/*
 		Function: set
 			Set a value
 
@@ -65,11 +70,12 @@ class WarpData extends ArrayObject {
 		Returns:
 			ArrayObject
 	*/
-	public function set($name, $value) {
+	public function set($name, $value)
+	{
 		$this->offsetSet($name, $value);
 		return $this;
 	}
-	
+
 	/*
 		Function: remove
 			Remove a value
@@ -80,7 +86,8 @@ class WarpData extends ArrayObject {
 		Returns:
 			ArrayObject
 	*/
-	public function remove($name) {
+	public function remove($name)
+	{
 		$this->offsetUnset($name);
 		return $this;
 	}
@@ -95,8 +102,9 @@ class WarpData extends ArrayObject {
 		Returns:
 			ArrayObject
 	*/
-	public function merge($array) {
-		$this->exchangeArray(array_merge($this->getArrayCopy(), $array)); 
+	public function merge($array)
+	{
+		$this->exchangeArray(array_merge($this->getArrayCopy(), $array));
 		return $this;
 	}
 
@@ -110,7 +118,8 @@ class WarpData extends ArrayObject {
 		Returns:
 			Boolean
 	*/
-	public function __isset($name) {
+	public function __isset($name)
+	{
 		return $this->offsetExists($name);
 	}
 
@@ -124,11 +133,12 @@ class WarpData extends ArrayObject {
 		Returns:
 			Mixed
 	*/
-	public function __get($name) {
+	public function __get($name)
+	{
 		return $this->offsetGet($name);
 	}
 
- 	/*
+	/*
 		Function: __set
 			Set a value (via magic method)
 
@@ -139,11 +149,12 @@ class WarpData extends ArrayObject {
 		Returns:
 			Void
 	*/
-	public function __set($name, $value) {
+	public function __set($name, $value)
+	{
 		$this->offsetSet($name, $value);
 	}
 
- 	/*
+	/*
 		Function: __unset
 			Unset a value (via magic method)
 
@@ -153,26 +164,29 @@ class WarpData extends ArrayObject {
 		Returns:
 			Void
 	*/
-	public function __unset($name) {
+	public function __unset($name)
+	{
 		$this->offsetUnset($name);
 	}
 
- 	/*
+	/*
 		Function: __toString
 			Get string (via magic method)
 			
 		Returns:
 			String
 	*/
-    public function __toString() {
-        return empty($this) ? '' : $this->_write($this->getArrayCopy());
-    }
+	public function __toString()
+	{
+		return empty($this) ? '' : $this->_write($this->getArrayCopy());
+	}
 
 	/*
 		Function: _read
 			Read array
-	*/	
-	protected function _read($array = array()) {
+	*/
+	protected function _read($array = array())
+	{
 		return $array;
 	}
 
@@ -180,7 +194,8 @@ class WarpData extends ArrayObject {
 		Function: _write
 			Serialize array
 	*/
-	protected function _write($data) {
+	protected function _write($data)
+	{
 		return serialize($data);
 	}
 
@@ -190,33 +205,37 @@ class WarpData extends ArrayObject {
 	Class: JSONWarpData
 		Read/Write data in JSON format.
 */
-class JSONWarpData extends WarpData {
+class JSONWarpData extends WarpData
+{
 
-    /*
+	/*
 		Variable: _assoc
 			Returned object's will be converted into associative array's.
-    */
+	*/
 	protected $_assoc = true;
 
 	/*
 		Function: __construct
 			Constructor
-	*/	
-	public function __construct($data = array()) {
-		
+	*/
+	public function __construct($data = array())
+	{
+
 		// decode JSON string
-		if (is_string($data)) {
+		if (is_string($data))
+		{
 			$data = $this->_read($data);
 		}
-		
+
 		parent::__construct($data);
 	}
 
 	/*
 		Function: _read
 			Decode JSON string
-	*/	
-	protected function _read($json = '') {
+	*/
+	protected function _read($json = '')
+	{
 		return json_decode($json, $this->_assoc);
 	}
 
@@ -224,8 +243,9 @@ class JSONWarpData extends WarpData {
 		Function: _write
 			Encode JSON string
 	*/
-	protected function _write($data) {
+	protected function _write($data)
+	{
 		return json_encode($data);
 	}
-	
+
 }

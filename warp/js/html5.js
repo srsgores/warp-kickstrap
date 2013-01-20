@@ -1,11 +1,168 @@
-/*
- HTML5 Shiv v3.6.2pre | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
-*/
-(function(k,f){function v(a,b){var c=a.createElement("p"),l=a.getElementsByTagName("head")[0]||a.documentElement;c.innerHTML="x<style>"+b+"</style>";return l.insertBefore(c.lastChild,l.firstChild)}function n(){var a=e.elements;return"string"==typeof a?a.split(" "):a}function m(a){var b=w[a[x]];b||(b={},q++,a[x]=q,w[q]=b);return b}function y(a,b,c){b||(b=f);if(g)return b.createElement(a);c||(c=m(b));b=c.cache[a]?c.cache[a].cloneNode():B.test(a)?(c.cache[a]=c.createElem(a)).cloneNode():c.createElem(a);
-return b.canHaveChildren&&!C.test(a)?c.frag.appendChild(b):b}function z(a){a||(a=f);var b=m(a);e.shivCSS&&(!r&&!b.hasCSS)&&(b.hasCSS=!!v(a,"article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}mark{background:#FF0;color:#000}"));if(!g){var c=a;b.cache||(b.cache={},b.createElem=c.createElement,b.createFrag=c.createDocumentFragment,b.frag=b.createFrag());c.createElement=function(a){return!e.shivMethods?b.createElem(a):y(a,c,b)};c.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+
-n().join().replace(/\w+/g,function(a){b.createElem(a);b.frag.createElement(a);return'c("'+a+'")'})+");return n}")(e,b.frag)}return a}function D(a){for(var b,c=a.attributes,l=c.length,f=a.ownerDocument.createElement(p+":"+a.nodeName);l--;)b=c[l],b.specified&&f.setAttribute(b.nodeName,b.nodeValue);f.style.cssText=a.style.cssText;return f}function A(a){function b(){clearTimeout(d._removeSheetTimer);c&&c.removeNode(!0);c=null}var c,f,d=m(a),e=a.namespaces,g=a.parentWindow;if(!E||a.printShived)return a;
-"undefined"==typeof e[p]&&e.add(p);g.attachEvent("onbeforeprint",function(){b();var h,j,d;d=a.styleSheets;for(var e=[],i=d.length,g=Array(i);i--;)g[i]=d[i];for(;d=g.pop();)if(!d.disabled&&F.test(d.media)){try{h=d.imports,j=h.length}catch(m){j=0}for(i=0;i<j;i++)g.push(h[i]);try{e.push(d.cssText)}catch(k){}}h=e.reverse().join("").split("{");j=h.length;i=RegExp("(^|[\\s,>+~])("+n().join("|")+")(?=[[\\s,>+~#.:]|$)","gi");for(g="$1"+p+"\\:$2";j--;)e=h[j]=h[j].split("}"),e[e.length-1]=e[e.length-1].replace(i,
-g),h[j]=e.join("}");e=h.join("{");j=a.getElementsByTagName("*");i=j.length;g=RegExp("^(?:"+n().join("|")+")$","i");for(d=[];i--;)h=j[i],g.test(h.nodeName)&&d.push(h.applyElement(D(h)));f=d;c=v(a,e)});g.attachEvent("onafterprint",function(){for(var a=f,c=a.length;c--;)a[c].removeNode();clearTimeout(d._removeSheetTimer);d._removeSheetTimer=setTimeout(b,500)});a.printShived=!0;return a}var d=k.html5||{},C=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,B=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,
-r,x="_html5shiv",q=0,w={},g;try{var s=f.createElement("a");s.innerHTML="<xyz></xyz>";r="hidden"in s;var t;if(!(t=1==s.childNodes.length)){f.createElement("a");var u=f.createDocumentFragment();t="undefined"==typeof u.cloneNode||"undefined"==typeof u.createDocumentFragment||"undefined"==typeof u.createElement}g=t}catch(G){g=r=!0}var e={elements:d.elements||"abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup main mark meter nav output progress section summary time video",
-version:"3.6.2pre",shivCSS:!1!==d.shivCSS,supportsUnknownElements:g,shivMethods:!1!==d.shivMethods,type:"default",shivDocument:z,createElement:y,createDocumentFragment:function(a,b){a||(a=f);if(g)return a.createDocumentFragment();for(var b=b||m(a),c=b.frag.cloneNode(),d=0,e=n(),k=e.length;d<k;d++)c.createElement(e[d]);return c}};k.html5=e;z(f);var F=/^$|\b(?:all|print)\b/,p="html5shiv";if(d=!g)d=f.documentElement,d=!("undefined"==typeof f.namespaces||"undefined"==typeof f.parentWindow||"undefined"==
-typeof d.applyElement||"undefined"==typeof d.removeNode||"undefined"==typeof k.attachEvent);var E=d;e.type+=" print";e.shivPrint=A;A(f)})(this,document);
+(function (k, c)
+{
+	function p(a, b)
+	{
+		var d = a.createElement("p"), e = a.getElementsByTagName("head")[0] || a.documentElement;
+		d.innerHTML = "x<style>" + b + "</style>";
+		return e.insertBefore(d.lastChild, e.firstChild)
+	}
+
+	function m()
+	{
+		var a = j.elements;
+		return"string" == typeof a ? a.split(" ") : a
+	}
+
+	function q(a)
+	{
+		var b, d = {}, e = a.createElement;
+		b = a.createDocumentFragment;
+		for (var f = m(), h = b(), r = f.length;
+		     r--;)
+		{
+			b = f[r], d[b] = e(b), h.createElement(b);
+		}
+		a.createElement = function (a)
+		{
+			var b = (d[a] || (d[a] = e(a))).cloneNode(!1);
+			return j.shivMethods && !v.test(a) &&
+				b.canHaveChildren && !b.xmlns && !b.tagUrn ? h.appendChild(b) : b
+		};
+		a.createDocumentFragment = function ()
+		{
+			var a = h.cloneNode(!1);
+			return j.shivMethods ? (q(a), a) : a
+		}
+	}
+
+	function s(a)
+	{
+		var b;
+		if (a.documentShived)
+		{
+			return a;
+		}
+		j.shivCSS && !t && (b = !!p(a, "article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio{display:none}canvas,video{display:inline-block;*display:inline;*zoom:1}[hidden]{display:none}audio[controls]{display:inline-block;*display:inline;*zoom:1}mark{background:#FF0;color:#000}"));
+		j.shivMethods && !n && (b = !q(a));
+		b && (a.documentShived = b);
+		return a
+	}
+
+	function w(a)
+	{
+		for (var b, d = a.attributes, e = d.length, f = a.ownerDocument.createElement(l + ":" + a.nodeName);
+		     e--;)
+		{
+			b = d[e], b.specified && f.setAttribute(b.nodeName, b.nodeValue);
+		}
+		f.style.cssText = a.style.cssText;
+		return f
+	}
+
+	function u(a)
+	{
+		var b, d, e = a.namespaces, f = a.parentWindow;
+		if (!x || a.printShived)
+		{
+			return a;
+		}
+		"undefined" == typeof e[l] && e.add(l);
+		f.attachEvent("onbeforeprint", function ()
+		{
+			var h, e, f;
+			h = a.styleSheets;
+			for (var c = [], g = h.length, i = Array(g);
+			     g--;)
+			{
+				i[g] = h[g];
+			}
+			for (;
+				f = i.pop();)
+			{
+				if (!f.disabled && y.test(f.media))
+				{
+					h = f.imports;
+					g = 0;
+					for (e = h.length;
+					     g < e;
+					     g++)
+					{
+						i.push(h[g]);
+					}
+					c.push(f.cssText)
+				}
+			}
+			g = c.reverse().join("").split("{");
+			i = g.length;
+			h = RegExp("(^|[\\s,>+~])(" + m().join("|") + ")(?=[[\\s,>+~#.:]|$)", "gi");
+			for (e = "$1" + l + "\\:$2";
+			     i--;)
+			{
+				c = g[i] = g[i].split("}"), c[c.length - 1] = c[c.length - 1].replace(h, e), g[i] = c.join("}");
+			}
+			c = g.join("{");
+			i = a.getElementsByTagName("*");
+			h = i.length;
+			e = RegExp("^(?:" + m().join("|") + ")$", "i");
+			for (f = [];
+			     h--;)
+			{
+				g = i[h], e.test(g.nodeName) && f.push(g.applyElement(w(g)));
+			}
+			d = f;
+			b = p(a, c)
+		});
+		f.attachEvent("onafterprint", function ()
+		{
+			for (var a = d, c = a.length;
+			     c--;)
+			{
+				a[c].removeNode();
+			}
+			b.removeNode(!0)
+		});
+		a.printShived = !0;
+		return a
+	}
+
+	var o = k.html5 || {}, v = /^<|^(?:button|textarea|select|optgroup|option)$/i, t, n;
+	(function ()
+	{
+		var a, b = c.createElement("a"), d = k.getComputedStyle, e = c.documentElement, f = c.body || (a = e.insertBefore(c.createElement("body"), e.firstChild));
+		f.insertBefore(b, f.firstChild);
+		b.hidden = !0;
+		b.innerHTML = "<xyz></xyz>";
+		t = "none" == (b.currentStyle || d(b, null)).display;
+		if (!(d = 1 == b.childNodes.length))
+		{
+			a:{
+				try
+				{
+					c.createElement("a")
+				}
+				catch (h)
+				{
+					d = !0;
+					break a
+				}
+				d = c.createDocumentFragment();
+				d = "undefined" == typeof d.cloneNode || "undefined" == typeof d.createDocumentFragment || "undefined" == typeof d.createElement
+			}
+		}
+		n = d;
+		f.removeChild(b);
+		a && e.removeChild(a)
+	})();
+	var j = {elements: o.elements || "abbr article aside audio bdi canvas data datalist details figcaption figure footer header hgroup mark meter nav output progress section summary time video".split(" "), shivCSS: !1 !== o.shivCSS, shivMethods: !1 !== o.shivMethods, type: "default", shivDocument: s};
+	k.html5 = j;
+	s(c);
+	var y =
+		/^$|\b(?:all|print)\b/, l = "html5shiv", x = !n && function ()
+	{
+		var a = c.documentElement;
+		return!("undefined" == typeof c.namespaces || "undefined" == typeof c.parentWindow || "undefined" == typeof a.applyElement || "undefined" == typeof a.removeNode || "undefined" == typeof k.attachEvent)
+	}();
+	j.type += " print";
+	j.shivPrint = u;
+	u(c)
+})(this, document);

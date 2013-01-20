@@ -4,7 +4,6 @@
  * Layout Style Sheet - Provides a fluid grid and helper classes to create any layout and some layout defaults
  */
 
-
 /* Grid and Clearing Tools
 ----------------------------------------------------------------------------------------------------*/
 
@@ -15,35 +14,85 @@
 .deepest:before,
 .deepest:after {
 	content: "";
-    display: table;
+	display: table;
 }
+
 .clearfix:after,
 .grid-block:after,
-.deepest:after { clear: both; }
+.deepest:after {
+	clear: both;
+}
 
-.grid-box { float: left; }
+.grid-box {
+	float: left;
+}
 
 /* Grid Units */
-.width16 { width: 16.666%; }
-.width20 { width: 20%; }
-.width25 { width: 25%; }
-.width33 { width: 33.333%; }
-.width40 { width: 40%; }
-.width50 { width: 50%; }
-.width60 { width: 60%; }
-.width66 { width: 66.666%; }
-.width75 { width: 75%; }
-.width80 { width: 80%; }
-.width100 { width: 100%; }
+.width16 {
+	width: 16.666%;
+}
 
-[class*='width'] {
+.width20 {
+	width: 20%;
+}
+
+.width25 {
+	width: 25%;
+}
+
+.width33 {
+	width: 33.333%;
+}
+
+.width40 {
+	width: 40%;
+}
+
+.width50 {
+	width: 50%;
+}
+
+.width60 {
+	width: 60%;
+}
+
+.width66 {
+	width: 66.666%;
+}
+
+.width75 {
+	width: 75%;
+}
+
+.width80 {
+	width: 80%;
+}
+
+.width100 {
+	width: 100%;
+}
+
+.width16,
+.width20,
+.width25,
+.width33,
+.width40,
+.width50,
+.width60,
+.width66,
+.width75,
+.width80,
+.width100 {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 /* Create new Block Formatting Contexts */
-.bfc-o { overflow: hidden; }
+.bfc-o {
+	overflow: hidden;
+}
+
 .bfc-f {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -53,16 +102,30 @@
 }
 
 /* Align Boxes */
-.float-left { float: left; }
-.float-right { float: right; }
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
 
 /* Grid Gutter */
-.grid-gutter.grid-block { margin: 0 -15px; }
-.grid-gutter > .grid-box > * { margin: 0 15px; }
+.grid-gutter.grid-block {
+	margin: 0 -15px;
+}
 
-.grid-gutter > .grid-box > * > :first-child { margin-top: 0; }
-.grid-gutter > .grid-box > * > :last-child { margin-bottom: 0; }
+.grid-gutter > .grid-box > * {
+	margin: 0 15px;
+}
 
+.grid-gutter > .grid-box > * > :first-child {
+	margin-top: 0;
+}
+
+.grid-gutter > .grid-box > * > :last-child {
+	margin-bottom: 0;
+}
 
 /* Layout Defaults
 ----------------------------------------------------------------------------------------------------*/
@@ -76,7 +139,9 @@
 }
 
 /* Header */
-#header { position: relative; }
+#header {
+	position: relative;
+}
 
 #toolbar .float-left .module,
 #toolbar .float-left > time {
@@ -96,8 +161,13 @@
 }
 
 #logo, #logo > img,
-#menu { float: left; }
-#search { float: right; }
+#menu {
+	float: left;
+}
+
+#search {
+	float: right;
+}
 
 #banner {
 	position: absolute;

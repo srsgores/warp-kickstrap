@@ -2,7 +2,6 @@
 
 @import url(../warp/css/base.css);
 
-
 /* New style-related Base Values
 ----------------------------------------------------------------------------------------------------*/
 
@@ -11,21 +10,39 @@ body {
 	color: #444;
 }
 
-a { color: #48b; }
+a {
+	color: #48b;
+}
 
 a:hover,
-em, code { color: #d50; }
+em, code {
+	color: #d50;
+}
 
-ins, mark { background-color: #ffa; }
-mark { color: #444; }
+ins, mark {
+	background-color: #ffa;
+}
 
-hr { border-top-color: #ddd; }
+mark {
+	color: #444;
+}
+
+hr {
+	border-top-color: #ddd;
+}
 
 pre {
 	border: 1px solid #ddd;
 	background: #fafafa;
 }
 
-::-moz-selection { background: #39f; color: #fff; }
-::selection { background: #39f; color: #fff; }
+::-moz-selection {
+	background: #39f;
+	color: #fff;
+}
+
+::selection {
+	background: #39f;
+	color: #fff;
+}
 

@@ -1,22 +1,24 @@
 <?php
 /**
-* @package   Warp Theme Framework
-* @author    YOOtheme http://www.yootheme.com
-* @copyright Copyright (C) YOOtheme GmbH
-* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
-*/
+ * @package   Warp Theme Framework
+ * @author    YOOtheme http://www.yootheme.com
+ * @copyright Copyright (C) YOOtheme GmbH
+ * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
+ */
 
 /*
 	Class: DataWarpHelper
 		Data helper class.
 */
-class DataWarpHelper extends WarpHelper {
+class DataWarpHelper extends WarpHelper
+{
 
 	/*
 		Function: __construct
 			Class Constructor.
 	*/
-	public function __construct() {
+	public function __construct()
+	{
 		parent::__construct();
 
 		// load class
@@ -34,12 +36,13 @@ class DataWarpHelper extends WarpHelper {
 		Returns:
 			Mixed
 	*/
-	public function create($data = array(), $format = 'json') {
-		
+	public function create($data = array(), $format = 'json')
+	{
+
 		// load data class
-		$class = $format.'WarpData';
+		$class = $format . 'WarpData';
 
 		return new $class($data);
 	}
-	
+
 }

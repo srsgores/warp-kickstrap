@@ -4,38 +4,39 @@
 // Modified to support css styling instead of inline styling
 // Inspired by https://github.com/Srirangan/notifer.js/
 
-;(function (window, $)
+;
+(function (window, $)
 {
 	window.toastr = (function ()
 	{
 		var
 			defaults = {
-				tapToDismiss:true,
-				toastClass:'toast',
-				containerId:'toast-container',
-				debug:false,
-				fadeIn:300,
-				fadeOut:1000,
-				extendedTimeOut:1000,
-				iconClasses:{
-					error:'toast-error',
-					info:'toast-info',
-					success:'toast-success',
-					warning:'toast-warning'
+				tapToDismiss: true,
+				toastClass: 'toast',
+				containerId: 'toast-container',
+				debug: false,
+				fadeIn: 300,
+				fadeOut: 1000,
+				extendedTimeOut: 1000,
+				iconClasses: {
+					error: 'toast-error',
+					info: 'toast-info',
+					success: 'toast-success',
+					warning: 'toast-warning'
 				},
-				iconClass:'toast-info',
-				positionClass:'toast-top-right',
-				timeOut:5000, // Set timeOut to 0 to make it sticky
-				titleClass:'toast-title',
-				messageClass:'toast-message'
+				iconClass: 'toast-info',
+				positionClass: 'toast-top-right',
+				timeOut: 5000, // Set timeOut to 0 to make it sticky
+				titleClass: 'toast-title',
+				messageClass: 'toast-message'
 			},
 
 			error = function (message, title)
 			{
 				return notify({
-					iconClass:getOptions().iconClasses.error,
-					message:message,
-					title:title
+					iconClass: getOptions().iconClasses.error,
+					message: message,
+					title: title
 				})
 			},
 
@@ -65,9 +66,9 @@
 			info = function (message, title)
 			{
 				return notify({
-					iconClass:getOptions().iconClasses.info,
-					message:message,
-					title:title
+					iconClass: getOptions().iconClasses.info,
+					message: message,
+					title: title
 				})
 			},
 
@@ -81,7 +82,7 @@
 					$toastElement = $('<div/>'),
 					$titleElement = $('<div/>'),
 					$messageElement = $('<div/>'),
-					response = { options:options, map:map }
+					response = { options: options, map: map }
 
 				if (map.iconClass)
 				{
@@ -176,27 +177,27 @@
 			success = function (message, title)
 			{
 				return notify({
-					iconClass:getOptions().iconClasses.success,
-					message:message,
-					title:title
+					iconClass: getOptions().iconClasses.success,
+					message: message,
+					title: title
 				})
 			},
 
 			warning = function (message, title)
 			{
 				return notify({
-					iconClass:getOptions().iconClasses.warning,
-					message:message,
-					title:title
+					iconClass: getOptions().iconClasses.warning,
+					message: message,
+					title: title
 				})
 			}
 
 		return {
-			error:error,
-			info:info,
-			options:{},
-			success:success,
-			warning:warning
+			error: error,
+			info: info,
+			options: {},
+			success: success,
+			warning: warning
 		}
 	})()
 }(window, jQuery));

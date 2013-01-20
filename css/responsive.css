@@ -2,7 +2,6 @@
 
 @import url(../warp/css/responsive.css);
 
-
 /* Breakpoints
 ----------------------------------------------------------------------------------------------------*/
 
@@ -25,7 +24,9 @@
 @media (min-width: 480px) and (max-width: 959px) {
 
 	/* Layout */
-	#search { display: none; }
+	#search {
+		display: none;
+	}
 
 }
 
@@ -37,7 +38,9 @@
 	#headerbar,
 	#menubar,
 	#breadcrumbs,
-	#totop-scroller { display: none; }
+	#totop-scroller {
+		display: none;
+	}
 
 }
 

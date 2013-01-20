@@ -1,5 +1,66 @@
 /* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
 
-(function(e){var a=function(){};e.extend(a.prototype,{name:"accordionMenu",options:{mode:"default",display:null,collapseall:!1,toggler:"span.level1.parent",content:"ul.level2",onaction:function(){}},initialize:function(a,b){var b=e.extend({},this.options,b),f=a.find(b.toggler);f.each(function(a){var c=e(this),d=c.next(b.content).wrap("<div>").parent();d.data("height",d.height());c.hasClass("active")||a==b.display?d.show():d.hide().css("height",0);c.bind("click",function(){g(a)})});var g=function(a){var c=
-e(f.get(a)),d=e([]);c.hasClass("active")&&(d=c,c=e([]));b.collapseall&&(d=f.filter(".active"));switch(b.mode){case "slide":c.next().stop().show().animate({height:c.next().data("height")},400);d.next().stop().animate({height:0},400,function(){d.next().hide()});setTimeout(function(){b.onaction.apply(this,[c,d])},401);break;default:c.next().show().css("height",c.next().data("height")),d.next().hide().css("height",0),b.onaction.apply(this,[c,d])}c.addClass("active").parent().addClass("active");d.removeClass("active").parent().removeClass("active")}}});
-e.fn[a.prototype.name]=function(){var h=arguments,b=h[0]?h[0]:null;return this.each(function(){var f=e(this);if(a.prototype[b]&&f.data(a.prototype.name)&&"initialize"!=b)f.data(a.prototype.name)[b].apply(f.data(a.prototype.name),Array.prototype.slice.call(h,1));else if(!b||e.isPlainObject(b)){var g=new a;a.prototype.initialize&&g.initialize.apply(g,e.merge([f],h));f.data(a.prototype.name,g)}else e.error("Method "+b+" does not exist on jQuery."+a.name)})}})(jQuery);
+(function (d)
+{
+	var a = function ()
+	{
+	};
+	d.extend(a.prototype, {name: "accordionMenu", options: {mode: "default", display: null, collapseall: !1, toggler: "span.level1.parent", content: "ul.level2"}, initialize: function (a, b)
+	{
+		var b = d.extend({}, this.options, b), c = a.find(b.toggler);
+		c.each(function (h)
+		{
+			var a = d(this), c = a.next(b.content).wrap("<div>").parent();
+			c.data("height", c.height());
+			a.hasClass("active") || h == b.display ? c.show() : c.hide().css("height", 0);
+			a.bind("click", function ()
+			{
+				f(h)
+			})
+		});
+		var f = function (a)
+		{
+			var a = d(c.get(a)), e =
+				d([]);
+			a.hasClass("active") && (e = a, a = d([]));
+			b.collapseall && (e = c.filter(".active"));
+			switch (b.mode)
+			{
+				case "slide":
+					a.next().stop().show().animate({height: a.next().data("height")});
+					e.next().stop().animate({height: 0}, function ()
+					{
+						e.next().hide()
+					});
+					break;
+				default:
+					a.next().show().css("height", a.next().data("height")), e.next().hide().css("height", 0)
+			}
+			a.addClass("active").parent().addClass("active");
+			e.removeClass("active").parent().removeClass("active")
+		}
+	}});
+	d.fn[a.prototype.name] = function ()
+	{
+		var g = arguments, b = g[0] ?
+			g[0] : null;
+		return this.each(function ()
+		{
+			var c = d(this);
+			if (a.prototype[b] && c.data(a.prototype.name) && "initialize" != b)
+			{
+				c.data(a.prototype.name)[b].apply(c.data(a.prototype.name), Array.prototype.slice.call(g, 1));
+			}
+			else if (!b || d.isPlainObject(b))
+			{
+				var f = new a;
+				a.prototype.initialize && f.initialize.apply(f, d.merge([c], g));
+				c.data(a.prototype.name, f)
+			}
+			else
+			{
+				d.error("Method " + b + " does not exist on jQuery." + a.name)
+			}
+		})
+	}
+})(jQuery);

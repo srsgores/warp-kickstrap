@@ -6,7 +6,9 @@
 
 /* Resets (Bootstrap) */
 .tabs-box input[type="radio"],
-.tabs-box input[type="checkbox"] { vertical-align: baseline; }
+.tabs-box input[type="checkbox"] {
+	vertical-align: baseline;
+}
 
 .tabs-box ul.content input[type='text'],
 .tabs-box ul.content input[type='password'],

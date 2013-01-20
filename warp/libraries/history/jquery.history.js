@@ -73,7 +73,7 @@ window.JSON || (window.JSON = {}), function ()
 	{
 		return this.valueOf()
 	});
-	var JSON = window.JSON, cx = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, escapable = /[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, gap, indent, meta = {"\b":"\\b", "\t":"\\t", "\n":"\\n", "\f":"\\f", "\r":"\\r", '"':'\\"', "\\":"\\\\"}, rep;
+	var JSON = window.JSON, cx = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, escapable = /[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, gap, indent, meta = {"\b": "\\b", "\t": "\\t", "\n": "\\n", "\f": "\\f", "\r": "\\r", '"': '\\"', "\\": "\\\\"}, rep;
 	typeof JSON.stringify != "function" && (JSON.stringify = function (a, b, c)
 	{
 		var d;
@@ -94,7 +94,7 @@ window.JSON || (window.JSON = {}), function ()
 		rep = b;
 		if (!b || typeof b == "function" || typeof b == "object" && typeof b.length == "number")
 		{
-			return str("", {"":a});
+			return str("", {"": a});
 		}
 		throw new Error("JSON.stringify")
 	}), typeof JSON.parse != "function" && (JSON.parse = function (text, reviver)
@@ -120,7 +120,7 @@ window.JSON || (window.JSON = {}), function ()
 		}));
 		if (/^[\],:{}\s]*$/.test(text.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@").replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, "]").replace(/(?:^|:|,)(?:\s*\[)+/g, "")))
 		{
-			return j = eval("(" + text + ")"), typeof reviver == "function" ? walk({"":j}, "") : j;
+			return j = eval("(" + text + ")"), typeof reviver == "function" ? walk({"": j}, "") : j;
 		}
 		throw new SyntaxError("JSON.parse")
 	})
@@ -132,17 +132,17 @@ window.JSON || (window.JSON = {}), function ()
 	{
 		throw new Error("History.js Adapter has already been loaded...");
 	}
-	c.Adapter = {bind:function (a, b, c)
+	c.Adapter = {bind: function (a, b, c)
 	{
 		d(a).bind(b, c)
-	}, trigger:function (a, b, c)
+	}, trigger: function (a, b, c)
 	{
 		d(a).trigger(b, c)
-	}, extractEventData:function (a, c, d)
+	}, extractEventData: function (a, c, d)
 	{
 		var e = c && c.originalEvent && c.originalEvent[a] || d && d[a] || b;
 		return e
-	}, onDomLoad:function (a)
+	}, onDomLoad: function (a)
 	{
 		d(a)
 	}}, typeof c.init != "undefined" && c.init()
@@ -174,10 +174,10 @@ window.JSON || (window.JSON = {}), function ()
 		}, g.discardedHashes = {}, g.discardedStates = {}, g.discardState = function (a, b, c)
 		{
 			var d = g.getHashByState(a), e;
-			return e = {discardedState:a, backState:c, forwardState:b}, g.discardedStates[d] = e, !0
+			return e = {discardedState: a, backState: c, forwardState: b}, g.discardedStates[d] = e, !0
 		}, g.discardHash = function (a, b, c)
 		{
-			var d = {discardedHash:a, backState:c, forwardState:b};
+			var d = {discardedHash: a, backState: c, forwardState: b};
 			return g.discardedHashes[a] = d, !0
 		}, g.discardedState = function (a)
 		{
@@ -221,7 +221,7 @@ window.JSON || (window.JSON = {}), function ()
 			}
 			if (f !== !1 && g.busy())
 			{
-				return g.pushQueue({scope:g, callback:g.pushState, args:arguments, queue:f}), !1;
+				return g.pushQueue({scope: g, callback: g.pushState, args: arguments, queue: f}), !1;
 			}
 			g.busy(!0);
 			var h = g.createStateObject(b, d, e), i = g.getHashByState(h), j = g.getState(!1), k = g.getHashByState(j), l = g.getHash();
@@ -234,7 +234,7 @@ window.JSON || (window.JSON = {}), function ()
 			}
 			if (d !== !1 && g.busy())
 			{
-				return g.pushQueue({scope:g, callback:g.replaceState, args:arguments, queue:d}), !1;
+				return g.pushQueue({scope: g, callback: g.replaceState, args: arguments, queue: d}), !1;
 			}
 			g.busy(!0);
 			var e = g.createStateObject(a, b, c), f = g.getState(!1), h = g.getStateByIndex(-2);
@@ -316,7 +316,7 @@ window.JSON || (window.JSON = {}), function ()
 		{
 			var a = m.isInternetExplorer.cached = typeof m.isInternetExplorer.cached != "undefined" ? m.isInternetExplorer.cached : Boolean(m.getInternetExplorerMajorVersion());
 			return a
-		}, m.emulated = {pushState:!Boolean(a.history && a.history.pushState && a.history.replaceState && !/ Mobile\/([1-7][a-z]|(8([abcde]|f(1[0-8]))))/i.test(e.userAgent) && !/AppleWebKit\/5([0-2]|3[0-2])/i.test(e.userAgent)), hashChange:Boolean(!("onhashchange"in a || "onhashchange"in d) || m.isInternetExplorer() && m.getInternetExplorerMajorVersion() < 8)}, m.enabled = !m.emulated.pushState, m.bugs = {setHash:Boolean(!m.emulated.pushState && e.vendor === "Apple Computer, Inc." && /AppleWebKit\/5([0-2]|3[0-3])/.test(e.userAgent)), safariPoll:Boolean(!m.emulated.pushState && e.vendor === "Apple Computer, Inc." && /AppleWebKit\/5([0-2]|3[0-3])/.test(e.userAgent)), ieDoubleCheck:Boolean(m.isInternetExplorer() && m.getInternetExplorerMajorVersion() < 8), hashEscape:Boolean(m.isInternetExplorer() && m.getInternetExplorerMajorVersion() < 7)}, m.isEmptyObject = function (a)
+		}, m.emulated = {pushState: !Boolean(a.history && a.history.pushState && a.history.replaceState && !/ Mobile\/([1-7][a-z]|(8([abcde]|f(1[0-8]))))/i.test(e.userAgent) && !/AppleWebKit\/5([0-2]|3[0-2])/i.test(e.userAgent)), hashChange: Boolean(!("onhashchange"in a || "onhashchange"in d) || m.isInternetExplorer() && m.getInternetExplorerMajorVersion() < 8)}, m.enabled = !m.emulated.pushState, m.bugs = {setHash: Boolean(!m.emulated.pushState && e.vendor === "Apple Computer, Inc." && /AppleWebKit\/5([0-2]|3[0-3])/.test(e.userAgent)), safariPoll: Boolean(!m.emulated.pushState && e.vendor === "Apple Computer, Inc." && /AppleWebKit\/5([0-2]|3[0-3])/.test(e.userAgent)), ieDoubleCheck: Boolean(m.isInternetExplorer() && m.getInternetExplorerMajorVersion() < 8), hashEscape: Boolean(m.isInternetExplorer() && m.getInternetExplorerMajorVersion() < 7)}, m.isEmptyObject = function (a)
 		{
 			for (var b in
 				a)
@@ -425,7 +425,7 @@ window.JSON || (window.JSON = {}), function ()
 			return b.hashedUrl = m.getFullUrl(b.hash), (m.emulated.pushState || m.bugs.safariPoll) && m.hasUrlDuplicate(b) && (b.url = b.hashedUrl), b
 		}, m.createStateObject = function (a, b, c)
 		{
-			var d = {data:a, title:b, url:c};
+			var d = {data: a, title: b, url: c};
 			return d = m.normalizeState(d), d
 		}, m.getStateById = function (a)
 		{
@@ -435,7 +435,7 @@ window.JSON || (window.JSON = {}), function ()
 		}, m.getStateString = function (a)
 		{
 			var b, c, d;
-			return b = m.normalizeState(a), c = {data:b.data, title:a.title, url:a.url}, d = k.stringify(c), d
+			return b = m.normalizeState(a), c = {data: b.data, title: a.title, url: a.url}, d = k.stringify(c), d
 		}, m.getStateId = function (a)
 		{
 			var b, c;
@@ -512,7 +512,7 @@ window.JSON || (window.JSON = {}), function ()
 		}, m.setHash = function (a, b)
 		{
 			var c, e, f;
-			return b !== !1 && m.busy() ? (m.pushQueue({scope:m, callback:m.setHash, args:arguments, queue:b}), !1) : (c = m.escapeHash(a), m.busy(!0), e = m.extractState(a, !0), e && !m.emulated.pushState ? m.pushState(e.data, e.title, e.url, !1) : d.location.hash !== c && (m.bugs.setHash ? (f = m.getPageUrl(), m.pushState(null, null, f + "#" + c, !1)) : d.location.hash = c), m)
+			return b !== !1 && m.busy() ? (m.pushQueue({scope: m, callback: m.setHash, args: arguments, queue: b}), !1) : (c = m.escapeHash(a), m.busy(!0), e = m.extractState(a, !0), e && !m.emulated.pushState ? m.pushState(e.data, e.title, e.url, !1) : d.location.hash !== c && (m.bugs.setHash ? (f = m.getPageUrl(), m.pushState(null, null, f + "#" + c, !1)) : d.location.hash = c), m)
 		}, m.escapeHash = function (b)
 		{
 			var c = m.normalizeHash(b);
@@ -569,7 +569,7 @@ window.JSON || (window.JSON = {}), function ()
 			return m.queues[a.queue || 0] = m.queues[a.queue || 0] || [], m.queues[a.queue || 0].push(a), m
 		}, m.queue = function (a, b)
 		{
-			return typeof a == "function" && (a = {callback:a}), typeof b != "undefined" && (a.queue = b), m.busy() ? m.pushQueue(a) : m.fireQueueItem(a), m
+			return typeof a == "function" && (a = {callback: a}), typeof b != "undefined" && (a.queue = b), m.busy() ? m.pushQueue(a) : m.fireQueueItem(a), m
 		}, m.clearQueue = function ()
 		{
 			return m.busy.flag = !1, m.queues = [], m
@@ -599,13 +599,13 @@ window.JSON || (window.JSON = {}), function ()
 			return c || (c = m.createStateObject()), m.Adapter.trigger(a, "popstate"), m
 		}, m.back = function (a)
 		{
-			return a !== !1 && m.busy() ? (m.pushQueue({scope:m, callback:m.back, args:arguments, queue:a}), !1) : (m.busy(!0), m.doubleCheck(function ()
+			return a !== !1 && m.busy() ? (m.pushQueue({scope: m, callback: m.back, args: arguments, queue: a}), !1) : (m.busy(!0), m.doubleCheck(function ()
 			{
 				m.back(!1)
 			}), n.go(-1), !0)
 		}, m.forward = function (a)
 		{
-			return a !== !1 && m.busy() ? (m.pushQueue({scope:m, callback:m.forward, args:arguments, queue:a}), !1) : (m.busy(!0), m.doubleCheck(function ()
+			return a !== !1 && m.busy() ? (m.pushQueue({scope: m, callback: m.forward, args: arguments, queue: a}), !1) : (m.busy(!0), m.doubleCheck(function ()
 			{
 				m.forward(!1)
 			}), n.go(1), !0)
@@ -657,7 +657,7 @@ window.JSON || (window.JSON = {}), function ()
 				}
 				if (e !== !1 && m.busy())
 				{
-					return m.pushQueue({scope:m, callback:m.pushState, args:arguments, queue:e}), !1;
+					return m.pushQueue({scope: m, callback: m.pushState, args: arguments, queue: e}), !1;
 				}
 				m.busy(!0);
 				var f = m.createStateObject(b, c, d);
@@ -670,7 +670,7 @@ window.JSON || (window.JSON = {}), function ()
 				}
 				if (e !== !1 && m.busy())
 				{
-					return m.pushQueue({scope:m, callback:m.replaceState, args:arguments, queue:e}), !1;
+					return m.pushQueue({scope: m, callback: m.replaceState, args: arguments, queue: e}), !1;
 				}
 				m.busy(!0);
 				var f = m.createStateObject(b, c, d);

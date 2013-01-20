@@ -1,6 +1,10 @@
 /* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
 
 a,
-.menu-dropdown li.active .level1 { color: #DE5A51; }
+.menu-dropdown li.active .level1 {
+	color: #DE5A51;
+}
 
-.button-primary { background: #DE5A51; }
+.button-primary {
+	background: #DE5A51;
+}

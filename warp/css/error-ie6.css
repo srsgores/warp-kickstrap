@@ -10,7 +10,9 @@ body {
 }
 
 .error,
-.error span { zoom: 1; }
+.error span {
+	zoom: 1;
+}
 
 .error-browser .error {
 	font-size: 20px;

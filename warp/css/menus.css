@@ -5,7 +5,6 @@
  * Supported: Mega Drop-Down Menu, Sidebar/Accordion Menu and Line Menu
  */
 
-
 /* Menu Helpers
 ----------------------------------------------------------------------------------------------------*/
 
@@ -17,19 +16,27 @@
 }
 
 .menu a,
-.menu span { display: block; }
-.menu a { text-decoration: none; }
+.menu span {
+	display: block;
+}
 
+.menu a {
+	text-decoration: none;
+}
 
 /* Mega Drop-Down Menu
 ----------------------------------------------------------------------------------------------------*/
 
-.menu-dropdown li { position: relative; }
+.menu-dropdown li {
+	position: relative;
+}
 
 /* Level 1 */
 .menu-dropdown,
 .menu-dropdown .level1,
-.menu-dropdown .level1 > span { float: left; }
+.menu-dropdown .level1 > span {
+	float: left;
+}
 
 .menu-dropdown a.level1 > span,
 .menu-dropdown span.level1 > span {
@@ -43,13 +50,15 @@
 	display: none;
 	position: absolute;
 	top: 30px;
- 	left: 0;
+	left: 0;
 	z-index: 100;
 	width: 300px; /* Default */
 }
 
 .menu-dropdown li:hover .dropdown,
-.menu-dropdown li.remain .dropdown { display: block; }
+.menu-dropdown li.remain .dropdown {
+	display: block;
+}
 
 .menu-dropdown li:hover .dropdown.flip,
 .menu-dropdown li.remain .dropdown.flip {
@@ -57,16 +66,30 @@
 	right: 0;
 }
 
-.menu-dropdown .dropdown-bg > div { overflow: hidden; }
+.menu-dropdown .dropdown-bg > div {
+	overflow: hidden;
+}
 
-.menu-dropdown .stack .column { width: 100%; }
+.menu-dropdown .stack .column {
+	width: 100%;
+}
 
 /* Multi Columns, Default */
-.menu-dropdown .columns2 { width: 600px; }
-.menu-dropdown .columns3 { width: 900px; }
-.menu-dropdown .columns4 { width: 1200px; }
+.menu-dropdown .columns2 {
+	width: 600px;
+}
 
-.menu-dropdown .column { float: left; }
+.menu-dropdown .columns3 {
+	width: 900px;
+}
+
+.menu-dropdown .columns4 {
+	width: 1200px;
+}
+
+.menu-dropdown .column {
+	float: left;
+}
 
 /* Level 2 */
 .menu-dropdown a.level2 > span,
@@ -77,9 +100,12 @@
 }
 
 /* Level 3 */
-.menu-dropdown ul.level3 { padding-bottom: 10px; }
+.menu-dropdown ul.level3 {
+	padding-bottom: 10px;
+}
 
-.menu-dropdown li.level3 { /* Must be set in li for IE7 */
+.menu-dropdown li.level3 {
+	/* Must be set in li for IE7 */
 	font-size: 11px;
 	line-height: 17px;
 }
@@ -97,8 +123,11 @@
 	height: 30px;
 	margin-left: -5px;
 }
+
 .menu-dropdown .level1 .level1 span.icon + span,
-.menu-dropdown .level1 .level1 span.icon + span + span { margin-left: 25px; }
+.menu-dropdown .level1 .level1 span.icon + span + span {
+	margin-left: 25px;
+}
 
 .menu-dropdown li.level2 .level2 span.icon {
 	width: 35px;
@@ -106,14 +135,24 @@
 	margin-top: -7px;
 	margin-bottom: -7px;
 }
-.menu-dropdown li.level2.hassubtitle .level2 span.icon { margin-top: -4px; }
 
-.menu-dropdown li.level2 .level2 span.icon { margin-right: 5px; }
+.menu-dropdown li.level2.hassubtitle .level2 span.icon {
+	margin-top: -4px;
+}
+
+.menu-dropdown li.level2 .level2 span.icon {
+	margin-right: 5px;
+}
+
 .menu-dropdown li.level2 .level2 span.icon + span,
-.menu-dropdown li.level2 .level2 span.icon + span + span { margin-left: 40px; }
+.menu-dropdown li.level2 .level2 span.icon + span + span {
+	margin-left: 40px;
+}
 
 /* Subtitles */
-.menu-dropdown span.title { line-height: 18px; }
+.menu-dropdown span.title {
+	line-height: 18px;
+}
 
 .menu-dropdown span.subtitle {
 	margin-top: -1px;
@@ -122,15 +161,21 @@
 	text-indent: 1px;
 }
 
-.menu-dropdown li.level2 .level2 span.title { line-height: 15px; }
-.menu-dropdown li.level2 .level2 span.subtitle { line-height: 14px; }
+.menu-dropdown li.level2 .level2 span.title {
+	line-height: 15px;
+}
 
+.menu-dropdown li.level2 .level2 span.subtitle {
+	line-height: 14px;
+}
 
 /* Sidebar/Accordion Menu
 ----------------------------------------------------------------------------------------------------*/
 
 /* Accordion */
-.menu-sidebar li.parent span.level1 > span { cursor: pointer; }
+.menu-sidebar li.parent span.level1 > span {
+	cursor: pointer;
+}
 
 /* Level 1 */
 .menu-sidebar a.level1 > span,
@@ -140,12 +185,22 @@
 }
 
 /* Remove Subtitles */
-.menu-sidebar span.title { display: inline; }
-.menu-sidebar span.subtitle { display: none; }
+.menu-sidebar span.title {
+	display: inline;
+}
+
+.menu-sidebar span.subtitle {
+	display: none;
+}
 
 /* Level 2-4 */
-.menu-sidebar ul.level2 { padding-bottom: 10px; }
-.menu-sidebar li.level1:last-child ul.level2 { padding-bottom: 0; }
+.menu-sidebar ul.level2 {
+	padding-bottom: 10px;
+}
+
+.menu-sidebar li.level1:last-child ul.level2 {
+	padding-bottom: 0;
+}
 
 .menu-sidebar .level2 a > span {
 	font-size: 11px;
@@ -163,12 +218,13 @@
 	vertical-align: middle;
 }
 
-
 /* Line Menu
 ----------------------------------------------------------------------------------------------------*/
 
 /* Level 1 */
 .menu-line,
 .menu-line li,
-.menu-line li a { display: inline-block; }
+.menu-line li a {
+	display: inline-block;
+}
 

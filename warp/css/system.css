@@ -4,7 +4,6 @@
  * System Style Sheet - Defines a base style for the Joomla and WordPress core HTML markup
  */
 
-
 /* General
 ----------------------------------------------------------------------------------------------------*/
 
@@ -14,26 +13,37 @@
 	line-height: 18px;
 }
 
-#system .title { margin-top: 0; }
-#system .title a { text-decoration: none; }
+#system .title {
+	margin-top: 0;
+}
 
-#system .title + .title { margin-top: 20px; }
+#system .title a {
+	text-decoration: none;
+}
+
+#system .title + .title {
+	margin-top: 20px;
+}
 
 #system > .description {
 	margin-bottom: 30px;
 	overflow: hidden;
 }
 
-#system small { font-style: italic; }
-
+#system small {
+	font-style: italic;
+}
 
 /* Item
 ----------------------------------------------------------------------------------------------------*/
 
-#system .item > header { margin-bottom: 15px; }
-#system .item > :first-child + header { margin-top: 10px; }
+#system .item > header {
+	margin-bottom: 15px;
+}
 
-#system .item > header .title { margin-bottom: 0; }
+#system .item > header .title {
+	margin-bottom: 0;
+}
 
 #system .item > header .meta {
 	margin: 10px 0 0 0;
@@ -41,7 +51,7 @@
 	line-height: 13px;
 }
 
-#system .item > header .subtitle{
+#system .item > header .subtitle {
 	margin: 0 0 8px 0;
 	font-size: 14px;
 	line-height: 16px;
@@ -50,35 +60,69 @@
 }
 
 #system .item > .content > *:first-child:not(.grid-gutter),
-#system .item > .content > *[class*="align"]:first-child + * { margin-top: 0; }
-#system .item > .content > *:last-child:not(.grid-gutter) { margin-bottom: 0; }
+#system .item > .content > *[class*="align"]:first-child + * {
+	margin-top: 0;
+}
 
-#system .item > .links { margin: 22px 0 0 0; }
-#system .item > .links a { margin-right: 15px; }
+#system .item > .content > *:last-child:not(.grid-gutter) {
+	margin-bottom: 0;
+}
 
-#system .item > .taxonomy {}
-#system .item > .trackback {}
-#system .item > .edit {}
+#system .item > .links {
+	margin: 22px 0 0 0;
+}
 
-#system .item > *:last-child { margin-bottom: 0; }
+#system .item > .links a {
+	margin-right: 15px;
+}
 
-#system .item .socialbuttons { margin-top: 15px; }
+#system .item > .taxonomy {
+}
+
+#system .item > .trackback {
+}
+
+#system .item > .edit {
+}
+
+#system .item > *:last-child {
+	margin-bottom: 0;
+}
+
+#system .item .socialbuttons {
+	margin-top: 15px;
+}
+
 #system .item .socialbuttons > div {
 	margin-right: 10px;
 	float: left;
 }
 
-
 /* Items
 ----------------------------------------------------------------------------------------------------*/
 
-#system .items { margin: 0 -10px 0 -10px; }
-#system .items .item { margin: 0 10px 0 10px; }
+#system .items {
+	margin: 0 -10px 0 -10px;
+}
 
-#system .items > .width50 .title { font-size: 22px; line-height: 22px; }
-#system .items > .width33 .title { font-size: 20px; line-height: 20px; }
-#system .items > .width25 .title { font-size: 18px; line-height: 18px; }
+#system .items .item {
+	margin: 0 10px 0 10px;
+}
 
+#system .items > .width50 .title {
+	font-size: 22px;
+	line-height: 22px;
+}
+
+#system .items > .width33 .title {
+	font-size: 20px;
+	line-height: 20px;
+}
+
+#system .items > .width25 .title {
+	font-size: 18px;
+	line-height: 18px;
+}
 
 /* Pagination
 ----------------------------------------------------------------------------------------------------*/
@@ -88,8 +132,13 @@
 	text-align: center;
 }
 
-#system .pagination a { text-decoration: none; }
-#system .pagination strong { font-weight: normal; }
+#system .pagination a {
+	text-decoration: none;
+}
+
+#system .pagination strong {
+	font-weight: normal;
+}
 
 #system .pagination a,
 #system .pagination strong {
@@ -100,7 +149,10 @@
 	padding: 0 5px;
 	line-height: 25px;
 }
-#system .pagination > *:first-child { margin-left: 0; }
+
+#system .pagination > *:first-child {
+	margin-left: 0;
+}
 
 #system .pagination a.previous,
 #system .pagination a.next {
@@ -108,11 +160,12 @@
 	line-height: 23px;
 }
 
-
 /* Search Box
 ----------------------------------------------------------------------------------------------------*/
 
-.searchbox { position: relative; }
+.searchbox {
+	position: relative;
+}
 
 .searchbox input {
 	width: 100%;
@@ -123,9 +176,10 @@
 	float: left;
 }
 
-.searchbox input::-ms-clear { display: none; }
+.searchbox button {
+	display: none;
+}
 
-.searchbox button { display: none; }
 .searchbox.filled button {
 	display: block;
 	position: absolute;
@@ -137,7 +191,9 @@
 	line-height: 0;
 	cursor: pointer;
 }
-.searchbox.loading button {}
+
+.searchbox.loading button {
+}
 
 /* Drop-Down Results */
 .searchbox .results {
@@ -159,7 +215,9 @@
 	text-transform: uppercase;
 }
 
-.searchbox .results li.more-results { cursor: pointer; }
+.searchbox .results li.more-results {
+	cursor: pointer;
+}
 
 .searchbox .results li.result {
 	padding: 10px 15px;
@@ -171,13 +229,16 @@
 	font-size: 16px;
 }
 
-.searchbox .results li.result div { font-size: 11px; }
-
+.searchbox .results li.result div {
+	font-size: 11px;
+}
 
 /* Breadcrumbs
 ----------------------------------------------------------------------------------------------------*/
 
-.breadcrumbs { overflow: hidden; }
+.breadcrumbs {
+	overflow: hidden;
+}
 
 .breadcrumbs a,
 .breadcrumbs span,
@@ -187,14 +248,20 @@
 }
 
 .breadcrumbs a,
-.breadcrumbs > span { margin-right: 10px; }
-
+.breadcrumbs > span {
+	margin-right: 10px;
+}
 
 /* Author Box
 ----------------------------------------------------------------------------------------------------*/
 
-#system .author-box { margin: 20px 0; }
-#system .title + .author-box { margin-top: 0; }
+#system .author-box {
+	margin: 20px 0;
+}
+
+#system .title + .author-box {
+	margin-top: 0;
+}
 
 #system .author-box .avatar {
 	margin-right: 15px;
@@ -208,15 +275,19 @@
 	line-height: 22px;
 }
 
-#system .author-box .description {}
-
+#system .author-box .description {
+}
 
 /* Comments
 ----------------------------------------------------------------------------------------------------*/
 
-#system #comments { margin-top: 20px; }
+#system #comments {
+	margin-top: 20px;
+}
 
-#system #comments h3.comments-meta { margin: 0 0 10px 0; }
+#system #comments h3.comments-meta {
+	margin: 0 0 10px 0;
+}
 
 #system #comments ul {
 	margin: 0;
@@ -253,11 +324,17 @@
 	padding: 0 10px;
 }
 
-#system #comments .comment-body .content { text-align: justify; }
+#system #comments .comment-body .content {
+	text-align: justify;
+}
 
-#system #comments .comment-body .reply { margin: 10px 0 0 0; }
+#system #comments .comment-body .reply {
+	margin: 10px 0 0 0;
+}
 
-#system #comments .no-response .comment-body .reply { display: none; }
+#system #comments .no-response .comment-body .reply {
+	display: none;
+}
 
 #system #comments .comment-body .moderation {
 	margin: 10px 0 0 0;
@@ -265,7 +342,9 @@
 	font-style: italic;
 }
 
-#system #comments ul.level1 ul { padding-left: 55px; }
+#system #comments ul.level1 ul {
+	padding-left: 55px;
+}
 
 /* Respond */
 #system #respond h3 {
@@ -275,7 +354,9 @@
 	font-weight: normal;
 }
 
-#system #respond p.user { margin: 0; }
+#system #respond p.user {
+	margin: 0;
+}
 
 #system #respond input[type='text'] {
 	width: 200px;
@@ -295,7 +376,6 @@
 	margin: 0 0 30px 0;
 	padding-left: 10px;
 }
-
 
 /* Latest Comments
 ----------------------------------------------------------------------------------------------------*/
@@ -329,8 +409,9 @@
 	font-style: italic;
 }
 
-.comments-list .content p { margin: 5px 0 0 0; }
-
+.comments-list .content p {
+	margin: 5px 0 0 0;
+}
 
 /* Tag Cloud
 ----------------------------------------------------------------------------------------------------*/
@@ -348,24 +429,64 @@
 	vertical-align: middle;
 }
 
-.tagcloud a { white-space: nowrap; }
+.tagcloud a {
+	white-space: nowrap;
+}
 
-.tagcloud .weight1 a { font-size: 11px; }
-.tagcloud .weight2 a { font-size: 12px; }
-.tagcloud .weight3 a { font-size: 13px; }
-.tagcloud .weight4 a { font-size: 14px; }
-.tagcloud .weight5 a { font-size: 15px; }
-.tagcloud .weight6 a { font-size: 16px; }
-.tagcloud .weight7 a { font-size: 18px; }
-.tagcloud .weight8 a { font-size: 20px; }
-.tagcloud .weight9 a { font-size: 23px; letter-spacing: -1px; }
-.tagcloud .weight10 a { font-size: 26px; letter-spacing: -1px; }
+.tagcloud .weight1 a {
+	font-size: 11px;
+}
 
+.tagcloud .weight2 a {
+	font-size: 12px;
+}
+
+.tagcloud .weight3 a {
+	font-size: 13px;
+}
+
+.tagcloud .weight4 a {
+	font-size: 14px;
+}
+
+.tagcloud .weight5 a {
+	font-size: 15px;
+}
+
+.tagcloud .weight6 a {
+	font-size: 16px;
+}
+
+.tagcloud .weight7 a {
+	font-size: 18px;
+}
+
+.tagcloud .weight8 a {
+	font-size: 20px;
+}
+
+.tagcloud .weight9 a {
+	font-size: 23px;
+	letter-spacing: -1px;
+}
+
+.tagcloud .weight10 a {
+	font-size: 26px;
+	letter-spacing: -1px;
+}
 
 /* Page Navigation
 ----------------------------------------------------------------------------------------------------*/
 
-.page-nav { margin-top: 15px; }
-.page-nav .prev { float: left; }
-.page-nav .next { float: right; }
+.page-nav {
+	margin-top: 15px;
+}
+
+.page-nav .prev {
+	float: left;
+}
+
+.page-nav .next {
+	float: right;
+}
 

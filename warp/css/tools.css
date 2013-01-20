@@ -5,14 +5,24 @@
  * Some classes are used in the Joomla and WordPress system markup
  */
 
-
 /* Useful Classes for Content Creation
 ----------------------------------------------------------------------------------------------------*/
 
-.display-block { display: block; }
-.remove-margin { margin: 0; }
-.remove-margin-t { margin-top: 0; }
-.remove-margin-b { margin-bottom: 0; }
+.display-block {
+	display: block;
+}
+
+.remove-margin {
+	margin: 0;
+}
+
+.remove-margin-t {
+	margin-top: 0;
+}
+
+.remove-margin-b {
+	margin-bottom: 0;
+}
 
 .hidden {
 	display: none;
@@ -48,11 +58,21 @@
 }
 
 /* Text Alignment */
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
-.text-justify { text-align: justify; }
+.text-left {
+	text-align: left;
+}
 
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
 
 /* Buttons (Needed for System Markup)
 ----------------------------------------------------------------------------------------------------*/
@@ -60,12 +80,15 @@
 /* Note: .button-more is deprecated since Warp 6.2 */
 .button-more,
 .button-default,
-.button-primary { display: inline-block; }
+.button-primary {
+	display: inline-block;
+}
 
 .button-more + [class*=button-],
 .button-default + [class*=button-],
-.button-primary + [class*=button-] { margin-left: 10px; }
-
+.button-primary + [class*=button-] {
+	margin-left: 10px;
+}
 
 /* Lists (Needed for System Markup)
 ----------------------------------------------------------------------------------------------------*/
@@ -81,8 +104,13 @@ ul.zebra {
 }
 
 /* Space */
-ul.space li { margin-top: 15px; }
-ul.space li:first-child { margin-top: 0; }
+ul.space li {
+	margin-top: 15px;
+}
+
+ul.space li:first-child {
+	margin-top: 0;
+}
 
 /* Line */
 ul.line > li {
@@ -96,20 +124,30 @@ ul.line > li:first-child {
 }
 
 /* Check */
-ul.check > li { margin-top: 5px; }
-ul.check > li:first-child { margin-top: 0; }
+ul.check > li {
+	margin-top: 5px;
+}
+
+ul.check > li:first-child {
+	margin-top: 0;
+}
 
 /* Zebra */
-ul.zebra > li { padding: 5px; }
+ul.zebra > li {
+	padding: 5px;
+}
 
 ul.line > li > a:first-child,
-ul.check > li > a:first-child { display: block; }
-
+ul.check > li > a:first-child {
+	display: block;
+}
 
 /* Tables (Needed for System Markup)
 ----------------------------------------------------------------------------------------------------*/
 
-table.zebra { width: 100%; }
+table.zebra {
+	width: 100%;
+}
 
 table.zebra th {
 	font-size: 16px;
@@ -118,24 +156,36 @@ table.zebra th {
 }
 
 table.zebra th,
-table.zebra td { padding: 5px; }
+table.zebra td {
+	padding: 5px;
+}
 
 table.zebra tbody,
-table.zebra tfoot { font-size: 12px; }
+table.zebra tfoot {
+	font-size: 12px;
+}
 
-table.zebra .bold { font-weight: bold; }
-table.zebra .center { text-align: center; }
+table.zebra .bold {
+	font-weight: bold;
+}
 
-table.zebra td * { vertical-align: middle; }
+table.zebra .center {
+	text-align: center;
+}
 
-table.zebra tfoot { font-style: italic; }
+table.zebra td * {
+	vertical-align: middle;
+}
+
+table.zebra tfoot {
+	font-style: italic;
+}
 
 table.zebra caption {
 	font-size: 11px;
 	text-align: left;
 	font-style: italic;
 }
-
 
 /* Definition Lists
 ----------------------------------------------------------------------------------------------------*/
@@ -145,7 +195,7 @@ dl.separator {
 	overflow: hidden;
 }
 
-dl.separator dt {	
+dl.separator dt {
 	width: 160px;
 	padding-right: 10px;
 	float: left;
@@ -157,18 +207,19 @@ dl.separator dd {
 	padding-left: 20px;
 }
 
-
 /* Text
 ----------------------------------------------------------------------------------------------------*/
 
 /* Inline Text Box */
-em.box { 
+em.box {
 	padding: 0 3px;
 	white-space: nowrap;
 }
 
 /* Dotted Horizontal Rule */
-hr.dotted { border: none; }
+hr.dotted {
+	border: none;
+}
 
 /* Drop Caps */
 p.dropcap:first-letter {
@@ -178,7 +229,6 @@ p.dropcap:first-letter {
 	font-size: 280%;
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
-
 
 /* Boxes
 ----------------------------------------------------------------------------------------------------*/
@@ -193,13 +243,16 @@ p.dropcap:first-letter {
 	padding: 10px;
 }
 
-.box-content { padding: 20px; }
+.box-content {
+	padding: 20px;
+}
 
 .box-info,
 .box-warning,
 .box-hint,
-.box-download { padding-left: 40px; }
-
+.box-download {
+	padding-left: 40px;
+}
 
 /* Forms (Needed for System Markup)
 ----------------------------------------------------------------------------------------------------*/
@@ -209,21 +262,41 @@ form.box fieldset {
 	margin-bottom: 30px;
 	padding: 0 10px 10px 10px;
 }
-form.box legend { padding: 0 10px; }
-form.box fieldset > div { margin: 15px 0; }
+
+form.box legend {
+	padding: 0 10px;
+}
+
+form.box fieldset > div {
+	margin: 15px 0;
+}
 
 form.box button,
 form.box input[type='button'],
-form.box input[type='reset'] { vertical-align: middle; }
+form.box input[type='reset'] {
+	vertical-align: middle;
+}
 
 /* Short */
-form.short > div { margin: 10px 0; }
+form.short > div {
+	margin: 10px 0;
+}
 
-form.short input { color: #333; }
-form.short input:-moz-placeholder { color: #999; }
-form.short input::-webkit-input-placeholder { color: #999; }
-form.short input.placeholder { color: #999; }
+form.short input {
+	color: #333;
+}
 
+form.short input:-moz-placeholder {
+	color: #999;
+}
+
+form.short input::-webkit-input-placeholder {
+	color: #999;
+}
+
+form.short input.placeholder {
+	color: #999;
+}
 
 /* Mobile Switcher (Needed for Mobile)
 ----------------------------------------------------------------------------------------------------*/

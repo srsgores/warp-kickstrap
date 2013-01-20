@@ -4213,7 +4213,7 @@
 
 .btn.active, .btn:active {
 	background-color: #e6e6e6;
-	background-color: #d9d9d9  \9;
+	background-color: #d9d9d9   \9;
 	background-image: none;
 	outline: 0;
 	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
@@ -4310,7 +4310,7 @@
 }
 
 .btn:active, .btn.active {
-	background-color: #ccc  \9;
+	background-color: #ccc   \9;
 }
 
 .btn-primary {
@@ -4335,7 +4335,7 @@
 }
 
 .btn-primary:active, .btn-primary.active {
-	background-color: #039  \9;
+	background-color: #039   \9;
 }
 
 .btn-warning {
@@ -4360,7 +4360,7 @@
 }
 
 .btn-warning:active, .btn-warning.active {
-	background-color: #c67605  \9;
+	background-color: #c67605   \9;
 }
 
 .btn-danger {
@@ -4385,7 +4385,7 @@
 }
 
 .btn-danger:active, .btn-danger.active {
-	background-color: #942a25  \9;
+	background-color: #942a25   \9;
 }
 
 .btn-success {
@@ -4410,7 +4410,7 @@
 }
 
 .btn-success:active, .btn-success.active {
-	background-color: #408140  \9;
+	background-color: #408140   \9;
 }
 
 .btn-info {
@@ -4435,7 +4435,7 @@
 }
 
 .btn-info:active, .btn-info.active {
-	background-color: #24748c  \9;
+	background-color: #24748c   \9;
 }
 
 .btn-inverse {
@@ -4460,7 +4460,7 @@
 }
 
 .btn-inverse:active, .btn-inverse.active {
-	background-color: #090909  \9;
+	background-color: #090909   \9;
 }
 
 button.btn, input[type="submit"].btn {
@@ -4540,7 +4540,7 @@ button.btn:focus, input[type="submit"].btn:focus {
 
 button.btn.active, button.btn:active, input[type="submit"].btn.active, input[type="submit"].btn:active {
 	background-color: #e6e6e6;
-	background-color: #d9d9d9  \9;
+	background-color: #d9d9d9   \9;
 	background-image: none;
 	outline: 0;
 	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
@@ -4570,7 +4570,7 @@ button.btn:hover, button.btn:active, button.btn.active, button.btn.disabled, but
 }
 
 button.btn:active, button.btn.active, input[type="submit"].btn:active, input[type="submit"].btn.active {
-	background-color: #ccc  \9;
+	background-color: #ccc   \9;
 }
 
 button.btn .label, button.btn .badge, input[type="submit"].btn .label, input[type="submit"].btn .badge {
@@ -4689,7 +4689,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 
 .button-more.active, .button-more:active, .btn-more.active, .btn-more:active {
 	background-color: #e6e6e6;
-	background-color: #d9d9d9  \9;
+	background-color: #d9d9d9   \9;
 	background-image: none;
 	outline: 0;
 	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05);
@@ -4719,7 +4719,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 
 .button-more:active, .button-more.active, .btn-more:active, .btn-more.active {
-	background-color: #ccc  \9;
+	background-color: #ccc   \9;
 }
 
 .button-more .label, .button-more .badge, .btn-more .label, .btn-more .badge {
@@ -4807,7 +4807,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
 	border-color: rgba(82, 168, 236, 0.8);
 	outline: 0;
-	outline: thin dotted  \9;
+	outline: thin dotted   \9;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
 	-khtml-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
@@ -4818,7 +4818,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 input[type="radio"], input[type="checkbox"] {
 	margin: 4px 0 0;
 	*margin-top: 0;
-	margin-top: 1px  \9;
+	margin-top: 1px   \9;
 	line-height: normal;
 	cursor: pointer;
 }
@@ -5186,9 +5186,9 @@ input:focus:required:invalid:focus, textarea:focus:required:invalid:focus, selec
 
 input.search-query {
 	padding-right: 14px;
-	padding-right: 4px  \9;
+	padding-right: 4px   \9;
 	padding-left: 14px;
-	padding-left: 4px  \9;
+	padding-left: 4px   \9;
 	margin-bottom: 0;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;

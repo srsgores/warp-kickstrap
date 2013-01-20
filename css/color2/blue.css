@@ -8,6 +8,10 @@ code,
 .menu-dropdown a.level2:hover,
 .menu-dropdown a.level3:hover,
 .menu-sidebar a:hover > span,
-.menu-sidebar span:hover > span { color: #469bdb; }
+.menu-sidebar span:hover > span {
+	color: #469bdb;
+}
 
-.button-primary:hover { background: #469bdb; }
+.button-primary:hover {
+	background: #469bdb;
+}

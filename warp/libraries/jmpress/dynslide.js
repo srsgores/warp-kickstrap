@@ -1,10 +1,3 @@
-/**
-* @package   yoo_master
-* @author    YOOtheme http://www.yootheme.com
-* @copyright Copyright (C) YOOtheme GmbH
-* @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
-*/
-
 /*------------------------------------------------------------------------------------------------------------------------
  Author: Sean Goresht
  www: http://seangoresht.com/
@@ -67,11 +60,13 @@ function setSlideHeight(stepSelector)
 		}
 	});
 }
-function setCss() {
+function setCss()
+{
 	$("header,footer").css("position", "fixed");
 }
 
-function unsetCss() {
+function unsetCss()
+{
 	$("header,footer").css("position", "relative");
 }
 function setRowWidth($)
@@ -133,7 +128,7 @@ function dynSlide($)
 {
 	addSlides("step");
 	$("#content").jmpress({
-		'ajax:afterStepLoaded':function (element, eventData)
+		'ajax:afterStepLoaded': function (element, eventData)
 		{
 			var scripts = String($(element).data('script') || '').split(',');
 			scripts.forEach(function (script)
@@ -145,7 +140,7 @@ function dynSlide($)
 			});
 			$(window).trigger("resize");
 		},
-		afterInit:resizeSlides()
+		afterInit: resizeSlides()
 	});
 
 	$(window).trigger("resize");
