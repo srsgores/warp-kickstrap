@@ -1,0 +1,18 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * Joomla 3.0 specific
+ */
+
+/* Resets (Bootstrap) */
+.tabs-box input[type="radio"],
+.tabs-box input[type="checkbox"] {
+	vertical-align: baseline;
+}
+
+.tabs-box ul.content input[type='text'],
+.tabs-box ul.content input[type='password'],
+.tabs-box ul.content select {
+	height: auto;
+	line-height: inherit;
+}

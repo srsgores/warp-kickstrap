@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+	<name>warp-kickstrap</name>
+	<version>1.0</version>
+	<creationDate>August 8, 2012</creationDate>
+	<author>Sean Goresht</author>
+	<authorEmail>seangores@gmail.com</authorEmail>
+	<authorUrl>http://www.seangoresht.com</authorUrl>
+	<copyright>Copyright (C) GPL license</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
+	<description><![CDATA[
+    <h1>
+    	Joomla Warp Kickstrap Template
+    </h1>
+    <p class="description">
+    	This template is based off of adam's kickstrap, and it's free.  It uses jQuery, Twitter Bootstrap, and the 1140 grid system in replace for their crappy grid system (sorry, liked it more).
+    </p>
+    ]]></description>
+	<files>
+		<filename>checksums</filename>
+		<filename>apple_touch_icon.png</filename>
+		<filename>apple-touch-icon-57x57-precomposed.png</filename>
+		<filename>apple-touch-icon-72x72-precomposed.png</filename>
+		<filename>apple-touch-icon-114x114-precomposed.png</filename>
+		<filename>apple-touch-icon-precomposed.png</filename>
+		<filename>changelog.php</filename>
+		<filename>component.php</filename>
+		<filename>config.php</filename>
+		<filename>config.xml</filename>
+		<filename>config.default</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>raw.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>fonts</folder>
+		<folder>less</folder>
+		<folder>sass</folder>
+		<folder>html</folder>
+		<folder>img</folder>
+		<folder>layouts</folder>
+		<folder>styles</folder>
+		<folder>warp</folder>
+	</files>
+	<positions>
+		<position>absolute</position>
+		<position>search</position>
+		<position>logo</position>
+		<position>menu</position>
+		<position>banner</position>
+		<position>toolbar-l</position>
+		<position>toolbar-r</position>
+		<position>headerbar</position>
+		<position>breadcrumbs</position>
+		<position>top-a</position>
+		<position>top-b</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+		<position>innertop</position>
+		<position>innerbottom</position>
+		<position>sidebar-a</position>
+		<position>sidebar-b</position>
+		<position>footer</position>
+		<position>debug</position>
+	</positions>
+	<config>
+		<fields name="params" addfieldpath="/templates/warp-kickstrap/warp/systems/joomla/config/elements">
+			<fieldset name="basic">
+				<field name="config" type="config" label="Config" description="" default="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

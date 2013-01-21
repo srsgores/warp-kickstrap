@@ -1,0 +1,14 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+.menu-dropdown a.level1,
+.menu-dropdown span.level1 { 
+	font-family: "OpenSansLight";
+	font-size: 20px;
+}
+
+.menu-dropdown .level1 .level1 span.title { font-size: 18px; }
+.menu-dropdown .level1 .level1 span.subtitle {
+	margin-top: 1px;
+	font-size: 10px;
+}
+

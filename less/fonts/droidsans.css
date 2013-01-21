@@ -1,0 +1,13 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+@font-face {
+	font-family: 'DroidSansRegular';
+	src: url('DroidSans-webfont.eot');
+	src: url('DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('DroidSans-webfont.woff') format('woff'),
+		 url('DroidSans-webfont.ttf') format('truetype'),
+		 url('DroidSans-webfont.svg#DroidSansRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

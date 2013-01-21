@@ -1,0 +1,492 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * System Style Sheet - Defines a base style for the Joomla and WordPress core HTML markup
+ */
+
+/* General
+----------------------------------------------------------------------------------------------------*/
+
+#system .page-title {
+	margin-top: 0;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+#system .title {
+	margin-top: 0;
+}
+
+#system .title a {
+	text-decoration: none;
+}
+
+#system .title + .title {
+	margin-top: 20px;
+}
+
+#system > .description {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+#system small {
+	font-style: italic;
+}
+
+/* Item
+----------------------------------------------------------------------------------------------------*/
+
+#system .item > header {
+	margin-bottom: 15px;
+}
+
+#system .item > header .title {
+	margin-bottom: 0;
+}
+
+#system .item > header .meta {
+	margin: 10px 0 0 0;
+	font-size: 11px;
+	line-height: 13px;
+}
+
+#system .item > header .subtitle {
+	margin: 0 0 8px 0;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+#system .item > .content > *:first-child:not(.grid-gutter),
+#system .item > .content > *[class*="align"]:first-child + * {
+	margin-top: 0;
+}
+
+#system .item > .content > *:last-child:not(.grid-gutter) {
+	margin-bottom: 0;
+}
+
+#system .item > .links {
+	margin: 22px 0 0 0;
+}
+
+#system .item > .links a {
+	margin-right: 15px;
+}
+
+#system .item > .taxonomy {
+}
+
+#system .item > .trackback {
+}
+
+#system .item > .edit {
+}
+
+#system .item > *:last-child {
+	margin-bottom: 0;
+}
+
+#system .item .socialbuttons {
+	margin-top: 15px;
+}
+
+#system .item .socialbuttons > div {
+	margin-right: 10px;
+	float: left;
+}
+
+/* Items
+----------------------------------------------------------------------------------------------------*/
+
+#system .items {
+	margin: 0 -10px 0 -10px;
+}
+
+#system .items .item {
+	margin: 0 10px 0 10px;
+}
+
+#system .items > .width50 .title {
+	font-size: 22px;
+	line-height: 22px;
+}
+
+#system .items > .width33 .title {
+	font-size: 20px;
+	line-height: 20px;
+}
+
+#system .items > .width25 .title {
+	font-size: 18px;
+	line-height: 18px;
+}
+
+/* Pagination
+----------------------------------------------------------------------------------------------------*/
+
+#system .pagination {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#system .pagination a {
+	text-decoration: none;
+}
+
+#system .pagination strong {
+	font-weight: normal;
+}
+
+#system .pagination a,
+#system .pagination strong {
+	display: inline-block;
+	min-width: 15px;
+	height: 25px;
+	margin-left: 5px;
+	padding: 0 5px;
+	line-height: 25px;
+}
+
+#system .pagination > *:first-child {
+	margin-left: 0;
+}
+
+#system .pagination a.previous,
+#system .pagination a.next {
+	font-size: 16px;
+	line-height: 23px;
+}
+
+/* Search Box
+----------------------------------------------------------------------------------------------------*/
+
+.searchbox {
+	position: relative;
+}
+
+.searchbox input {
+	width: 100%;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: none;
+	float: left;
+}
+
+.searchbox button {
+	display: none;
+}
+
+.searchbox.filled button {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	padding: 0;
+	border: none;
+	line-height: 0;
+	cursor: pointer;
+}
+
+.searchbox.loading button {
+}
+
+/* Drop-Down Results */
+.searchbox .results {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	z-index: 110;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.searchbox .results li.results-header,
+.searchbox .results li.more-results {
+	height: 35px;
+	line-height: 35px;
+	text-indent: 15px;
+	text-transform: uppercase;
+}
+
+.searchbox .results li.more-results {
+	cursor: pointer;
+}
+
+.searchbox .results li.result {
+	padding: 10px 15px;
+	cursor: pointer;
+}
+
+.searchbox .results li.result h3 {
+	margin: 0 0 5px 0;
+	font-size: 16px;
+}
+
+.searchbox .results li.result div {
+	font-size: 11px;
+}
+
+/* Breadcrumbs
+----------------------------------------------------------------------------------------------------*/
+
+.breadcrumbs {
+	overflow: hidden;
+}
+
+.breadcrumbs a,
+.breadcrumbs span,
+.breadcrumbs strong {
+	display: inline-block;
+	text-decoration: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs > span {
+	margin-right: 10px;
+}
+
+/* Author Box
+----------------------------------------------------------------------------------------------------*/
+
+#system .author-box {
+	margin: 20px 0;
+}
+
+#system .title + .author-box {
+	margin-top: 0;
+}
+
+#system .author-box .avatar {
+	margin-right: 15px;
+	float: left;
+}
+
+#system .author-box .name {
+	margin: 0 0 10px 0;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 22px;
+}
+
+#system .author-box .description {
+}
+
+/* Comments
+----------------------------------------------------------------------------------------------------*/
+
+#system #comments {
+	margin-top: 20px;
+}
+
+#system #comments h3.comments-meta {
+	margin: 0 0 10px 0;
+}
+
+#system #comments ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Head */
+#system #comments .comment-head {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+#system #comments .comment-head .avatar {
+	margin-right: 10px;
+	float: left;
+}
+
+#system #comments .comment-head .author {
+	margin: 8px 0 0 0;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+#system #comments .comment-head .meta {
+	margin: 3px 0 0 0;
+	font-size: 11px;
+}
+
+/* Body */
+#system #comments .comment-body {
+	margin-bottom: 20px;
+	padding: 0 10px;
+}
+
+#system #comments .comment-body .content {
+	text-align: justify;
+}
+
+#system #comments .comment-body .reply {
+	margin: 10px 0 0 0;
+}
+
+#system #comments .no-response .comment-body .reply {
+	display: none;
+}
+
+#system #comments .comment-body .moderation {
+	margin: 10px 0 0 0;
+	font-size: 14px;
+	font-style: italic;
+}
+
+#system #comments ul.level1 ul {
+	padding-left: 55px;
+}
+
+/* Respond */
+#system #respond h3 {
+	margin: 0 0 10px 0;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: normal;
+}
+
+#system #respond p.user {
+	margin: 0;
+}
+
+#system #respond input[type='text'] {
+	width: 200px;
+	height: 25px;
+	padding-left: 5px;
+	line-height: 25px;
+}
+
+#system #respond textarea {
+	width: 100%;
+	max-width: 400px;
+	height: 100px;
+}
+
+/* Moved Respond */
+#system ul #respond {
+	margin: 0 0 30px 0;
+	padding-left: 10px;
+}
+
+/* Latest Comments
+----------------------------------------------------------------------------------------------------*/
+
+.comments-list > article {
+	margin-top: 10px;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+.comments-list > article:first-child {
+	margin: 0;
+	padding: 0;
+}
+
+.comments-list .avatar {
+	margin-right: 10px;
+	float: left;
+}
+
+.comments-list .author {
+	margin: 2px 0 0 0;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.comments-list .meta {
+	margin: 0;
+	font-size: 11px;
+	line-height: 13px;
+	font-style: italic;
+}
+
+.comments-list .content p {
+	margin: 5px 0 0 0;
+}
+
+/* Tag Cloud
+----------------------------------------------------------------------------------------------------*/
+
+.tagcloud {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.tagcloud li {
+	display: inline-block;
+	line-height: 20px;
+	vertical-align: middle;
+}
+
+.tagcloud a {
+	white-space: nowrap;
+}
+
+.tagcloud .weight1 a {
+	font-size: 11px;
+}
+
+.tagcloud .weight2 a {
+	font-size: 12px;
+}
+
+.tagcloud .weight3 a {
+	font-size: 13px;
+}
+
+.tagcloud .weight4 a {
+	font-size: 14px;
+}
+
+.tagcloud .weight5 a {
+	font-size: 15px;
+}
+
+.tagcloud .weight6 a {
+	font-size: 16px;
+}
+
+.tagcloud .weight7 a {
+	font-size: 18px;
+}
+
+.tagcloud .weight8 a {
+	font-size: 20px;
+}
+
+.tagcloud .weight9 a {
+	font-size: 23px;
+	letter-spacing: -1px;
+}
+
+.tagcloud .weight10 a {
+	font-size: 26px;
+	letter-spacing: -1px;
+}
+
+/* Page Navigation
+----------------------------------------------------------------------------------------------------*/
+
+.page-nav {
+	margin-top: 15px;
+}
+
+.page-nav .prev {
+	float: left;
+}
+
+.page-nav .next {
+	float: right;
+}
+
