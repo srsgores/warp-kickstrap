@@ -391,6 +391,13 @@
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
+		<field name = "dynslide" type = "radio" label = "Dynslide"
+		       description =
+				       "Turn all your articles and content into slides.  Note: highly experimental, and can lead to unpredictable results"
+		       default = "0">
+			<option value = "0">No</option>
+			<option value = "1">Yes</option>
+		</field>
 		<field name = "chosen" type = "radio" label = "Load chosen"
 		       description = "Load chosen to beef up your select boxes"
 		       default = "1">

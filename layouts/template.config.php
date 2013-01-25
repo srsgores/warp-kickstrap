@@ -389,9 +389,12 @@ $this['asset']->addFile('js', 'js:dropdownmenu.js');
 if ($this['config']->get('jmpress') == "1")
 {
 	$this['config']->get('ajaxify') == "0"; //loading ajaxify and jmpress will conflict because they both use ajax
-	$this['asset']->addFile('js', 'lib:jmpress/jmpress.js');
 }
 
+if ($this['config']->get('dynslide') == "1")
+{
+	$this['asset']->addFile('js', 'lib:jmpress/jmpress.js');
+}
 $this['asset']->addFile('js', 'js:template.js');
 
 if ($this['config']->get('ajaxify') == "1")
