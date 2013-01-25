@@ -30,7 +30,7 @@
 @media screen and (max-width: 1400px) {
 	.btn-group {
 		white-space: normal;
-		.btn-group-vertical;
+		//.btn-group-vertical;
 	}
 
 	.btn {
@@ -181,7 +181,7 @@
 		width: 89%;
 	}
 
-	.container .logo, .container #toolbar {
+	.container .logo, .container #toolbar, #header-responsive {
 		text-align: center;
 	}
 
@@ -212,7 +212,7 @@
 
 	h1 {
 		&.title {
-			font-size: 3em;
+			font-size: @em * 3;
 		}
 		&.shoutout {
 			font-size: 40%;
@@ -224,8 +224,8 @@
 		float: none;
 		margin-left: 0;
 		margin-right: 0;
-		padding-left: 1em;
-		padding-right: 1em;
+		padding-left: @padding;
+		padding-right: @padding;
 	}
 
 	img {
@@ -233,6 +233,6 @@
 		height: 100%;
 	}
 	.container .module {
-		margin-right: 2em;
+		margin-right: @em * 2;
 	}
 }

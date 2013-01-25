@@ -16,7 +16,8 @@
 @import "imports/mixins.less";
 @import "icomoon/icomoon.less";
 @import "imports/grids.less";
-
+@import "imports/loaders.less";
+@import "imports/menu.less";
 
 /* Layout
 ----------------------------------------------------------------------------------------------------*/
@@ -88,7 +89,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .headingsX(@index) when (@index > 0) {
 	(~"h@{index}") {
-		font-size: ((@em * @multiplierLarge) - ((@index * ((@em * @multiplierLarge) / 6 )))) + (@em * @multiplier);
+		font-size: ((@em * @multiplierLarge) - ((@index * ((@em * @multiplier) / 6 ))));
+		&.title {
+			font-size: ((@em * @multiplier) - ((@index * ((@em * @multiplierSmall) / 6 ))) + (@em * @multiplier)) * @multiplier;
+		}
 	}
 	.headingsX(@index - 1);
 }
@@ -97,6 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 	color: @linkColour;
+	text-decoration: none;
 	&:hover {
 		color: @linkColourHover;
 	}
@@ -104,7 +109,7 @@ a {
 		color: @linkColourVisited;
 	}
 }
-.button, button, .btn, input[type="submit"], a.submit {
+.button, button, .btn, input[type="submit"], a.submit, .item header div a {
 
 	background: @buttonPrimaryColour;
 	border: @border;
@@ -129,11 +134,23 @@ a {
 		text-shadow: 0 1px 1px #111;
 		.box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 4px rgba(150, 150, 150, 0.5));
 		#gradient > .vertical(lighten(#2F5163, 10%), #2F5163);
+
+		ul.dropdown-menu {
+			display: block;
+		}
 	}
 
 	&:active {
 		border-color: #000;
 		.box-shadow(inset 0 0 @borderRadiusLarge #000);
+	}
+
+	&.dropdown-toggle {
+		.right-icon(@icon-arrow-down-2);
+		ul {
+			display: none;
+			position: absolute;
+		}
 	}
 
 }
@@ -152,8 +169,8 @@ a {
 			.border-radius-right(0);
 		}
 	}
-
 }
+
 
 .toolbar, .btn-group, .actions input {
 	position: relative;
@@ -183,22 +200,26 @@ a {
 
 /* Put anything that needs padding here */
 
-.box, #top-a, #top-b, #bottom-a, #bottom-b, #main, #content, #content .module, .well-large, #lightbox-title-over {
+.box, #top-a, #top-b, #bottom-a, #bottom-b, #main, #content, #content .module, .well-large, #lightbox-title-over, .menu-dropdown li a, .breadcrumbs a {
 	.padding-fix;
 	padding: @padding;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, p, h1, h2, h3, h4, h5, h6, blockquote, pre, address, cite, code, del, dfn, img, q, dl, ul, fieldset, form, legend, table, caption, summary, audio, video {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, p, h1, h2, h3, h4, h5, h6, blockquote, pre, address, cite, code, del, dfn, img, q, dl, ul, fieldset, form, legend, table, caption, summary, audio, video, input, select, textarea {
 	margin-bottom: @margin; //spaced only at bottom by default
 }
 
 /* =============================================================================
 Border Radius
 ========================================================================== */
-nav, button, .btn, .box, .rounded, pre, code, aside, menu, .nav, #top-a, #top-b, #bottom-a, #bottom-b, #main, #content, #maininner, #content .module, .well-large, #lightbox-title-over {
+nav, button, .btn, .box, .rounded, pre, code, aside, menu, .nav, #top-a, #top-b, #bottom-a, #bottom-b, #main, #content, #maininner, #content .module, .well-large, #lightbox-title-over, .menu, .menu li {
 	.border-radius(@borderRadius);
 }
 
+/* Anything with border radius small */
+input, select, textarea {
+	.border-radius(@borderRadiusSmall);
+}
 /* inline block stuff */
 nav, nav, nav li, .toolbar, .toolbar input, .toolbar li, .toolbar li input, .btn-group, .btn-group input, .item .print, .item .email {
 	.inline-block;
@@ -224,3 +245,9 @@ Borders
 .border-bottom, legend, header, footer, article, section {
 	border-bottom: @borderStyle @borderColour;
 }
+
+//Stuff to hide by default (and then show with media queries?)
+#menu-responsive {
+	display: none;
+}
+@import "imports/media-queries.less";
