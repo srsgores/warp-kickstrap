@@ -2,6 +2,16 @@
 
 jQuery(function (a)
 {
+	try {
+		var $inputs = $("input[type='color']").each(function() {
+			var randomInt = Math.random * this.length;
+			$(this).attr("id", randomInt);
+			window.nativeColorPicker.init($(this).attr("id"));
+		});
+	}
+	catch(e) {
+		console.log("oh no!  Something failed!  Please contact seangores@gmail.com...");
+	}
 	submitbutton = Joomla.submitbutton;
 	Joomla.submitbutton = function (b)
 	{

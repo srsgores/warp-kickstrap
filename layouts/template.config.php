@@ -121,6 +121,49 @@ if ($this['config']->get('less') == "1")
 		$less->setFormatter("compressed");
 	}
 	$less->addImportDir($this['path']->path($add_path) . "/imports/");
+
+	//check for config and set variables accordingly
+	if ($this['config']->get('num_cols') > 0) {
+		$less->setVariables(array(
+			"num-cols" => $this['config']->get('num_cols')
+		));
+	}
+	if ($this['config']->get('col-margin-right') > 0) {
+		$less->setVariables(array(
+			"col-margin-right" => $this['config']->get('col-margin-right')
+		));
+	}
+	if ($this['config']->get('textColour')) {
+		$less->setVariables(array(
+			"textColour" => $this['config']->get('textColour')
+		));
+	}
+	if ($this['config']->get('primaryColour')) {
+		$less->setVariables(array(
+			"primaryColour" => $this['config']->get('primaryColour')
+		));
+	}
+	if ($this['config']->get('secondaryColour')) {
+		$less->setVariables(array(
+			"secondaryColour" => $this['config']->get('secondaryColour')
+		));
+	}
+	if ($this['config']->get('tertiaryColour')) {
+		$less->setVariables(array(
+			"tertiaryColour" => $this['config']->get('tertiaryColour')
+		));
+	}
+	if ($this['config']->get('bodyBackgroundColour')) {
+		$less->setVariables(array(
+			"bodyBackgroundColour" => $this['config']->get('bodyBackgroundColour')
+		));
+	}
+	if ($this['config']->get('bodyWidth')) {
+		$less->setVariables(array(
+			"bodyWidth" => $this['config']->get('bodyWidth')
+		));
+	}
+
 	//loop through all files in folder, creating a CSS file
 	foreach (glob($current_path) as $file)
 	{
@@ -388,7 +431,7 @@ $this['asset']->addFile('js', 'js:dropdownmenu.js');
 
 if ($this['config']->get('jmpress') == "1")
 {
-	$this['config']->get('ajaxify') == "0"; //loading ajaxify and jmpress will conflict because they both use ajax
+	//loading ajaxify and jmpress will conflict because they both use ajax
 }
 
 if ($this['config']->get('dynslide') == "1")

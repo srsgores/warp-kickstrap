@@ -11,7 +11,7 @@
 
 /*Type*/
 @baseFontSize: 16px;
-@baseFontFamily: "Open Sans", "sans-serif", "arial";
+@baseFontFamily: "Arimo", "sans-serif", "arial";
 @fontSizeSmall: 85%;
 @fontSizeMedium: 90%;
 @fontSizeLarge: 125%;
@@ -19,27 +19,54 @@
 @baseLineHeight: 1.4;
 @em: 1em;
 @line: @em * @baseLineHeight;
-@headingFontWeight: 300;
 @baseFontWeight: 500;
 
 @sansFontFamily: "Open Sans", Helvetica, Arial, sans-serif;
 @serifFontFamily: Georgia, "Times New Roman", Times, serif;
 @monoFontFamily: Monaco, Menlo, Consolas, "Courier New", monospace;
 
-
-@baseFontFamily: @sansFontFamily;
 @altFontFamily: @serifFontFamily;
 
-@headingsFontFamily: inherit;
-@headingsFontWeight: bold;
+@headingsFontFamily: "Open Sans";
+@headingsFontWeight: 300;
 @headingsColour: inherit;
 
 /*Grid*/
-@num-cols: 12;
+//@num-cols: 12;
 @rowWidth: 100%;
 @container-lateral-padding: @em;
-@col-margin-right: 3.8%;
+//@col-margin-right: 3.8%;
 @col-unit: (@rowWidth + @col-margin-right) / @num-cols;
+@col-identifier: "col";
+
+@col-name-1: "one";
+@col-name-2: "two";
+@col-name-3: "three";
+@col-name-4: "four";
+@col-name-5: "five";
+@col-name-6: "six";
+@col-name-7: "seven";
+@col-name-8: "eight";
+@col-name-9: "nine";
+@col-name-10: "ten";
+@col-name-11: "eleven";
+@col-name-12: "twelve";
+@col-name-13: "thirteen";
+@col-name-14: "fourteen";
+@col-name-15: "fifteen";
+@col-name-16: "sixteen";
+@col-name-17: "seventeen";
+@col-name-18: "eighteen";
+@col-name-19: "nineteen";
+@col-name-20: "twenty";
+@col-name-21: "twentyone";
+@col-name-22: "twentytwo";
+@col-name-23: "twentythree";
+@col-name-24: "twentyfour";
+
+@col-identifier-names: true;
+
+@column-selector-number-at-end: false;
 
 /* Basic measurements */
 
@@ -66,14 +93,22 @@
 /* =============================================================================
 Colours
 ========================================================================== */
-@textColour: #000;
-@primaryColour: @textColour;
+//@textColour: #000;
+//@primaryColour: @textColour;
 //colour of text and main colour overall
-@secondaryColour: #DDD;
-@tertiaryColour: #CCC;
+//@secondaryColour: #6F6F6F;
+//@tertiaryColour: #D6D6D6;
 @codeColour: lighten(@textColour, 60%);
 //background colour.  Should be the opposite of primary colour for good results
-@bodyBackground: url("http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/subtle_dots.png");
+@bodyBackgroundImage: url("../img/pw_maze_white.png");
+//@bodyBackgroundColour: spin(@textColour, 180); //inverse of text coliour
+@moduleBackground: fade(@secondaryColour, 90%);
+//@bodyWidth: 1140px;
+/* =============================================================================
+CSS3 PIE settings
+========================================================================== */
+@pie: true; //enable support for IE6-8 via CSS3 PIE?
+@pieDirectory: "PIE.htc";
 
 /* =============================================================================
 shadow
@@ -93,16 +128,8 @@ Buttons
 Borders
 ========================================================================== */
 @borderStyle: 1px solid;
-@borderColour: lighten(@textColour, 40%);
+@borderColour: #c7c7c7;
 @border: @borderStyle @borderColour;
-
-@text-colour: @textColour;
-
-// template variables (set in template view)
-@moduleBackground: #FFFFFF;
-@sidebarAWidth: percentage(1 / 3);
-@sidebarBWidth: percentage(1 / 3);
-@mainInnerWidth: @sidebarBWidth;
 
 // Grays
 // -------------------------
@@ -127,7 +154,6 @@ Borders
 
 // Scaffolding
 // -------------------------
-@textColour: @black;
 
 // Links
 // -------------------------
@@ -137,13 +163,13 @@ Borders
 
 // Tables
 // -------------------------
-@tableBackground: transparent;
+@tableBackgroundColour: fade(@bodyBackgroundColour, 70%);
 // overall background-colour
-@tableBackgroundAccent: #f9f9f9;
+@tableBackgroundAccent: darken(@bodyBackgroundColour, 30%);
 // for striping
-@tableBackgroundHover: #f5f5f5;
+@tableBackgroundHover: fade(darken(@tableBackgroundColour, 40%), 30%);
 // for hover
-@tableBorder: #ddd;
+@tableBorderColour: darken(@borderColour, 15%);
 // table and cell border
 
 // Buttons

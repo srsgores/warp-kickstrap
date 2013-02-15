@@ -44,69 +44,71 @@
 	<fields name = "Profiles">
 		<field name = "Style" type = "separator"/>
 		<field name = "style" type = "styles" default = "" label = "Style" description = "Select the style variation."/>
-		<field name = "color1" type = "list" default = "default" label = "Primary Color"
-		       description = "Select the primary color.">
-			<option value = "">Blue</option>
-			<option value = "orange">Orange</option>
-			<option value = "green">Green</option>
-			<option value = "navy">Navy</option>
-			<option value = "red">Red</option>
-			<option value = "pink">Pink</option>
-			<option value = "salmon">Salmon</option>
-			<option value = "turquoise">Turquoise</option>
-			<option value = "rose">Rose</option>
+		<field name = "textColour" type = "colour" label = "Text Colour"
+		       description = "Choose the colour of the text." default = "#000"> </field>
+		<field name = "primaryColour" type = "colour" label = "Primary Colour"
+		       description = "Choose a main colour.  It's a good idea to make this the same colour as the text."
+		       default = "#000">
 		</field>
-		<field name = "color2" type = "list" default = "default" label = "Secondary Color"
-		       description = "Select the secondary color.">
-			<option value = "">Orange</option>
-			<option value = "blue">Blue</option>
-			<option value = "green">Green</option>
-			<option value = "navy">Navy</option>
-			<option value = "red">Red</option>
-			<option value = "pink">Pink</option>
-			<option value = "salmon">Salmon</option>
-			<option value = "turquoise">Turquoise</option>
-			<option value = "rose">Rose</option>
+		<field name = "secondaryColour" type = "colour" label = "Secondary Colour"
+		       description = "The second colour in the design."
+		       default = "#6F6F6F"> </field>
+		<field name = "tertiaryColour" type = "colour" label = "Tertiary Colour"
+		       description = "The third main colour of your page"
+		       default = "#D6D6D6"> </field>
+		<field name = "bodyWidth" type = "text" label = "Body Width" description =
+				"The maximum width of the body, specified in any unit you want.  I think 100% or 1140px works good"
+		       default = "1140px"> </field>
+		<field name = "bodyBackgroundColour" type = "colour" label = "Body Background Colour"
+		       description = "Colour for the body"
+		       default = "#FFF"> </field>
+		<field name = "bodyBackgroundImage" type = "text" label = "Body Background Image (optional)"
+		       description = "The background image for the body"
+		       default = "../images/asfalt.png"> </field>
+
+		<field name = "transitionTime" type = "text" label = "Transition Time"
+		       description = "Time it takes for CSS3 transitions to occur" default = "0.5s"> </field>
+
+		<field name = "pie" type = "radio" label = "Use CSS3 PIE"
+		       description = "Get support for some CSS3 in older IE versions?" default = "1">
+			<option value = "0">No</option>
+			<option value = "1">Yes</option>
 		</field>
-		<field name = "font1" type = "list" default = "default" label = "Body Font"
-		       description = "Select the main body typeface.">
-			<option value = "arial">Arial</option>
-			<option value = "lucida">Lucida</option>
-			<option value = "georgia">Georgia</option>
-			<option value = "timesnewroman">Times New Roman</option>
-			<option value = "trebuchet">Trebuchet</option>
-			<option value = "droidsans">Droid Sans</option>
-			<option value = "opensans">Open Sans</option>
-			<option value = "yanonekaffeesatz">Yanone Kaffeesatz</option>
-			<option value = "mavenpro">Maven Pro</option>
-			<option value = "kreon">Kreon</option>
+		<field name = "multiplier" type = "number" label = "Multiplier" description = "Multiplier value"
+		       default = "1.3"> </field>
+		<field name = "borderStyle" type = "list" label = "Border Style" description = "Type of border you want to use"
+		       default = "solid">
+			<option value = "">none</option>
+			<option value = "">hidden</option>
+			<option value = "">dotted</option>
+			<option value = "">dashed</option>
+			<option value = "">solid</option>
+			<option value = "">double</option>
+			<option value = "">groove</option>
+			<option value = "">ridge</option>
+			<option value = "">inset</option>
+			<option value = "">outset</option>
 		</field>
-		<field name = "font2" type = "list" default = "default" label = "Header Font"
-		       description = "Select the headings typeface.">
-			<option value = "arial">Arial</option>
-			<option value = "lucida">Lucida</option>
-			<option value = "georgia">Georgia</option>
-			<option value = "timesnewroman">Times New Roman</option>
-			<option value = "trebuchet">Trebuchet</option>
-			<option value = "droidsans">Droid Sans</option>
-			<option value = "opensans">Open Sans</option>
-			<option value = "yanonekaffeesatz">Yanone Kaffeesatz</option>
-			<option value = "mavenpro">Maven Pro</option>
-			<option value = "kreon">Kreon</option>
+		<field name = "borderWidth" type = "text" label = "Border Width" description = "Width of border (if any)"
+		       default = "1px">
 		</field>
-		<field name = "font3" type = "list" default = "default" label = "Menu Font"
-		       description = "Select the menu typeface.">
-			<option value = "arial">Arial</option>
-			<option value = "lucida">Lucida</option>
-			<option value = "georgia">Georgia</option>
-			<option value = "timesnewroman">Times New Roman</option>
-			<option value = "trebuchet">Trebuchet</option>
-			<option value = "droidsans">Droid Sans</option>
-			<option value = "opensans">Open Sans</option>
-			<option value = "yanonekaffeesatz">Yanone Kaffeesatz</option>
-			<option value = "mavenpro">Maven Pro</option>
-			<option value = "kreon">Kreon</option>
-		</field>
+		<field name = "borderColour" type = "colour" label = "Border Colour" description = "Colour of the border"
+		       default = "#CCCCCC"> </field>
+		<field name = "padding" type = "text" label = "Padding" description = "The amount of padding between elements"
+		       default = "1em"> </field>
+		<field name = "margin" type = "text" label = "Margin" description = "The amount of spacing between elements"
+		       default = "1em"> </field>
+
+		<field name = "baseFontFamily" type = "text" label = "Base Font Family"
+		       description = "The main font, which will be used for the body of the page" default = "'Arimo', Helvetica, Arial, sans-serif"> </field>
+		<field name = "headingsFontFamily" type = "text" label = "Headings Font Family"
+		       description = "The font to be used for headings"
+		       default = "Raleway"> </field>
+		<field name = "headingsFontWeight" type = "text" label = "Headings Font Weight"
+		       description = "Font Weight for Headings"
+		       default = "300"> </field>
+		<field name = "altFontFamily" type = "text" label = "Alternative Font Family"
+		       description = "The secondary font, which will be used for the body of the page" default = "Georgia, 'Times New Roman', Times, serif"> </field>
 		<field name = "Content" type = "separator"/>
 		<field name = "date" type = "radio" default = "1" label = "Date" description = "Show the date.">
 			<option value = "0">No</option>
@@ -163,106 +165,19 @@
 		       description = "Select a grid layout for this module position."/>
 		<field name = "menu_width" type = "text" size = "10" default = "250" label = "Drop Down Column Width"
 		       description = "Set the column width of the drop down menu in pixel." class = "short"/>
-		<field name = "Twitter Bootstrap Variables Customization" type = "separator"/>
-		<field name = "Scaffolding" type = "separator"/>
-		<field name = "bootstrap_bodyBackground" type = "text" size = "10" default = "#FFFFFF" label =
-				"Body background colour" description = "Set the background colour for your body." class =
-				       "short colour-picker"/>
-		<field name = "bootstrap_textColor" type = "text" size = "10" default = "#000000" label =
-				"Body text colour" description = "Set the text colour for your body." class =
-				       "short colour-picker"/>
-		<field name = "Typography" type = "separator"/>
-		<field name = "bootstrap_sansFontFamily" type = "text" default = "Helvetica Neue, Helvetica, Arial, sans-serif" label =
-				"Sans font family" description = "Set the main fonts to be used by Bootstrap"/>
-		<field name = "bootstrap_serifFontFamily" type = "text" default = "Georgia, Times New Roman, Times, serif" label =
-				"serif font family" description = "Set the main serif fonts to be used by Bootstrap"/>
-		<field name = "bootstrap_monoFontFamily" type = "text" default = "Menlo, Monaco, Courier New, monospace" label =
-				"mono font family" description = "Set the main mono fonts to be used by Bootstrap"/>
-		<field name = "bootstrap_baseFontSize" type = "text" size = "10" default = "14px" label =
-				"Base font size"
-		       description = "Set the amount of pixels for the base body text" class = "short"/>
-		<field name = "bootstrap_baseFontFamily" type = "text" default = "@sansFontFamily" label =
-				"Base Font Family" description = "Set the main font family to be used by Bootstrap"/>
-		<field name = "bootstrap_altFontFamily" type = "text" default = "@serifFontFamily" label =
-				"Alternative Font Family"
-		       description = "Set the alternative, secondary font family to be used by Bootstrap"/>
-		<field name = "bootstrap_headingsFontFamily" type = "text" default = "inherit" label =
-				"Headings Font Family" description = "Set the main font family to be used for headings in Bootstrap"/>
-		<field name = "bootstrap_headingsFontWeight" type = "list" default = "bold" label =
-				"Headings Font Weight" description = "Set the thickness of the headings">
-			<option value = "normal">Normal</option>
-			<option value = "bold">Bold</option>
-			<option value = "italic">Italic</option>
-			<option value = "300">300 (thin)</option>
-		</field>
-		<field name = "bootstrap_headingsColor" type = "text" size = "10" default = "#000000" label =
-				"Headings text colour" description = "Set the text colour for your headings." class =
-				       "short colour-picker"/>
-		<field name = "bootstrap_heroUnitBackground" type = "text" size = "10" default = "#CCC" label =
-				"Hero unit background colour" description = "Set the background colour for the hero unit." class =
-				       "short colour-picker"/>
-		<field name = "bootstrap_heroUnitHeadingColor" type = "text" size = "10" default = "inherit" label =
-				"Hero unit heading colour" description = "Set the text colour for the headings in any hero unit."
-		       class =
-				       "short colour-picker"/>
-		<field name = "bootstrap_heroUnitLeadColor" type = "text" size = "10" default = "inherit" label =
-				"Hero unit lead heading colour" description
-				       = "Set the text colour for the lead headings in any hero unit." class =
-				       "short colour-picker"/>
-		<field name = "bootstrap_baseLineHeight" type = "text" default = "20px" label =
-				"Base Line Height" description = "Set the main line height for your text"/>
-		<field name = "Grid System" type = "separator"/>
-		<field name = "bootstrap_gridColumns" type = "text" size = "10" default = "12" label = "Number of columns"
-		       description
-				       = "Set the number of columns.  The resulting classes will be integers from 1 to the specified number."
-		       class = "short"/>
-		<field name = "bootstrap_gridColumnWidth" type = "text" size = "10" default = "60px" label =
-				"Grid Column Width"
-		       description
-				       = "Set the desired width in pixels for Bootstrap's fixed grid"
-		       class = "short"/>
-		<field name = "bootstrap_gridGutterWidth" type = "text" size = "10" default = "20px" label =
-				"Grid gutter width"
-		       description
-				       = "Set the desired grid gutter width"
-		       class = "short"/>
-		<field name = "bootstrap_gridGutterWidth1200" type = "text" size = "10" default = "30px" label =
-				"Grid gutter width at 1200px"
-		       description
-				       = "Set the desired grid gutter width on screens of 1200px resolution"
-		       class = "short"/>
-		<field name = "bootstrap_gridGutterWidth768" type = "text" size = "10" default = "20px" label =
-				"Grid gutter width at 768px"
-		       description
-				       = "Set the desired grid gutter width on screens of 768px resolution"
-		       class = "short"/>
-
-		<field name = "bootstrap_gridColumnWidth1200" type = "text" size = "10" default = "70px" label =
-				"Grid column width on screens of 1200px"
-		       description
-				       = "Set the desired grid column width on screens that are 1200px"
-		       class = "short"/>
-		<field name = "bootstrap_gridColumnWidth768" type = "text" size = "10" default = "42px" label =
-				"Grid column width on screens of 768px"
-		       description
-				       = "Set the desired grid column width on screens that are 768px"
-		       class = "short"/>
 	</fields>
 	<fields name = "Warp Kickstrap Stuff">
 		<field name = "Grid" type = "separator"/>
-		<field name = "grid_system" type = "list" label = "Grid System"
-		       description = "Grid system to be used when styling the template.  Bootstrap and 1140 both use the .row class, but the Warp one uses poor css classes like width33 (meaining 33 percent of the page)."
-		       default = "none">
-			<option value = "1140">1140 CSS Grid by Andy Taylor</option>
-			<option value = "bootstrap">Twitter Bootstrap Grid System</option>
-			<option value = "ggs">Golden Grid System (tweaked and modified as well)</option>
-			<option value = "foundation">Zurb Foundation</option>
-			<option value = "yoo">YooTheme Warp Grid System</option>
-			<option value = "none">None</option>
+		<field name = "num_cols" type = "text" label = "Number of Columns"
+		       description = "The amount of columns you want, horizontally separating the page."
+		       default = "12" class = "short">
 		</field>
-		<field name = "max_columns" type = "text" label = "Maximum number of columns"
-		       description = "GGS only: set how many columns you want your grid to be.  (Hint: try not to go over 16, and try to use even numbers" default = "16" class = "short">
+		<field name = "col_identifier" type = "text" label = "Column Prefix Identifier"
+		       description = "Class to use and prepend to each column on the grid." default = "col" class = "short">
 		</field>
+		<field name = "col-margin-right" type = "text" label = "Column Margin Right"
+		       description = "Space to the right separating each column from the next"
+		       default = "3.8%" class = "short"> </field>
 		<field name = "Javascript Plugins" type = "separator"/>
 		<field name = "jquery_cdn" type = "radio" label = "Load jQuery via CDN?"
 		       description = "Choose yes if you want jQuery to be loaded via the CDN (content distribution network) AKA Google.  Note: if you have selected to minify javascript files, they will be cached, and this effectively won't matter after the person first visits your site."
@@ -272,7 +187,7 @@
 		</field>
 		<field name = "cdn" type = "radio" label = "Load javascript Via CDN"
 		       description = "Use Content Delivery Networks when possible for plugins."
-		       default = "0">
+		       default = "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
@@ -285,7 +200,7 @@
 		<field name = "bootstrap" type = "radio" label = "Load Twitter Bootstrap Javascript File"
 		       description =
 				       "Load the Twitter Bootstrap file via CDN to enable the javascript component functionality.  Use this if your site uses some of these methods.  See the Bootstrap Documentation for more info."
-		       default = "0">
+		       default = "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
@@ -306,7 +221,7 @@
 		<field name = "ajaxify" type = "radio" label = "Ajaxify site front-end"
 		       description =
 				       "Give your users a more fluid experience by enabling ajax on the whole site.  Note: this can cause a lot of problems for some plugins, so test this out before you commit to it!  Also, this loads a file called history.js to allow for functionality on older browsers (requires ScrollTo."
-		       default = "1">
+		       default = "0">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
@@ -391,9 +306,9 @@
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
-		<field name = "dynslide" type = "radio" label = "Dynslide"
+		<field name = "jmpress_dynamic" type = "radio" label = "Generate slides from anchors"
 		       description =
-				       "Turn all your articles and content into slides.  Note: highly experimental, and can lead to unpredictable results"
+				       "Ajaxify your site, and make the whole thing randomly generate slides from your a tags."
 		       default = "0">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
@@ -404,8 +319,8 @@
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
-		<field name = "toastr" type = "radio" label = "Load toastr"
-		       description = "Load toastr for real-time notifications"
+		<field name = "noty" type = "radio" label = "Load noty"
+		       description = "Load noty for real-time notifications"
 		       default = "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
