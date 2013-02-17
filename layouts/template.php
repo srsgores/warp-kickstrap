@@ -13,7 +13,7 @@
 
     twitter: http://twitter.com/S.Goresht
 
-     warp-kickstrap Joomla Template
+     warp-kickstrap wordpress Template
      Licensed under the GNU Public License
 
 	=============================================================================
@@ -24,7 +24,7 @@
 	 This file does the following things:
 	 	--Resolve dependencies for the template's CSS, Javascript, and configurations
 	 	--Set the html structure according to the language file
-	 	--Output modules depending on whether their positions are enabled, according to Joomla.  This is always achieved through an if/else statement.
+	 	--Output modules depending on whether their positions are enabled, according to wordpress.  This is always achieved through an if/else statement.
 
 	 	Note: the logic behind how modules are displayed is part of the WARP engine, and should not be confused with the template (ex. how "stacked" templates appear).  To customize this, please see the %d - $d - %d files in the warp folder.
 

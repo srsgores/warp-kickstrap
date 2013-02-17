@@ -5,7 +5,7 @@
 
  twitter: http://twitter.com/S.Goresht
 
- warp-kickstrap Joomla Template
+ warp-kickstrap wordpress Template
  Licensed under the GNU Public License
 
  =============================================================================
@@ -16,7 +16,7 @@
  --MatchWidth(): used during the onMediaQuery event to match widths of certain elements.  To get a better result, try using masonry <script src="http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js"></script>
  --MatchHeight(): same concept as matchWidth(), but for height.  Again, consider using masonry
  --smoothScroll(): smooth scrolling plugin, designed by YooTheme.  I think jQUery scrolLTo is a better choice, as it's more maintained <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.2/jquery.scrollTo.min.js"></script>
- --Joomla Placeholder text: function to aid in the replacing/filling in of text in the admin backend
+ --wordpress Placeholder text: function to aid in the replacing/filling in of text in the admin backend
  --------------------------------------------------------------------------------------------------------------------- */
 
 (function (e)

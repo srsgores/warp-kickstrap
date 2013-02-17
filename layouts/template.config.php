@@ -13,7 +13,7 @@
 
     twitter: http://twitter.com/S.Goresht
 
-     warp-kickstrap Joomla Template
+     warp-kickstrap wordpress Template
      Licensed under the GNU Public License
 
 	=============================================================================
@@ -24,7 +24,7 @@
 	 	--loading template-specific styles and javascript
 	 	--generation of mobile dropdown for nav menus
 	 	--loading template-specific IE conditional styles and Javascript
-	 Note: all assets are pulled in with WARP's helper functions.  If you don't want to use WARP, check out Joomla's application-->addStylesheet(URL) function.
+	 Note: all assets are pulled in with WARP's helper functions.  If you don't want to use WARP, check out wordpress's application-->addStylesheet(URL) function.
 
 --------------------------------------------------------------------------------------------------------------------- */
 

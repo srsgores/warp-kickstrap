@@ -130,6 +130,13 @@
 			<option value = "1">Yes</option>
 		</field>
 		<field name = "Layout" type = "separator"/>
+		<field name = "responsive" type = "radio" default = "1" label = "Responsive Layout"
+		       description = "Enable responsive layout.">
+			<option value = "0">No</option>
+			<option value = "1">Yes</option>
+		</field>
+		<field name = "template_width" type = "text" size = "10" default = "1140" label = "Template Width"
+		       description = "Set the template max-width in pixels." class = "short"/>
 		<field name = "sidebar-a_width" type = "text" size = "10" default = "25" label = "Sidebar A Width"
 		       description = "Set the Sidebar A width in percent." class = "short"/>
 		<field name = "sidebar-b_width" type = "text" size = "10" default = "25" label = "Sidebar B Width"
@@ -237,19 +244,23 @@
 		<field name = "bootstrap-css" type = "radio" label =
 				"Load Twitter Bootstrap CSS"
 		       description =
-				       "Load the Twitter Bootstrap CSS framework's files.  You may want this if you're using Joomla 3.  If LESS is enabled, the CSS will be generated server-side by LESS."
+				       "Load the Twitter Bootstrap CSS framework's files.  You may want this if you're using wordpress 3.  If LESS is enabled, the CSS will be generated server-side by LESS."
 		       default = "0">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
-		<field name = "icomoon" type = "radio" label = "Load icomoon css icons" description = "Load in a pre-selected package of icomoon css icons.  To see what icons are available, check this template's css/icomoon directory" default = "0">
+		<field name = "icomoon" type = "radio" label =
+				"Load icomoon css icons" description
+				       = "Load in a pre-selected package of icomoon css icons.  To see what icons are available, check this template's css/icomoon directory"
+		       default =
+				       "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
 		<field name = "LESS Files" type = "separator"/>
 		<field name = "less" type = "radio" label = "Enable LESS stylesheets"
 		       description = "Let the server compile your less files in the directory for this template into the CSS directory when any client loads the page.  Note: the resulting CSS files are then cached."
-		       default = "1">
+		       default = "0">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
@@ -304,13 +315,13 @@
 		</field>
 		<field name = "chosen" type = "radio" label = "Load chosen"
 		       description = "Load chosen to beef up your select boxes"
-		       default = "0">
+		       default = "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
 		<field name = "noty" type = "radio" label = "Load noty"
 		       description = "Load noty for real-time notifications"
-		       default = "0">
+		       default = "1">
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>

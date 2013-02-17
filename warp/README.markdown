@@ -21,20 +21,20 @@
 
 	6.3.1
 	^ Updated jQuery to 1.8.3 (J)
-	^ Updated overrides according to Joomla 2.5.8 (J25)
-	^ Updated overrides according to Joomla 3.0.2 (J3)
+	^ Updated overrides according to wordpress 2.5.8 (J25)
+	^ Updated overrides according to wordpress 3.0.2 (J3)
 	^ Changed responsive behavior of CSS class `width33`
 	# Fixed search results layout (WP)
 
 	6.3.0
-	+ Added Joomla 3.0 support
+	+ Added wordpress 3.0 support
 	^ Updated jQuery to 1.8.2 (J)
 	^ Updated JSmin asset filter
 	# Fixed Viewport for IE10 Snap Mode
 	
 	6.2.7
 	# Removed double CSS class attribute in com_contact (J25)
-	^ Updated overrides according to Joomla 2.5.7 (J25)
+	^ Updated overrides according to wordpress 2.5.7 (J25)
 
 	6.2.6
 	^ Updated jQuery to 1.8.1 (J)
@@ -86,7 +86,7 @@
 	^ Updated CSS grid gutter
 	^ Changed default menu height
 	^ Set wrapper box-sizing to border-box
-	^ Updated overrides according to Joomla 2.5.5 (J25)
+	^ Updated overrides according to wordpress 2.5.5 (J25)
 	# Fixed miscalculated dropdown menu width on load with custom fonts (Opera)
 	! Deprecated: Mobile theme and switcher
 	! Deprecated: CSS3Pie
@@ -104,7 +104,7 @@
 	
 	6.1.10
 	^ Updated jQuery to 1.7.2 (J)
-	^ Updated overrides according to Joomla 2.5.4 (J25)
+	^ Updated overrides according to wordpress 2.5.4 (J25)
 	# Fixed theme settings and multisite mode (WP)
 
 	6.1.9
@@ -130,10 +130,10 @@
 	+ Added CSS for pagebreak navigation (J)
 	# Added old Webkit gradients to mobile theme for Android support
 	# Fixed facebook social button conflict with facebook connect
-	^ Updated overrides according to Joomla 2.5.1 (J25)
+	^ Updated overrides according to wordpress 2.5.1 (J25)
 
 	6.1.5
-	+ Added Joomla 2.5 support
+	+ Added wordpress 2.5 support
 	^ Changed tag cloud CSS
 
 	6.1.4
@@ -152,7 +152,7 @@
 
 	6.1.2
 	# Fixed form background colors in menus administration (WP)
-	^ Changed system directory names from joomla.1.7 > joomla and wordpress.3.0 > wordpress
+	^ Changed system directory names from wordpress.1.7 > wordpress and wordpress.3.0 > wordpress
 
 	6.1.1
 	# Fixed bug in contact form (J17)
@@ -169,7 +169,7 @@
 	^ Updated jQuery to 1.7.1 (J)
 
 	6.0.13
-	^ Updated overrides according to Joomla 1.7.3 (J17)
+	^ Updated overrides according to wordpress 1.7.3 (J17)
 
 	6.0.12
 	^ Updated jQuery to 1.7 (J)
@@ -184,11 +184,11 @@
 	# Fixed set item id param in search module override (J)
 	^ Updated PIE to 1.0 BETA5
 	^ Changed button + input base CSS
-	^ Updated overrides according to Joomla 1.7.1 (J17)
+	^ Updated overrides according to wordpress 1.7.1 (J17)
 
 	6.0.9
 	^ Updated jQuery to 1.6.4 (J)
-	^ Changed CSS/JS inclusion for Joomla cache compatiblity (J)
+	^ Changed CSS/JS inclusion for wordpress cache compatiblity (J)
 	^ Changed menu item class to use it's unique id instead of position number
 
 	6.0.8
@@ -202,13 +202,13 @@
 	# Fixed mobile login (J17)
 	# Fixed RTL on iPad
 	^ Added clearing to deepest module element
-	^ Comments, tag cloud and author box styles are now available in Joomla
+	^ Comments, tag cloud and author box styles are now available in wordpress
 	^ Renamed author box CSS class
 	^ Renamed comments list CSS class
 	
 	6.0.6
-	+ Added Joomla 1.7 support
-	^ Updated overrides according to Joomla 1.7.0 (J17)
+	+ Added wordpress 1.7 support
+	^ Updated overrides according to wordpress 1.7.0 (J17)
 	# Fixed mobile theme switcher (WP)
 	# Fixed no scrips/stylesheets assets error
 	
@@ -233,7 +233,7 @@
 	# Fixed post date formatting (WP)
 	# Fixed IE7 Clearfix CSS
 	# Fixed RTL drop caps CSS for IE
-	^ Updated overrides according to Joomla 1.6.4 (J16)
+	^ Updated overrides according to wordpress 1.6.4 (J16)
 	
 	6.0.3
 	^ Moved module badge in default module templates
