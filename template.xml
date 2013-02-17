@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type = "template">
+	<name>warp-kickstrap</name>
+	<version>1.0.0</version>
+	<creationDate>February 2013</creationDate>
+	<author>Sean Goresht</author>
+	<authorEmail>seangores@gmail.com</authorEmail>
+	<authorUrl>http://seangoresht.com</authorUrl>
+	<copyright>Copyright (C) GPL License</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
+	<description><![CDATA[
+    <h1>
+    	Joomla Warp Kickstrap Template
+    </h1>
+    <p class="description">
+    	This template is based off of adam's kickstrap, and it's free.  It uses jQuery, Twitter Bootstrap, and the 1140 grid system in replace for their crappy grid system (sorry, liked it more).
+    </p>
+    ]]></description>
+	<positions>
+		<position settings = "display">absolute</position>
+		<position settings = "display">search</position>
+		<position settings = "display">logo</position>
+		<position settings = "display">menu</position>
+		<position settings = "display">banner</position>
+		<position settings = "display">toolbar-l</position>
+		<position settings = "display">toolbar-r</position>
+		<position settings = "display">headerbar</position>
+		<position settings = "display">breadcrumbs</position>
+		<position>top-a</position>
+		<position>top-b</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+		<position>innertop</position>
+		<position>innerbottom</position>
+		<position>sidebar-a</position>
+		<position>sidebar-b</position>
+		<position settings = "display">footer</position>
+	</positions>
+	<modulesettings>
+		<setting name = "title" type = "list" label = "Title" default = "1">
+			<option value = "1">Show</option>
+			<option value = "0">Hide</option>
+		</setting>
+		<setting name = "style" type = "style" label = "Style" nav_menu = "false">
+			<option name = "Default" value = ""/>
+			<option name = "Box" value = "box"/>
+			<option name = "Blank" value = "blank"/>
+		</setting>
+		<setting name = "icon" type = "list" label = "Icon">
+			<option value = "">None</option>
+			<option value = "download">Download</option>
+			<option value = "twitter">Twitter</option>
+			<option value = "mail">Mail</option>
+			<option value = "bubble">Bubble</option>
+			<option value = "login">Login</option>
+			<option value = "cart">Cart</option>
+		</setting>
+		<setting name = "badge" type = "list" label = "Badge">
+			<option value = "">None</option>
+			<option value = "hot">Hot</option>
+			<option value = "new">New</option>
+			<option value = "top">Top</option>
+			<option value = "free">Free</option>
+		</setting>
+		<setting name = "display" type = "display" label = "Display"/>
+	</modulesettings>
+</install>

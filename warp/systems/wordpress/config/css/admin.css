@@ -1,0 +1,82 @@
+/* Copyright (C) YOOtheme GmbH, http://www.gnu.org/licenses/gpl.html GNU/GPL */
+
+/*
+ * Wordpress specific
+ */
+
+
+/* Fixes
+----------------------------------------------------------------------------------------------------*/
+
+/* Fix for Widget Position Footer on Widget Settings Page */
+#footer.widgets-sortables {
+	position: static;
+	margin: 0;
+	border-top: none;
+}
+
+
+/* WordPress specific
+----------------------------------------------------------------------------------------------------*/
+
+/* Description Header */
+#warp > h2 {
+	padding: 14px 15px 3px 40px;
+	background: url(../images/yoo_icon_32.png) 0px 15px no-repeat;
+}
+
+/* Save Button Spinner */
+#warp .saving span {
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+	background: url("../images/loader.gif") 4px 0 no-repeat;
+	vertical-align: middle;
+}
+
+
+/* Widget Boxes
+----------------------------------------------------------------------------------------------------*/
+
+.tabs-box div.widget-box {
+	width: 250px;
+	margin: 0 15px 15px 0;
+	border: 1px solid #DFDFDF;
+	border-radius: 6px;
+	overflow: hidden;
+	float: left;
+}
+
+.tabs-box div.widget-box > h3 {
+	margin: 0;
+	padding: 9px;
+	font-size: 12px;
+	font-weight: bold;
+	cursor: default;
+}
+
+.tabs-box div.widget-box > h3 .small { font-size: 11px; }
+
+.tabs-box div.widget-box .option {
+	margin: 15px;
+	overflow: hidden;
+}
+
+.tabs-box div.widget-box .option h4 {
+	margin: 0 0 8px 0;
+	font-size: 12px;
+}
+
+.tabs-box div.widget-box .option .value {
+	margin-right: 10px;
+	float: left;
+}
+
+.tabs-box div.widget-box .option select { width: auto; }
+
+/* Widget Boxes Container */
+.tabs-box ul.widget-container { padding-bottom: 0; }
+.tabs-box ul.widget-container li {
+	margin-bottom: 0;
+	overflow: hidden;
+}

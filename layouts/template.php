@@ -145,8 +145,8 @@ if ($this['config']->get('loader') == "1")
 
 	<?php if ($this['modules']->count('innertop + innerbottom + sidebar-a + sidebar-b') || $this['config']->get('system_output')) : ?>
 	<div id = "main" class = "row grid-block">
-		<!--if it's just sidebar a-->
 		<?php if ($this['modules']->count('sidebar-a') && ($this['modules']->count('sidebar-b') == 0)): ?>
+		<!--it's just sidebar a-->
 		<aside id = "sidebar-a" class = "grid-box threecol">
 			<?php echo $this['modules']->render('sidebar-a', array('layout' => 'stack')); ?>
 		</aside>
@@ -155,8 +155,8 @@ if ($this['config']->get('loader') == "1")
 		</div>
 		<?php endif; ?>
 
-		<!--if it's just sidebar b-->
 		<?php if ($this['modules']->count('sidebar-b') && ($this['modules']->count('sidebar-a') == 0)): ?>
+		<!--it's just sidebar b-->
 		<div id = "maininner" class = "grid-box ninecol">
 			<?php checkMainInner($this) ?>
 		</div>
@@ -165,8 +165,8 @@ if ($this['config']->get('loader') == "1")
 		</aside>
 		<?php endif; ?>
 
-		<!--if it's both sidebars -->
-		<?php if ($this['modules']->count('sidebar-b + sidebar-a')): ?>
+		<?php if ($this['modules']->count('sidebar-a + sidebar-b') == 2): ?>
+		<!--it's both sidebars -->
 		<aside id = "sidebar-a" class = "grid-box threecol">
 			<?php echo $this['modules']->render('sidebar-a', array('layout' => 'stack')); ?>
 		</aside>
@@ -178,8 +178,8 @@ if ($this['config']->get('loader') == "1")
 		</aside>
 		<?php endif; ?>
 
-		<!--if it's none of the sidebars -->
 		<?php if ($this['modules']->count('sidebar-b + sidebar-a') == 0): ?>
+		<!--it's none of the sidebars -->
 		<div id = "maininner" class = "grid-box twelvecol last">
 			<?php checkMainInner($this) ?>
 		</div>

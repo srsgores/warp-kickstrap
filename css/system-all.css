@@ -3,29 +3,23 @@
 /* General
 ----------------------------------------------------------------------------------------------------*/
 
-#system .title a {
-	color: #444;
-}
+#system .title a { color: #444; }
 
-#system small {
-	color: #999;
-}
+#system small { color: #999; }
+
 
 /* Item
 ----------------------------------------------------------------------------------------------------*/
 
-#system .item > header .meta {
-	color: #999;
-}
+#system .item > header .meta { color: #999; }
 
-#system .item > header .subtitle {
-	color: #777;
-}
+#system .item > header .subtitle { color: #777; }
 
 #system .item > .links a:after {
 	content: " »";
 	font-size: 16px;
 }
+
 
 /* Items
 ----------------------------------------------------------------------------------------------------*/
@@ -42,13 +36,13 @@
 	border-width: 0;
 }
 
+
 /* Pagination
 ----------------------------------------------------------------------------------------------------*/
 
 #system .pagination a,
-#system .pagination strong {
-	border: 1px solid #ddd;
-}
+#system .pagination strong { border: 1px solid #ddd; }
+
 
 /* Search Box
 ----------------------------------------------------------------------------------------------------*/
@@ -67,26 +61,16 @@
 	font-size: 14px;
 }
 
-.searchbox input:-moz-placeholder {
-	color: #999;
-}
-
-.searchbox input::-webkit-input-placeholder {
-	color: #999;
-}
-
-.searchbox input.placeholder {
-	color: #999;
-}
+.searchbox input:-moz-placeholder { color: #999; }
+.searchbox input:-ms-input-placeholder { color: #999; }
+.searchbox input::-webkit-input-placeholder { color: #999; }
+.searchbox input.placeholder { color: #999; }
 
 .searchbox.filled button {
 	width: 25px;
-	background: url(../images/searchbox_reset.png) 50% 50% no-repeat;
+	background: url(../images/searchbox_reset.png) 50% 50% no-repeat; 
 }
-
-.searchbox.loading button {
-	background: url(../images/searchbox_loader.gif) 50% 50% no-repeat;
-}
+.searchbox.loading button { background: url(../images/searchbox_loader.gif) 50% 50% no-repeat; }
 
 /* Drop-Down Results */
 .searchbox .results {
@@ -97,25 +81,13 @@
 	background: #ffffff;
 }
 
-.searchbox .results li.results-header {
-	border-bottom: 1px solid #ddd;
-}
+.searchbox .results li.results-header { border-bottom: 1px solid #ddd; }
+.searchbox .results li.more-results { border-top: 1px solid #ddd; }
+.searchbox .results li.result { border-top: 1px solid #eee; }
+.searchbox .results li.results-header + li.result { border-top: none; }
 
-.searchbox .results li.more-results {
-	border-top: 1px solid #ddd;
-}
+.searchbox .results li.result.selected { background-color: #fafafa; }
 
-.searchbox .results li.result {
-	border-top: 1px solid #eee;
-}
-
-.searchbox .results li.results-header + li.result {
-	border-top: none;
-}
-
-.searchbox .results li.result.selected {
-	background-color: #fafafa;
-}
 
 /* Breadcrumbs
 ----------------------------------------------------------------------------------------------------*/
@@ -142,9 +114,8 @@
 	background: #fff;
 }
 
-#system .author-box .name {
-	color: #444;
-}
+#system .author-box .name { color: #444; }
+
 
 /* Comments
 ----------------------------------------------------------------------------------------------------*/
@@ -161,32 +132,20 @@
 	background: #faffe6;
 }
 
-#system #comments .comment-head .author {
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 1);
-}
+#system #comments .comment-head .author { text-shadow: 1px 1px 0 rgba(255, 255, 255, 1); }
 
 /* Body */
-#system #comments ul.level1 ul {
-	background: url(../images/comments_arrow.png) 0 0 no-repeat;
-}
+#system #comments ul.level1 ul { background: url(../images/comments_arrow.png) 0 0 no-repeat; }
 
 /* Respond */
-#system #respond h3 {
-	color: #444;
-}
+#system #respond h3 { color: #444; }
+
 
 /* Latest Comments
 ----------------------------------------------------------------------------------------------------*/
 
-.comments-list > article {
-	border-top: 1px solid #ddd;
-}
+.comments-list > article { border-top: 1px solid #ddd; }
+.comments-list > article:first-child { border: none; }
 
-.comments-list > article:first-child {
-	border: none;
-}
-
-.comments-list .meta {
-	color: #999;
-}
+.comments-list .meta { color: #999; }
 

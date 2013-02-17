@@ -1,12 +1,15 @@
 # Warp Theme Framework #
 
-- Version: 6.3.3
+- Version: 6.3.4
 - Date: January 2013
 - Author: YOOtheme GmbH
 - Website: <http://www.yootheme.com/warp>
 
 ## Changelog
 
+	6.3.4
+	# Fixed default widget classes (WP)
+	
 	6.3.3
 	^ Updated jQuery to 1.9.0 (J)
 	^ Updated HTML5 Shiv to 3.6.2

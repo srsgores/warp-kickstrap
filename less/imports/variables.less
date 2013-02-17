@@ -11,7 +11,10 @@
 
 /*Type*/
 @baseFontSize: 16px;
-@baseFontFamily: "Arimo", "sans-serif", "arial";
+@sansFontFamily: "Open Sans", Helvetica, Arial, sans-serif;
+@serifFontFamily: Georgia, "Times New Roman", Times, serif;
+@monoFontFamily: Monaco, Menlo, Consolas, "Courier New", monospace;
+@baseFontFamily: @sansFontFamily;
 @fontSizeSmall: 85%;
 @fontSizeMedium: 90%;
 @fontSizeLarge: 125%;
@@ -21,13 +24,10 @@
 @line: @em * @baseLineHeight;
 @baseFontWeight: 500;
 
-@sansFontFamily: "Open Sans", Helvetica, Arial, sans-serif;
-@serifFontFamily: Georgia, "Times New Roman", Times, serif;
-@monoFontFamily: Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @altFontFamily: @serifFontFamily;
 
-@headingsFontFamily: "Open Sans";
+@headingsFontFamily: @sansFontFamily;
 @headingsFontWeight: 300;
 @headingsColour: inherit;
 
@@ -127,9 +127,10 @@ Buttons
 /* =============================================================================
 Borders
 ========================================================================== */
-@borderStyle: 1px solid;
+@borderStyle: solid;
+@borderWidth: 1px;
 @borderColour: #c7c7c7;
-@border: @borderStyle @borderColour;
+@border: @borderWidth @borderStyle @borderColour;
 
 // Grays
 // -------------------------
@@ -331,5 +332,3 @@ Borders
 @popoverArrowOuterColour: rgba(0, 0, 0, .25);
 
 @horizontalComponentOffset: 15%;
-
-@borderColour: #DDD;

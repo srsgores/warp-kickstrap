@@ -32,6 +32,7 @@
 //$css[] = sprintf('.wrapper { max-width: %dpx; }', $this['config']->get('template_width'));
 
 // generate css for 3-column-layout
+
 $sidebar_a = '';
 $sidebar_b = '';
 $maininner_width = 100;
@@ -107,6 +108,31 @@ foreach (array(1 => '.dropdown', 2 => '.columns2', 3 => '.columns3', 4 => '.colu
 	$css[] = sprintf('#menu %s { width: %dpx; }', $class, $i * intval($this['config']->get('menu_width')));
 }
 
+
+
+//less variables to be set
+
+$less_vars = array("num_cols", "col-margin-right", "textColour", "primaryColour", "secondaryColour",
+	"tertiaryColour",
+	"bodyBackgroundColour", "bodyWidth", "baseFontSize", "multiplier", "baseFontFamily", "baseFontWeight",
+	"headingsFontFamily", "headingsFontWeight", "col-identifier", "col-identifier-names", "transitionTime", "pie",
+	"borderColour", "borderStyle", "borderColour");
+
+//TODO: Allow generation of variable array for those that exist
+/*function getLessVars($paramArray) {
+	$tempArray = array();
+	if (is_array($paramArray)) {
+		foreach ($paramArray as $stringValue)
+		{
+			if($this['config']->get($stringValue) > 0) {
+				$tempArray[] += $this['config']->get($stringValue);
+				//somehow combine the arrays?
+			}
+		}
+
+	}
+	return $tempArray;
+}*/
 //check for LESS configuration
 if ($this['config']->get('less') == "1")
 {
@@ -163,7 +189,6 @@ if ($this['config']->get('less') == "1")
 			"bodyWidth" => $this['config']->get('bodyWidth')
 		));
 	}
-
 	//loop through all files in folder, creating a CSS file
 	foreach (glob($current_path) as $file)
 	{
@@ -371,35 +396,56 @@ $this['config']->set('body_config', json_encode($body_config));
  * Load scripts from CDN if the user has specified so; otherwise, load scripts from local drive.
  * Host must be in HTTP mode, or else we will have problems with Cross-site permissions
  */
-if ($this['config']->get('jquery_cdn') == "1")
+function setJquery($this)
 {
-	$this['system']->document->addScript("https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js");
-}
-else
-{
-	// load jQuery
-	$this['asset']->addFile('js', 'lib:jquery/jquery.js');
+	if ($this['config']->get('jquery_cdn') == "1")
+	{
+		if ($this['config']->get('ajaxify') == '1')
+		{
+			// load older jQuery
+			wp_enqueue_script("jquerycdnnew", "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js");
+		}
+		else
+		{
+			// load older jQuery
+			wp_enqueue_script("jquerycdnold", "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js");
+		}
+	}
+	else
+	{
+		if ($this['config']->get('ajaxify') == '1')
+		{
+			// load older jQuery
+			wp_enqueue_script("jquery");
+		}
+		else
+		{
+			// load older jQuery
+			$this['asset']->addFile('js', 'lib:jquery/jquery.js');
+		}
+	}
 }
 
+setJquery($this);
 //now load remaining scripts, depending on parameters
 if ($this['config']->get('cdn') == "1" && $http != "https")
 { //if the user has specified that CDN is to be used
 	if ($this['config']->get('modernizr') == "1")
 	{
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js");
+		wp_enqueue_script("modernizr", "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js");
 	}
 	if ($this['config']->get('bootstrap') == "1")
 	{
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js");
+		wp_enqueue_script("twitterbootstrap", "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.0/js/bootstrap.min.js");
 	}
 	if ($this['config']->get('scrollto') == "1")
 	{
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js");
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js");
+		wp_enqueue_script("jquery-easing", "http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js");
+		wp_enqueue_script("jquery-scrollto", "http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js");
 	}
 	if ($this['config']->get('masonry') == "1")
 	{
-		$this['system']->document->addScript("http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js");
+		wp_enqueue_script("masonry", "http://cdnjs.cloudflare.com/ajax/libs/masonry/2.1.04/jquery.masonry.min.js");
 	}
 }
 else

@@ -110,7 +110,7 @@
 			var a = {};
 			a[b.options.param] = b.value;
 			b.request({data: a})
-		}, this.options.delay, this))
+		}, this.options.delay, this));
 	},
 		suggest: function (a)
 		{
@@ -123,6 +123,7 @@
 				{
 					b.done(d(this))
 				}};
+				//this.form.find("button[type='reset']").toggleClass("visuallyhidden");
 				!1 === a ? this.hide() : (this.selected = null, this.choices.empty(), this.options.msgResultsHeader && d("<li>").addClass(this.options.resultsHeaderClass + " " + this.options.skipClass).html(this.options.msgResultsHeader).appendTo(this.choices).bind(c), a.results && 0 < a.results.length ? (d(a.results).each(function ()
 				{
 					d("<li>").data("choice", this).addClass(b.options.resultClass).append(d("<h3>").html(this.title)).append(d("<div>").html(this.text)).appendTo(b.choices).bind(c)
@@ -131,10 +132,11 @@
 			}
 		}, show: function ()
 		{
-			this.visible || (this.visible = !0, this.choices.fadeIn(200))
+			this.visible || (this.visible = !0, this.choices.fadeIn(200));
 		}, hide: function ()
 		{
-			this.visible && (this.visible = !1, this.choices.removeClass(this.options.hoverClass).fadeOut(200))
+			this.visible && (this.visible = !1, this.choices.removeClass(this.options.hoverClass).fadeOut(200));
+			//this.form.find("button[type='reset']").toggleClass("visuallyhidden");
 		}});
 	d.fn[e.prototype.name] = function ()
 	{
