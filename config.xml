@@ -45,10 +45,10 @@
 		<field name = "Style" type = "separator"/>
 		<field name = "style" type = "styles" default = "" label = "Style" description = "Select the style variation."/>
 		<field name = "textColour" type = "colour" label = "Text Colour"
-		       description = "Choose the colour of the text." default = "#000"> </field>
+		       description = "Choose the colour of the text." default = "#000000"> </field>
 		<field name = "primaryColour" type = "colour" label = "Primary Colour"
 		       description = "Choose a main colour.  It's a good idea to make this the same colour as the text."
-		       default = "#000">
+		       default = "#000000">
 		</field>
 		<field name = "secondaryColour" type = "colour" label = "Secondary Colour"
 		       description = "The second colour in the design."
@@ -61,10 +61,10 @@
 		       default = "1140px"> </field>
 		<field name = "bodyBackgroundColour" type = "colour" label = "Body Background Colour"
 		       description = "Colour for the body"
-		       default = "#FFF"> </field>
+		       default = "#FFFFFF"> </field>
 		<field name = "bodyBackgroundImage" type = "text" label = "Body Background Image (optional)"
 		       description = "The background image for the body"
-		       default = "../images/asfalt.png"> </field>
+		       default = "../img/asfalt.png"> </field>
 
 		<field name = "transitionTime" type = "text" label = "Transition Time"
 		       description = "Time it takes for CSS3 transitions to occur" default = "0.5s"> </field>
