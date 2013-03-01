@@ -53,6 +53,7 @@ class Warp implements ArrayAccess
 			self::$_instance['path']->register($path . '/helpers', 'helpers');
 			self::$_instance['path']->register($path . '/libraries', 'lib');
 			self::$_instance['path']->register($path . '/css', 'css');
+			self::$_instance['path']->register($path . '/less', 'less');
 			self::$_instance['path']->register($path . '/js', 'js');
 			self::$_instance['path']->register($path . '/layouts', 'layouts');
 			self::$_instance['path']->register($path . '/menus', 'menu');

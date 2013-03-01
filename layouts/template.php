@@ -99,7 +99,95 @@ if ($this['config']->get('loader') == "1")
 			<?php endif; ?>
 		</div> <!-- end toolbar -->
 		<?php endif; ?>
+		<?php if ($this['config']->get("lessStyler") == "1") //if LESS demo styles in enabled...
+		{
+			?>
+			<div class="row docked" id="less-styler">
+				<aside class="box">
+					<form class = "box" action = "#">
+						<legend>The Preview Pane <i class="icon-preview"></i></legend>
+						<fieldset class="box">
+							<h1>Main Colours</h1>
+							<div class="row formfield">
+								<label class = "threecol" for = "baseFontSize">Base Font Size</label>
+								<input id = "baseFontSize" type = "number" class="ninecol last"/>
+							</div>
+							<div class = "row formfield">
+								<label class = "threecol" for = "colour1">Primary Colour</label><input class = "ninecol last" type = "color" id="colour1"/>
+							</div>
+							<div class = "row formfield">
+								<label class = "threecol" for = "colour2">Secondary Colour</label><input class =
+								                                                                       "ninecol last" type= "color" id="colour2"/>
+							</div>
+							<div class = "row formfield">
+								<label class = "threecol" for = "colour3">Tertiary Colour</label><input class =
+								                                                                       "ninecol last" type=
+								"color" id="colour3"/>
+							</div>
+							<div class = "row formfield">
+								<label class = "threecol" for = "textColour"></label><input class = "ninecol last" type
+								=
+								"color" id="textColour"/>
+							</div>
+						</fieldset>
+						<fieldset class = "box">
+							<h1>Multipliers</h1>
+							<p class="description">Multipliers allow for measurements to be configured and to scale
+								based on numbers.  Each multiplier uses the other multipiers,
+								so adjusting this will adjust everything.</p>
 
+							<div class = "row formfield">
+								<label class = "threecol" for = "multiplier">Multiplier</label><input id = "multiplier" type = "number"/>
+							</div>
+							<div class = "row formfield">
+								<label class = "threecol" for = "multiplierSmall">Small Multiplier</label><input id =
+								                                                                                "multiplierSmall" type=
+								"number"/></div>
+							<div class = "row formfield">
+								<label class = "threecol" for = "multiplierLarge">Large Multiplier</label><input id =
+								                                                                                "multiplierLarge" type= "number"/></div>
+						</fieldset>
+						<fieldset class = "box">
+							<h1>Main Measurements</h1>
+							<div class="row formfield">
+								<label class = "threecol" for = "baseUnit">Base Unit Measurement</label>
+								<input class = "ninecol last" id = "baseUnit" type = "text"/>
+							</div>
+							<div class="row formfield">
+								<label class = "threecol" for = "padding">Padding</label>
+								<input class = "ninecol last" id = "padding" type = "number"/>
+							</div>
+							<div class="row formfield">
+								<label class = "threecol" for = "margin">Margin</label>
+								<input class = "ninecol last" id = "margin" type = "number"/>
+							</div>
+						</fieldset>
+						<fieldset class = "box">
+							<h1>Borders</h1>
+							<div class="row formfield">
+								<label class = "threecol" for = "borderStyle">Border Style</label>
+								<select class = "ninecol last" name = "borderStyle" id = "borderStyle">
+									<option value = "none">none</option>
+									<option value = "dashed">dashed</option>
+									<option value = "ridge">ridge</option>
+									<option value = "dotted">dotted</option>
+									<option value = "inset">inset</option>
+								</select>
+							</div>
+							<div class="row formfield">
+								<label class = "threecol" for = "borderColour">Border Colour</label>
+								<input class = "ninecol last" id = "borderColour" type = "color"/>
+							</div>
+							<div class="row formfield">
+								<label class = "threecol" for = "borderWidth">Border Width</label>
+								<input class = "ninecol last" type = "number" id="borderWidth"/>
+							</div>
+						</fieldset>
+					</form>
+				</aside>
+			</div>
+			<?php
+		} ?>
 		<?php if ($this['modules']->count('logo + headerbar')) : ?>
 		<div id = "headerbar" class = "row extended-height">
 

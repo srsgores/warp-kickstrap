@@ -79,4 +79,7 @@
 		}
 	});
 
+	//TODO: allow previewing less styles via config
+
+
 })(jQuery);

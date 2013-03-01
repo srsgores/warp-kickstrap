@@ -109,6 +109,12 @@
 		       default = "300"> </field>
 		<field name = "altFontFamily" type = "text" label = "Alternative Font Family"
 		       description = "The secondary font, which will be used for the body of the page" default = "Georgia, 'Times New Roman', Times, serif"> </field>
+		<field name = "lessStyler" type = "radio" label = "Enable Style Preview?" description =
+				"enable style previewing in a docked sidebar to the left.  Lets you preview styles."
+		       default = "0">
+			<option value = "0">No</option>
+			<option value = "1">yes</option>
+		       </field>
 		<field name = "Content" type = "separator"/>
 		<field name = "date" type = "radio" default = "1" label = "Date" description = "Show the date.">
 			<option value = "0">No</option>
@@ -130,11 +136,6 @@
 			<option value = "1">Yes</option>
 		</field>
 		<field name = "Layout" type = "separator"/>
-		<field name = "responsive" type = "radio" default = "1" label = "Responsive Layout"
-		       description = "Enable responsive layout.">
-			<option value = "0">No</option>
-			<option value = "1">Yes</option>
-		</field>
 		<field name = "template_width" type = "text" size = "10" default = "1140" label = "Template Width"
 		       description = "Set the template max-width in pixels." class = "short"/>
 		<field name = "sidebar-a_width" type = "text" size = "10" default = "25" label = "Sidebar A Width"

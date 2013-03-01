@@ -362,7 +362,16 @@ if ($this['config']->get("icomoon") == "1")
 
 
 //now that grid systems are loaded, time to load main styles
-$this['asset']->addFile('css', 'css:style.css');
+//check for LESS styler and configuration
+if ($this['config']->get("lessStyler") == "1") {
+	$this['asset']->addFile("js", "js:less-1.3.3.min.js");
+	//less file added in head
+	$head[] = sprintf('<link rel = "stylesheet/less" type = "text/css" href ="%s"></script>', $this['path']->url('less:style.less'));
+}
+else {
+	$this['asset']->addFile('css', 'css:style.css');
+}
+
 
 // load fonts
 $http = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
@@ -473,6 +482,9 @@ else
 $this['asset']->addFile('js', 'js:warp.js');
 $this['asset']->addFile('js', 'js:responsive.js');
 $this['asset']->addFile('js', 'js:accordionmenu.js');
+$this['asset']->addFile('js', 'js:dropdownmenu.js');
+
+
 $this['asset']->addFile('js', 'js:dropdownmenu.js');
 
 if ($this['config']->get('jmpress') == "1")
