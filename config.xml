@@ -298,7 +298,25 @@
 			<option value = "0">No</option>
 			<option value = "1">Yes</option>
 		</field>
+		<field name = "compass" type = "radio" label = "Use Compass"
+		       description = "Allow compass mixins to be used (Recommended)" default = "1">
+			<option value = "0">No</option>
+			<option value = "1">Yes</option>
+		       </field>
+
+		<field name = "susy" type = "radio" label = "Use Susy"
+		       description = "Allow susy grid system mixins to be used (Recommended)" default = "1">
+			<option value = "0">No</option>
+			<option value = "1">Yes</option>
+		</field>
+
+		<field name = "breakpoint" type = "radio" label = "Use Breakpoint"
+		       description = "Allow breakpoint mixins to be used (Recommended)" default = "1">
+			<option value = "0">No</option>
+			<option value = "1">Yes</option>
+		</field>
 	</fields>
+
 	<fields name = "Template-Specific Stuff">
 		<field name = "Template Javascript" type = "separator"/>
 		<field name = "jmpress" type = "radio" label = "Load jmpress"

@@ -15,7 +15,7 @@ $filters = $this['assetfilter']->create(array('CSSImportResolver', 'CSSRewriteUR
 
 <head>
 	<title><?php echo $error; ?> - <?php echo $title; ?></title>
-	<link rel = "stylesheet" href = "<?php echo $this['path']->url('css:base.css'); ?>"/>
+	<link rel = "stylesheet" href = "<?php echo $this['path']->url('css:style.css'); ?>"/>
 	<link rel = "stylesheet" href = "<?php echo $this['path']->url('css:error.css'); ?>"/>
 	<!--[if IE 6]>
 	<style><?php echo $this['asset']->createFile('css:error-ie6.css')->getContent($filters); ?></style><![endif]-->

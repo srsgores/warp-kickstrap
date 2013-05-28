@@ -252,22 +252,90 @@ if ($this['config']->get('sass') == "1")
 {
 	$sass_dir = $this['config']->get('sassdir');
 	$warp_path = "template:" . $sass_dir;
-	$add_path = $this['path']->path($warp_path) . "/";
-	//check to see if foundation is enabled
-	if ($this['config']->get("grid_system") == "foundation")
-	{
-		$add_path = $this['path']->path("css:foundation");
+	$sass_path = $this['path']->path($warp_path) . "/*.scss";
+
+	if ($this["config"]->get("compass") == "1") {
+		//if compass is set to true, load it
+		//require_once dirname(__FILE__) . "/helpers/phpsass/Extensions/Compass.php";
+		function loadCallback($file, $parser)
+		{
+			$paths = array();
+			foreach ($parser->extensions as $extensionName)
+			{
+				$namespace = ucwords(preg_replace('/[^0-9a-z]+/', '_', strtolower($extensionName)));
+				$extensionPath = './' . $namespace . '/' . $namespace . '.php';
+				if (file_exists($extensionPath))
+				{
+					require_once($extensionPath);
+					$hook = $namespace . '::resolveExtensionPath';
+					$returnPath = call_user_func($hook, $file, $parser);
+					if (!empty($returnPath))
+					{
+						$paths[] = $returnPath;
+					}
+
+				}
+			}
+			return $paths;
+		}
+
+
+		function getFunctions($extensions)
+		{
+			$output = array();
+			if (!empty($extensions))
+			{
+				foreach ($extensions as $extension)
+				{
+					$name = explode('/', $extension, 2);
+					$namespace = ucwords(preg_replace('/[^0-9a-z]+/', '_', strtolower(array_shift($name))));
+					$extensionPath = './' . $namespace . '/' . $namespace . '.php';
+					if (file_exists($extensionPath)
+					)
+					{
+						require_once($extensionPath);
+						$namespace = $namespace . '::';
+						$function = 'getFunctions';
+						$output = array_merge($output, call_user_func($namespace . $function, $namespace));
+					}
+				}
+			}
+
+			return $output;
+		}
+
 	}
-	$scss = new scssc();
-	if ($this['config']->get('sass_compress') == "1")
-	{
-		$scss->setFormatter("scss_formatter_compressed");
+	function warn($text, $context) {
+		print "/** WARN: $text, on line {$context->node->token->line} of {$context->node->token->filename} **/\n";
 	}
-	$scss->addImportPath($add_path . "/partials/");
-	//loop through all files in folder, serving css to client
-	var_dump($add_path); //for debugging
-	$server = new scss_server($add_path, null, $scss);
-	$server->serve();
+	function debug($text, $context) {
+		print "/** DEBUG: $text, on line {$context->node->token->line} of {$context->node->token->filename} **/\n";
+	}
+	$syntax = "scss";
+	$options = array(
+		'style' => 'expanded',
+		'cache' => FALSE,
+		'syntax' => $syntax,
+		'debug' => FALSE,
+		'callbacks' => array(
+			'warn' => 'warn',
+			'debug' => 'debug'
+		),
+		'load_path_functions' => array('loadCallback'),
+		'load_paths' => array(dirname($file)),
+		'functions' => getFunctions(array('Compass', 'Susy')),
+		'extensions' => array('Compass', 'Susy')
+	);
+	// Execute the compiler.
+	$parser = new SassParser($options);
+	foreach (glob($sass_path) as $file)
+	{
+		try {
+			print "\n\n" . $parser->toCss($file);
+		} catch (Exception $e) {
+			print $e->getMessage();
+		}
+	}
 }
 function autoCompileLess($inputFile, $outputFile, $compiler)
 {
